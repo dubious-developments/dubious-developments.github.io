@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/entities/task.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/entities/</a> task.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.18% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>34/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.85% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.43% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>32/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">472979×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">472979×</span>
+<span class="cline-any cline-yes">472979×</span>
+<span class="cline-any cline-yes">472979×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">472977×</span>
+<span class="cline-any cline-yes">472977×</span>
+<span class="cline-any cline-yes">472977×</span>
+<span class="cline-any cline-yes">472977×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">472976×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/entities/task.ts']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * A task that can be executed on a task processor.
+ */
+var Task = /** @class */ (function () {
+    /**
+     * Creates a task.
+     */
+    function Task() {
+        this.index = Task.generateTaskIndex();
+    }
+    Task.generateTaskIndex = function () {
+        var result = Task.taskCounter;
+        Task.taskCounter = (Task.taskCounter + 1) % (1 &lt;&lt; 31 - 1);
+        return result;
+    };
+    /**
+     * Gets a string representation for this task.
+     */
+    Task.prototype.toString = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return "Task " + this.index;</span>
+    };
+    Task.taskCounter = 0;
+    return Task;
+}());
+exports.Task = Task;
+/**
+ * A task that uses an opaque function to do its job.
+ * This type of task is suitable for initial task implementations
+ * and tasks that need not be rewritten after scheduling.
+ * However, this type of task is ill-suited for rewriting
+ * after it is scheduled.
+ */
+var OpaqueTask = /** @class */ (function (_super) {
+    __extends(OpaqueTask, _super);
+    /**
+     * Creates an opaque task.
+     * @param execute The task's implementation.
+     * @param metadata Additional information related to the task.
+     */
+    function OpaqueTask(execute, metadata) {
+        var _this = _super.call(this) || this;
+        _this.metadata = metadata;
+        _this.executeImpl = execute;
+        return _this;
+    }
+    /**
+     * Executes this task.
+     * @param data The data the task takes as input.
+     */
+    OpaqueTask.prototype.execute = function (data) {
+        return this.executeImpl(data);
+    };
+    /**
+     * Creates a copy of this task.
+     */
+    OpaqueTask.prototype.clone = function () {
+        return new OpaqueTask(this.executeImpl, this.metadata);
+    };
+    return OpaqueTask;
+}(Task));
+exports.OpaqueTask = OpaqueTask;
+&nbsp;
+},'src/entities/task.ts',{}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGFzay5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInRhc2sudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUE7O0dBRUc7QUFDSDtJQWdCSTs7T0FFRztJQUNIO1FBQ0ksSUFBSSxDQUFDLEtBQUssR0FBRyxJQUFJLENBQUMsaUJBQWlCLEVBQUUsQ0FBQztJQUMxQyxDQUFDO0lBRWMsc0JBQWlCLEdBQWhDO1FBQ0ksSUFBSSxNQUFNLEdBQUcsSUFBSSxDQUFDLFdBQVcsQ0FBQztRQUM5QixJQUFJLENBQUMsV0FBVyxHQUFHLENBQUMsSUFBSSxDQUFDLFdBQVcsR0FBRyxDQUFDLENBQUMsR0FBRyxDQUFDLENBQUMsSUFBSSxFQUFFLEdBQUcsQ0FBQyxDQUFDLENBQUM7UUFDMUQsTUFBTSxDQUFDLE1BQU0sQ0FBQztJQUNsQixDQUFDO0lBYUQ7O09BRUc7SUFDSSx1QkFBUSxHQUFmO1FBQ0ksTUFBTSxDQUFDLFVBQVEsSUFBSSxDQUFDLEtBQU8sQ0FBQztJQUNoQyxDQUFDO0lBNUNjLGdCQUFXLEdBQUcsQ0FBQyxDQUFDO0lBNkNuQyxXQUFDO0NBQUEsQUE5Q0QsSUE4Q0M7QUE5Q3FCLG9CQUFJO0FBZ0QxQjs7Ozs7O0dBTUc7QUFDSDtJQUFzRCw4QkFBMEI7SUFHNUU7Ozs7T0FJRztJQUNILG9CQUNJLE9BQThCLEVBQ2QsUUFBdUI7UUFGM0MsWUFJSSxpQkFBTyxTQUVWO1FBSm1CLGNBQVEsR0FBUixRQUFRLENBQWU7UUFHdkMsS0FBSSxDQUFDLFdBQVcsR0FBRyxPQUFPLENBQUM7O0lBQy9CLENBQUM7SUFFRDs7O09BR0c7SUFDSSw0QkFBTyxHQUFkLFVBQWUsSUFBVztRQUN0QixNQUFNLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUNsQyxDQUFDO0lBRUQ7O09BRUc7SUFDSSwwQkFBSyxHQUFaO1FBQ0ksTUFBTSxDQUFDLElBQUksVUFBVSxDQUF1QixJQUFJLENBQUMsV0FBVyxFQUFFLElBQUksQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUNqRixDQUFDO0lBQ0wsaUJBQUM7QUFBRCxDQUFDLEFBOUJELENBQXNELElBQUksR0E4QnpEO0FBOUJZLGdDQUFVIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBBIHRhc2sgdGhhdCBjYW4gYmUgZXhlY3V0ZWQgb24gYSB0YXNrIHByb2Nlc3Nvci5cbiAqL1xuZXhwb3J0IGFic3RyYWN0IGNsYXNzIFRhc2s8VERhdGEsIFRUYXNrTWV0YWRhdGE+IHtcbiAgICBwcml2YXRlIHN0YXRpYyB0YXNrQ291bnRlciA9IDA7XG5cbiAgICAvKipcbiAgICAgKiBBIHRhc2stdW5pcXVlIGluZGV4LlxuICAgICAqXG4gICAgICogTk9URTogd2UgbmVlZCB0aGVzZSBpbmRpY2VzIHRvIG1ha2Ugc2V0cyB3b3JrLiBKYXZhU2NyaXB0XG4gICAgICogYXJyYXlzIGFyZSBzdHVwaWQgYW5kIGFzc3VtZSB0aGF0IG9iamVjdHMgYXJlIGVxdWFsIGlmZlxuICAgICAqIHRoZWlyIHN0cmluZyByZXByZXNlbnRhdGlvbnMgYXJlLiBBZGRpdGlvbmFsbHksIHN0cmluZ1xuICAgICAqIHJlcHJlc2VudGF0aW9ucyBhcmUgKnN0cnVjdHVyYWwsKiBzbyB3aXRob3V0IHRoaXMgaW5kZXgsXG4gICAgICogdGhlIHN0cmluZyByZXByZXNlbnRhdGlvbiBmb3IgdHdvIGRpZmZlcmVudCB0YXNrcyB3b3VsZFxuICAgICAqIGJlIHRoZSBzYW1lLiBUaGF0IGJyZWFrcyBzZXRzIGFuZCBoYXNoIG1hcHMsIHdoaWNoIHdlIGNhbid0XG4gICAgICogaGF2ZS5cbiAgICAgKi9cbiAgICBwdWJsaWMgcmVhZG9ubHkgaW5kZXg6IG51bWJlcjtcblxuICAgIC8qKlxuICAgICAqIENyZWF0ZXMgYSB0YXNrLlxuICAgICAqL1xuICAgIHB1YmxpYyBjb25zdHJ1Y3RvcigpIHtcbiAgICAgICAgdGhpcy5pbmRleCA9IFRhc2suZ2VuZXJhdGVUYXNrSW5kZXgoKTtcbiAgICB9XG5cbiAgICBwcml2YXRlIHN0YXRpYyBnZW5lcmF0ZVRhc2tJbmRleCgpOiBudW1iZXIge1xuICAgICAgICBsZXQgcmVzdWx0ID0gVGFzay50YXNrQ291bnRlcjtcbiAgICAgICAgVGFzay50YXNrQ291bnRlciA9IChUYXNrLnRhc2tDb3VudGVyICsgMSkgJSAoMSA8PCAzMSAtIDEpO1xuICAgICAgICByZXR1cm4gcmVzdWx0O1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIEV4ZWN1dGVzIHRoaXMgdGFzay5cbiAgICAgKiBAcGFyYW0gZGF0YSBUaGUgZGF0YSB0aGUgdGFzayB0YWtlcyBhcyBpbnB1dC5cbiAgICAgKi9cbiAgICBwdWJsaWMgYWJzdHJhY3QgZXhlY3V0ZShkYXRhOiBURGF0YSk6IHZvaWQ7XG5cbiAgICAvKipcbiAgICAgKiBHZXRzIHRoZSBtZXRhZGF0YSBmb3IgdGhpcyB0YXNrLlxuICAgICAqL1xuICAgIHB1YmxpYyBhYnN0cmFjdCBnZXQgbWV0YWRhdGEoKTogVFRhc2tNZXRhZGF0YTtcblxuICAgIC8qKlxuICAgICAqIEdldHMgYSBzdHJpbmcgcmVwcmVzZW50YXRpb24gZm9yIHRoaXMgdGFzay5cbiAgICAgKi9cbiAgICBwdWJsaWMgdG9TdHJpbmcoKTogc3RyaW5nIHtcbiAgICAgICAgcmV0dXJuIGBUYXNrICR7dGhpcy5pbmRleH1gO1xuICAgIH1cbn1cblxuLyoqXG4gKiBBIHRhc2sgdGhhdCB1c2VzIGFuIG9wYXF1ZSBmdW5jdGlvbiB0byBkbyBpdHMgam9iLlxuICogVGhpcyB0eXBlIG9mIHRhc2sgaXMgc3VpdGFibGUgZm9yIGluaXRpYWwgdGFzayBpbXBsZW1lbnRhdGlvbnNcbiAqIGFuZCB0YXNrcyB0aGF0IG5lZWQgbm90IGJlIHJld3JpdHRlbiBhZnRlciBzY2hlZHVsaW5nLlxuICogSG93ZXZlciwgdGhpcyB0eXBlIG9mIHRhc2sgaXMgaWxsLXN1aXRlZCBmb3IgcmV3cml0aW5nXG4gKiBhZnRlciBpdCBpcyBzY2hlZHVsZWQuXG4gKi9cbmV4cG9ydCBjbGFzcyBPcGFxdWVUYXNrPFREYXRhLCBUVGFza01ldGFkYXRhPiBleHRlbmRzIFRhc2s8VERhdGEsIFRUYXNrTWV0YWRhdGE+IHtcbiAgICBwcml2YXRlIHJlYWRvbmx5IGV4ZWN1dGVJbXBsOiAoZGF0YTogVERhdGEpID0+IHZvaWQ7XG5cbiAgICAvKipcbiAgICAgKiBDcmVhdGVzIGFuIG9wYXF1ZSB0YXNrLlxuICAgICAqIEBwYXJhbSBleGVjdXRlIFRoZSB0YXNrJ3MgaW1wbGVtZW50YXRpb24uXG4gICAgICogQHBhcmFtIG1ldGFkYXRhIEFkZGl0aW9uYWwgaW5mb3JtYXRpb24gcmVsYXRlZCB0byB0aGUgdGFzay5cbiAgICAgKi9cbiAgICBwdWJsaWMgY29uc3RydWN0b3IoXG4gICAgICAgIGV4ZWN1dGU6IChkYXRhOiBURGF0YSkgPT4gdm9pZCxcbiAgICAgICAgcHVibGljIHJlYWRvbmx5IG1ldGFkYXRhOiBUVGFza01ldGFkYXRhKSB7XG5cbiAgICAgICAgc3VwZXIoKTtcbiAgICAgICAgdGhpcy5leGVjdXRlSW1wbCA9IGV4ZWN1dGU7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogRXhlY3V0ZXMgdGhpcyB0YXNrLlxuICAgICAqIEBwYXJhbSBkYXRhIFRoZSBkYXRhIHRoZSB0YXNrIHRha2VzIGFzIGlucHV0LlxuICAgICAqL1xuICAgIHB1YmxpYyBleGVjdXRlKGRhdGE6IFREYXRhKTogdm9pZCB7XG4gICAgICAgIHJldHVybiB0aGlzLmV4ZWN1dGVJbXBsKGRhdGEpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIENyZWF0ZXMgYSBjb3B5IG9mIHRoaXMgdGFzay5cbiAgICAgKi9cbiAgICBwdWJsaWMgY2xvbmUoKTogT3BhcXVlVGFzazxURGF0YSwgVFRhc2tNZXRhZGF0YT4ge1xuICAgICAgICByZXR1cm4gbmV3IE9wYXF1ZVRhc2s8VERhdGEsIFRUYXNrTWV0YWRhdGE+KHRoaXMuZXhlY3V0ZUltcGwsIHRoaXMubWV0YWRhdGEpO1xuICAgIH1cbn1cbiJdfQ==
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Mar 25 2018 12:02:36 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
