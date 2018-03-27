@@ -788,7 +788,7 @@ module.exports = g;
 /* 20 */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.5.3' };
+var core = module.exports = { version: '2.5.4' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -2360,6 +2360,7 @@ var global = __webpack_require__(46);
 var core = __webpack_require__(20);
 var ctx = __webpack_require__(172);
 var hide = __webpack_require__(71);
+var has = __webpack_require__(57);
 var PROTOTYPE = 'prototype';
 
 var $export = function (type, name, source) {
@@ -2377,7 +2378,7 @@ var $export = function (type, name, source) {
   for (key in source) {
     // contains in native
     own = !IS_FORCED && target && target[key] !== undefined;
-    if (own && key in exports) continue;
+    if (own && has(exports, key)) continue;
     // export native or passed
     out = own ? target[key] : source[key];
     // prevent global pollution for namespaces
@@ -17194,7 +17195,6 @@ var LIBRARY = __webpack_require__(181);
 var $export = __webpack_require__(45);
 var redefine = __webpack_require__(287);
 var hide = __webpack_require__(71);
-var has = __webpack_require__(57);
 var Iterators = __webpack_require__(75);
 var $iterCreate = __webpack_require__(579);
 var setToStringTag = __webpack_require__(183);
@@ -17221,7 +17221,7 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
   var VALUES_BUG = false;
   var proto = Base.prototype;
   var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
-  var $default = (!BUGGY && $native) || getMethod(DEFAULT);
+  var $default = $native || getMethod(DEFAULT);
   var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
   var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
   var methods, key, IteratorPrototype;
@@ -17232,7 +17232,7 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
       // Set @@toStringTag to native iterators
       setToStringTag(IteratorPrototype, TAG, true);
       // fix for some old engines
-      if (!LIBRARY && !has(IteratorPrototype, ITERATOR)) hide(IteratorPrototype, ITERATOR, returnThis);
+      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
     }
   }
   // fix Array#{values, @@iterator}.name in V8 / FF
@@ -66575,13 +66575,29 @@ var Navbar = /** @class */ (function (_super) {
     };
     Navbar.prototype.saveFileButton = function () {
         var input = document.getElementById("saveGraph");
-        input.click();
+        if (input) {
+            input.click();
+        }
+        else {
+            console.log("error: could not find saveGraph button");
+        }
     };
     Navbar.prototype.importGraph = function (e) {
-        var file = document.getElementById("importGraph").files[0];
-        var fileDAO = __WEBPACK_IMPORTED_MODULE_5__persistence_dataAccessProvider__["a" /* DataAccessProvider */].getInstance().getFileDAO();
-        if (file) {
-            fileDAO.find(new __WEBPACK_IMPORTED_MODULE_4__persistence_fileDAO__["b" /* FileModule */](__WEBPACK_IMPORTED_MODULE_7__entities_modelTaskMetadata__["a" /* ModelComponent */].DataGraph, file.name, file));
+        var input = document.getElementById("importGraph");
+        if (input) {
+            var files = input.files;
+            var fileDAO = __WEBPACK_IMPORTED_MODULE_5__persistence_dataAccessProvider__["a" /* DataAccessProvider */].getInstance().getFileDAO();
+            if (files) {
+                if (files[0]) {
+                    fileDAO.find(new __WEBPACK_IMPORTED_MODULE_4__persistence_fileDAO__["b" /* FileModule */](__WEBPACK_IMPORTED_MODULE_7__entities_modelTaskMetadata__["a" /* ModelComponent */].DataGraph, files[0].name, files[0]));
+                }
+            }
+            else {
+                console.log("error: no files found");
+            }
+        }
+        else {
+            console.log("error: could not find importGraph button");
         }
     };
     // TODO not only load datagraph
@@ -66617,11 +66633,15 @@ var Navbar = /** @class */ (function (_super) {
     };
     Navbar.prototype.uploadProjectButton = function () {
         var input = document.getElementById("importProject");
-        input.click();
+        if (input) {
+            input.click();
+        }
+        else {
+            console.log("error: could not find importProject button");
+        }
     };
     Navbar.prototype.importProject = function (e) {
-        var file = document.getElementById("importGraph").files[0];
-        console.log(file);
+        console.log(e);
     };
     Navbar.prototype.render = function () {
         var _this = this;
@@ -99401,4 +99421,4 @@ var NotFound = /** @class */ (function (_super) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.9c507f32.js.map
+//# sourceMappingURL=main.9919459a.js.map
