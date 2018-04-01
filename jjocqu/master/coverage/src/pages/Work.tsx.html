@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">72.41% </span>
+        <span class="strong">62.16% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>21/29</span>
+        <span class='fraction'>23/37</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">38.46% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>5/13</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">60% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/10</span>
+        <span class='fraction'>6/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">76% </span>
+        <span class="strong">63.64% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>19/25</span>
+        <span class='fraction'>21/33</span>
       </div>
     </div>
   </div>
@@ -84,7 +84,21 @@
 39
 40
 41
-42</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -106,6 +120,11 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -113,6 +132,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -146,33 +174,47 @@ var Workspace = /** @class */ (function (_super) {
     __extends(Workspace, _super);
 <span class="fstat-no" title="function not covered" >    function Workspace(props) {</span>
 <span class="cstat-no" title="statement not covered" >        var _this = _super.call(this, props) || this;</span>
-<span class="cstat-no" title="statement not covered" >        _this.state = { menuVisible: false };</span>
+<span class="cstat-no" title="statement not covered" >        _this.state = {</span>
+            menuVisible: true,
+            dragid: null
+        };
+<span class="cstat-no" title="statement not covered" >        _this.callBackNavBar = _this.callBackNavBar.bind(_this);</span>
+<span class="cstat-no" title="statement not covered" >        _this.idCallback = _this.idCallback.bind(_this);</span>
 <span class="cstat-no" title="statement not covered" >        return _this;</span>
     }
+    Workspace.prototype.callBackNavBar = <span class="fstat-no" title="function not covered" >function (childData) {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            menuVisible: childData
+        });
+    };
+    Workspace.prototype.idCallback = <span class="fstat-no" title="function not covered" >function (childData) {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            dragid: childData
+        });
+    };
     Workspace.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Grid, { style: { height: '100vh' } },</span>
-            React.createElement(semantic_ui_react_1.Grid.Row, { style: { height: '10%', paddingBottom: 0 } },
-                React.createElement(semantic_ui_react_1.Grid.Column, null,
-                    React.createElement(navbarWork_1.default, null))),
-            React.createElement(semantic_ui_react_1.Grid.Row, { columns: 16, style: { height: '90%', paddingTop: 0 }, stretched: true },
-                React.createElement(semantic_ui_react_1.Grid.Column, { width: 2, style: { paddingRight: 0 } },
-                    React.createElement(Sidebar_1.default, null)),
-                React.createElement(semantic_ui_react_1.Grid.Column, { width: 14, style: { paddingLeft: 0 } },
-                    React.createElement(MxGraph_1.default, null)))));
+<span class="cstat-no" title="statement not covered" >        var menuVisible = this.state.menuVisible;</span>
+<span class="cstat-no" title="statement not covered" >        var dragid = this.state.dragid;</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Sidebar.Pushable, { style: { width: '100%', height: '100%' } },</span>
+            React.createElement(Sidebar_1.default, { visible: menuVisible, callback: this.idCallback }),
+            React.createElement(semantic_ui_react_1.Sidebar.Pusher, { style: { height: '100vh', padding: '0em 0em' } },
+                React.createElement(semantic_ui_react_1.Segment, { basic: true, style: { height: '100vh', padding: '0em 0em' } },
+                    React.createElement(navbarWork_1.default, { visible: menuVisible, callback: this.callBackNavBar }),
+                    React.createElement(MxGraph_1.default, { dragid: dragid })))));
     };
     return Workspace;
 }(React.Component));
 exports.default = Workspace;
 &nbsp;
 },'src/pages/Work.tsx',{"react":"/home/travis/build/jjocqu/UnSHACLed/node_modules/react/index.js","../components/navbarWork":"/home/travis/build/jjocqu/UnSHACLed/src/components/navbarWork.tsx","../components/Sidebar":"/home/travis/build/jjocqu/UnSHACLed/src/components/Sidebar.tsx","../components/MxGraph":"/home/travis/build/jjocqu/UnSHACLed/src/components/MxGraph.tsx","semantic-ui-react":"/home/travis/build/jjocqu/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiV29yay5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIldvcmsudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBLDZCQUErQjtBQUMvQix1REFBOEM7QUFDOUMsaURBQTRDO0FBQzVDLGlEQUE0QztBQUM1Qyx1REFBeUM7QUFFekM7SUFBd0IsNkJBQXlCO0lBRTdDLG1CQUFZLEtBQVU7UUFBdEIsWUFDSSxrQkFBTSxLQUFLLENBQUMsU0FFZjtRQURHLEtBQUksQ0FBQyxLQUFLLEdBQUcsRUFBQyxXQUFXLEVBQUUsS0FBSyxFQUFDLENBQUM7O0lBQ3RDLENBQUM7SUFFRCwwQkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNILG9CQUFDLHdCQUFJLElBQUMsS0FBSyxFQUFFLEVBQUMsTUFBTSxFQUFFLE9BQU8sRUFBQztZQUMxQixvQkFBQyx3QkFBSSxDQUFDLEdBQUcsSUFBQyxLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsS0FBSyxFQUFFLGFBQWEsRUFBRSxDQUFDLEVBQUM7Z0JBQzlDLG9CQUFDLHdCQUFJLENBQUMsTUFBTTtvQkFDUixvQkFBQyxvQkFBTSxPQUFFLENBQ0MsQ0FDUDtZQUVYLG9CQUFDLHdCQUFJLENBQUMsR0FBRyxJQUFDLE9BQU8sRUFBRSxFQUFFLEVBQUUsS0FBSyxFQUFFLEVBQUMsTUFBTSxFQUFFLEtBQUssRUFBRSxVQUFVLEVBQUUsQ0FBQyxFQUFDLEVBQUUsU0FBUyxFQUFFLElBQUk7Z0JBQ3pFLG9CQUFDLHdCQUFJLENBQUMsTUFBTSxJQUFDLEtBQUssRUFBRSxDQUFDLEVBQUUsS0FBSyxFQUFFLEVBQUMsWUFBWSxFQUFFLENBQUMsRUFBQztvQkFDM0Msb0JBQUMsaUJBQU8sT0FBRSxDQUNBO2dCQUNkLG9CQUFDLHdCQUFJLENBQUMsTUFBTSxJQUFDLEtBQUssRUFBRSxFQUFFLEVBQUUsS0FBSyxFQUFFLEVBQUMsV0FBVyxFQUFFLENBQUMsRUFBQztvQkFDM0Msb0JBQUMsaUJBQU8sT0FBRSxDQUNBLENBQ1AsQ0FDUixDQUNWLENBQUM7SUFDTixDQUFDO0lBQ0wsZ0JBQUM7QUFBRCxDQUFDLEFBM0JELENBQXdCLEtBQUssQ0FBQyxTQUFTLEdBMkJ0QztBQUVELGtCQUFlLFNBQVMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBOYXZiYXIgZnJvbSAnLi4vY29tcG9uZW50cy9uYXZiYXJXb3JrJztcbmltcG9ydCBTaWRlQmFyIGZyb20gJy4uL2NvbXBvbmVudHMvU2lkZWJhcic7XG5pbXBvcnQgTXhHcmFwaCBmcm9tICcuLi9jb21wb25lbnRzL014R3JhcGgnO1xuaW1wb3J0IHsgR3JpZCB9IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcblxuY2xhc3MgV29ya3NwYWNlIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICBjb25zdHJ1Y3Rvcihwcm9wczogYW55KSB7XG4gICAgICAgIHN1cGVyKHByb3BzKTtcbiAgICAgICAgdGhpcy5zdGF0ZSA9IHttZW51VmlzaWJsZTogZmFsc2V9O1xuICAgIH1cblxuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxHcmlkIHN0eWxlPXt7aGVpZ2h0OiAnMTAwdmgnfX0+XG4gICAgICAgICAgICAgICAgPEdyaWQuUm93IHN0eWxlPXt7aGVpZ2h0OiAnMTAlJywgcGFkZGluZ0JvdHRvbTogMH19PlxuICAgICAgICAgICAgICAgICAgICA8R3JpZC5Db2x1bW4+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TmF2YmFyLz5cbiAgICAgICAgICAgICAgICAgICAgPC9HcmlkLkNvbHVtbj5cbiAgICAgICAgICAgICAgICA8L0dyaWQuUm93PlxuXG4gICAgICAgICAgICAgICAgPEdyaWQuUm93IGNvbHVtbnM9ezE2fSBzdHlsZT17e2hlaWdodDogJzkwJScsIHBhZGRpbmdUb3A6IDB9fSBzdHJldGNoZWQ9e3RydWV9PlxuICAgICAgICAgICAgICAgICAgICA8R3JpZC5Db2x1bW4gd2lkdGg9ezJ9IHN0eWxlPXt7cGFkZGluZ1JpZ2h0OiAwfX0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8U2lkZUJhci8+XG4gICAgICAgICAgICAgICAgICAgIDwvR3JpZC5Db2x1bW4+XG4gICAgICAgICAgICAgICAgICAgIDxHcmlkLkNvbHVtbiB3aWR0aD17MTR9IHN0eWxlPXt7cGFkZGluZ0xlZnQ6IDB9fT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxNeEdyYXBoLz5cbiAgICAgICAgICAgICAgICAgICAgPC9HcmlkLkNvbHVtbj5cbiAgICAgICAgICAgICAgICA8L0dyaWQuUm93PlxuICAgICAgICAgICAgPC9HcmlkPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgV29ya3NwYWNlO1xuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiV29yay5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIldvcmsudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBLDZCQUErQjtBQUMvQix1REFBOEM7QUFDOUMsaURBQTRDO0FBQzVDLGlEQUE0QztBQUM1Qyx1REFBcUQ7QUFFckQ7SUFBd0IsNkJBQXlCO0lBRTdDLG1CQUFZLEtBQVU7UUFBdEIsWUFDSSxrQkFBTSxLQUFLLENBQUMsU0FRZjtRQVBHLEtBQUksQ0FBQyxLQUFLLEdBQUc7WUFDVCxXQUFXLEVBQUUsSUFBSTtZQUNqQixNQUFNLEVBQUUsSUFBSTtTQUNmLENBQUM7UUFFRixLQUFJLENBQUMsY0FBYyxHQUFHLEtBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLEtBQUksQ0FBQyxDQUFDO1FBQ3JELEtBQUksQ0FBQyxVQUFVLEdBQUcsS0FBSSxDQUFDLFVBQVUsQ0FBQyxJQUFJLENBQUMsS0FBSSxDQUFDLENBQUM7O0lBQ2pELENBQUM7SUFFRCxrQ0FBYyxHQUFkLFVBQWUsU0FBa0I7UUFDN0IsSUFBSSxDQUFDLFFBQVEsQ0FBQztZQUNWLFdBQVcsRUFBRSxTQUFTO1NBQ3pCLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCw4QkFBVSxHQUFWLFVBQVcsU0FBaUI7UUFDeEIsSUFBSSxDQUFDLFFBQVEsQ0FBQztZQUNWLE1BQU0sRUFBRSxTQUFTO1NBQ3BCLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCwwQkFBTSxHQUFOO1FBQ1csSUFBQSxvQ0FBVyxDQUFlO1FBQzFCLElBQUEsMEJBQU0sQ0FBZTtRQUM1QixPQUFPLENBQ0gsb0JBQUMsMkJBQU8sQ0FBQyxRQUFRLElBQUMsS0FBSyxFQUFFLEVBQUMsS0FBSyxFQUFFLE1BQU0sRUFBRSxNQUFNLEVBQUUsTUFBTSxFQUFDO1lBQ3BELG9CQUFDLGlCQUFPLElBQUMsT0FBTyxFQUFFLFdBQVcsRUFBRSxRQUFRLEVBQUUsSUFBSSxDQUFDLFVBQVUsR0FBRztZQUMzRCxvQkFBQywyQkFBTyxDQUFDLE1BQU0sSUFBQyxLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsT0FBTyxFQUFFLE9BQU8sRUFBRSxTQUFTLEVBQUM7Z0JBQ3hELG9CQUFDLDJCQUFPLElBQUMsS0FBSyxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsT0FBTyxFQUFFLE9BQU8sRUFBRSxTQUFTLEVBQUM7b0JBQzlELG9CQUFDLG9CQUFNLElBQUMsT0FBTyxFQUFFLFdBQVcsRUFBRSxRQUFRLEVBQUUsSUFBSSxDQUFDLGNBQWMsR0FBRztvQkFDOUQsb0JBQUMsaUJBQU8sSUFBQyxNQUFNLEVBQUUsTUFBTSxHQUFHLENBQ3BCLENBQ0csQ0FDRixDQUN0QixDQUFDO0lBQ04sQ0FBQztJQUNMLGdCQUFDO0FBQUQsQ0FBQyxBQXhDRCxDQUF3QixLQUFLLENBQUMsU0FBUyxHQXdDdEM7QUFFRCxrQkFBZSxTQUFTLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgTmF2YmFyIGZyb20gJy4uL2NvbXBvbmVudHMvbmF2YmFyV29yayc7XG5pbXBvcnQgU2lkZUJhciBmcm9tICcuLi9jb21wb25lbnRzL1NpZGViYXInO1xuaW1wb3J0IE14R3JhcGggZnJvbSAnLi4vY29tcG9uZW50cy9NeEdyYXBoJztcbmltcG9ydCB7IFNpZGViYXIsIFNlZ21lbnQgfSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5cbmNsYXNzIFdvcmtzcGFjZSBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgY29uc3RydWN0b3IocHJvcHM6IGFueSkge1xuICAgICAgICBzdXBlcihwcm9wcyk7XG4gICAgICAgIHRoaXMuc3RhdGUgPSB7XG4gICAgICAgICAgICBtZW51VmlzaWJsZTogdHJ1ZSxcbiAgICAgICAgICAgIGRyYWdpZDogbnVsbFxuICAgICAgICB9O1xuXG4gICAgICAgIHRoaXMuY2FsbEJhY2tOYXZCYXIgPSB0aGlzLmNhbGxCYWNrTmF2QmFyLmJpbmQodGhpcyk7XG4gICAgICAgIHRoaXMuaWRDYWxsYmFjayA9IHRoaXMuaWRDYWxsYmFjay5iaW5kKHRoaXMpO1xuICAgIH1cblxuICAgIGNhbGxCYWNrTmF2QmFyKGNoaWxkRGF0YTogYm9vbGVhbikge1xuICAgICAgICB0aGlzLnNldFN0YXRlKHtcbiAgICAgICAgICAgIG1lbnVWaXNpYmxlOiBjaGlsZERhdGFcbiAgICAgICAgfSk7XG4gICAgfVxuXG4gICAgaWRDYWxsYmFjayhjaGlsZERhdGE6IHN0cmluZykge1xuICAgICAgICB0aGlzLnNldFN0YXRlKHtcbiAgICAgICAgICAgIGRyYWdpZDogY2hpbGREYXRhXG4gICAgICAgIH0pO1xuICAgIH1cblxuICAgIHJlbmRlcigpIHtcbiAgICAgICAgY29uc3Qge21lbnVWaXNpYmxlfSA9IHRoaXMuc3RhdGU7XG4gICAgICAgIGNvbnN0IHtkcmFnaWR9ID0gdGhpcy5zdGF0ZTtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxTaWRlYmFyLlB1c2hhYmxlIHN0eWxlPXt7d2lkdGg6ICcxMDAlJywgaGVpZ2h0OiAnMTAwJSd9fT5cbiAgICAgICAgICAgICAgICA8U2lkZUJhciB2aXNpYmxlPXttZW51VmlzaWJsZX0gY2FsbGJhY2s9e3RoaXMuaWRDYWxsYmFja30vPlxuICAgICAgICAgICAgICAgIDxTaWRlYmFyLlB1c2hlciBzdHlsZT17e2hlaWdodDogJzEwMHZoJywgcGFkZGluZzogJzBlbSAwZW0nfX0+XG4gICAgICAgICAgICAgICAgICAgIDxTZWdtZW50IGJhc2ljPXt0cnVlfSBzdHlsZT17e2hlaWdodDogJzEwMHZoJywgcGFkZGluZzogJzBlbSAwZW0nfX0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TmF2YmFyIHZpc2libGU9e21lbnVWaXNpYmxlfSBjYWxsYmFjaz17dGhpcy5jYWxsQmFja05hdkJhcn0vPlxuICAgICAgICAgICAgICAgICAgICAgICAgPE14R3JhcGggZHJhZ2lkPXtkcmFnaWR9Lz5cbiAgICAgICAgICAgICAgICAgICAgPC9TZWdtZW50PlxuICAgICAgICAgICAgICAgIDwvU2lkZWJhci5QdXNoZXI+XG4gICAgICAgICAgICA8L1NpZGViYXIuUHVzaGFibGU+XG4gICAgICAgICk7XG4gICAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBXb3Jrc3BhY2U7XG4iXX0=
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Apr 01 2018 10:50:58 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Apr 01 2018 14:30:53 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>
