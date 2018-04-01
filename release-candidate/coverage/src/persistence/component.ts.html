@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">93.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>13/13</span>
+        <span class='fraction'>14/15</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">85.71% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/6</span>
+        <span class='fraction'>6/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">92.86% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>12/12</span>
+        <span class='fraction'>13/14</span>
       </div>
     </div>
   </div>
@@ -80,7 +80,14 @@
 35
 36
 37
-38</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+38
+39
+40
+41
+42
+43
+44
+45</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -94,6 +101,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -133,6 +147,13 @@ var Component = /** @class */ (function () {
         this.parts = new Collections.Dictionary();
     }
     /**
+     * Retrieve all keys.
+     * @returns {string[]}
+     */
+    Component.prototype.getAllKeys = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.parts.keys();</span>
+    };
+    /**
      * Retrieve a part of the component.
      * @param {string} key
      * @returns {any}
@@ -153,14 +174,14 @@ var Component = /** @class */ (function () {
 exports.Component = Component;
 &nbsp;
 },'src/persistence/component.ts',{"typescript-collections":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/typescript-collections/dist/lib/index.js"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsb0RBQXNEO0FBRXREOzs7O0dBSUc7QUFDSDtJQUdJOztPQUVHO0lBQ0g7UUFDSSxJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksV0FBVyxDQUFDLFVBQVUsRUFBZSxDQUFDO0lBQzNELENBQUM7SUFFRDs7OztPQUlHO0lBQ0ksMkJBQU8sR0FBZCxVQUFlLEdBQVc7UUFDdEIsTUFBTSxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsUUFBUSxDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBQ3BDLENBQUM7SUFFRDs7OztPQUlHO0lBQ0ksMkJBQU8sR0FBZCxVQUFlLEdBQVcsRUFBRSxLQUFVO1FBQ2xDLElBQUksQ0FBQyxLQUFLLENBQUMsUUFBUSxDQUFDLEdBQUcsRUFBRSxLQUFLLENBQUMsQ0FBQztJQUNwQyxDQUFDO0lBQ0wsZ0JBQUM7QUFBRCxDQUFDLEFBM0JELElBMkJDO0FBM0JZLDhCQUFTIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgQ29sbGVjdGlvbnMgZnJvbSBcInR5cGVzY3JpcHQtY29sbGVjdGlvbnNcIjtcblxuLyoqXG4gKiBBIHN0cnVjdHVyZSB0aGF0IGlzIHRvIGJlIHN0b3JlZCBpbnNpZGUgdGhlIE1vZGVsLlxuICogUG9zc2libHkgY29udGFpbnMgbXVsdGlwbGUgY29tcG9zaXRlIHBhcnRzIGFsbCBtYXBwZWQgdG8gYW4gaWRlbnRpZmllci5cbiAqIEFuIGV4YW1wbGUgY29tcG9uZW50IG1pZ2h0IGNvbnRhaW4gbXVsdGlwbGUgZGF0YSBncmFwaHMsIGVhY2ggb2Ygd2hpY2ggaXMgYXNzb2NpYXRlZCB3aXRoIGEgZmlsZW5hbWUuXG4gKi9cbmV4cG9ydCBjbGFzcyBDb21wb25lbnQge1xuICAgIHByaXZhdGUgcGFydHM6IENvbGxlY3Rpb25zLkRpY3Rpb25hcnk8c3RyaW5nLCBhbnk+O1xuXG4gICAgLyoqXG4gICAgICogQ3JlYXRlIGEgbmV3IENvbXBvbmVudC5cbiAgICAgKi9cbiAgICBwdWJsaWMgY29uc3RydWN0b3IoKSB7XG4gICAgICAgIHRoaXMucGFydHMgPSBuZXcgQ29sbGVjdGlvbnMuRGljdGlvbmFyeTxzdHJpbmcsIGFueT4oKTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBSZXRyaWV2ZSBhIHBhcnQgb2YgdGhlIGNvbXBvbmVudC5cbiAgICAgKiBAcGFyYW0ge3N0cmluZ30ga2V5XG4gICAgICogQHJldHVybnMge2FueX1cbiAgICAgKi9cbiAgICBwdWJsaWMgZ2V0UGFydChrZXk6IHN0cmluZykge1xuICAgICAgICByZXR1cm4gdGhpcy5wYXJ0cy5nZXRWYWx1ZShrZXkpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIEJpbmQgYSB2YWx1ZSB0byBhIGdpdmVuIGtleS5cbiAgICAgKiBAcGFyYW0ge3N0cmluZ30ga2V5XG4gICAgICogQHBhcmFtIHZhbHVlXG4gICAgICovXG4gICAgcHVibGljIHNldFBhcnQoa2V5OiBzdHJpbmcsIHZhbHVlOiBhbnkpIHtcbiAgICAgICAgdGhpcy5wYXJ0cy5zZXRWYWx1ZShrZXksIHZhbHVlKTtcbiAgICB9XG59Il19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsb0RBQXNEO0FBRXREOzs7O0dBSUc7QUFDSDtJQUdJOztPQUVHO0lBQ0g7UUFDSSxJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksV0FBVyxDQUFDLFVBQVUsRUFBZSxDQUFDO0lBQzNELENBQUM7SUFFRDs7O09BR0c7SUFDSSw4QkFBVSxHQUFqQjtRQUNJLE9BQU8sSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUM3QixDQUFDO0lBRUQ7Ozs7T0FJRztJQUNJLDJCQUFPLEdBQWQsVUFBZSxHQUFXO1FBQ3RCLE9BQU8sSUFBSSxDQUFDLEtBQUssQ0FBQyxRQUFRLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDcEMsQ0FBQztJQUVEOzs7O09BSUc7SUFDSSwyQkFBTyxHQUFkLFVBQWUsR0FBVyxFQUFFLEtBQVU7UUFDbEMsSUFBSSxDQUFDLEtBQUssQ0FBQyxRQUFRLENBQUMsR0FBRyxFQUFFLEtBQUssQ0FBQyxDQUFDO0lBQ3BDLENBQUM7SUFDTCxnQkFBQztBQUFELENBQUMsQUFuQ0QsSUFtQ0M7QUFuQ1ksOEJBQVMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBDb2xsZWN0aW9ucyBmcm9tIFwidHlwZXNjcmlwdC1jb2xsZWN0aW9uc1wiO1xuXG4vKipcbiAqIEEgc3RydWN0dXJlIHRoYXQgaXMgdG8gYmUgc3RvcmVkIGluc2lkZSB0aGUgTW9kZWwuXG4gKiBQb3NzaWJseSBjb250YWlucyBtdWx0aXBsZSBjb21wb3NpdGUgcGFydHMgYWxsIG1hcHBlZCB0byBhbiBpZGVudGlmaWVyLlxuICogQW4gZXhhbXBsZSBjb21wb25lbnQgbWlnaHQgY29udGFpbiBtdWx0aXBsZSBkYXRhIGdyYXBocywgZWFjaCBvZiB3aGljaCBpcyBhc3NvY2lhdGVkIHdpdGggYSBmaWxlbmFtZS5cbiAqL1xuZXhwb3J0IGNsYXNzIENvbXBvbmVudCB7XG4gICAgcHJpdmF0ZSBwYXJ0czogQ29sbGVjdGlvbnMuRGljdGlvbmFyeTxzdHJpbmcsIGFueT47XG5cbiAgICAvKipcbiAgICAgKiBDcmVhdGUgYSBuZXcgQ29tcG9uZW50LlxuICAgICAqL1xuICAgIHB1YmxpYyBjb25zdHJ1Y3RvcigpIHtcbiAgICAgICAgdGhpcy5wYXJ0cyA9IG5ldyBDb2xsZWN0aW9ucy5EaWN0aW9uYXJ5PHN0cmluZywgYW55PigpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIFJldHJpZXZlIGFsbCBrZXlzLlxuICAgICAqIEByZXR1cm5zIHtzdHJpbmdbXX1cbiAgICAgKi9cbiAgICBwdWJsaWMgZ2V0QWxsS2V5cygpIHtcbiAgICAgICAgcmV0dXJuIHRoaXMucGFydHMua2V5cygpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIFJldHJpZXZlIGEgcGFydCBvZiB0aGUgY29tcG9uZW50LlxuICAgICAqIEBwYXJhbSB7c3RyaW5nfSBrZXlcbiAgICAgKiBAcmV0dXJucyB7YW55fVxuICAgICAqL1xuICAgIHB1YmxpYyBnZXRQYXJ0KGtleTogc3RyaW5nKSB7XG4gICAgICAgIHJldHVybiB0aGlzLnBhcnRzLmdldFZhbHVlKGtleSk7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogQmluZCBhIHZhbHVlIHRvIGEgZ2l2ZW4ga2V5LlxuICAgICAqIEBwYXJhbSB7c3RyaW5nfSBrZXlcbiAgICAgKiBAcGFyYW0gdmFsdWVcbiAgICAgKi9cbiAgICBwdWJsaWMgc2V0UGFydChrZXk6IHN0cmluZywgdmFsdWU6IGFueSkge1xuICAgICAgICB0aGlzLnBhcnRzLnNldFZhbHVlKGtleSwgdmFsdWUpO1xuICAgIH1cbn0iXX0=
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Mar 25 2018 14:14:46 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Apr 01 2018 11:17:01 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>
