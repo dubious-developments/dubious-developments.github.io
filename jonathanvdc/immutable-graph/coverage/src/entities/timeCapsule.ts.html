@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/entities/timeCapsule.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/entities/</a> timeCapsule.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">32.61% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>15/46</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.77% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.11% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/45</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/jonathanvdc/UnSHACLed/src/entities/timeCapsule.ts']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * A class that presents an "immutable" (but not re-entrant) view of
+ * a mutable value by undoing/redoing the actions performed on
+ * that value.
+ */
+var TimeCapsule = /** @class */ (function () {
+    // The idea behind a time capsule is to efficiently fake
+    // immutability by taking a mutable data structure and
+    // remembering how to perform each state change.
+    //
+    // For example, suppose that we have the following tree of
+    // changes to a data structure.
+    //
+    //     C &lt;---- B &lt;---- A &lt;---- A' &lt;---- A'' &lt;---- ... &lt;---- Root
+    //                     |
+    //                     v
+    //             E &lt;---- D
+    //
+    // The tricky thing with immutable data structures is that
+    // A, B, C, D and E's perspectives are all equally valid,
+    // that is, there is no "canonical" form of the data structure
+    // *and* the "history" of the data structure is always a tree.
+    //
+    // What a time capsule instance does is the following: it
+    // assigns an "instant" to each version of the data structure.
+    // (Actually, the `TimeCapsule&lt;T&gt;` class *is* such an instant,
+    // but making a distinction between all time capsule instants
+    // and just one is useful for explaining how the whole thing
+    // works.) When the state for one instant is requested, the
+    // time capsule modifies the mutable data it manages by finding
+    // a path from the current instant and the desired instance and
+    // undoing/redoing the changes along that path.
+    //
+    // For example, suppose that the current instant is 'C' and we
+    // want to get to instant 'E'. Then we need to undo 'C' and 'B'
+    // as well as redo 'D' and 'E'.
+    /**
+     * Creates a time capsule instant.
+     * @param state The shared state.
+     * @param parent The parent state of this time capsule instant.
+     * @param undoChange Undoes the change performed by this time capsule state.
+     * @param redoChange Redoes the change performed by this time capsule state.
+     * @param generation The time capsule instant's generation, i.e., the number
+     * of edits from the root. The generation is used to do less work when finding
+     * the last common ancestor of two states.
+     */
+<span class="fstat-no" title="function not covered" >    function TimeCapsule(state, parent, undoChange, redoChange, generation) {</span>
+<span class="cstat-no" title="statement not covered" >        this.state = state;</span>
+<span class="cstat-no" title="statement not covered" >        this.parent = parent;</span>
+<span class="cstat-no" title="statement not covered" >        this.undoChange = undoChange;</span>
+<span class="cstat-no" title="statement not covered" >        this.redoChange = redoChange;</span>
+<span class="cstat-no" title="statement not covered" >        this.generation = generation;</span>
+    }
+    TimeCapsule.findLastCommonAncestor = <span class="fstat-no" title="function not covered" >function (first, second) {</span>
+        // TODO: implement this!
+<span class="cstat-no" title="statement not covered" >        throw new Error();</span>
+    };
+    /**
+     * Creates a time capsule from a piece of data.
+     * @param data The data to manage.
+     */
+    TimeCapsule.create = <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >        var result = new TimeCapsule(new TimeCapsuleState(data), undefined, <span class="fstat-no" title="function not covered" >function (state) {</span> }, <span class="fstat-no" title="function not covered" >function (state) {</span> }, 0);</span>
+<span class="cstat-no" title="statement not covered" >        result.state.currentInstant = result;</span>
+<span class="cstat-no" title="statement not covered" >        return result;</span>
+    };
+    /**
+     * Gets a list of all instant along the path to an ancestor,
+     * including this instant and the ancestor.
+     * @param ancestor An ancestor time instant.
+     */
+    TimeCapsule.prototype.pathToAncestor = <span class="fstat-no" title="function not covered" >function (ancestor) {</span>
+<span class="cstat-no" title="statement not covered" >        var results = new Array();</span>
+<span class="cstat-no" title="statement not covered" >        var instant = this;</span>
+<span class="cstat-no" title="statement not covered" >        while (instant != ancestor) {</span>
+<span class="cstat-no" title="statement not covered" >            results.push(instant);</span>
+<span class="cstat-no" title="statement not covered" >            instant = instant.parent;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        results.push(ancestor);</span>
+<span class="cstat-no" title="statement not covered" >        return results;</span>
+    };
+    /**
+     * Creates a modified version of this time capsule instant.
+     * @param doChange Performs a change.
+     * @param undoChange Rolls back the change performed by `doChange`.
+     */
+    TimeCapsule.prototype.modify = <span class="fstat-no" title="function not covered" >function (doChange, undoChange) {</span>
+<span class="cstat-no" title="statement not covered" >        return new TimeCapsule(this.state, this, undoChange, doChange, this.generation + 1);</span>
+    };
+    /**
+     * Gets the mutable data managed by the time capsule
+     * for this instant.
+     */
+    TimeCapsule.prototype.get = <span class="fstat-no" title="function not covered" >function () {</span>
+        // We need to do the following:
+        //
+        //   * We need to find the last common ancestor of
+        //     this instant and the current instant.
+        //
+        //   * Then we need to undo/redo changes until we
+        //     find the Universe to our liking. (or, um, at
+        //     least the tiny piece of the Universe we're in
+        //     charge of managing)
+<span class="cstat-no" title="statement not covered" >        var data = this.state.data;</span>
+<span class="cstat-no" title="statement not covered" >        var currentInstant = this.state.currentInstant;</span>
+<span class="cstat-no" title="statement not covered" >        if (currentInstant === this) {</span>
+<span class="cstat-no" title="statement not covered" >            return data;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        var ancestor = TimeCapsule.findLastCommonAncestor(this, currentInstant);</span>
+<span class="cstat-no" title="statement not covered" >        for (var _i = 0, _a = currentInstant.pathToAncestor(ancestor).slice(1); _i &lt; _a.length; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >            var instant = _a[_i];</span>
+<span class="cstat-no" title="statement not covered" >            instant.undoChange(data);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        for (var _b = 0, _c = this.pathToAncestor(ancestor).reverse().slice(1); _b &lt; _c.length; _b++) {</span>
+<span class="cstat-no" title="statement not covered" >            var instant = _c[_b];</span>
+<span class="cstat-no" title="statement not covered" >            instant.redoChange(data);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return data;</span>
+    };
+    return TimeCapsule;
+}());
+exports.TimeCapsule = TimeCapsule;
+/**
+ * The state shared by a number of time capsule instants.
+ */
+var TimeCapsuleState = /** @class */ (function () {
+    /**
+     * Creates a time capsule state from a piece of data to
+     * manage.
+     * @param data The data to manage.
+     */
+<span class="fstat-no" title="function not covered" >    function TimeCapsuleState(data) {</span>
+<span class="cstat-no" title="statement not covered" >        this.data = data;</span>
+<span class="cstat-no" title="statement not covered" >        this.currentInstant = undefined;</span>
+    }
+    return TimeCapsuleState;
+}());
+&nbsp;
+},'src/entities/timeCapsule.ts',{"dns":"/home/travis/build/jonathanvdc/UnSHACLed/node_modules/karma-typescript/dist/bundler/resolve/empty.js"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGltZUNhcHN1bGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0aW1lQ2Fwc3VsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBOzs7O0dBSUc7QUFDSDtJQUNJLHdEQUF3RDtJQUN4RCxzREFBc0Q7SUFDdEQsZ0RBQWdEO0lBQ2hELEVBQUU7SUFDRiwwREFBMEQ7SUFDMUQsK0JBQStCO0lBQy9CLEVBQUU7SUFDRixnRUFBZ0U7SUFDaEUsd0JBQXdCO0lBQ3hCLHdCQUF3QjtJQUN4Qix3QkFBd0I7SUFDeEIsRUFBRTtJQUNGLDBEQUEwRDtJQUMxRCx5REFBeUQ7SUFDekQsOERBQThEO0lBQzlELDhEQUE4RDtJQUM5RCxFQUFFO0lBQ0YseURBQXlEO0lBQ3pELDhEQUE4RDtJQUM5RCw4REFBOEQ7SUFDOUQsNkRBQTZEO0lBQzdELDREQUE0RDtJQUM1RCwyREFBMkQ7SUFDM0QsK0RBQStEO0lBQy9ELCtEQUErRDtJQUMvRCwrQ0FBK0M7SUFDL0MsRUFBRTtJQUNGLDhEQUE4RDtJQUM5RCwrREFBK0Q7SUFDL0QsK0JBQStCO0lBRS9COzs7Ozs7Ozs7T0FTRztJQUNILHFCQUNxQixLQUEwQixFQUMxQixNQUFzQixFQUN0QixVQUE4QixFQUM5QixVQUE4QixFQUM5QixVQUFrQjtRQUpsQixVQUFLLEdBQUwsS0FBSyxDQUFxQjtRQUMxQixXQUFNLEdBQU4sTUFBTSxDQUFnQjtRQUN0QixlQUFVLEdBQVYsVUFBVSxDQUFvQjtRQUM5QixlQUFVLEdBQVYsVUFBVSxDQUFvQjtRQUM5QixlQUFVLEdBQVYsVUFBVSxDQUFRO0lBQ3ZDLENBQUM7SUFFYyxrQ0FBc0IsR0FBckMsVUFDSSxLQUFxQixFQUNyQixNQUFzQjtRQUV0Qix3QkFBd0I7UUFDeEIsTUFBTSxJQUFJLEtBQUssRUFBRSxDQUFDO0lBQ3RCLENBQUM7SUFFRDs7O09BR0c7SUFDVyxrQkFBTSxHQUFwQixVQUF3QixJQUFPO1FBQzNCLElBQUksTUFBTSxHQUFHLElBQUksV0FBVyxDQUN4QixJQUFJLGdCQUFnQixDQUFJLElBQUksQ0FBQyxFQUM3QixTQUFTLEVBQ1QsVUFBQyxLQUFRLElBQU8sQ0FBQyxFQUNqQixVQUFDLEtBQVEsSUFBTyxDQUFDLEVBQ2pCLENBQUMsQ0FBQyxDQUFDO1FBQ1AsTUFBTSxDQUFDLEtBQUssQ0FBQyxjQUFjLEdBQUcsTUFBTSxDQUFDO1FBQ3JDLE9BQU8sTUFBTSxDQUFDO0lBQ2xCLENBQUM7SUFFRDs7OztPQUlHO0lBQ0ssb0NBQWMsR0FBdEIsVUFBdUIsUUFBd0I7UUFDM0MsSUFBSSxPQUFPLEdBQUcsSUFBSSxLQUFLLEVBQWtCLENBQUM7UUFDMUMsSUFBSSxPQUFPLEdBQW1CLElBQUksQ0FBQztRQUNuQyxPQUFPLE9BQU8sSUFBSSxRQUFRLEVBQUU7WUFDeEIsT0FBTyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUN0QixPQUFPLEdBQUcsT0FBTyxDQUFDLE1BQU0sQ0FBQztTQUM1QjtRQUNELE9BQU8sQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDdkIsT0FBTyxPQUFPLENBQUM7SUFDbkIsQ0FBQztJQUVEOzs7O09BSUc7SUFDSSw0QkFBTSxHQUFiLFVBQ0ksUUFBNEIsRUFDNUIsVUFBOEI7UUFFOUIsT0FBTyxJQUFJLFdBQVcsQ0FDbEIsSUFBSSxDQUFDLEtBQUssRUFDVixJQUFJLEVBQ0osVUFBVSxFQUNWLFFBQVEsRUFDUixJQUFJLENBQUMsVUFBVSxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzdCLENBQUM7SUFFRDs7O09BR0c7SUFDSSx5QkFBRyxHQUFWO1FBQ0ksK0JBQStCO1FBQy9CLEVBQUU7UUFDRixrREFBa0Q7UUFDbEQsNENBQTRDO1FBQzVDLEVBQUU7UUFDRixpREFBaUQ7UUFDakQsbURBQW1EO1FBQ25ELG9EQUFvRDtRQUNwRCwwQkFBMEI7UUFFMUIsSUFBSSxJQUFJLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUM7UUFDM0IsSUFBSSxjQUFjLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxjQUFjLENBQUM7UUFFL0MsSUFBSSxjQUFjLEtBQUssSUFBSSxFQUFFO1lBQ3pCLE9BQU8sSUFBSSxDQUFDO1NBQ2Y7UUFFRCxJQUFJLFFBQVEsR0FBRyxXQUFXLENBQUMsc0JBQXNCLENBQzdDLElBQUksRUFDSixjQUFjLENBQUMsQ0FBQztRQUVwQixLQUFvQixVQUFnRCxFQUFoRCxLQUFBLGNBQWMsQ0FBQyxjQUFjLENBQUMsUUFBUSxDQUFDLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQyxFQUFoRCxjQUFnRCxFQUFoRCxJQUFnRDtZQUEvRCxJQUFJLE9BQU8sU0FBQTtZQUNaLE9BQU8sQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDNUI7UUFFRCxLQUFvQixVQUFnRCxFQUFoRCxLQUFBLElBQUksQ0FBQyxjQUFjLENBQUMsUUFBUSxDQUFDLENBQUMsT0FBTyxFQUFFLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQyxFQUFoRCxjQUFnRCxFQUFoRCxJQUFnRDtZQUEvRCxJQUFJLE9BQU8sU0FBQTtZQUNaLE9BQU8sQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDNUI7UUFFRCxPQUFPLElBQUksQ0FBQztJQUNoQixDQUFDO0lBQ0wsa0JBQUM7QUFBRCxDQUFDLEFBOUlELElBOElDO0FBOUlZLGtDQUFXO0FBZ0p4Qjs7R0FFRztBQUNIO0lBV0k7Ozs7T0FJRztJQUNILDBCQUFtQixJQUFPO1FBQ3RCLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1FBQ2pCLElBQUksQ0FBQyxjQUFjLEdBQUcsU0FBUyxDQUFDO0lBQ3BDLENBQUM7SUFDTCx1QkFBQztBQUFELENBQUMsQUFwQkQsSUFvQkMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyByZXZlcnNlIH0gZnJvbSBcImRuc1wiO1xuXG4vKipcbiAqIEEgY2xhc3MgdGhhdCBwcmVzZW50cyBhbiBcImltbXV0YWJsZVwiIChidXQgbm90IHJlLWVudHJhbnQpIHZpZXcgb2ZcbiAqIGEgbXV0YWJsZSB2YWx1ZSBieSB1bmRvaW5nL3JlZG9pbmcgdGhlIGFjdGlvbnMgcGVyZm9ybWVkIG9uXG4gKiB0aGF0IHZhbHVlLlxuICovXG5leHBvcnQgY2xhc3MgVGltZUNhcHN1bGU8VD4ge1xuICAgIC8vIFRoZSBpZGVhIGJlaGluZCBhIHRpbWUgY2Fwc3VsZSBpcyB0byBlZmZpY2llbnRseSBmYWtlXG4gICAgLy8gaW1tdXRhYmlsaXR5IGJ5IHRha2luZyBhIG11dGFibGUgZGF0YSBzdHJ1Y3R1cmUgYW5kXG4gICAgLy8gcmVtZW1iZXJpbmcgaG93IHRvIHBlcmZvcm0gZWFjaCBzdGF0ZSBjaGFuZ2UuXG4gICAgLy9cbiAgICAvLyBGb3IgZXhhbXBsZSwgc3VwcG9zZSB0aGF0IHdlIGhhdmUgdGhlIGZvbGxvd2luZyB0cmVlIG9mXG4gICAgLy8gY2hhbmdlcyB0byBhIGRhdGEgc3RydWN0dXJlLlxuICAgIC8vXG4gICAgLy8gICAgIEMgPC0tLS0gQiA8LS0tLSBBIDwtLS0tIEEnIDwtLS0tIEEnJyA8LS0tLSAuLi4gPC0tLS0gUm9vdFxuICAgIC8vICAgICAgICAgICAgICAgICAgICAgfFxuICAgIC8vICAgICAgICAgICAgICAgICAgICAgdlxuICAgIC8vICAgICAgICAgICAgIEUgPC0tLS0gRFxuICAgIC8vXG4gICAgLy8gVGhlIHRyaWNreSB0aGluZyB3aXRoIGltbXV0YWJsZSBkYXRhIHN0cnVjdHVyZXMgaXMgdGhhdFxuICAgIC8vIEEsIEIsIEMsIEQgYW5kIEUncyBwZXJzcGVjdGl2ZXMgYXJlIGFsbCBlcXVhbGx5IHZhbGlkLFxuICAgIC8vIHRoYXQgaXMsIHRoZXJlIGlzIG5vIFwiY2Fub25pY2FsXCIgZm9ybSBvZiB0aGUgZGF0YSBzdHJ1Y3R1cmVcbiAgICAvLyAqYW5kKiB0aGUgXCJoaXN0b3J5XCIgb2YgdGhlIGRhdGEgc3RydWN0dXJlIGlzIGFsd2F5cyBhIHRyZWUuXG4gICAgLy9cbiAgICAvLyBXaGF0IGEgdGltZSBjYXBzdWxlIGluc3RhbmNlIGRvZXMgaXMgdGhlIGZvbGxvd2luZzogaXRcbiAgICAvLyBhc3NpZ25zIGFuIFwiaW5zdGFudFwiIHRvIGVhY2ggdmVyc2lvbiBvZiB0aGUgZGF0YSBzdHJ1Y3R1cmUuXG4gICAgLy8gKEFjdHVhbGx5LCB0aGUgYFRpbWVDYXBzdWxlPFQ+YCBjbGFzcyAqaXMqIHN1Y2ggYW4gaW5zdGFudCxcbiAgICAvLyBidXQgbWFraW5nIGEgZGlzdGluY3Rpb24gYmV0d2VlbiBhbGwgdGltZSBjYXBzdWxlIGluc3RhbnRzXG4gICAgLy8gYW5kIGp1c3Qgb25lIGlzIHVzZWZ1bCBmb3IgZXhwbGFpbmluZyBob3cgdGhlIHdob2xlIHRoaW5nXG4gICAgLy8gd29ya3MuKSBXaGVuIHRoZSBzdGF0ZSBmb3Igb25lIGluc3RhbnQgaXMgcmVxdWVzdGVkLCB0aGVcbiAgICAvLyB0aW1lIGNhcHN1bGUgbW9kaWZpZXMgdGhlIG11dGFibGUgZGF0YSBpdCBtYW5hZ2VzIGJ5IGZpbmRpbmdcbiAgICAvLyBhIHBhdGggZnJvbSB0aGUgY3VycmVudCBpbnN0YW50IGFuZCB0aGUgZGVzaXJlZCBpbnN0YW5jZSBhbmRcbiAgICAvLyB1bmRvaW5nL3JlZG9pbmcgdGhlIGNoYW5nZXMgYWxvbmcgdGhhdCBwYXRoLlxuICAgIC8vXG4gICAgLy8gRm9yIGV4YW1wbGUsIHN1cHBvc2UgdGhhdCB0aGUgY3VycmVudCBpbnN0YW50IGlzICdDJyBhbmQgd2VcbiAgICAvLyB3YW50IHRvIGdldCB0byBpbnN0YW50ICdFJy4gVGhlbiB3ZSBuZWVkIHRvIHVuZG8gJ0MnIGFuZCAnQidcbiAgICAvLyBhcyB3ZWxsIGFzIHJlZG8gJ0QnIGFuZCAnRScuXG5cbiAgICAvKipcbiAgICAgKiBDcmVhdGVzIGEgdGltZSBjYXBzdWxlIGluc3RhbnQuXG4gICAgICogQHBhcmFtIHN0YXRlIFRoZSBzaGFyZWQgc3RhdGUuXG4gICAgICogQHBhcmFtIHBhcmVudCBUaGUgcGFyZW50IHN0YXRlIG9mIHRoaXMgdGltZSBjYXBzdWxlIGluc3RhbnQuXG4gICAgICogQHBhcmFtIHVuZG9DaGFuZ2UgVW5kb2VzIHRoZSBjaGFuZ2UgcGVyZm9ybWVkIGJ5IHRoaXMgdGltZSBjYXBzdWxlIHN0YXRlLlxuICAgICAqIEBwYXJhbSByZWRvQ2hhbmdlIFJlZG9lcyB0aGUgY2hhbmdlIHBlcmZvcm1lZCBieSB0aGlzIHRpbWUgY2Fwc3VsZSBzdGF0ZS5cbiAgICAgKiBAcGFyYW0gZ2VuZXJhdGlvbiBUaGUgdGltZSBjYXBzdWxlIGluc3RhbnQncyBnZW5lcmF0aW9uLCBpLmUuLCB0aGUgbnVtYmVyXG4gICAgICogb2YgZWRpdHMgZnJvbSB0aGUgcm9vdC4gVGhlIGdlbmVyYXRpb24gaXMgdXNlZCB0byBkbyBsZXNzIHdvcmsgd2hlbiBmaW5kaW5nXG4gICAgICogdGhlIGxhc3QgY29tbW9uIGFuY2VzdG9yIG9mIHR3byBzdGF0ZXMuXG4gICAgICovXG4gICAgcHJpdmF0ZSBjb25zdHJ1Y3RvcihcbiAgICAgICAgcHJpdmF0ZSByZWFkb25seSBzdGF0ZTogVGltZUNhcHN1bGVTdGF0ZTxUPixcbiAgICAgICAgcHJpdmF0ZSByZWFkb25seSBwYXJlbnQ6IFRpbWVDYXBzdWxlPFQ+LFxuICAgICAgICBwcml2YXRlIHJlYWRvbmx5IHVuZG9DaGFuZ2U6IChzdGF0ZTogVCkgPT4gdm9pZCxcbiAgICAgICAgcHJpdmF0ZSByZWFkb25seSByZWRvQ2hhbmdlOiAoc3RhdGU6IFQpID0+IHZvaWQsXG4gICAgICAgIHByaXZhdGUgcmVhZG9ubHkgZ2VuZXJhdGlvbjogbnVtYmVyKSB7XG4gICAgfVxuXG4gICAgcHJpdmF0ZSBzdGF0aWMgZmluZExhc3RDb21tb25BbmNlc3RvcjxUPihcbiAgICAgICAgZmlyc3Q6IFRpbWVDYXBzdWxlPFQ+LFxuICAgICAgICBzZWNvbmQ6IFRpbWVDYXBzdWxlPFQ+KTogVGltZUNhcHN1bGU8VD4ge1xuXG4gICAgICAgIC8vIFRPRE86IGltcGxlbWVudCB0aGlzIVxuICAgICAgICB0aHJvdyBuZXcgRXJyb3IoKTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBDcmVhdGVzIGEgdGltZSBjYXBzdWxlIGZyb20gYSBwaWVjZSBvZiBkYXRhLlxuICAgICAqIEBwYXJhbSBkYXRhIFRoZSBkYXRhIHRvIG1hbmFnZS5cbiAgICAgKi9cbiAgICBwdWJsaWMgc3RhdGljIGNyZWF0ZTxUPihkYXRhOiBUKTogVGltZUNhcHN1bGU8VD4ge1xuICAgICAgICBsZXQgcmVzdWx0ID0gbmV3IFRpbWVDYXBzdWxlPFQ+KFxuICAgICAgICAgICAgbmV3IFRpbWVDYXBzdWxlU3RhdGU8VD4oZGF0YSksXG4gICAgICAgICAgICB1bmRlZmluZWQsXG4gICAgICAgICAgICAoc3RhdGU6IFQpID0+IHsgfSxcbiAgICAgICAgICAgIChzdGF0ZTogVCkgPT4geyB9LFxuICAgICAgICAgICAgMCk7XG4gICAgICAgIHJlc3VsdC5zdGF0ZS5jdXJyZW50SW5zdGFudCA9IHJlc3VsdDtcbiAgICAgICAgcmV0dXJuIHJlc3VsdDtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBHZXRzIGEgbGlzdCBvZiBhbGwgaW5zdGFudCBhbG9uZyB0aGUgcGF0aCB0byBhbiBhbmNlc3RvcixcbiAgICAgKiBpbmNsdWRpbmcgdGhpcyBpbnN0YW50IGFuZCB0aGUgYW5jZXN0b3IuXG4gICAgICogQHBhcmFtIGFuY2VzdG9yIEFuIGFuY2VzdG9yIHRpbWUgaW5zdGFudC5cbiAgICAgKi9cbiAgICBwcml2YXRlIHBhdGhUb0FuY2VzdG9yKGFuY2VzdG9yOiBUaW1lQ2Fwc3VsZTxUPik6IFRpbWVDYXBzdWxlPFQ+W10ge1xuICAgICAgICBsZXQgcmVzdWx0cyA9IG5ldyBBcnJheTxUaW1lQ2Fwc3VsZTxUPj4oKTtcbiAgICAgICAgbGV0IGluc3RhbnQ6IFRpbWVDYXBzdWxlPFQ+ID0gdGhpcztcbiAgICAgICAgd2hpbGUgKGluc3RhbnQgIT0gYW5jZXN0b3IpIHtcbiAgICAgICAgICAgIHJlc3VsdHMucHVzaChpbnN0YW50KTtcbiAgICAgICAgICAgIGluc3RhbnQgPSBpbnN0YW50LnBhcmVudDtcbiAgICAgICAgfVxuICAgICAgICByZXN1bHRzLnB1c2goYW5jZXN0b3IpO1xuICAgICAgICByZXR1cm4gcmVzdWx0cztcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBDcmVhdGVzIGEgbW9kaWZpZWQgdmVyc2lvbiBvZiB0aGlzIHRpbWUgY2Fwc3VsZSBpbnN0YW50LlxuICAgICAqIEBwYXJhbSBkb0NoYW5nZSBQZXJmb3JtcyBhIGNoYW5nZS5cbiAgICAgKiBAcGFyYW0gdW5kb0NoYW5nZSBSb2xscyBiYWNrIHRoZSBjaGFuZ2UgcGVyZm9ybWVkIGJ5IGBkb0NoYW5nZWAuXG4gICAgICovXG4gICAgcHVibGljIG1vZGlmeShcbiAgICAgICAgZG9DaGFuZ2U6IChzdGF0ZTogVCkgPT4gdm9pZCxcbiAgICAgICAgdW5kb0NoYW5nZTogKHN0YXRlOiBUKSA9PiB2b2lkKTogVGltZUNhcHN1bGU8VD4ge1xuXG4gICAgICAgIHJldHVybiBuZXcgVGltZUNhcHN1bGU8VD4oXG4gICAgICAgICAgICB0aGlzLnN0YXRlLFxuICAgICAgICAgICAgdGhpcyxcbiAgICAgICAgICAgIHVuZG9DaGFuZ2UsXG4gICAgICAgICAgICBkb0NoYW5nZSxcbiAgICAgICAgICAgIHRoaXMuZ2VuZXJhdGlvbiArIDEpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIEdldHMgdGhlIG11dGFibGUgZGF0YSBtYW5hZ2VkIGJ5IHRoZSB0aW1lIGNhcHN1bGVcbiAgICAgKiBmb3IgdGhpcyBpbnN0YW50LlxuICAgICAqL1xuICAgIHB1YmxpYyBnZXQoKTogVCB7XG4gICAgICAgIC8vIFdlIG5lZWQgdG8gZG8gdGhlIGZvbGxvd2luZzpcbiAgICAgICAgLy9cbiAgICAgICAgLy8gICAqIFdlIG5lZWQgdG8gZmluZCB0aGUgbGFzdCBjb21tb24gYW5jZXN0b3Igb2ZcbiAgICAgICAgLy8gICAgIHRoaXMgaW5zdGFudCBhbmQgdGhlIGN1cnJlbnQgaW5zdGFudC5cbiAgICAgICAgLy9cbiAgICAgICAgLy8gICAqIFRoZW4gd2UgbmVlZCB0byB1bmRvL3JlZG8gY2hhbmdlcyB1bnRpbCB3ZVxuICAgICAgICAvLyAgICAgZmluZCB0aGUgVW5pdmVyc2UgdG8gb3VyIGxpa2luZy4gKG9yLCB1bSwgYXRcbiAgICAgICAgLy8gICAgIGxlYXN0IHRoZSB0aW55IHBpZWNlIG9mIHRoZSBVbml2ZXJzZSB3ZSdyZSBpblxuICAgICAgICAvLyAgICAgY2hhcmdlIG9mIG1hbmFnaW5nKVxuXG4gICAgICAgIGxldCBkYXRhID0gdGhpcy5zdGF0ZS5kYXRhO1xuICAgICAgICBsZXQgY3VycmVudEluc3RhbnQgPSB0aGlzLnN0YXRlLmN1cnJlbnRJbnN0YW50O1xuXG4gICAgICAgIGlmIChjdXJyZW50SW5zdGFudCA9PT0gdGhpcykge1xuICAgICAgICAgICAgcmV0dXJuIGRhdGE7XG4gICAgICAgIH1cblxuICAgICAgICBsZXQgYW5jZXN0b3IgPSBUaW1lQ2Fwc3VsZS5maW5kTGFzdENvbW1vbkFuY2VzdG9yPFQ+KFxuICAgICAgICAgICAgdGhpcyxcbiAgICAgICAgICAgIGN1cnJlbnRJbnN0YW50KTtcblxuICAgICAgICBmb3IgKGxldCBpbnN0YW50IG9mIGN1cnJlbnRJbnN0YW50LnBhdGhUb0FuY2VzdG9yKGFuY2VzdG9yKS5zbGljZSgxKSkge1xuICAgICAgICAgICAgaW5zdGFudC51bmRvQ2hhbmdlKGRhdGEpO1xuICAgICAgICB9XG5cbiAgICAgICAgZm9yIChsZXQgaW5zdGFudCBvZiB0aGlzLnBhdGhUb0FuY2VzdG9yKGFuY2VzdG9yKS5yZXZlcnNlKCkuc2xpY2UoMSkpIHtcbiAgICAgICAgICAgIGluc3RhbnQucmVkb0NoYW5nZShkYXRhKTtcbiAgICAgICAgfVxuXG4gICAgICAgIHJldHVybiBkYXRhO1xuICAgIH1cbn1cblxuLyoqXG4gKiBUaGUgc3RhdGUgc2hhcmVkIGJ5IGEgbnVtYmVyIG9mIHRpbWUgY2Fwc3VsZSBpbnN0YW50cy5cbiAqL1xuY2xhc3MgVGltZUNhcHN1bGVTdGF0ZTxUPiB7XG4gICAgLyoqXG4gICAgICogVGhlIGRhdGEgc2hhcmVkIGJ5IHRoZSB0aW1lIGNhcHN1bGUgaW5zdGFudHMuXG4gICAgICovXG4gICAgcHVibGljIGRhdGE6IFQ7XG5cbiAgICAvKipcbiAgICAgKiBUaGUgY3VycmVudCBpbnN0YW50IHRoZSB0aW1lIGNhcHN1bGUgaXMgaW4uXG4gICAgICovXG4gICAgcHVibGljIGN1cnJlbnRJbnN0YW50OiBUaW1lQ2Fwc3VsZTxUPjtcblxuICAgIC8qKlxuICAgICAqIENyZWF0ZXMgYSB0aW1lIGNhcHN1bGUgc3RhdGUgZnJvbSBhIHBpZWNlIG9mIGRhdGEgdG9cbiAgICAgKiBtYW5hZ2UuXG4gICAgICogQHBhcmFtIGRhdGEgVGhlIGRhdGEgdG8gbWFuYWdlLlxuICAgICAqL1xuICAgIHB1YmxpYyBjb25zdHJ1Y3RvcihkYXRhOiBUKSB7XG4gICAgICAgIHRoaXMuZGF0YSA9IGRhdGE7XG4gICAgICAgIHRoaXMuY3VycmVudEluc3RhbnQgPSB1bmRlZmluZWQ7XG4gICAgfVxufVxuIl19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 14 2018 17:30:16 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
