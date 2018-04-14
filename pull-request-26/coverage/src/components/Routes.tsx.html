@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/Routes.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> Routes.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>24/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.62% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/components/Routes.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var react_router_dom_1 = require("react-router-dom");
+var Login_1 = require("../pages/Login");
+var Home_1 = require("../pages/Home");
+var Work_1 = require("../pages/Work");
+var About_1 = require("../pages/About");
+var Contact_1 = require("../pages/Contact");
+var NotFound_1 = require("../pages/NotFound");
+var Routes = /** @class */ (function (_super) {
+    __extends(Routes, _super);
+<span class="fstat-no" title="function not covered" >    function Routes() {</span>
+<span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+    }
+    Routes.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement("div", null,</span>
+            React.createElement(react_router_dom_1.Switch, null,
+                React.createElement(react_router_dom_1.Route, { exact: true, path: "/", component: Home_1.default }),
+                React.createElement(react_router_dom_1.Route, { exact: true, path: "/login", component: Login_1.default }),
+                React.createElement(react_router_dom_1.Route, { exact: true, path: "/user", component: Work_1.default }),
+                React.createElement(react_router_dom_1.Route, { exact: true, path: "/about", component: About_1.default }),
+                React.createElement(react_router_dom_1.Route, { exact: true, path: "/contact", component: Contact_1.default }),
+                React.createElement(react_router_dom_1.Route, { component: NotFound_1.default }))));
+    };
+    return Routes;
+}(React.Component));
+exports.default = Routes;
+&nbsp;
+},'src/components/Routes.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","react-router-dom":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-router-dom/index.js","../pages/Login":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/Login.tsx","../pages/Home":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/Home.tsx","../pages/Work":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/Work.tsx","../pages/About":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/About.tsx","../pages/Contact":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/Contact.tsx","../pages/NotFound":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/NotFound.tsx"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUm91dGVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUm91dGVzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IscURBQWlEO0FBQ2pELHdDQUFtQztBQUNuQyxzQ0FBaUM7QUFDakMsc0NBQWlDO0FBQ2pDLHdDQUFtQztBQUNuQyw0Q0FBdUM7QUFDdkMsOENBQXlDO0FBRXpDO0lBQXFCLDBCQUF5QjtJQUE5Qzs7SUFnQkEsQ0FBQztJQWRHLHVCQUFNLEdBQU47UUFDSSxPQUFPLENBQ0g7WUFDSSxvQkFBQyx5QkFBTTtnQkFDSCxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLEdBQUcsRUFBQyxTQUFTLEVBQUUsY0FBSSxHQUFHO2dCQUMvQyxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLFFBQVEsRUFBQyxTQUFTLEVBQUUsZUFBSyxHQUFHO2dCQUNyRCxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLE9BQU8sRUFBQyxTQUFTLEVBQUUsY0FBSSxHQUFHO2dCQUNuRCxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLFFBQVEsRUFBQyxTQUFTLEVBQUUsZUFBSyxHQUFHO2dCQUNyRCxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLFVBQVUsRUFBQyxTQUFTLEVBQUUsaUJBQU8sR0FBRztnQkFDekQsb0JBQUMsd0JBQUssSUFBQyxTQUFTLEVBQUUsa0JBQVEsR0FBSSxDQUN6QixDQUNQLENBQ1QsQ0FBQztJQUNOLENBQUM7SUFDTCxhQUFDO0FBQUQsQ0FBQyxBQWhCRCxDQUFxQixLQUFLLENBQUMsU0FBUyxHQWdCbkM7QUFFRCxrQkFBZSxNQUFNLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBTd2l0Y2gsIFJvdXRlIH0gZnJvbSAncmVhY3Qtcm91dGVyLWRvbSc7XG5pbXBvcnQgTG9naW4gZnJvbSBcIi4uL3BhZ2VzL0xvZ2luXCI7XG5pbXBvcnQgSG9tZSBmcm9tIFwiLi4vcGFnZXMvSG9tZVwiO1xuaW1wb3J0IFdvcmsgZnJvbSBcIi4uL3BhZ2VzL1dvcmtcIjtcbmltcG9ydCBBYm91dCBmcm9tIFwiLi4vcGFnZXMvQWJvdXRcIjtcbmltcG9ydCBDb250YWN0IGZyb20gXCIuLi9wYWdlcy9Db250YWN0XCI7XG5pbXBvcnQgTm90Rm91bmQgZnJvbSBcIi4uL3BhZ2VzL05vdEZvdW5kXCI7XG5cbmNsYXNzIFJvdXRlcyBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8U3dpdGNoPlxuICAgICAgICAgICAgICAgICAgICA8Um91dGUgZXhhY3Q9e3RydWV9IHBhdGg9XCIvXCIgY29tcG9uZW50PXtIb21lfS8+XG4gICAgICAgICAgICAgICAgICAgIDxSb3V0ZSBleGFjdD17dHJ1ZX0gcGF0aD1cIi9sb2dpblwiIGNvbXBvbmVudD17TG9naW59Lz5cbiAgICAgICAgICAgICAgICAgICAgPFJvdXRlIGV4YWN0PXt0cnVlfSBwYXRoPVwiL3VzZXJcIiBjb21wb25lbnQ9e1dvcmt9Lz5cbiAgICAgICAgICAgICAgICAgICAgPFJvdXRlIGV4YWN0PXt0cnVlfSBwYXRoPVwiL2Fib3V0XCIgY29tcG9uZW50PXtBYm91dH0vPlxuICAgICAgICAgICAgICAgICAgICA8Um91dGUgZXhhY3Q9e3RydWV9IHBhdGg9XCIvY29udGFjdFwiIGNvbXBvbmVudD17Q29udGFjdH0vPlxuICAgICAgICAgICAgICAgICAgICA8Um91dGUgY29tcG9uZW50PXtOb3RGb3VuZH0gLz5cbiAgICAgICAgICAgICAgICA8L1N3aXRjaD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgUm91dGVzOyJdfQ==
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 14 2018 15:53:11 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
