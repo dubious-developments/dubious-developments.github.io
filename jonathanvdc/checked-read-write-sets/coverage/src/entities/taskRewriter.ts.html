@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/entities/taskRewriter.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/entities/</a> taskRewriter.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>12/12</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/jonathanvdc/UnSHACLed/src/entities/taskRewriter.ts']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * A simple task rewriter implementation that uses functions
+ * to implement its is-of-interest and maybe-concat operations.
+ */
+var SimpleTaskRewriter = /** @class */ (function () {
+    /**
+     * Creates a simple task method from two functions.
+     * @param isOfInterestImpl Decides if a particular task is of
+     * interest to this task rewriter.
+     * @param maybeConcatImpl Concatenates and rewrites two tasks
+     * that are both of interest and eligible for merging.
+     * Or doesn't.
+     */
+    function SimpleTaskRewriter(isOfInterestImpl, maybeConcatImpl) {
+        this.isOfInterestImpl = isOfInterestImpl;
+        this.maybeConcatImpl = maybeConcatImpl;
+    }
+    /**
+     * Decides if a particular task is of interest for this
+     * task rewriter.
+     * @param task The task to inspect.
+     * @returns `true` if the task rewriter wants to have the
+     * opportunity to maybe rewrite the task in the future;
+     * otherwise, `false`.
+     */
+    SimpleTaskRewriter.prototype.isOfInterest = function (task) {
+        return this.isOfInterestImpl(task);
+    };
+    /**
+     * Concatenates and rewrites two tasks that are both of interest
+     * and eligible for merging. Or doesn't.
+     * @param first The first task to merge.
+     * @param second The second task to merge.
+     * @returns A merged task if the tasks should be merged.
+     * Otherwise, `undefined`.
+     */
+    SimpleTaskRewriter.prototype.maybeConcat = function (first, second) {
+        return this.maybeConcatImpl(first, second);
+    };
+    return SimpleTaskRewriter;
+}());
+exports.SimpleTaskRewriter = SimpleTaskRewriter;
+&nbsp;
+},'src/entities/taskRewriter.ts',{"./task":"/home/travis/build/jonathanvdc/UnSHACLed/src/entities/task.ts"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGFza1Jld3JpdGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsidGFza1Jld3JpdGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBZ0RBOzs7R0FHRztBQUNIO0lBQ0k7Ozs7Ozs7T0FPRztJQUNILDRCQUNxQixnQkFBNkMsRUFDN0MsZUFBMkM7UUFEM0MscUJBQWdCLEdBQWhCLGdCQUFnQixDQUE2QjtRQUM3QyxvQkFBZSxHQUFmLGVBQWUsQ0FBNEI7SUFFaEUsQ0FBQztJQUVEOzs7Ozs7O09BT0c7SUFDSSx5Q0FBWSxHQUFuQixVQUFvQixJQUFXO1FBQzNCLE9BQU8sSUFBSSxDQUFDLGdCQUFnQixDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ3ZDLENBQUM7SUFFRDs7Ozs7OztPQU9HO0lBQ0ksd0NBQVcsR0FBbEIsVUFDSSxLQUFZLEVBQ1osTUFBYTtRQUViLE9BQU8sSUFBSSxDQUFDLGVBQWUsQ0FBQyxLQUFLLEVBQUUsTUFBTSxDQUFDLENBQUM7SUFDL0MsQ0FBQztJQUNMLHlCQUFDO0FBQUQsQ0FBQyxBQXpDRCxJQXlDQztBQXpDWSxnREFBa0IiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBUYXNrIH0gZnJvbSBcIi4vdGFza1wiO1xuXG4vKipcbiAqIFJld3JpdGVzIHRhc2tzIHRoYXQgYmVlbiBzY2hlZHVsZWQgYnV0IGhhdmUgbm90IHlldCBiZWVuXG4gKiBleGVjdXRlZC5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBUYXNrUmV3cml0ZXI8VFRhc2s+IHtcblxuICAgIC8vIFRoZSBydWxlcyBmb3IgdGFzayBtZXJnaW5nIGFyZSByYXRoZXIgY29tcGxleCBhbmRcbiAgICAvLyB3ZSBkb24ndCB3YW50IHRoZSB0YXNrIHJld3JpdGVycyB0aGVtc2VsdmVzIHRvIHRoaW5rXG4gICAgLy8gYWJvdXQgdGhlbS5cbiAgICAvL1xuICAgIC8vIEluc3RlYWQsIHdlJ2xsIHB1c2ggYWxsIG9mIHRoaXMgbG9naWMgaW4gdGhlIG1vZGVsIHRhc2tcbiAgICAvLyBxdWV1ZSBhbmQgZXhwb3NlIG9ubHkgYSBzaW1wbGUgdGFzayByZXdyaXRlciBBUEkgaGVyZS5cblxuICAgIC8qKlxuICAgICAqIERlY2lkZXMgaWYgYSBwYXJ0aWN1bGFyIHRhc2sgaXMgb2YgaW50ZXJlc3QgdG8gdGhpc1xuICAgICAqIHRhc2sgcmV3cml0ZXIuXG4gICAgICogQHBhcmFtIHRhc2sgVGhlIHRhc2sgdG8gaW5zcGVjdC5cbiAgICAgKiBAcmV0dXJucyBgdHJ1ZWAgaWYgdGhlIHRhc2sgcmV3cml0ZXIgd2FudHMgdG8gaGF2ZSB0aGVcbiAgICAgKiBvcHBvcnR1bml0eSB0byBtYXliZSByZXdyaXRlIHRoZSB0YXNrIGluIHRoZSBmdXR1cmU7XG4gICAgICogb3RoZXJ3aXNlLCBgZmFsc2VgLlxuICAgICAqL1xuICAgIGlzT2ZJbnRlcmVzdCh0YXNrOiBUVGFzayk6IGJvb2xlYW47XG5cbiAgICAvKipcbiAgICAgKiBDb25jYXRlbmF0ZXMgYW5kIHJld3JpdGVzIHR3byB0YXNrcyB0aGF0IGFyZSBib3RoIG9mIGludGVyZXN0XG4gICAgICogYW5kIGVsaWdpYmxlIGZvciBtZXJnaW5nLiBPciBkb2Vzbid0LlxuICAgICAqIEBwYXJhbSBmaXJzdCBUaGUgZmlyc3QgdGFzayB0byBtZXJnZS5cbiAgICAgKiBAcGFyYW0gc2Vjb25kIFRoZSBzZWNvbmQgdGFzayB0byBtZXJnZS5cbiAgICAgKiBAcmV0dXJucyBBIG1lcmdlZCB0YXNrIGlmIHRoZSB0YXNrcyBzaG91bGQgYmUgbWVyZ2VkLlxuICAgICAqIE90aGVyd2lzZSwgYHVuZGVmaW5lZGAuXG4gICAgICovXG4gICAgbWF5YmVDb25jYXQoXG4gICAgICAgIGZpcnN0OiBUVGFzayxcbiAgICAgICAgc2Vjb25kOiBUVGFzayk6XG4gICAgICAgIFRUYXNrIHwgdW5kZWZpbmVkO1xufVxuXG50eXBlIElzT2ZJbnRlcmVzdEZ1bmN0aW9uPFRUYXNrPiA9IChcbiAgICB0YXNrOiBUVGFzaykgPT5cbiAgICBib29sZWFuO1xuXG50eXBlIE1heWJlQ29uY2F0RnVuY3Rpb248VFRhc2s+ID0gKFxuICAgIGZpcnN0OiBUVGFzayxcbiAgICBzZWNvbmQ6IFRUYXNrKSA9PlxuICAgIFRUYXNrIHwgdW5kZWZpbmVkO1xuXG4vKipcbiAqIEEgc2ltcGxlIHRhc2sgcmV3cml0ZXIgaW1wbGVtZW50YXRpb24gdGhhdCB1c2VzIGZ1bmN0aW9uc1xuICogdG8gaW1wbGVtZW50IGl0cyBpcy1vZi1pbnRlcmVzdCBhbmQgbWF5YmUtY29uY2F0IG9wZXJhdGlvbnMuXG4gKi9cbmV4cG9ydCBjbGFzcyBTaW1wbGVUYXNrUmV3cml0ZXI8VFRhc2s+IGltcGxlbWVudHMgVGFza1Jld3JpdGVyPFRUYXNrPiB7XG4gICAgLyoqXG4gICAgICogQ3JlYXRlcyBhIHNpbXBsZSB0YXNrIG1ldGhvZCBmcm9tIHR3byBmdW5jdGlvbnMuXG4gICAgICogQHBhcmFtIGlzT2ZJbnRlcmVzdEltcGwgRGVjaWRlcyBpZiBhIHBhcnRpY3VsYXIgdGFzayBpcyBvZlxuICAgICAqIGludGVyZXN0IHRvIHRoaXMgdGFzayByZXdyaXRlci5cbiAgICAgKiBAcGFyYW0gbWF5YmVDb25jYXRJbXBsIENvbmNhdGVuYXRlcyBhbmQgcmV3cml0ZXMgdHdvIHRhc2tzXG4gICAgICogdGhhdCBhcmUgYm90aCBvZiBpbnRlcmVzdCBhbmQgZWxpZ2libGUgZm9yIG1lcmdpbmcuXG4gICAgICogT3IgZG9lc24ndC5cbiAgICAgKi9cbiAgICBwdWJsaWMgY29uc3RydWN0b3IoXG4gICAgICAgIHByaXZhdGUgcmVhZG9ubHkgaXNPZkludGVyZXN0SW1wbDogSXNPZkludGVyZXN0RnVuY3Rpb248VFRhc2s+LFxuICAgICAgICBwcml2YXRlIHJlYWRvbmx5IG1heWJlQ29uY2F0SW1wbDogTWF5YmVDb25jYXRGdW5jdGlvbjxUVGFzaz4pIHtcblxuICAgIH1cblxuICAgIC8qKlxuICAgICAqIERlY2lkZXMgaWYgYSBwYXJ0aWN1bGFyIHRhc2sgaXMgb2YgaW50ZXJlc3QgZm9yIHRoaXNcbiAgICAgKiB0YXNrIHJld3JpdGVyLlxuICAgICAqIEBwYXJhbSB0YXNrIFRoZSB0YXNrIHRvIGluc3BlY3QuXG4gICAgICogQHJldHVybnMgYHRydWVgIGlmIHRoZSB0YXNrIHJld3JpdGVyIHdhbnRzIHRvIGhhdmUgdGhlXG4gICAgICogb3Bwb3J0dW5pdHkgdG8gbWF5YmUgcmV3cml0ZSB0aGUgdGFzayBpbiB0aGUgZnV0dXJlO1xuICAgICAqIG90aGVyd2lzZSwgYGZhbHNlYC5cbiAgICAgKi9cbiAgICBwdWJsaWMgaXNPZkludGVyZXN0KHRhc2s6IFRUYXNrKTogYm9vbGVhbiB7XG4gICAgICAgIHJldHVybiB0aGlzLmlzT2ZJbnRlcmVzdEltcGwodGFzayk7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogQ29uY2F0ZW5hdGVzIGFuZCByZXdyaXRlcyB0d28gdGFza3MgdGhhdCBhcmUgYm90aCBvZiBpbnRlcmVzdFxuICAgICAqIGFuZCBlbGlnaWJsZSBmb3IgbWVyZ2luZy4gT3IgZG9lc24ndC5cbiAgICAgKiBAcGFyYW0gZmlyc3QgVGhlIGZpcnN0IHRhc2sgdG8gbWVyZ2UuXG4gICAgICogQHBhcmFtIHNlY29uZCBUaGUgc2Vjb25kIHRhc2sgdG8gbWVyZ2UuXG4gICAgICogQHJldHVybnMgQSBtZXJnZWQgdGFzayBpZiB0aGUgdGFza3Mgc2hvdWxkIGJlIG1lcmdlZC5cbiAgICAgKiBPdGhlcndpc2UsIGB1bmRlZmluZWRgLlxuICAgICAqL1xuICAgIHB1YmxpYyBtYXliZUNvbmNhdChcbiAgICAgICAgZmlyc3Q6IFRUYXNrLFxuICAgICAgICBzZWNvbmQ6IFRUYXNrKTogVFRhc2sgfCB1bmRlZmluZWQge1xuXG4gICAgICAgIHJldHVybiB0aGlzLm1heWJlQ29uY2F0SW1wbChmaXJzdCwgc2Vjb25kKTtcbiAgICB9XG59XG4iXX0=
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 10:01:40 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
