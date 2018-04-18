@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/entities/taskInstruction.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/entities/</a> taskInstruction.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.37% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>37/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.3% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>36/37</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">174×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/entities/taskInstruction.ts']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Collections = require("typescript-collections");
+/**
+ * A task represented as an instruction in SSA form.
+ */
+var TaskInstruction = /** @class */ (function () {
+    /**
+     * Creates a task instruction.
+     * @param task The task that is stored in this instruction.
+     * @param data The captured data for this instruction.
+     */
+    function TaskInstruction(task, data) {
+        this.index = TaskInstruction.generateInstructionIndex();
+        this.task = task;
+        this.data = data;
+        this.dependencies = new Collections.Dictionary();
+        this.invertedDependencies = new Collections.Set();
+    }
+    /**
+     * Get the priority of a task instruction.
+     * @param instruction A task instruction to examine.
+     * @returns The priority associated with the task instruction.
+     */
+    TaskInstruction.getPriority = function (instruction) {
+        return instruction.task.metadata.priority;
+    };
+    TaskInstruction.generateInstructionIndex = function () {
+        var result = TaskInstruction.taskCounter;
+        TaskInstruction.taskCounter = (TaskInstruction.taskCounter + 1) % (1 &lt;&lt; 31 - 1);
+        return result;
+    };
+    Object.defineProperty(TaskInstruction.prototype, "isEligibleForExecution", {
+        /**
+         * Tests if this instruction is eligible for execution.
+         */
+        get: function () {
+            return this.dependencies.isEmpty();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Adds a dependency to this instruction.
+     * @param dependency The instruction on which this instruction is dependent.
+     * @param component The component supplied by that instruction.
+     */
+    TaskInstruction.prototype.addDependency = function (dependency, component) {
+        var componentSet = this.dependencies.getValue(dependency);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (componentSet === undefined) {
+            componentSet = new Collections.Set();
+        }
+        componentSet.add(component);
+        this.dependencies.setValue(dependency, componentSet);
+        dependency.invertedDependencies.add(this);
+    };
+    /**
+     * Transfers the this instruction to a dependent instruction.
+     * @param target The instruction to which data is copied.
+     */
+    TaskInstruction.prototype.transferOutput = function (target) {
+        var _this = this;
+        var componentsToTransfer = target.dependencies.getValue(this);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (componentsToTransfer === undefined) {
+<span class="cstat-no" title="statement not covered" >            throw new Error("Cannot transfer components to independent instruction.");</span>
+        }
+        componentsToTransfer.forEach(function (component) {
+            target.data.setComponent(component, _this.data.getComponent(component));
+        });
+    };
+    /**
+     * Gets a string representation for this instruction.
+     */
+    TaskInstruction.prototype.toString = function () {
+        return "Instruction " + this.index;
+    };
+    TaskInstruction.taskCounter = 0;
+    return TaskInstruction;
+}());
+exports.TaskInstruction = TaskInstruction;
+&nbsp;
+},'src/entities/taskInstruction.ts',{"typescript-collections":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/typescript-collections/dist/lib/index.js","./task":"/home/travis/build/dubious-developments/UnSHACLed/src/entities/task.ts","./modelTaskMetadata":"/home/travis/build/dubious-developments/UnSHACLed/src/entities/modelTaskMetadata.ts","./modelData":"/home/travis/build/dubious-developments/UnSHACLed/src/entities/modelData.ts"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGFza0luc3RydWN0aW9uLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsidGFza0luc3RydWN0aW9uLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsb0RBQXNEO0FBZXREOztHQUVHO0FBQ0g7SUFzQ0k7Ozs7T0FJRztJQUNILHlCQUFtQixJQUFlLEVBQUUsSUFBZTtRQUMvQyxJQUFJLENBQUMsS0FBSyxHQUFHLGVBQWUsQ0FBQyx3QkFBd0IsRUFBRSxDQUFDO1FBQ3hELElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1FBQ2pCLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDO1FBQ2pCLElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxXQUFXLENBQUMsVUFBVSxFQUFvRCxDQUFDO1FBQ25HLElBQUksQ0FBQyxvQkFBb0IsR0FBRyxJQUFJLFdBQVcsQ0FBQyxHQUFHLEVBQW1CLENBQUM7SUFDdkUsQ0FBQztJQUVEOzs7O09BSUc7SUFDVywyQkFBVyxHQUF6QixVQUEwQixXQUE0QjtRQUNsRCxPQUFPLFdBQVcsQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLFFBQVEsQ0FBQztJQUM5QyxDQUFDO0lBRWMsd0NBQXdCLEdBQXZDO1FBQ0ksSUFBSSxNQUFNLEdBQUcsZUFBZSxDQUFDLFdBQVcsQ0FBQztRQUN6QyxlQUFlLENBQUMsV0FBVyxHQUFHLENBQUMsZUFBZSxDQUFDLFdBQVcsR0FBRyxDQUFDLENBQUMsR0FBRyxDQUFDLENBQUMsSUFBSSxFQUFFLEdBQUcsQ0FBQyxDQUFDLENBQUM7UUFDaEYsT0FBTyxNQUFNLENBQUM7SUFDbEIsQ0FBQztJQUtELHNCQUFXLG1EQUFzQjtRQUhqQzs7V0FFRzthQUNIO1lBQ0ksT0FBTyxJQUFJLENBQUMsWUFBWSxDQUFDLE9BQU8sRUFBRSxDQUFDO1FBQ3ZDLENBQUM7OztPQUFBO0lBRUQ7Ozs7T0FJRztJQUNJLHVDQUFhLEdBQXBCLFVBQXFCLFVBQTJCLEVBQUUsU0FBeUI7UUFDdkUsSUFBSSxZQUFZLEdBQUcsSUFBSSxDQUFDLFlBQVksQ0FBQyxRQUFRLENBQUMsVUFBVSxDQUFDLENBQUM7UUFDMUQsSUFBSSxZQUFZLEtBQUssU0FBUyxFQUFFO1lBQzVCLFlBQVksR0FBRyxJQUFJLFdBQVcsQ0FBQyxHQUFHLEVBQWtCLENBQUM7U0FDeEQ7UUFDRCxZQUFZLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxDQUFDO1FBQzVCLElBQUksQ0FBQyxZQUFZLENBQUMsUUFBUSxDQUFDLFVBQVUsRUFBRSxZQUFZLENBQUMsQ0FBQztRQUNyRCxVQUFVLENBQUMsb0JBQW9CLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQzlDLENBQUM7SUFFRDs7O09BR0c7SUFDSSx3Q0FBYyxHQUFyQixVQUFzQixNQUF1QjtRQUE3QyxpQkFXQztRQVZHLElBQUksb0JBQW9CLEdBQUcsTUFBTSxDQUFDLFlBQVksQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDOUQsSUFBSSxvQkFBb0IsS0FBSyxTQUFTLEVBQUU7WUFDcEMsTUFBTSxJQUFJLEtBQUssQ0FBQyx3REFBd0QsQ0FBQyxDQUFDO1NBQzdFO1FBRUQsb0JBQW9CLENBQUMsT0FBTyxDQUFDLFVBQUEsU0FBUztZQUNsQyxNQUFNLENBQUMsSUFBSSxDQUFDLFlBQVksQ0FDcEIsU0FBUyxFQUNULEtBQUksQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFNLFNBQVMsQ0FBQyxDQUFDLENBQUM7UUFDaEQsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQ7O09BRUc7SUFDSSxrQ0FBUSxHQUFmO1FBQ0ksT0FBTyxpQkFBZSxJQUFJLENBQUMsS0FBTyxDQUFDO0lBQ3ZDLENBQUM7SUE3R2MsMkJBQVcsR0FBRyxDQUFDLENBQUM7SUE4R25DLHNCQUFDO0NBQUEsQUEvR0QsSUErR0M7QUEvR1ksMENBQWUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBDb2xsZWN0aW9ucyBmcm9tIFwidHlwZXNjcmlwdC1jb2xsZWN0aW9uc1wiO1xuaW1wb3J0IHsgVGFzaywgT3BhcXVlVGFzayB9IGZyb20gXCIuL3Rhc2tcIjtcbmltcG9ydCB7IE1vZGVsVGFza01ldGFkYXRhLCBNb2RlbENvbXBvbmVudCB9IGZyb20gXCIuL21vZGVsVGFza01ldGFkYXRhXCI7XG5pbXBvcnQgeyBNb2RlbERhdGEgfSBmcm9tIFwiLi9tb2RlbERhdGFcIjtcblxuLyoqXG4gKiBUaGUgdHlwZSBvZiB0YXNrIHVzZWQgYnkgdGhlIG1vZGVsLlxuICovXG5leHBvcnQgdHlwZSBNb2RlbFRhc2sgPSBUYXNrPE1vZGVsRGF0YSwgTW9kZWxUYXNrTWV0YWRhdGE+O1xuXG4vKipcbiAqIEFuIG9wYXF1ZSB0YXNrIHN1aXRhYmxlIGZvciBleGVjdXRpb24gb24gdGhlIG1vZGVsLlxuICovXG5leHBvcnQgdHlwZSBPcGFxdWVNb2RlbFRhc2sgPSBPcGFxdWVUYXNrPE1vZGVsRGF0YSwgTW9kZWxUYXNrTWV0YWRhdGE+O1xuXG4vKipcbiAqIEEgdGFzayByZXByZXNlbnRlZCBhcyBhbiBpbnN0cnVjdGlvbiBpbiBTU0EgZm9ybS5cbiAqL1xuZXhwb3J0IGNsYXNzIFRhc2tJbnN0cnVjdGlvbiB7XG4gICAgcHJpdmF0ZSBzdGF0aWMgdGFza0NvdW50ZXIgPSAwO1xuXG4gICAgLyoqXG4gICAgICogQW4gaW5zdHJ1Y3Rpb24tdW5pcXVlIGluZGV4LlxuICAgICAqXG4gICAgICogTk9URTogd2UgbmVlZCB0aGVzZSBpbmRpY2VzIHRvIG1ha2Ugc2V0cyB3b3JrLiBKYXZhU2NyaXB0XG4gICAgICogYXJyYXlzIGFyZSBzdHVwaWQgYW5kIGFzc3VtZSB0aGF0IG9iamVjdHMgYXJlIGVxdWFsIGlmZlxuICAgICAqIHRoZWlyIHN0cmluZyByZXByZXNlbnRhdGlvbnMgYXJlLiBBZGRpdGlvbmFsbHksIHN0cmluZ1xuICAgICAqIHJlcHJlc2VudGF0aW9ucyBhcmUgKnN0cnVjdHVyYWwsKiBzbyB3aXRob3V0IHRoaXMgaW5kZXgsXG4gICAgICogdGhlIHN0cmluZyByZXByZXNlbnRhdGlvbiBmb3IgdHdvIGRpZmZlcmVudCBpbnN0cnVjdGlvbnNcbiAgICAgKiB3b3VsZCBiZSB0aGUgc2FtZS4gVGhhdCBicmVha3Mgc2V0cyBhbmQgaGFzaCBtYXBzLCB3aGljaFxuICAgICAqIHdlIGNhbid0IGhhdmUuXG4gICAgICovXG4gICAgcHVibGljIHJlYWRvbmx5IGluZGV4OiBudW1iZXI7XG5cbiAgICAvKipcbiAgICAgKiBUaGUgdGFzayB0aGF0IGlzIHN0b3JlZCBpbiB0aGlzIGluc3RydWN0aW9uLlxuICAgICAqL1xuICAgIHB1YmxpYyB0YXNrOiBNb2RlbFRhc2s7XG5cbiAgICAvKipcbiAgICAgKiBUaGUgbW9kZWwgZGF0YSBjYXB0dXJlZCBieSB0aGlzIGluc3RydWN0aW9uLlxuICAgICAqL1xuICAgIHB1YmxpYyBkYXRhOiBNb2RlbERhdGE7XG5cbiAgICAvKipcbiAgICAgKiBUaGUgc2V0IG9mIGluc3RydWN0aW9ucyB0aGF0IG11c3QgY29tcGxldGUgYmVmb3JlIHRoZSB0YXNrXG4gICAgICogcmVwcmVzZW50ZWQgYnkgdGhpcyBpbnN0cnVjdGlvbiBjYW4gYmUgZXhlY3V0ZWQuIEVhY2hcbiAgICAgKiBpbnN0cnVjdGlvbiBpcyBtYXBwZWQgdG8gdGhlIHNldCBvZiBjb21wb25lbnRzIGl0IHN1cHBsaWVzLlxuICAgICAqL1xuICAgIHB1YmxpYyBkZXBlbmRlbmNpZXM6IENvbGxlY3Rpb25zLkRpY3Rpb25hcnk8VGFza0luc3RydWN0aW9uLCBDb2xsZWN0aW9ucy5TZXQ8TW9kZWxDb21wb25lbnQ+PjtcblxuICAgIC8qKlxuICAgICAqIFRoZSBzZXQgb2YgaW5zdHJ1Y3Rpb25zIHRoYXQgaGF2ZSBhIGRlcGVuZGVuY3kgb24gdGhpcyBpbnN0cnVjdGlvbi5cbiAgICAgKi9cbiAgICBwdWJsaWMgaW52ZXJ0ZWREZXBlbmRlbmNpZXM6IENvbGxlY3Rpb25zLlNldDxUYXNrSW5zdHJ1Y3Rpb24+O1xuXG4gICAgLyoqXG4gICAgICogQ3JlYXRlcyBhIHRhc2sgaW5zdHJ1Y3Rpb24uXG4gICAgICogQHBhcmFtIHRhc2sgVGhlIHRhc2sgdGhhdCBpcyBzdG9yZWQgaW4gdGhpcyBpbnN0cnVjdGlvbi5cbiAgICAgKiBAcGFyYW0gZGF0YSBUaGUgY2FwdHVyZWQgZGF0YSBmb3IgdGhpcyBpbnN0cnVjdGlvbi5cbiAgICAgKi9cbiAgICBwdWJsaWMgY29uc3RydWN0b3IodGFzazogTW9kZWxUYXNrLCBkYXRhOiBNb2RlbERhdGEpIHtcbiAgICAgICAgdGhpcy5pbmRleCA9IFRhc2tJbnN0cnVjdGlvbi5nZW5lcmF0ZUluc3RydWN0aW9uSW5kZXgoKTtcbiAgICAgICAgdGhpcy50YXNrID0gdGFzaztcbiAgICAgICAgdGhpcy5kYXRhID0gZGF0YTtcbiAgICAgICAgdGhpcy5kZXBlbmRlbmNpZXMgPSBuZXcgQ29sbGVjdGlvbnMuRGljdGlvbmFyeTxUYXNrSW5zdHJ1Y3Rpb24sIENvbGxlY3Rpb25zLlNldDxNb2RlbENvbXBvbmVudD4+KCk7XG4gICAgICAgIHRoaXMuaW52ZXJ0ZWREZXBlbmRlbmNpZXMgPSBuZXcgQ29sbGVjdGlvbnMuU2V0PFRhc2tJbnN0cnVjdGlvbj4oKTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBHZXQgdGhlIHByaW9yaXR5IG9mIGEgdGFzayBpbnN0cnVjdGlvbi5cbiAgICAgKiBAcGFyYW0gaW5zdHJ1Y3Rpb24gQSB0YXNrIGluc3RydWN0aW9uIHRvIGV4YW1pbmUuXG4gICAgICogQHJldHVybnMgVGhlIHByaW9yaXR5IGFzc29jaWF0ZWQgd2l0aCB0aGUgdGFzayBpbnN0cnVjdGlvbi5cbiAgICAgKi9cbiAgICBwdWJsaWMgc3RhdGljIGdldFByaW9yaXR5KGluc3RydWN0aW9uOiBUYXNrSW5zdHJ1Y3Rpb24pOiBudW1iZXIge1xuICAgICAgICByZXR1cm4gaW5zdHJ1Y3Rpb24udGFzay5tZXRhZGF0YS5wcmlvcml0eTtcbiAgICB9XG5cbiAgICBwcml2YXRlIHN0YXRpYyBnZW5lcmF0ZUluc3RydWN0aW9uSW5kZXgoKTogbnVtYmVyIHtcbiAgICAgICAgbGV0IHJlc3VsdCA9IFRhc2tJbnN0cnVjdGlvbi50YXNrQ291bnRlcjtcbiAgICAgICAgVGFza0luc3RydWN0aW9uLnRhc2tDb3VudGVyID0gKFRhc2tJbnN0cnVjdGlvbi50YXNrQ291bnRlciArIDEpICUgKDEgPDwgMzEgLSAxKTtcbiAgICAgICAgcmV0dXJuIHJlc3VsdDtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBUZXN0cyBpZiB0aGlzIGluc3RydWN0aW9uIGlzIGVsaWdpYmxlIGZvciBleGVjdXRpb24uXG4gICAgICovXG4gICAgcHVibGljIGdldCBpc0VsaWdpYmxlRm9yRXhlY3V0aW9uKCk6IGJvb2xlYW4ge1xuICAgICAgICByZXR1cm4gdGhpcy5kZXBlbmRlbmNpZXMuaXNFbXB0eSgpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIEFkZHMgYSBkZXBlbmRlbmN5IHRvIHRoaXMgaW5zdHJ1Y3Rpb24uXG4gICAgICogQHBhcmFtIGRlcGVuZGVuY3kgVGhlIGluc3RydWN0aW9uIG9uIHdoaWNoIHRoaXMgaW5zdHJ1Y3Rpb24gaXMgZGVwZW5kZW50LlxuICAgICAqIEBwYXJhbSBjb21wb25lbnQgVGhlIGNvbXBvbmVudCBzdXBwbGllZCBieSB0aGF0IGluc3RydWN0aW9uLlxuICAgICAqL1xuICAgIHB1YmxpYyBhZGREZXBlbmRlbmN5KGRlcGVuZGVuY3k6IFRhc2tJbnN0cnVjdGlvbiwgY29tcG9uZW50OiBNb2RlbENvbXBvbmVudCkge1xuICAgICAgICBsZXQgY29tcG9uZW50U2V0ID0gdGhpcy5kZXBlbmRlbmNpZXMuZ2V0VmFsdWUoZGVwZW5kZW5jeSk7XG4gICAgICAgIGlmIChjb21wb25lbnRTZXQgPT09IHVuZGVmaW5lZCkge1xuICAgICAgICAgICAgY29tcG9uZW50U2V0ID0gbmV3IENvbGxlY3Rpb25zLlNldDxNb2RlbENvbXBvbmVudD4oKTtcbiAgICAgICAgfVxuICAgICAgICBjb21wb25lbnRTZXQuYWRkKGNvbXBvbmVudCk7XG4gICAgICAgIHRoaXMuZGVwZW5kZW5jaWVzLnNldFZhbHVlKGRlcGVuZGVuY3ksIGNvbXBvbmVudFNldCk7XG4gICAgICAgIGRlcGVuZGVuY3kuaW52ZXJ0ZWREZXBlbmRlbmNpZXMuYWRkKHRoaXMpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIFRyYW5zZmVycyB0aGUgdGhpcyBpbnN0cnVjdGlvbiB0byBhIGRlcGVuZGVudCBpbnN0cnVjdGlvbi5cbiAgICAgKiBAcGFyYW0gdGFyZ2V0IFRoZSBpbnN0cnVjdGlvbiB0byB3aGljaCBkYXRhIGlzIGNvcGllZC5cbiAgICAgKi9cbiAgICBwdWJsaWMgdHJhbnNmZXJPdXRwdXQodGFyZ2V0OiBUYXNrSW5zdHJ1Y3Rpb24pOiB2b2lkIHtcbiAgICAgICAgbGV0IGNvbXBvbmVudHNUb1RyYW5zZmVyID0gdGFyZ2V0LmRlcGVuZGVuY2llcy5nZXRWYWx1ZSh0aGlzKTtcbiAgICAgICAgaWYgKGNvbXBvbmVudHNUb1RyYW5zZmVyID09PSB1bmRlZmluZWQpIHtcbiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcihcIkNhbm5vdCB0cmFuc2ZlciBjb21wb25lbnRzIHRvIGluZGVwZW5kZW50IGluc3RydWN0aW9uLlwiKTtcbiAgICAgICAgfVxuXG4gICAgICAgIGNvbXBvbmVudHNUb1RyYW5zZmVyLmZvckVhY2goY29tcG9uZW50ID0+IHtcbiAgICAgICAgICAgIHRhcmdldC5kYXRhLnNldENvbXBvbmVudDxhbnk+KFxuICAgICAgICAgICAgICAgIGNvbXBvbmVudCxcbiAgICAgICAgICAgICAgICB0aGlzLmRhdGEuZ2V0Q29tcG9uZW50PGFueT4oY29tcG9uZW50KSk7XG4gICAgICAgIH0pO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIEdldHMgYSBzdHJpbmcgcmVwcmVzZW50YXRpb24gZm9yIHRoaXMgaW5zdHJ1Y3Rpb24uXG4gICAgICovXG4gICAgcHVibGljIHRvU3RyaW5nKCk6IHN0cmluZyB7XG4gICAgICAgIHJldHVybiBgSW5zdHJ1Y3Rpb24gJHt0aGlzLmluZGV4fWA7XG4gICAgfVxufVxuIl19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 12:16:03 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
