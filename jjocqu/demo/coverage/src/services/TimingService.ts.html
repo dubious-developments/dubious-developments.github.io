@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/services/TimingService.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/services/</a> TimingService.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.64% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/11</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/jjocqu/UnSHACLed/src/services/TimingService.ts']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * This class is used to store the time since the last user action
+ * A user action is a click or a key pressed
+ */
+var TimingService = /** @class */ (function () {
+<span class="fstat-no" title="function not covered" >    function TimingService() {</span>
+        // number of milliseconds user needs to be inactive
+<span class="cstat-no" title="statement not covered" >        this.ms = 2000;</span>
+    }
+    /**
+     * @param f the function to execute when the user becomes idle
+     */
+    TimingService.prototype.userAction = <span class="fstat-no" title="function not covered" >function (f) {</span>
+        // remove previous timeouts by user action
+<span class="cstat-no" title="statement not covered" >        if (this.plannedTimeout) {</span>
+<span class="cstat-no" title="statement not covered" >            clearTimeout(this.plannedTimeout);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.plannedTimeout = setTimeout(f, this.ms);</span>
+    };
+    return TimingService;
+}());
+exports.default = TimingService;
+&nbsp;
+},'src/services/TimingService.ts',{}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGltaW5nU2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlRpbWluZ1NlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7O0dBR0c7QUFDSDtJQUFBO1FBRUksbURBQW1EO1FBQzNDLE9BQUUsR0FBVyxJQUFJLENBQUM7SUFpQjlCLENBQUM7SUFaRzs7T0FFRztJQUNJLGtDQUFVLEdBQWpCLFVBQWtCLENBQWU7UUFDN0IsMENBQTBDO1FBQzFDLElBQUksSUFBSSxDQUFDLGNBQWMsRUFBRTtZQUNyQixZQUFZLENBQUMsSUFBSSxDQUFDLGNBQWMsQ0FBQyxDQUFDO1NBQ3JDO1FBRUQsSUFBSSxDQUFDLGNBQWMsR0FBRyxVQUFVLENBQUMsQ0FBQyxFQUFFLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQztJQUNqRCxDQUFDO0lBRUwsb0JBQUM7QUFBRCxDQUFDLEFBcEJELElBb0JDO0FBRUQsa0JBQWUsYUFBYSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBUaGlzIGNsYXNzIGlzIHVzZWQgdG8gc3RvcmUgdGhlIHRpbWUgc2luY2UgdGhlIGxhc3QgdXNlciBhY3Rpb25cbiAqIEEgdXNlciBhY3Rpb24gaXMgYSBjbGljayBvciBhIGtleSBwcmVzc2VkXG4gKi9cbmNsYXNzIFRpbWluZ1NlcnZpY2Uge1xuXG4gICAgLy8gbnVtYmVyIG9mIG1pbGxpc2Vjb25kcyB1c2VyIG5lZWRzIHRvIGJlIGluYWN0aXZlXG4gICAgcHJpdmF0ZSBtczogbnVtYmVyID0gMjAwMDtcblxuICAgIC8vIHRoZSB0aW1lb3V0XG4gICAgcHJpdmF0ZSBwbGFubmVkVGltZW91dDogYW55O1xuXG4gICAgLyoqXG4gICAgICogQHBhcmFtIGYgdGhlIGZ1bmN0aW9uIHRvIGV4ZWN1dGUgd2hlbiB0aGUgdXNlciBiZWNvbWVzIGlkbGVcbiAgICAgKi9cbiAgICBwdWJsaWMgdXNlckFjdGlvbihmOiAoKCkgPT4gdm9pZCkpOiB2b2lkIHtcbiAgICAgICAgLy8gcmVtb3ZlIHByZXZpb3VzIHRpbWVvdXRzIGJ5IHVzZXIgYWN0aW9uXG4gICAgICAgIGlmICh0aGlzLnBsYW5uZWRUaW1lb3V0KSB7XG4gICAgICAgICAgICBjbGVhclRpbWVvdXQodGhpcy5wbGFubmVkVGltZW91dCk7XG4gICAgICAgIH1cblxuICAgICAgICB0aGlzLnBsYW5uZWRUaW1lb3V0ID0gc2V0VGltZW91dChmLCB0aGlzLm1zKTtcbiAgICB9XG5cbn1cblxuZXhwb3J0IGRlZmF1bHQgVGltaW5nU2VydmljZTsiXX0=
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 14:38:18 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
