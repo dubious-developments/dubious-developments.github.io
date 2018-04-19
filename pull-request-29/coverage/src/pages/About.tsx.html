@@ -77,7 +77,29 @@
 32
 33
 34
-35</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -99,6 +121,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,23 +179,45 @@ var About = /** @class */ (function (_super) {
 <span class="cstat-no" title="statement not covered" >        return (React.createElement("div", null,</span>
             React.createElement(semantic_ui_react_1.Segment, { inverted: true, textAlign: "center", style: { height: '100vh' }, vertical: true },
                 React.createElement(navbarHome_1.default, null),
-                React.createElement(semantic_ui_react_1.Container, { text: true, style: { marginTop: '7em' } },
-                    React.createElement(semantic_ui_react_1.Header, { as: 'h1', color: "teal" }, "About UnSHACLed"),
-                    React.createElement("p", null, " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis vehicula ante. Proin sapien ante, bibendum eu porttitor nec, elementum cursus diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin et sollicitudin neque. Nullam at quam eu purus fringilla dictum. In ut elit eu diam accumsan efficitur in id purus. Sed eget urna vel ligula bibendum molestie volutpat non neque. Aliquam tincidunt vel purus quis aliquet. Maecenas ac mi magna.")))));
+                React.createElement(semantic_ui_react_1.Container, { text: true, style: { marginTop: '2em' }, textAlign: "left" },
+                    React.createElement(semantic_ui_react_1.Header, { as: 'h3', color: "teal" }, "Semantic Web?"),
+                    React.createElement("p", null,
+                        React.createElement("small", null, "The Semantic Web is an extension of the current Web expanding it with meaning and allowing machines to reason about information in a human-like way. Despite its good intention, the abundance of unstructured data within the Semantic Web hampers the collaboration between different entities. To overcome this, SHACL allows people to set up constraints for what their data should look like so one can ascertain its exact format and look. Crucially, machines can also check whether data conforms to the constraints, making the contract between collaborating entities verifiable and offering more structure to the Semantic Web."))),
+                React.createElement(semantic_ui_react_1.Container, { text: true, style: { marginTop: '2em' }, textAlign: "left" },
+                    React.createElement(semantic_ui_react_1.Header, { as: 'h3', color: "teal" }, "Why UnSHACLed?"),
+                    React.createElement("p", null,
+                        React.createElement("small", null, "Current constraint editors are mostly text-based. The problem with these becomes clear looking at a similar problem: imagine developing UML rules by typing them. You immediately feel that this would be a slow and repetitive process in contrast to creating UML with a design tool. Our product solves a similar issue, but with SHACL instead of UML. Using a visual editor/IDE enables users to easily adopt an unfamiliar technology due to its intuitive visualization which abstracts most of the complexity of the underlying technology. In addition, it increases productivity, allowing for faster development. Our tool also allows for collaborative editing, so SHACL experts and non-experts can easily work together and assist each other."))),
+                React.createElement(semantic_ui_react_1.Container, { text: true, style: { marginTop: '2em' }, textAlign: "left" },
+                    React.createElement(semantic_ui_react_1.Header, { as: 'h3', color: "teal" }, "Features"),
+                    React.createElement("p", null,
+                        React.createElement("small", null, "To allow intuitive, fast development of constraints and a clear detection of non-conforming data, our product offers several features:")),
+                    React.createElement(semantic_ui_react_1.List, { bulleted: true },
+                        React.createElement(semantic_ui_react_1.List.Item, null,
+                            React.createElement("small", null, "An innovative way of visualizing data and constraints")),
+                        React.createElement(semantic_ui_react_1.List.Item, null,
+                            React.createElement("small", null, "Intuitive building and editing of your own constraints in a visual manner")),
+                        React.createElement(semantic_ui_react_1.List.Item, null,
+                            React.createElement("small", null, "Pointing out errors clearly, giving users the context they need to understand why their data is non-conforming.")),
+                        React.createElement(semantic_ui_react_1.List.Item, null,
+                            React.createElement("small", null, "Creating templates to further enable rapid development and prevent a repetitive workflow")),
+                        React.createElement(semantic_ui_react_1.List.Item, null,
+                            React.createElement("small", null, "Working together with others to gain more experience regarding a new technology")),
+                        React.createElement(semantic_ui_react_1.List.Item, null,
+                            React.createElement("small", null, "Save and exchange your constructed formats")))))));
     };
     return About;
 }(React.Component));
 exports.default = About;
 &nbsp;
 },'src/pages/About.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","../components/navbarHome":"/home/travis/build/dubious-developments/UnSHACLed/src/components/navbarHome.tsx"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQWJvdXQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJBYm91dC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUErRDtBQUMvRCx1REFBOEM7QUFFOUM7SUFBb0IseUJBQXlCO0lBQTdDOztJQTZCQSxDQUFDO0lBM0JHLHNCQUFNLEdBQU47UUFDSSxPQUFPLENBQ0g7WUFDSSxvQkFBQywyQkFBTyxJQUNKLFFBQVEsRUFBRSxJQUFJLEVBQ2QsU0FBUyxFQUFDLFFBQVEsRUFDbEIsS0FBSyxFQUFFLEVBQUMsTUFBTSxFQUFFLE9BQU8sRUFBQyxFQUN4QixRQUFRLEVBQUUsSUFBSTtnQkFFZCxvQkFBQyxvQkFBTSxPQUFFO2dCQUNULG9CQUFDLDZCQUFTLElBQUMsSUFBSSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsRUFBQyxTQUFTLEVBQUUsS0FBSyxFQUFDO29CQUM1QyxvQkFBQywwQkFBTSxJQUFDLEVBQUUsRUFBQyxJQUFJLEVBQUMsS0FBSyxFQUFDLE1BQU0sc0JBQXlCO29CQUNyRCxtaEJBUUksQ0FDSSxDQUNOLENBQ1IsQ0FDVCxDQUNJO0lBQ1QsQ0FBQztJQUNMLFlBQUM7QUFBRCxDQUFDLEFBN0JELENBQW9CLEtBQUssQ0FBQyxTQUFTLEdBNkJsQztBQUNELGtCQUFlLEtBQUssQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IFNlZ21lbnQsIENvbnRhaW5lciwgSGVhZGVyIH0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuaW1wb3J0IE5hdmJhciBmcm9tICcuLi9jb21wb25lbnRzL25hdmJhckhvbWUnO1xuXG5jbGFzcyBBYm91dCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8U2VnbWVudFxuICAgICAgICAgICAgICAgICAgICBpbnZlcnRlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICAgICAgdGV4dEFsaWduPVwiY2VudGVyXCJcbiAgICAgICAgICAgICAgICAgICAgc3R5bGU9e3toZWlnaHQ6ICcxMDB2aCd9fVxuICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbD17dHJ1ZX1cbiAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgIDxOYXZiYXIvPlxuICAgICAgICAgICAgICAgICAgICA8Q29udGFpbmVyIHRleHQ9e3RydWV9IHN0eWxlPXt7bWFyZ2luVG9wOiAnN2VtJ319PlxuICAgICAgICAgICAgICAgICAgICAgICAgPEhlYWRlciBhcz0naDEnIGNvbG9yPVwidGVhbFwiPkFib3V0IFVuU0hBQ0xlZDwvSGVhZGVyPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHA+IExvcmVtIGlwc3VtIGRvbG9yIHNpdCBhbWV0LCBjb25zZWN0ZXR1ciBhZGlwaXNjaW5nIGVsaXQuIE1vcmJpIGxvYm9ydGlzIHZlaGljdWxhIGFudGUuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgUHJvaW4gc2FwaWVuIGFudGUsIGJpYmVuZHVtIGV1IHBvcnR0aXRvciBuZWMsIGVsZW1lbnR1bSBjdXJzdXMgZGlhbS5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBDbGFzcyBhcHRlbnQgdGFjaXRpIHNvY2lvc3F1IGFkIGxpdG9yYSB0b3JxdWVudCBwZXIgY29udWJpYSBub3N0cmEsIHBlciBpbmNlcHRvcyBoaW1lbmFlb3MuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgUHJvaW4gZXQgc29sbGljaXR1ZGluIG5lcXVlLiBOdWxsYW0gYXQgcXVhbSBldSBwdXJ1cyBmcmluZ2lsbGEgZGljdHVtLlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIEluIHV0IGVsaXQgZXUgZGlhbSBhY2N1bXNhbiBlZmZpY2l0dXIgaW4gaWQgcHVydXMuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgU2VkIGVnZXQgdXJuYSB2ZWwgbGlndWxhIGJpYmVuZHVtIG1vbGVzdGllIHZvbHV0cGF0IG5vbiBuZXF1ZS5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBBbGlxdWFtIHRpbmNpZHVudCB2ZWwgcHVydXMgcXVpcyBhbGlxdWV0LlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIE1hZWNlbmFzIGFjIG1pIG1hZ25hLlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgICA8L0NvbnRhaW5lcj5cbiAgICAgICAgICAgICAgICA8L1NlZ21lbnQ+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKVxuICAgICAgICAgICAgO1xuICAgIH1cbn1cbmV4cG9ydCBkZWZhdWx0IEFib3V0O1xuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQWJvdXQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJBYm91dC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUFvRTtBQUNwRSx1REFBOEM7QUFFOUM7SUFBb0IseUJBQXlCO0lBQTdDOztJQTBGQSxDQUFDO0lBeEZHLHNCQUFNLEdBQU47UUFDSSxPQUFPLENBQ0g7WUFDSSxvQkFBQywyQkFBTyxJQUNKLFFBQVEsRUFBRSxJQUFJLEVBQ2QsU0FBUyxFQUFDLFFBQVEsRUFDbEIsS0FBSyxFQUFFLEVBQUMsTUFBTSxFQUFFLE9BQU8sRUFBQyxFQUN4QixRQUFRLEVBQUUsSUFBSTtnQkFFZCxvQkFBQyxvQkFBTSxPQUFFO2dCQUNULG9CQUFDLDZCQUFTLElBQUMsSUFBSSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsRUFBQyxTQUFTLEVBQUUsS0FBSyxFQUFDLEVBQUUsU0FBUyxFQUFDLE1BQU07b0JBQzlELG9CQUFDLDBCQUFNLElBQUMsRUFBRSxFQUFDLElBQUksRUFBQyxLQUFLLEVBQUMsTUFBTSxvQkFBdUI7b0JBQ25EO3dCQUNJLG9wQkFTSSxDQUNKLENBQ0k7Z0JBRVosb0JBQUMsNkJBQVMsSUFBQyxJQUFJLEVBQUUsSUFBSSxFQUFFLEtBQUssRUFBRSxFQUFDLFNBQVMsRUFBRSxLQUFLLEVBQUMsRUFBRSxTQUFTLEVBQUMsTUFBTTtvQkFDOUQsb0JBQUMsMEJBQU0sSUFBQyxFQUFFLEVBQUMsSUFBSSxFQUFDLEtBQUssRUFBQyxNQUFNLHFCQUF3QjtvQkFDcEQ7d0JBQ0ksbXdCQWNRLENBQ1IsQ0FDSTtnQkFFWixvQkFBQyw2QkFBUyxJQUFDLElBQUksRUFBRSxJQUFJLEVBQUUsS0FBSyxFQUFFLEVBQUMsU0FBUyxFQUFFLEtBQUssRUFBQyxFQUFFLFNBQVMsRUFBQyxNQUFNO29CQUM5RCxvQkFBQywwQkFBTSxJQUFDLEVBQUUsRUFBQyxJQUFJLEVBQUMsS0FBSyxFQUFDLE1BQU0sZUFBa0I7b0JBQzlDO3dCQUNJLDRLQUdRLENBQ1I7b0JBQ0osb0JBQUMsd0JBQUksSUFBQyxRQUFRLEVBQUUsSUFBSTt3QkFDaEIsb0JBQUMsd0JBQUksQ0FBQyxJQUFJOzRCQUNOLDJGQUFvRSxDQUM1RDt3QkFDWixvQkFBQyx3QkFBSSxDQUFDLElBQUk7NEJBQ04sK0dBQXdGLENBQ2hGO3dCQUNaLG9CQUFDLHdCQUFJLENBQUMsSUFBSTs0QkFDTixxSkFDcUUsQ0FDN0Q7d0JBQ1osb0JBQUMsd0JBQUksQ0FBQyxJQUFJOzRCQUNOLDhIQUdRLENBQ0E7d0JBQ1osb0JBQUMsd0JBQUksQ0FBQyxJQUFJOzRCQUNOLHFIQUVRLENBQ0E7d0JBQ1osb0JBQUMsd0JBQUksQ0FBQyxJQUFJOzRCQUNOLGdGQUF5RCxDQUNqRCxDQUNULENBQ0MsQ0FFTixDQUNSLENBQ1QsQ0FDSTtJQUNULENBQUM7SUFDTCxZQUFDO0FBQUQsQ0FBQyxBQTFGRCxDQUFvQixLQUFLLENBQUMsU0FBUyxHQTBGbEM7QUFDRCxrQkFBZSxLQUFLLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBTZWdtZW50LCBDb250YWluZXIsIEhlYWRlciwgTGlzdH0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuaW1wb3J0IE5hdmJhciBmcm9tICcuLi9jb21wb25lbnRzL25hdmJhckhvbWUnO1xuXG5jbGFzcyBBYm91dCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8U2VnbWVudFxuICAgICAgICAgICAgICAgICAgICBpbnZlcnRlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICAgICAgdGV4dEFsaWduPVwiY2VudGVyXCJcbiAgICAgICAgICAgICAgICAgICAgc3R5bGU9e3toZWlnaHQ6ICcxMDB2aCd9fVxuICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbD17dHJ1ZX1cbiAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgIDxOYXZiYXIvPlxuICAgICAgICAgICAgICAgICAgICA8Q29udGFpbmVyIHRleHQ9e3RydWV9IHN0eWxlPXt7bWFyZ2luVG9wOiAnMmVtJ319IHRleHRBbGlnbj1cImxlZnRcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxIZWFkZXIgYXM9J2gzJyBjb2xvcj1cInRlYWxcIj5TZW1hbnRpYyBXZWI/PC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c21hbGw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFRoZSBTZW1hbnRpYyBXZWIgaXMgYW4gZXh0ZW5zaW9uIG9mIHRoZSBjdXJyZW50IFdlYiBleHBhbmRpbmcgaXQgd2l0aFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1lYW5pbmcgYW5kIGFsbG93aW5nIG1hY2hpbmVzIHRvIHJlYXNvbiBhYm91dCBpbmZvcm1hdGlvbiBpbiBhIGh1bWFuLWxpa2Ugd2F5LlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIERlc3BpdGUgaXRzIGdvb2QgaW50ZW50aW9uLCB0aGUgYWJ1bmRhbmNlIG9mIHVuc3RydWN0dXJlZCBkYXRhIHdpdGhpbiB0aGUgU2VtYW50aWMgV2ViXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgaGFtcGVycyB0aGUgY29sbGFib3JhdGlvbiBiZXR3ZWVuIGRpZmZlcmVudCBlbnRpdGllcy4gVG8gb3ZlcmNvbWUgdGhpcywgU0hBQ0xcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBhbGxvd3MgcGVvcGxlIHRvIHNldCB1cCBjb25zdHJhaW50cyBmb3Igd2hhdCB0aGVpciBkYXRhIHNob3VsZCBsb29rIGxpa2Ugc28gb25lIGNhblxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFzY2VydGFpbiBpdHMgZXhhY3QgZm9ybWF0IGFuZCBsb29rLiBDcnVjaWFsbHksIG1hY2hpbmVzIGNhbiBhbHNvIGNoZWNrIHdoZXRoZXIgZGF0YVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbmZvcm1zIHRvIHRoZSBjb25zdHJhaW50cywgbWFraW5nIHRoZSBjb250cmFjdCBiZXR3ZWVuIGNvbGxhYm9yYXRpbmcgZW50aXRpZXNcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB2ZXJpZmlhYmxlIGFuZCBvZmZlcmluZyBtb3JlIHN0cnVjdHVyZSB0byB0aGUgU2VtYW50aWMgV2ViLlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9zbWFsbD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgICAgPC9Db250YWluZXI+XG5cbiAgICAgICAgICAgICAgICAgICAgPENvbnRhaW5lciB0ZXh0PXt0cnVlfSBzdHlsZT17e21hcmdpblRvcDogJzJlbSd9fSB0ZXh0QWxpZ249XCJsZWZ0XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoMycgY29sb3I9XCJ0ZWFsXCI+V2h5IFVuU0hBQ0xlZD88L0hlYWRlcj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzbWFsbD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBDdXJyZW50IGNvbnN0cmFpbnQgZWRpdG9ycyBhcmUgbW9zdGx5IHRleHQtYmFzZWQuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgVGhlIHByb2JsZW0gd2l0aCB0aGVzZSBiZWNvbWVzIGNsZWFyIGxvb2tpbmcgYXQgYSBzaW1pbGFyIHByb2JsZW06IGltYWdpbmVcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkZXZlbG9waW5nIFVNTCBydWxlcyBieSB0eXBpbmcgdGhlbS4gWW91IGltbWVkaWF0ZWx5IGZlZWwgdGhhdCB0aGlzIHdvdWxkXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgYmUgYSBzbG93IGFuZCByZXBldGl0aXZlIHByb2Nlc3MgaW4gY29udHJhc3QgdG8gY3JlYXRpbmcgVU1MIHdpdGggYSBkZXNpZ24gdG9vbC5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBPdXIgcHJvZHVjdCBzb2x2ZXMgYSBzaW1pbGFyIGlzc3VlLCBidXQgd2l0aCBTSEFDTCBpbnN0ZWFkIG9mIFVNTC5cblxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIFVzaW5nIGEgdmlzdWFsIGVkaXRvci9JREUgZW5hYmxlcyB1c2VycyB0byBlYXNpbHkgYWRvcHQgYW4gdW5mYW1pbGlhciB0ZWNobm9sb2d5XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZHVlIHRvIGl0cyBpbnR1aXRpdmUgdmlzdWFsaXphdGlvbiB3aGljaCBhYnN0cmFjdHMgbW9zdCBvZiB0aGUgY29tcGxleGl0eSBvZiB0aGVcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB1bmRlcmx5aW5nIHRlY2hub2xvZ3kuIEluIGFkZGl0aW9uLCBpdCBpbmNyZWFzZXMgcHJvZHVjdGl2aXR5LFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsbG93aW5nIGZvciBmYXN0ZXIgZGV2ZWxvcG1lbnQuXG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBPdXIgdG9vbCBhbHNvIGFsbG93cyBmb3IgY29sbGFib3JhdGl2ZSBlZGl0aW5nLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNvIFNIQUNMIGV4cGVydHMgYW5kIG5vbi1leHBlcnRzIGNhbiBlYXNpbHkgd29yayB0b2dldGhlciBhbmQgYXNzaXN0IGVhY2ggb3RoZXIuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zbWFsbD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgICAgPC9Db250YWluZXI+XG5cbiAgICAgICAgICAgICAgICAgICAgPENvbnRhaW5lciB0ZXh0PXt0cnVlfSBzdHlsZT17e21hcmdpblRvcDogJzJlbSd9fSB0ZXh0QWxpZ249XCJsZWZ0XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoMycgY29sb3I9XCJ0ZWFsXCI+RmVhdHVyZXM8L0hlYWRlcj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzbWFsbD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBUbyBhbGxvdyBpbnR1aXRpdmUsIGZhc3QgZGV2ZWxvcG1lbnQgb2YgY29uc3RyYWludHMgYW5kIGEgY2xlYXJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkZXRlY3Rpb24gb2Ygbm9uLWNvbmZvcm1pbmcgZGF0YSwgb3VyIHByb2R1Y3Qgb2ZmZXJzIHNldmVyYWwgZmVhdHVyZXM6XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zbWFsbD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0IGJ1bGxldGVkPXt0cnVlfT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c21hbGw+QW4gaW5ub3ZhdGl2ZSB3YXkgb2YgdmlzdWFsaXppbmcgZGF0YSBhbmQgY29uc3RyYWludHM8L3NtYWxsPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzbWFsbD5JbnR1aXRpdmUgYnVpbGRpbmcgYW5kIGVkaXRpbmcgb2YgeW91ciBvd24gY29uc3RyYWludHMgaW4gYSB2aXN1YWwgbWFubmVyPC9zbWFsbD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c21hbGw+UG9pbnRpbmcgb3V0IGVycm9ycyBjbGVhcmx5LCBnaXZpbmcgdXNlcnMgdGhlIGNvbnRleHRcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRoZXkgbmVlZCB0byB1bmRlcnN0YW5kIHdoeSB0aGVpciBkYXRhIGlzIG5vbi1jb25mb3JtaW5nLjwvc21hbGw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNtYWxsPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQ3JlYXRpbmcgdGVtcGxhdGVzIHRvIGZ1cnRoZXIgZW5hYmxlIHJhcGlkIGRldmVsb3BtZW50XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhbmQgcHJldmVudCBhIHJlcGV0aXRpdmUgd29ya2Zsb3dcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zbWFsbD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c21hbGw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBXb3JraW5nIHRvZ2V0aGVyIHdpdGggb3RoZXJzIHRvIGdhaW4gbW9yZSBleHBlcmllbmNlIHJlZ2FyZGluZyBhIG5ldyB0ZWNobm9sb2d5XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvc21hbGw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNtYWxsPlNhdmUgYW5kIGV4Y2hhbmdlIHlvdXIgY29uc3RydWN0ZWQgZm9ybWF0czwvc21hbGw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3Q+XG4gICAgICAgICAgICAgICAgICAgIDwvQ29udGFpbmVyPlxuXG4gICAgICAgICAgICAgICAgPC9TZWdtZW50PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgIClcbiAgICAgICAgICAgIDtcbiAgICB9XG59XG5leHBvcnQgZGVmYXVsdCBBYm91dDtcbiJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 06:03:24 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 19 2018 08:03:15 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>
