@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/components/Slider.tsx</title>
+    <title>Code coverage report for src/pages/Signup.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> Slider.tsx
+      <a href="../../index.html">all files</a> / <a href="index.html">src/pages/</a> Signup.tsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">76% </span>
+        <span class="strong">76.92% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>19/25</span>
+        <span class='fraction'>20/26</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">35.71% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>6/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80.95% </span>
+        <span class="strong">81.82% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>17/21</span>
+        <span class='fraction'>18/22</span>
       </div>
     </div>
   </div>
@@ -74,7 +74,8 @@
 29
 30
 31
-32</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+32
+33</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -92,11 +93,12 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -105,7 +107,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/components/Slider.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/pages/Signup.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
 var __extends = (this &amp;&amp; this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
@@ -118,24 +120,25 @@ var __extends = (this &amp;&amp; this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-require("../style/App.css");
-var Slider_1 = require("material-ui/Slider");
-var SliderClass = /** @class */ (function (_super) {
-    __extends(SliderClass, _super);
-<span class="fstat-no" title="function not covered" >    function SliderClass() {</span>
+var semantic_ui_react_1 = require("semantic-ui-react");
+var navbarHome_1 = require("../components/navbarHome");
+var SignupForm_1 = require("../form/SignupForm");
+var Signup = /** @class */ (function (_super) {
+    __extends(Signup, _super);
+<span class="fstat-no" title="function not covered" >    function Signup() {</span>
 <span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
     }
-    SliderClass.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >        return (React.createElement("div", null,</span>
-            React.createElement("p", null, " Zoom "),
-            React.createElement(Slider_1.default, { defaultValue: 0.2, style: { width: 200 } })));
+    Signup.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Segment, { inverted: true, textAlign: "center", style: { height: '100vh' }, vertical: true },</span>
+            React.createElement(navbarHome_1.default, null),
+            React.createElement(SignupForm_1.default, null)));
     };
-    return SliderClass;
+    return Signup;
 }(React.Component));
-exports.default = SliderClass;
+exports.default = Signup;
 &nbsp;
-},'src/components/Slider.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","../style/App.css":"/home/travis/build/dubious-developments/UnSHACLed/src/style/App.css","material-ui/Slider":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/material-ui/Slider/index.js"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2xpZGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU2xpZGVyLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsNEJBQTBCO0FBQzFCLDZDQUF3QztBQUV4QztJQUEwQiwrQkFBZTtJQUF6Qzs7SUFTQSxDQUFDO0lBUkcsNEJBQU0sR0FBTjtRQUNJLE9BQU8sQ0FDSDtZQUNJLHdDQUFhO1lBQ2Isb0JBQUMsZ0JBQU0sSUFBQyxZQUFZLEVBQUUsR0FBRyxFQUFHLEtBQUssRUFBRSxFQUFDLEtBQUssRUFBRSxHQUFHLEVBQUMsR0FBRyxDQUNoRCxDQUNULENBQUM7SUFDTixDQUFDO0lBQ0wsa0JBQUM7QUFBRCxDQUFDLEFBVEQsQ0FBMEIsS0FBSyxDQUFDLFNBQVMsR0FTeEM7QUFFRCxrQkFBZSxXQUFXLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgJy4uL3N0eWxlL0FwcC5jc3MnO1xuaW1wb3J0IFNsaWRlciBmcm9tICdtYXRlcmlhbC11aS9TbGlkZXInO1xuXG5jbGFzcyBTbGlkZXJDbGFzcyBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8cD4gWm9vbSA8L3A+XG4gICAgICAgICAgICAgICAgPFNsaWRlciBkZWZhdWx0VmFsdWU9ezAuMn0gIHN0eWxlPXt7d2lkdGg6IDIwMH19Lz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgU2xpZGVyQ2xhc3M7Il19
+},'src/pages/Signup.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","../components/navbarHome":"/home/travis/build/dubious-developments/UnSHACLed/src/components/navbarHome.tsx","../form/SignupForm":"/home/travis/build/dubious-developments/UnSHACLed/src/form/SignupForm.tsx"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2lnbnVwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU2lnbnVwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQTBDO0FBQzFDLHVEQUE4QztBQUM5QyxpREFBNEM7QUFFNUM7SUFBcUIsMEJBQXlCO0lBQTlDOztJQWVBLENBQUM7SUFiRyx1QkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNILG9CQUFDLDJCQUFPLElBQ0osUUFBUSxFQUFFLElBQUksRUFDZCxTQUFTLEVBQUMsUUFBUSxFQUNsQixLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsT0FBTyxFQUFDLEVBQ3hCLFFBQVEsRUFBRSxJQUFJO1lBRWQsb0JBQUMsb0JBQU0sT0FBRTtZQUNULG9CQUFDLG9CQUFVLE9BQUUsQ0FDUCxDQUNiLENBQUM7SUFDTixDQUFDO0lBQ0wsYUFBQztBQUFELENBQUMsQUFmRCxDQUFxQixLQUFLLENBQUMsU0FBUyxHQWVuQztBQUVELGtCQUFlLE1BQU0sQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7U2VnbWVudH0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuaW1wb3J0IE5hdmJhciBmcm9tICcuLi9jb21wb25lbnRzL25hdmJhckhvbWUnO1xuaW1wb3J0IFNpZ251cEZvcm0gZnJvbSAnLi4vZm9ybS9TaWdudXBGb3JtJztcblxuY2xhc3MgU2lnbnVwIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8U2VnbWVudFxuICAgICAgICAgICAgICAgIGludmVydGVkPXt0cnVlfVxuICAgICAgICAgICAgICAgIHRleHRBbGlnbj1cImNlbnRlclwiXG4gICAgICAgICAgICAgICAgc3R5bGU9e3toZWlnaHQ6ICcxMDB2aCd9fVxuICAgICAgICAgICAgICAgIHZlcnRpY2FsPXt0cnVlfVxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIDxOYXZiYXIvPlxuICAgICAgICAgICAgICAgIDxTaWdudXBGb3JtLz5cbiAgICAgICAgICAgIDwvU2VnbWVudD5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IFNpZ251cDtcbiJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
