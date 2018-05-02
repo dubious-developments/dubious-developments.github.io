@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/entities/modelData.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/entities/</a> modelData.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>52/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>21/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>51/51</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">62×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">61×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">61×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/entities/modelData.ts']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Collections = require("typescript-collections");
+var Immutable = require("immutable");
+/**
+ * A mutable view of the model.
+ */
+var ModelData = /** @class */ (function () {
+    /**
+     * Creates a data container for the model.
+     * @param components A mapping of component types to their values.
+     * @param readSet The set of all model components that the model data
+     * is allowed to read from.
+     * @param writeSet The set of all model components that the model data
+     * is allowed to write to.
+     */
+    function ModelData(components, readSet, writeSet) {
+        this.readSet = readSet;
+        this.writeSet = writeSet;
+        this.writeBuffer = Immutable.Set();
+        this.readBuffer = Immutable.Set();
+        if (components) {
+            this.components = components;
+        }
+        else {
+            this.components = new Collections.Dictionary();
+        }
+    }
+    /**
+     * Gets a particular component of this model.
+     * @param component The component to retrieve.
+     */
+    ModelData.prototype.getComponent = function (component) {
+        if (this.readSet
+            &amp;&amp; !this.readSet.contains(component)
+            &amp;&amp; !this.writeBuffer.contains(component)) {
+            // Looks like the task is writing to an element that
+            // it doesn't have access to.
+            throw Error("Intercepted a read from '" + component + "', which is not in the read set. " +
+                ("Consider adding '" + component + "' to the read set if the read is intentional."));
+        }
+        return this.getComponentUnchecked(component);
+    };
+    /**
+     * Gets a particular component of this model. Elides the legality
+     * check associated with this operation.
+     * @param component The component to retrieve.
+     */
+    ModelData.prototype.getComponentUnchecked = function (component) {
+        if (this.components.containsKey(component)
+            &amp;&amp; !this.writeBuffer.contains(component)) {
+            // Only update the read buffer if the component wasn't written to before.
+            this.readBuffer = this.readBuffer.add(component);
+        }
+        return this.components.getValue(component);
+    };
+    /**
+     * Gets a particular component of this model. Creates said
+     * component if it doesn't exist already.
+     * @param component The component to retrieve or create.
+     * @param createComponent A function that creates the component
+     * if it doesn't exist already.
+     */
+    ModelData.prototype.getOrCreateComponent = function (component, createComponent) {
+        var result = this.getComponent(component);
+        if (result === undefined) {
+            result = createComponent();
+            this.setComponent(component, result);
+        }
+        return result;
+    };
+    /**
+     * Sets a particular component of this model.
+     */
+    ModelData.prototype.setComponent = function (component, value) {
+        if (value !== this.components.getValue(component)) {
+            if (this.writeSet &amp;&amp; !this.writeSet.contains(component)) {
+                // Looks like the task wrote to an element that
+                // it doesn't have access to.
+                throw Error("Intercepted a write to '" + component + "', which is not in the write set. " +
+                    ("Consider adding '" + component + "' to the write set if the write is intentional."));
+            }
+            this.setComponentUnchecked(component, value);
+        }
+    };
+    /**
+     * Sets a particular component of this model. Elides the legality check
+     * associated with this operation.
+     */
+    ModelData.prototype.setComponentUnchecked = function (component, value) {
+        if (value !== this.components.getValue(component)) {
+            // Record the write in the write buffer.
+            this.writeBuffer = this.writeBuffer.add(component);
+        }
+        this.components.setValue(component, value);
+    };
+    /**
+     * Drains the model's read, write buffer pair.
+     */
+    ModelData.prototype.drainBuffers = function () {
+        var readBuf = this.readBuffer;
+        var writeBuf = this.writeBuffer;
+        this.readBuffer = Immutable.Set();
+        this.writeBuffer = Immutable.Set();
+        return { readBuffer: readBuf, writeBuffer: writeBuf };
+    };
+    /**
+     * Takes a peek at the read, write buffer pair without
+     * modifying them.
+     */
+    ModelData.prototype.peekBuffers = function () {
+        return { readBuffer: this.readBuffer, writeBuffer: this.writeBuffer };
+    };
+    /**
+     * Creates a shallow copy of this model data's components.
+     * Note that the change buffer is not copied.
+     * @param readSet The set of all model components that the
+     * cloned model data is allowed to read from.
+     * @param writeSet The set of all model components that the
+     * model data is allowed to write to.
+     */
+    ModelData.prototype.clone = function (readSet, writeSet) {
+        var componentCopy = new Collections.Dictionary();
+        this.components.forEach(function (key, value) {
+            componentCopy.setValue(key, value);
+        });
+        return new ModelData(componentCopy, readSet, writeSet);
+    };
+    return ModelData;
+}());
+exports.ModelData = ModelData;
+&nbsp;
+},'src/entities/modelData.ts',{"typescript-collections":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/typescript-collections/dist/lib/index.js","immutable":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/immutable/dist/immutable.js","./modelTaskMetadata":"/home/travis/build/dubious-developments/UnSHACLed/src/entities/modelTaskMetadata.ts"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9kZWxEYXRhLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibW9kZWxEYXRhLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsb0RBQXNEO0FBQ3RELHFDQUF1QztBQU12Qzs7R0FFRztBQUNIO0lBU0k7Ozs7Ozs7T0FPRztJQUNILG1CQUNJLFVBQXdELEVBQ3hDLE9BQXNCLEVBQ3RCLFFBQXVCO1FBRHZCLFlBQU8sR0FBUCxPQUFPLENBQWU7UUFDdEIsYUFBUSxHQUFSLFFBQVEsQ0FBZTtRQUV2QyxJQUFJLENBQUMsV0FBVyxHQUFHLFNBQVMsQ0FBQyxHQUFHLEVBQWtCLENBQUM7UUFDbkQsSUFBSSxDQUFDLFVBQVUsR0FBRyxTQUFTLENBQUMsR0FBRyxFQUFrQixDQUFDO1FBQ2xELElBQUksVUFBVSxFQUFFO1lBQ1osSUFBSSxDQUFDLFVBQVUsR0FBRyxVQUFVLENBQUM7U0FDaEM7YUFBTTtZQUNILElBQUksQ0FBQyxVQUFVLEdBQUcsSUFBSSxXQUFXLENBQUMsVUFBVSxFQUF1QixDQUFDO1NBQ3ZFO0lBQ0wsQ0FBQztJQUVEOzs7T0FHRztJQUNJLGdDQUFZLEdBQW5CLFVBQXVCLFNBQXlCO1FBRTVDLElBQUksSUFBSSxDQUFDLE9BQU87ZUFDVCxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsUUFBUSxDQUFDLFNBQVMsQ0FBQztlQUNqQyxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsUUFBUSxDQUFDLFNBQVMsQ0FBQyxFQUFFO1lBRTFDLG9EQUFvRDtZQUNwRCw2QkFBNkI7WUFDN0IsTUFBTSxLQUFLLENBQ1AsOEJBQTRCLFNBQVMsc0NBQW1DO2lCQUN4RSxzQkFBb0IsU0FBUyxrREFBK0MsQ0FBQSxDQUFDLENBQUM7U0FDckY7UUFDRCxPQUFPLElBQUksQ0FBQyxxQkFBcUIsQ0FBQyxTQUFTLENBQUMsQ0FBQztJQUNqRCxDQUFDO0lBRUQ7Ozs7T0FJRztJQUNJLHlDQUFxQixHQUE1QixVQUFnQyxTQUF5QjtRQUVyRCxJQUFJLElBQUks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QUMsQ0FBQztRQUNILE9BQU8sSUFBSSxTQUFTLENBQUMsYUFBYSxFQUFFLE9BQU8sRUFBRSxRQUFRLENBQUMsQ0FBQztJQUMzRCxDQUFDO0lBQ0wsZ0JBQUM7QUFBRCxDQUFDLEFBdkpELElBdUpDO0FBdkpZLDhCQUFTIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgQ29sbGVjdGlvbnMgZnJvbSBcInR5cGVzY3JpcHQtY29sbGVjdGlvbnNcIjtcbmltcG9ydCAqIGFzIEltbXV0YWJsZSBmcm9tIFwiaW1tdXRhYmxlXCI7XG5pbXBvcnQgeyBNb2RlbENvbXBvbmVudCB9IGZyb20gXCIuL21vZGVsVGFza01ldGFkYXRhXCI7XG5cbnR5cGUgQWNjZXNzQnVmZmVyID0gSW1tdXRhYmxlLlNldDxNb2RlbENvbXBvbmVudD47XG50eXBlIEFjY2Vzc0J1ZmZlclBhaXIgPSB7IHJlYWRCdWZmZXI6IEFjY2Vzc0J1ZmZlciwgd3JpdGVCdWZmZXI6IEFjY2Vzc0J1ZmZlciB9O1xuXG4vKipcbiAqIEEgbXV0YWJsZSB2aWV3IG9mIHRoZSBtb2RlbC5cbiAqL1xuZXhwb3J0IGNsYXNzIE1vZGVsRGF0YSB7XG4gICAgcHJpdmF0ZSB3cml0ZUJ1ZmZlcjogQWNjZXNzQnVmZmVyO1xuICAgIHByaXZhdGUgcmVhZEJ1ZmZlcjogQWNjZXNzQnVmZmVyO1xuXG4gICAgLyoqXG4gICAgICogQSBkaWN0aW9uYXJ5IHRoYXQgY29udGFpbnMgYWxsIG9mIHRoZSBtb2RlbCdzIGNvbXBvbmVudHMuXG4gICAgICovXG4gICAgcHJpdmF0ZSBjb21wb25lbnRzOiBDb2xsZWN0aW9ucy5EaWN0aW9uYXJ5PE1vZGVsQ29tcG9uZW50LCBhbnk+O1xuXG4gICAgLyoqXG4gICAgICogQ3JlYXRlcyBhIGRhdGEgY29udGFpbmVyIGZvciB0aGUgbW9kZWwuXG4gICAgICogQHBhcmFtIGNvbXBvbmVudHMgQSBtYXBwaW5nIG9mIGNvbXBvbmVudCB0eXBlcyB0byB0aGVpciB2YWx1ZXMuXG4gICAgICogQHBhcmFtIHJlYWRTZXQgVGhlIHNldCBvZiBhbGwgbW9kZWwgY29tcG9uZW50cyB0aGF0IHRoZSBtb2RlbCBkYXRhXG4gICAgICogaXMgYWxsb3dlZCB0byByZWFkIGZyb20uXG4gICAgICogQHBhcmFtIHdyaXRlU2V0IFRoZSBzZXQgb2YgYWxsIG1vZGVsIGNvbXBvbmVudHMgdGhhdCB0aGUgbW9kZWwgZGF0YVxuICAgICAqIGlzIGFsbG93ZWQgdG8gd3JpdGUgdG8uXG4gICAgICovXG4gICAgcHVibGljIGNvbnN0cnVjdG9yKFxuICAgICAgICBjb21wb25lbnRzPzogQ29sbGVjdGlvbnMuRGljdGlvbmFyeTxNb2RlbENvbXBvbmVudCwgYW55PixcbiAgICAgICAgcHVibGljIHJlYWRvbmx5IHJlYWRTZXQ/OiBBY2Nlc3NCdWZmZXIsXG4gICAgICAgIHB1YmxpYyByZWFkb25seSB3cml0ZVNldD86IEFjY2Vzc0J1ZmZlcikge1xuXG4gICAgICAgIHRoaXMud3JpdGVCdWZmZXIgPSBJbW11dGFibGUuU2V0PE1vZGVsQ29tcG9uZW50PigpO1xuICAgICAgICB0aGlzLnJlYWRCdWZmZXIgPSBJbW11dGFibGUuU2V0PE1vZGVsQ29tcG9uZW50PigpO1xuICAgICAgICBpZiAoY29tcG9uZW50cykge1xuICAgICAgICAgICAgdGhpcy5jb21wb25lbnRzID0gY29tcG9uZW50cztcbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgIHRoaXMuY29tcG9uZW50cyA9IG5ldyBDb2xsZWN0aW9ucy5EaWN0aW9uYXJ5PE1vZGVsQ29tcG9uZW50LCBhbnk+KCk7XG4gICAgICAgIH1cbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBHZXRzIGEgcGFydGljdWxhciBjb21wb25lbnQgb2YgdGhpcyBtb2RlbC5cbiAgICAgKiBAcGFyYW0gY29tcG9uZW50IFRoZSBjb21wb25lbnQgdG8gcmV0cmlldmUuXG4gICAgICovXG4gICAgcHVibGljIGdldENvbXBvbmVudDxUPihjb21wb25lbnQ6IE1vZGVsQ29tcG9uZW50KTogVCB8IHVuZGVmaW5lZCB7XG5cbiAgICAgICAgaWYgKHRoaXMucmVhZFNldFxuICAgICAgICAgICAgJiYgIXRoaXMucmVhZFNldC5jb250YWlucyhjb21wb25lbnQpXG4gICAgICAgICAgICAmJiAhdGhpcy53cml0ZUJ1ZmZlci5jb250YWlucyhjb21wb25lbnQpKSB7XG5cbiAgICAgICAgICAgIC8vIExvb2tzIGxpa2UgdGhlIHRhc2sgaXMgd3JpdGluZyB0byBhbiBlbGVtZW50IHRoYXRcbiAgICAgICAgICAgIC8vIGl0IGRvZXNuJ3QgaGF2ZSBhY2Nlc3MgdG8uXG4gICAgICAgICAgICB0aHJvdyBFcnJvcihcbiAgICAgICAgICAgICAgICBgSW50ZXJjZXB0ZWQgYSByZWFkIGZyb20gJyR7Y29tcG9uZW50fScsIHdoaWNoIGlzIG5vdCBpbiB0aGUgcmVhZCBzZXQuIGAgK1xuICAgICAgICAgICAgICAgIGBDb25zaWRlciBhZGRpbmcgJyR7Y29tcG9uZW50fScgdG8gdGhlIHJlYWQgc2V0IGlmIHRoZSByZWFkIGlzIGludGVudGlvbmFsLmApO1xuICAgICAgICB9XG4gICAgICAgIHJldHVybiB0aGlzLmdldENvbXBvbmVudFVuY2hlY2tlZChjb21wb25lbnQpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIEdldHMgYSBwYXJ0aWN1bGFyIGNvbXBvbmVudCBvZiB0aGlzIG1vZGVsLiBFbGlkZXMgdGhlIGxlZ2FsaXR5XG4gICAgICogY2hlY2sgYXNzb2NpYXRlZCB3aXRoIHRoaXMgb3BlcmF0aW9uLlxuICAgICAqIEBwYXJhbSBjb21wb25lbnQgVGhlIGNvbXBvbmVudCB0byByZXRyaWV2ZS5cbiAgICAgKi9cbiAgICBwdWJsaWMgZ2V0Q29tcG9uZW50VW5jaGVja2VkPFQ+KGNvbXBvbmVudDogTW9kZWxDb21wb25lbnQpOiBUIHwgdW5kZWZpbmVkIHtcblxuICAgICAgICBpZiAodGhpcy5jb21wb25lbnRzLmNvbnRhaW5zS2V5KGNvbXBvbmVudClcbiAgICAgICAgICAgICYmICF0aGlzLndyaXRlQnVmZmVyLmNvbnRhaW5zKGNvbXBvbmVudCkpIHtcblxuICAgICAgICAgICAgLy8gT25seSB1cGRhdGUgdGhlIHJlYWQgYnVmZmVyIGlmIHRoZSBjb21wb25lbnQgd2Fzbid0IHdyaXR0ZW4gdG8gYmVmb3JlLlxuICAgICAgICAgICAgdGhpcy5yZWFkQnVmZmVyID0gdGhpcy5yZWFkQnVmZmVyLmFkZChjb21wb25lbnQpO1xuICAgICAgICB9XG4gICAgICAgIHJldHVybiB0aGlzLmNvbXBvbmVudHMuZ2V0VmFsdWUoY29tcG9uZW50KTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBHZXRzIGEgcGFydGljdWxhciBjb21wb25lbnQgb2YgdGhpcyBtb2RlbC4gQ3JlYXRlcyBzYWlkXG4gICAgICogY29tcG9uZW50IGlmIGl0IGRvZXNuJ3QgZXhpc3QgYWxyZWFkeS5cbiAgICAgKiBAcGFyYW0gY29tcG9uZW50IFRoZSBjb21wb25lbnQgdG8gcmV0cmlldmUgb3IgY3JlYXRlLlxuICAgICAqIEBwYXJhbSBjcmVhdGVDb21wb25lbnQgQSBmdW5jdGlvbiB0aGF0IGNyZWF0ZXMgdGhlIGNvbXBvbmVudFxuICAgICAqIGlmIGl0IGRvZXNuJ3QgZXhpc3QgYWxyZWFkeS5cbiAgICAgKi9cbiAgICBwdWJsaWMgZ2V0T3JDcmVhdGVDb21wb25lbnQ8VD4oY29tcG9uZW50OiBNb2RlbENvbXBvbmVudCwgY3JlYXRlQ29tcG9uZW50OiAoKSA9PiBUKTogVCB7XG5cbiAgICAgICAgbGV0IHJlc3VsdCA9IHRoaXMuZ2V0Q29tcG9uZW50PFQ+KGNvbXBvbmVudCk7XG4gICAgICAgIGlmIChyZXN1bHQgPT09IHVuZGVmaW5lZCkge1xuICAgICAgICAgICAgcmVzdWx0ID0gY3JlYXRlQ29tcG9uZW50KCk7XG4gICAgICAgICAgICB0aGlzLnNldENvbXBvbmVudDxUPihjb21wb25lbnQsIHJlc3VsdCk7XG4gICAgICAgIH1cblxuICAgICAgICByZXR1cm4gcmVzdWx0O1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIFNldHMgYSBwYXJ0aWN1bGFyIGNvbXBvbmVudCBvZiB0aGlzIG1vZGVsLlxuICAgICAqL1xuICAgIHB1YmxpYyBzZXRDb21wb25lbnQ8VD4oY29tcG9uZW50OiBNb2RlbENvbXBvbmVudCwgdmFsdWU6IFQpOiB2b2lkIHtcblxuICAgICAgICBpZiAodmFsdWUgIT09IHRoaXMuY29tcG9uZW50cy5nZXRWYWx1ZShjb21wb25lbnQpKSB7XG4gICAgICAgICAgICBpZiAodGhpcy53cml0ZVNldCAmJiAhdGhpcy53cml0ZVNldC5jb250YWlucyhjb21wb25lbnQpKSB7XG4gICAgICAgICAgICAgICAgLy8gTG9va3MgbGlrZSB0aGUgdGFzayB3cm90ZSB0byBhbiBlbGVtZW50IHRoYXRcbiAgICAgICAgICAgICAgICAvLyBpdCBkb2Vzbid0IGhhdmUgYWNjZXNzIHRvLlxuICAgICAgICAgICAgICAgIHRocm93IEVycm9yKFxuICAgICAgICAgICAgICAgICAgICBgSW50ZXJjZXB0ZWQgYSB3cml0ZSB0byAnJHtjb21wb25lbnR9Jywgd2hpY2ggaXMgbm90IGluIHRoZSB3cml0ZSBzZXQuIGAgK1xuICAgICAgICAgICAgICAgICAgICBgQ29uc2lkZXIgYWRkaW5nICcke2NvbXBvbmVudH0nIHRvIHRoZSB3cml0ZSBzZXQgaWYgdGhlIHdyaXRlIGlzIGludGVudGlvbmFsLmApO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICB0aGlzLnNldENvbXBvbmVudFVuY2hlY2tlZChjb21wb25lbnQsIHZhbHVlKTtcbiAgICAgICAgfVxuICAgIH1cblxuICAgIC8qKlxuICAgICAqIFNldHMgYSBwYXJ0aWN1bGFyIGNvbXBvbmVudCBvZiB0aGlzIG1vZGVsLiBFbGlkZXMgdGhlIGxlZ2FsaXR5IGNoZWNrXG4gICAgICogYXNzb2NpYXRlZCB3aXRoIHRoaXMgb3BlcmF0aW9uLlxuICAgICAqL1xuICAgIHB1YmxpYyBzZXRDb21wb25lbnRVbmNoZWNrZWQ8VD4oY29tcG9uZW50OiBNb2RlbENvbXBvbmVudCwgdmFsdWU6IFQpOiB2b2lkIHtcblxuICAgICAgICBpZiAodmFsdWUgIT09IHRoaXMuY29tcG9uZW50cy5nZXRWYWx1ZShjb21wb25lbnQpKSB7XG5cbiAgICAgICAgICAgIC8vIFJlY29yZCB0aGUgd3JpdGUgaW4gdGhlIHdyaXRlIGJ1ZmZlci5cbiAgICAgICAgICAgIHRoaXMud3JpdGVCdWZmZXIgPSB0aGlzLndyaXRlQnVmZmVyLmFkZChjb21wb25lbnQpO1xuICAgICAgICB9XG5cbiAgICAgICAgdGhpcy5jb21wb25lbnRzLnNldFZhbHVlKGNvbXBvbmVudCwgdmFsdWUpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIERyYWlucyB0aGUgbW9kZWwncyByZWFkLCB3cml0ZSBidWZmZXIgcGFpci5cbiAgICAgKi9cbiAgICBwdWJsaWMgZHJhaW5CdWZmZXJzKCk6IEFjY2Vzc0J1ZmZlclBhaXIge1xuICAgICAgICBsZXQgcmVhZEJ1ZiA9IHRoaXMucmVhZEJ1ZmZlcjtcbiAgICAgICAgbGV0IHdyaXRlQnVmID0gdGhpcy53cml0ZUJ1ZmZlcjtcbiAgICAgICAgdGhpcy5yZWFkQnVmZmVyID0gSW1tdXRhYmxlLlNldDxNb2RlbENvbXBvbmVudD4oKTtcbiAgICAgICAgdGhpcy53cml0ZUJ1ZmZlciA9IEltbXV0YWJsZS5TZXQ8TW9kZWxDb21wb25lbnQ+KCk7XG4gICAgICAgIHJldHVybiB7IHJlYWRCdWZmZXI6IHJlYWRCdWYsIHdyaXRlQnVmZmVyOiB3cml0ZUJ1ZiB9O1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIFRha2VzIGEgcGVlayBhdCB0aGUgcmVhZCwgd3JpdGUgYnVmZmVyIHBhaXIgd2l0aG91dFxuICAgICAqIG1vZGlmeWluZyB0aGVtLlxuICAgICAqL1xuICAgIHB1YmxpYyBwZWVrQnVmZmVycygpOiBBY2Nlc3NCdWZmZXJQYWlyIHtcbiAgICAgICAgcmV0dXJuIHsgcmVhZEJ1ZmZlcjogdGhpcy5yZWFkQnVmZmVyLCB3cml0ZUJ1ZmZlcjogdGhpcy53cml0ZUJ1ZmZlciB9O1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIENyZWF0ZXMgYSBzaGFsbG93IGNvcHkgb2YgdGhpcyBtb2RlbCBkYXRhJ3MgY29tcG9uZW50cy5cbiAgICAgKiBOb3RlIHRoYXQgdGhlIGNoYW5nZSBidWZmZXIgaXMgbm90IGNvcGllZC5cbiAgICAgKiBAcGFyYW0gcmVhZFNldCBUaGUgc2V0IG9mIGFsbCBtb2RlbCBjb21wb25lbnRzIHRoYXQgdGhlXG4gICAgICogY2xvbmVkIG1vZGVsIGRhdGEgaXMgYWxsb3dlZCB0byByZWFkIGZyb20uXG4gICAgICogQHBhcmFtIHdyaXRlU2V0IFRoZSBzZXQgb2YgYWxsIG1vZGVsIGNvbXBvbmVudHMgdGhhdCB0aGVcbiAgICAgKiBtb2RlbCBkYXRhIGlzIGFsbG93ZWQgdG8gd3JpdGUgdG8uXG4gICAgICovXG4gICAgcHVibGljIGNsb25lKHJlYWRTZXQ/OiBBY2Nlc3NCdWZmZXIsIHdyaXRlU2V0PzogQWNjZXNzQnVmZmVyKTogTW9kZWxEYXRhIHtcbiAgICAgICAgbGV0IGNvbXBvbmVudENvcHkgPSBuZXcgQ29sbGVjdGlvbnMuRGljdGlvbmFyeTxNb2RlbENvbXBvbmVudCwgYW55PigpO1xuICAgICAgICB0aGlzLmNvbXBvbmVudHMuZm9yRWFjaCgoa2V5LCB2YWx1ZSkgPT4ge1xuICAgICAgICAgICAgY29tcG9uZW50Q29weS5zZXRWYWx1ZShrZXksIHZhbHVlKTtcbiAgICAgICAgfSk7XG4gICAgICAgIHJldHVybiBuZXcgTW9kZWxEYXRhKGNvbXBvbmVudENvcHksIHJlYWRTZXQsIHdyaXRlU2V0KTtcbiAgICB9XG59XG4iXX0=
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed May 02 2018 10:57:49 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
