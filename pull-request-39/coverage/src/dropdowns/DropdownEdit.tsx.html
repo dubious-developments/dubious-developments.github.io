@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dropdowns/DropdownEdit.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/dropdowns/</a> DropdownEdit.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.46% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/dropdowns/DropdownEdit.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var semantic_ui_react_1 = require("semantic-ui-react");
+/*
+    Component used to create a dropdown component for the edit toolbar option
+    Requires several props from the parent, which can be found in interfaces.d.ts
+&nbsp;
+ */
+var DropdownEdit = /** @class */ (function (_super) {
+    __extends(DropdownEdit, _super);
+<span class="fstat-no" title="function not covered" >    function DropdownEdit(props) {</span>
+<span class="cstat-no" title="statement not covered" >        return _super.call(this, props) || this;</span>
+    }
+    DropdownEdit.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Dropdown, { text: 'Edit', pointing: "top left" },</span>
+            React.createElement(semantic_ui_react_1.Dropdown.Menu, null,
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'reply', text: 'Undo', id: "tb_undo", description: "Ctrl+Z" }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'share', text: 'Redo', id: "tb_redo", description: "Ctrl+Y" }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'trash', text: 'Delete', id: "tb_delete", description: "Del" }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'clipboard', text: 'Copy', id: "tb_copy", description: "Ctrl+C" }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'paste', text: 'Paste', id: "tb_paste", description: "Ctrl+V" }),
+                React.createElement(semantic_ui_react_1.Dropdown.Divider, null),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'move', text: 'Select All', id: "tb_all", description: "Ctrl+A" }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'move', text: 'Select None', id: "tb_none" }))));
+    };
+    return DropdownEdit;
+}(React.Component));
+exports.default = DropdownEdit;
+&nbsp;
+},'src/dropdowns/DropdownEdit.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRHJvcGRvd25FZGl0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRHJvcGRvd25FZGl0LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQTJDO0FBRTNDOzs7O0dBSUc7QUFDSDtJQUEyQixnQ0FBeUI7SUFFaEQsc0JBQVksS0FBVTtlQUNsQixrQkFBTSxLQUFLLENBQUM7SUFDaEIsQ0FBQztJQUVELDZCQUFNLEdBQU47UUFDSSxPQUFPLENBQ0gsb0JBQUMsNEJBQVEsSUFBQyxJQUFJLEVBQUMsTUFBTSxFQUFDLFFBQVEsRUFBQyxVQUFVO1lBQ3JDLG9CQUFDLDRCQUFRLENBQUMsSUFBSTtnQkFDVixvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsT0FBTyxFQUFDLElBQUksRUFBQyxNQUFNLEVBQUMsRUFBRSxFQUFDLFNBQVMsRUFBQyxXQUFXLEVBQUMsUUFBUSxHQUFFO2dCQUMzRSxvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsT0FBTyxFQUFDLElBQUksRUFBQyxNQUFNLEVBQUMsRUFBRSxFQUFDLFNBQVMsRUFBQyxXQUFXLEVBQUMsUUFBUSxHQUFFO2dCQUMzRSxvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsT0FBTyxFQUFDLElBQUksRUFBQyxRQUFRLEVBQUMsRUFBRSxFQUFDLFdBQVcsRUFBQyxXQUFXLEVBQUMsS0FBSyxHQUFFO2dCQUM1RSxvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsV0FBVyxFQUFDLElBQUksRUFBQyxNQUFNLEVBQUMsRUFBRSxFQUFDLFNBQVMsRUFBQyxXQUFXLEVBQUMsUUFBUSxHQUFFO2dCQUMvRSxvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsT0FBTyxFQUFDLElBQUksRUFBQyxPQUFPLEVBQUMsRUFBRSxFQUFDLFVBQVUsRUFBQyxXQUFXLEVBQUMsUUFBUSxHQUFFO2dCQUM3RSxvQkFBQyw0QkFBUSxDQUFDLE9BQU8sT0FBRTtnQkFDbkIsb0JBQUMsNEJBQVEsQ0FBQyxJQUFJLElBQUMsSUFBSSxFQUFDLE1BQU0sRUFBQyxJQUFJLEVBQUMsWUFBWSxFQUFDLEVBQUUsRUFBQyxRQUFRLEVBQUMsV0FBVyxFQUFDLFFBQVEsR0FBRTtnQkFDL0Usb0JBQUMsNEJBQVEsQ0FBQyxJQUFJLElBQUMsSUFBSSxFQUFDLE1BQU0sRUFBQyxJQUFJLEVBQUMsYUFBYSxFQUFDLEVBQUUsRUFBQyxTQUFTLEdBQUcsQ0FDakQsQ0FDVCxDQUNkLENBQUM7SUFDTixDQUFDO0lBQ0wsbUJBQUM7QUFBRCxDQUFDLEFBdEJELENBQTJCLEtBQUssQ0FBQyxTQUFTLEdBc0J6QztBQUVELGtCQUFlLFlBQVksQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7RHJvcGRvd259IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcblxuLypcbiAgICBDb21wb25lbnQgdXNlZCB0byBjcmVhdGUgYSBkcm9wZG93biBjb21wb25lbnQgZm9yIHRoZSBlZGl0IHRvb2xiYXIgb3B0aW9uXG4gICAgUmVxdWlyZXMgc2V2ZXJhbCBwcm9wcyBmcm9tIHRoZSBwYXJlbnQsIHdoaWNoIGNhbiBiZSBmb3VuZCBpbiBpbnRlcmZhY2VzLmQudHNcblxuICovXG5jbGFzcyBEcm9wZG93bkVkaXQgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQ8YW55LCBhbnk+IHtcblxuICAgIGNvbnN0cnVjdG9yKHByb3BzOiBhbnkpIHtcbiAgICAgICAgc3VwZXIocHJvcHMpO1xuICAgIH1cblxuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxEcm9wZG93biB0ZXh0PSdFZGl0JyBwb2ludGluZz1cInRvcCBsZWZ0XCI+XG4gICAgICAgICAgICAgICAgPERyb3Bkb3duLk1lbnU+XG4gICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtIGljb249J3JlcGx5JyB0ZXh0PSdVbmRvJyBpZD1cInRiX3VuZG9cIiBkZXNjcmlwdGlvbj1cIkN0cmwrWlwiLz5cbiAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkl0ZW0gaWNvbj0nc2hhcmUnIHRleHQ9J1JlZG8nIGlkPVwidGJfcmVkb1wiIGRlc2NyaXB0aW9uPVwiQ3RybCtZXCIvPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSBpY29uPSd0cmFzaCcgdGV4dD0nRGVsZXRlJyBpZD1cInRiX2RlbGV0ZVwiIGRlc2NyaXB0aW9uPVwiRGVsXCIvPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSBpY29uPSdjbGlwYm9hcmQnIHRleHQ9J0NvcHknIGlkPVwidGJfY29weVwiIGRlc2NyaXB0aW9uPVwiQ3RybCtDXCIvPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSBpY29uPSdwYXN0ZScgdGV4dD0nUGFzdGUnIGlkPVwidGJfcGFzdGVcIiBkZXNjcmlwdGlvbj1cIkN0cmwrVlwiLz5cbiAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkRpdmlkZXIvPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSBpY29uPSdtb3ZlJyB0ZXh0PSdTZWxlY3QgQWxsJyBpZD1cInRiX2FsbFwiIGRlc2NyaXB0aW9uPVwiQ3RybCtBXCIvPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSBpY29uPSdtb3ZlJyB0ZXh0PSdTZWxlY3QgTm9uZScgaWQ9XCJ0Yl9ub25lXCIgLz5cbiAgICAgICAgICAgICAgICA8L0Ryb3Bkb3duLk1lbnU+XG4gICAgICAgICAgICA8L0Ryb3Bkb3duPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgRHJvcGRvd25FZGl0OyJdfQ==
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed May 02 2018 14:20:53 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
