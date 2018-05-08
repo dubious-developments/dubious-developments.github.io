@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dropdowns/DropdownFile.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/dropdowns/</a> DropdownFile.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.46% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.57% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/23</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/dropdowns/DropdownFile.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var semantic_ui_react_1 = require("semantic-ui-react");
+/*
+    Component used to create a dropdown component for the file toolbar option
+    Requires several props from the parent, which can be found in interfaces.d.ts
+&nbsp;
+ */
+var DropdownFile = /** @class */ (function (_super) {
+    __extends(DropdownFile, _super);
+<span class="fstat-no" title="function not covered" >    function DropdownFile(props) {</span>
+<span class="cstat-no" title="statement not covered" >        return _super.call(this, props) || this;</span>
+    }
+    DropdownFile.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Dropdown, { text: 'File', pointing: "top left" },</span>
+            React.createElement(semantic_ui_react_1.Dropdown.Menu, null,
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { text: 'New' }),
+                React.createElement(semantic_ui_react_1.Dropdown, { text: 'Open local graph', pointing: 'left', className: 'link item' },
+                    React.createElement(semantic_ui_react_1.Dropdown.Menu, null,
+                        React.createElement(semantic_ui_react_1.Dropdown.Item, { onClick: <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >return _this.props.import_cb("shacl"); </span>} }, " SHACL Graph "),
+                        React.createElement(semantic_ui_react_1.Dropdown.Item, { onClick: <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >return _this.props.import_cb("data"); </span>} }, " Data Graph"))),
+                React.createElement(semantic_ui_react_1.Popup, { trigger: React.createElement(semantic_ui_react_1.Dropdown.Item, { text: 'Save local graph' }), on: "hover", inverted: false, hoverable: true, position: "right center", content: this.props.opened_files }),
+                React.createElement(semantic_ui_react_1.Dropdown.Divider, null),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'github', text: 'Open graph from account' }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'github', text: 'Save graph to account' }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'trash', text: 'Clear graph' }))));
+    };
+    return DropdownFile;
+}(React.Component));
+exports.default = DropdownFile;
+&nbsp;
+},'src/dropdowns/DropdownFile.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","../components/interfaces/interfaces":"/home/travis/build/dubious-developments/UnSHACLed/src/components/interfaces/interfaces.d.ts"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRHJvcGRvd25GaWxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRHJvcGRvd25GaWxlLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQWtEO0FBRWxEOzs7O0dBSUc7QUFDSDtJQUEyQixnQ0FBdUM7SUFFOUQsc0JBQVksS0FBVTtlQUNsQixrQkFBTSxLQUFLLENBQUM7SUFDaEIsQ0FBQztJQUVELDZCQUFNLEdBQU47UUFBQSxpQkE4QkM7UUE3QkcsT0FBTyxDQUNILG9CQUFDLDRCQUFRLElBQUMsSUFBSSxFQUFDLE1BQU0sRUFBQyxRQUFRLEVBQUMsVUFBVTtZQUNyQyxvQkFBQyw0QkFBUSxDQUFDLElBQUk7Z0JBQ1Ysb0JBQUMsNEJBQVEsQ0FBQyxJQUFJLElBQUMsSUFBSSxFQUFDLEtBQUssR0FBRTtnQkFDM0Isb0JBQUMsNEJBQVEsSUFDTCxJQUFJLEVBQUMsa0JBQWtCLEVBQ3ZCLFFBQVEsRUFBQyxNQUFNLEVBQ2YsU0FBUyxFQUFDLFdBQVc7b0JBRXJCLG9CQUFDLDRCQUFRLENBQUMsSUFBSTt3QkFDVixvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxPQUFPLEVBQUUsY0FBTSxPQUFBLEtBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLE9BQU8sQ0FBQyxFQUE3QixDQUE2QixvQkFBK0I7d0JBQzFGLG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLE9BQU8sRUFBRSxjQUFNLE9BQUEsS0FBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLEVBQTVCLENBQTRCLGtCQUE2QixDQUMzRSxDQUNUO2dCQUNYLG9CQUFDLHlCQUFLLElBQ0YsT0FBTyxFQUFFLG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLElBQUksRUFBQyxrQkFBa0IsR0FBRSxFQUNqRCxFQUFFLEVBQUMsT0FBTyxFQUNWLFFBQVEsRUFBRSxLQUFLLEVBQ2YsU0FBUyxFQUFFLElBQUksRUFDZixRQUFRLEVBQUMsY0FBYyxFQUN2QixPQUFPLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxZQUFZLEdBQ2xDO2dCQUNGLG9CQUFDLDRCQUFRLENBQUMsT0FBTyxPQUFFO2dCQUNuQixvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsUUFBUSxFQUFDLElBQUksRUFBQyx5QkFBeUIsR0FBRztnQkFDOUQsb0JBQUMsNEJBQVEsQ0FBQyxJQUFJLElBQUMsSUFBSSxFQUFDLFFBQVEsRUFBQyxJQUFJLEVBQUMsdUJBQXVCLEdBQUU7Z0JBQzNELG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLElBQUksRUFBQyxPQUFPLEVBQUMsSUFBSSxFQUFDLGFBQWEsR0FBRSxDQUNwQyxDQUNULENBQ2QsQ0FBQztJQUNOLENBQUM7SUFDTCxtQkFBQztBQUFELENBQUMsQUFyQ0QsQ0FBMkIsS0FBSyxDQUFDLFNBQVMsR0FxQ3pDO0FBRUQsa0JBQWUsWUFBWSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtEcm9wZG93biwgUG9wdXB9IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcbmltcG9ydCB7RHJvcGRvd25GaWxlUHJvcHN9IGZyb20gJy4uL2NvbXBvbmVudHMvaW50ZXJmYWNlcy9pbnRlcmZhY2VzJztcbi8qXG4gICAgQ29tcG9uZW50IHVzZWQgdG8gY3JlYXRlIGEgZHJvcGRvd24gY29tcG9uZW50IGZvciB0aGUgZmlsZSB0b29sYmFyIG9wdGlvblxuICAgIFJlcXVpcmVzIHNldmVyYWwgcHJvcHMgZnJvbSB0aGUgcGFyZW50LCB3aGljaCBjYW4gYmUgZm91bmQgaW4gaW50ZXJmYWNlcy5kLnRzXG5cbiAqL1xuY2xhc3MgRHJvcGRvd25GaWxlIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PERyb3Bkb3duRmlsZVByb3BzLCBhbnk+IHtcblxuICAgIGNvbnN0cnVjdG9yKHByb3BzOiBhbnkpIHtcbiAgICAgICAgc3VwZXIocHJvcHMpO1xuICAgIH1cblxuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxEcm9wZG93biB0ZXh0PSdGaWxlJyBwb2ludGluZz1cInRvcCBsZWZ0XCI+XG4gICAgICAgICAgICAgICAgPERyb3Bkb3duLk1lbnU+XG4gICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtIHRleHQ9J05ldycvPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd25cbiAgICAgICAgICAgICAgICAgICAgICAgIHRleHQ9J09wZW4gbG9jYWwgZ3JhcGgnXG4gICAgICAgICAgICAgICAgICAgICAgICBwb2ludGluZz0nbGVmdCdcbiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0nbGluayBpdGVtJ1xuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uTWVudT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSBvbkNsaWNrPXsoKSA9PiB0aGlzLnByb3BzLmltcG9ydF9jYihcInNoYWNsXCIpfT4gU0hBQ0wgR3JhcGggPC9Ecm9wZG93bi5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtIG9uQ2xpY2s9eygpID0+IHRoaXMucHJvcHMuaW1wb3J0X2NiKFwiZGF0YVwiKX0+IERhdGEgR3JhcGg8L0Ryb3Bkb3duLkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0Ryb3Bkb3duLk1lbnU+XG4gICAgICAgICAgICAgICAgICAgIDwvRHJvcGRvd24+XG4gICAgICAgICAgICAgICAgICAgIDxQb3B1cFxuICAgICAgICAgICAgICAgICAgICAgICAgdHJpZ2dlcj17PERyb3Bkb3duLkl0ZW0gdGV4dD0nU2F2ZSBsb2NhbCBncmFwaCcvPn1cbiAgICAgICAgICAgICAgICAgICAgICAgIG9uPVwiaG92ZXJcIlxuICAgICAgICAgICAgICAgICAgICAgICAgaW52ZXJ0ZWQ9e2ZhbHNlfVxuICAgICAgICAgICAgICAgICAgICAgICAgaG92ZXJhYmxlPXt0cnVlfVxuICAgICAgICAgICAgICAgICAgICAgICAgcG9zaXRpb249XCJyaWdodCBjZW50ZXJcIlxuICAgICAgICAgICAgICAgICAgICAgICAgY29udGVudD17dGhpcy5wcm9wcy5vcGVuZWRfZmlsZXN9XG4gICAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5EaXZpZGVyLz5cbiAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkl0ZW0gaWNvbj0nZ2l0aHViJyB0ZXh0PSdPcGVuIGdyYXBoIGZyb20gYWNjb3VudCcgLz5cbiAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkl0ZW0gaWNvbj0nZ2l0aHViJyB0ZXh0PSdTYXZlIGdyYXBoIHRvIGFjY291bnQnLz5cbiAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkl0ZW0gaWNvbj0ndHJhc2gnIHRleHQ9J0NsZWFyIGdyYXBoJy8+XG4gICAgICAgICAgICAgICAgPC9Ecm9wZG93bi5NZW51PlxuICAgICAgICAgICAgPC9Ecm9wZG93bj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IERyb3Bkb3duRmlsZTsiXX0=
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 08 2018 17:35:11 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
