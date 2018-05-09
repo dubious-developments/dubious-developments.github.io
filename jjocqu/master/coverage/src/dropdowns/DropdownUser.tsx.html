@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/dropdowns/DropdownView.tsx</title>
+    <title>Code coverage report for src/dropdowns/DropdownUser.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">all files</a> / <a href="index.html">src/dropdowns/</a> DropdownView.tsx
+      <a href="../../index.html">all files</a> / <a href="index.html">src/dropdowns/</a> DropdownUser.tsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">76% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>18/24</span>
+        <span class='fraction'>19/25</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">38.46% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>6/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">80.95% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>16/20</span>
+        <span class='fraction'>17/21</span>
       </div>
     </div>
   </div>
@@ -81,8 +81,7 @@
 36
 37
 38
-39
-40</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+39</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -96,7 +95,7 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -114,14 +113,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/jjocqu/UnSHACLed/src/dropdowns/DropdownView.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/jjocqu/UnSHACLed/src/dropdowns/DropdownUser.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
 var __extends = (this &amp;&amp; this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
@@ -135,31 +133,30 @@ var __extends = (this &amp;&amp; this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var semantic_ui_react_1 = require("semantic-ui-react");
+var react_router_dom_1 = require("react-router-dom");
 /*
-    Component used to create a dropdown component for the view toolbar option
-    Requires several props from the parent, which can be found in interfaces.d.ts
+    Component used to create a dropdown component for an authenticated user
 &nbsp;
  */
-var DropdownView = /** @class */ (function (_super) {
-    __extends(DropdownView, _super);
-<span class="fstat-no" title="function not covered" >    function DropdownView(props) {</span>
+var DropdownUser = /** @class */ (function (_super) {
+    __extends(DropdownUser, _super);
+<span class="fstat-no" title="function not covered" >    function DropdownUser(props) {</span>
 <span class="cstat-no" title="statement not covered" >        return _super.call(this, props) || this;</span>
     }
-    DropdownView.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Dropdown, { text: 'View', pointing: "top left" },</span>
+    DropdownUser.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Dropdown, { text: 'Username', pointing: "top right" },</span>
             React.createElement(semantic_ui_react_1.Dropdown.Menu, null,
-                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'zoom', text: 'Zoom in', id: "tb_zoomin", description: "+" }),
-                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'zoom', text: 'Zoom out', id: "tb_zoomout", description: "-" }),
-                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'expand', text: 'Fit to screen', id: "tb_fit" }),
-                React.createElement(semantic_ui_react_1.Dropdown.Divider, null),
-                React.createElement(semantic_ui_react_1.Dropdown.Item, { icon: 'camera', text: 'Print Graph', id: "tb_show" }))));
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { text: 'Signed in as user' }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { text: 'My Profile' }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { text: 'My Projects' }),
+                React.createElement(semantic_ui_react_1.Dropdown.Item, { as: react_router_dom_1.Link, to: "/login" }, "Sign out"))));
     };
-    return DropdownView;
+    return DropdownUser;
 }(React.Component));
-exports.default = DropdownView;
+exports.default = DropdownUser;
 &nbsp;
-},'src/dropdowns/DropdownView.tsx',{"react":"/home/travis/build/jjocqu/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/jjocqu/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRHJvcGRvd25WaWV3LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRHJvcGRvd25WaWV3LnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQTJDO0FBRTNDOzs7O0dBSUc7QUFDSDtJQUEyQixnQ0FBeUI7SUFFaEQsc0JBQVksS0FBVTtlQUNsQixrQkFBTSxLQUFLLENBQUM7SUFDaEIsQ0FBQztJQUVELDZCQUFNLEdBQU47UUFDSSxPQUFPLENBQ0gsb0JBQUMsNEJBQVEsSUFBQyxJQUFJLEVBQUMsTUFBTSxFQUFDLFFBQVEsRUFBQyxVQUFVO1lBQ3JDLG9CQUFDLDRCQUFRLENBQUMsSUFBSTtnQkFDVixvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsTUFBTSxFQUFDLElBQUksRUFBQyxTQUFTLEVBQUMsRUFBRSxFQUFDLFdBQVcsRUFBQyxXQUFXLEVBQUMsR0FBRyxHQUFFO2dCQUMxRSxvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsTUFBTSxFQUFDLElBQUksRUFBQyxVQUFVLEVBQUMsRUFBRSxFQUFDLFlBQVksRUFBQyxXQUFXLEVBQUMsR0FBRyxHQUFFO2dCQUM1RSxvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsUUFBUSxFQUFDLElBQUksRUFBQyxlQUFlLEVBQUMsRUFBRSxFQUFDLFFBQVEsR0FBRTtnQkFDL0Qsb0JBQUMsNEJBQVEsQ0FBQyxPQUFPLE9BQUU7Z0JBQ25CLG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLElBQUksRUFBQyxRQUFRLEVBQUMsSUFBSSxFQUFDLGFBQWEsRUFBQyxFQUFFLEVBQUMsU0FBUyxHQUFFLENBQ2xELENBQ1QsQ0FDZCxDQUFDO0lBQ04sQ0FBQztJQUNMLG1CQUFDO0FBQUQsQ0FBQyxBQW5CRCxDQUEyQixLQUFLLENBQUMsU0FBUyxHQW1CekM7QUFFRCxrQkFBZSxZQUFZLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQge0Ryb3Bkb3dufSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5cbi8qXG4gICAgQ29tcG9uZW50IHVzZWQgdG8gY3JlYXRlIGEgZHJvcGRvd24gY29tcG9uZW50IGZvciB0aGUgdmlldyB0b29sYmFyIG9wdGlvblxuICAgIFJlcXVpcmVzIHNldmVyYWwgcHJvcHMgZnJvbSB0aGUgcGFyZW50LCB3aGljaCBjYW4gYmUgZm91bmQgaW4gaW50ZXJmYWNlcy5kLnRzXG5cbiAqL1xuY2xhc3MgRHJvcGRvd25WaWV3IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICBjb25zdHJ1Y3Rvcihwcm9wczogYW55KSB7XG4gICAgICAgIHN1cGVyKHByb3BzKTtcbiAgICB9XG5cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8RHJvcGRvd24gdGV4dD0nVmlldycgcG9pbnRpbmc9XCJ0b3AgbGVmdFwiPlxuICAgICAgICAgICAgICAgIDxEcm9wZG93bi5NZW51PlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSBpY29uPSd6b29tJyB0ZXh0PSdab29tIGluJyBpZD1cInRiX3pvb21pblwiIGRlc2NyaXB0aW9uPVwiK1wiLz5cbiAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkl0ZW0gaWNvbj0nem9vbScgdGV4dD0nWm9vbSBvdXQnIGlkPVwidGJfem9vbW91dFwiIGRlc2NyaXB0aW9uPVwiLVwiLz5cbiAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkl0ZW0gaWNvbj0nZXhwYW5kJyB0ZXh0PSdGaXQgdG8gc2NyZWVuJyBpZD1cInRiX2ZpdFwiLz5cbiAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkRpdmlkZXIvPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSBpY29uPSdjYW1lcmEnIHRleHQ9J1ByaW50IEdyYXBoJyBpZD1cInRiX3Nob3dcIi8+XG4gICAgICAgICAgICAgICAgPC9Ecm9wZG93bi5NZW51PlxuICAgICAgICAgICAgPC9Ecm9wZG93bj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IERyb3Bkb3duVmlldzsiXX0=
+},'src/dropdowns/DropdownUser.tsx',{"react":"/home/travis/build/jjocqu/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/jjocqu/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","react-router-dom":"/home/travis/build/jjocqu/UnSHACLed/node_modules/react-router-dom/index.js"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRHJvcGRvd25Vc2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRHJvcGRvd25Vc2VyLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQTJDO0FBQzNDLHFEQUFzQztBQUV0Qzs7O0dBR0c7QUFDSDtJQUEyQixnQ0FBeUI7SUFFaEQsc0JBQVksS0FBVTtlQUNsQixrQkFBTSxLQUFLLENBQUM7SUFDaEIsQ0FBQztJQUVELDZCQUFNLEdBQU47UUFDSSxPQUFPLENBQ0gsb0JBQUMsNEJBQVEsSUFBQyxJQUFJLEVBQUMsVUFBVSxFQUFDLFFBQVEsRUFBQyxXQUFXO1lBQzFDLG9CQUFDLDRCQUFRLENBQUMsSUFBSTtnQkFDVixvQkFBQyw0QkFBUSxDQUFDLElBQUksSUFBQyxJQUFJLEVBQUMsbUJBQW1CLEdBQUU7Z0JBQ3pDLG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLElBQUksRUFBQyxZQUFZLEdBQUU7Z0JBQ2xDLG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLElBQUksRUFBQyxhQUFhLEdBQUU7Z0JBQ25DLG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFFLEVBQUUsRUFBRSx1QkFBSSxFQUFFLEVBQUUsRUFBQyxRQUFRLGVBRXJCLENBQ0osQ0FDVCxDQUNkLENBQUM7SUFDTixDQUFDO0lBQ0wsbUJBQUM7QUFBRCxDQUFDLEFBcEJELENBQTJCLEtBQUssQ0FBQyxTQUFTLEdBb0J6QztBQUVELGtCQUFlLFlBQVksQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7RHJvcGRvd259IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcbmltcG9ydCB7TGlua30gZnJvbSBcInJlYWN0LXJvdXRlci1kb21cIjtcblxuLypcbiAgICBDb21wb25lbnQgdXNlZCB0byBjcmVhdGUgYSBkcm9wZG93biBjb21wb25lbnQgZm9yIGFuIGF1dGhlbnRpY2F0ZWQgdXNlclxuXG4gKi9cbmNsYXNzIERyb3Bkb3duVXNlciBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgY29uc3RydWN0b3IocHJvcHM6IGFueSkge1xuICAgICAgICBzdXBlcihwcm9wcyk7XG4gICAgfVxuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPERyb3Bkb3duIHRleHQ9J1VzZXJuYW1lJyBwb2ludGluZz1cInRvcCByaWdodFwiPlxuICAgICAgICAgICAgICAgIDxEcm9wZG93bi5NZW51PlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSB0ZXh0PSdTaWduZWQgaW4gYXMgdXNlcicvPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSB0ZXh0PSdNeSBQcm9maWxlJy8+XG4gICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtIHRleHQ9J015IFByb2plY3RzJy8+XG4gICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtICBhcz17TGlua30gdG89XCIvbG9naW5cIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIFNpZ24gb3V0XG4gICAgICAgICAgICAgICAgICAgIDwvRHJvcGRvd24uSXRlbT5cbiAgICAgICAgICAgICAgICA8L0Ryb3Bkb3duLk1lbnU+XG4gICAgICAgICAgICA8L0Ryb3Bkb3duPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgRHJvcGRvd25Vc2VyOyJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
