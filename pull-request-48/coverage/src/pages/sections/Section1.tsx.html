@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pages/sections/Section1.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/pages/sections/</a> Section1.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section1.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var semantic_ui_react_1 = require("semantic-ui-react");
+var Section1 = /** @class */ (function (_super) {
+    __extends(Section1, _super);
+<span class="fstat-no" title="function not covered" >    function Section1() {</span>
+<span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+    }
+    Section1.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement("div", null,</span>
+            React.createElement(semantic_ui_react_1.Header, { as: "h1" }, " Introduction "),
+            React.createElement("p", null, " Welcome to the user manual of our UnSHACLed product! UnSHACLed is a visual IDE for Semantic Web constraint languages where the current release supports the recently introduced constraint language SHACL. If none of this sounds familiar, don't worry. The following sections should help you understand the goald and meaning of our product and its surrounding topics. Each section is written such that it can be read independently of all other sections. If you only wish to read a certain section, you can navigate to your section of choice by using the table of contents."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal" }, " Semantic Web "),
+            React.createElement("p", null, "The Semantic Web is an extension of the current Web expanding it with meaning and allowing machines to reason about information in a human-like way. Despite its good intention, the abundance of unstructured data within the Semantic Web hampers the collaboration between different entities. To overcome this, SHACL allows people to set up constraints for what their data should look like so one can ascertain its exact format and look. Crucially, machines can also check whether data conforms to the constraints, making the contract between collaborating entities verifiable and offering more structure to the Semantic Web."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal" }, " SHACL "),
+            "Shapes Constraint Language (SHACL) is a constraint language for validating RDF graphs against a set of conditions (often called ",
+            React.createElement("b", null, " constraints "),
+            "). These conditions are represented in shapes in the form of RDF graphs and for that reason are often called ",
+            React.createElement("b", null, " shapes graphs "),
+            ". Those shapes graphs are then validated against the normal data (which is also represented in a RDF graph an for that reason is called a ",
+            React.createElement("b", null, " data graph"),
+            ". SHACL allows us to generate an exact format of how our data shoud look like and hence improve data exchanging between different entities. For more information on SHACL or RDF you can follow the links below.",
+            React.createElement(semantic_ui_react_1.List, null,
+                React.createElement(semantic_ui_react_1.List.Item, { as: 'a', to: "https://www.w3.org/TR/shacl/" }, "SHACL specification "),
+                React.createElement(semantic_ui_react_1.List.Item, { as: 'a', to: "https://www.w3.org/RDF/" }, "RDF info")),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal" }, " UnSHACLed "),
+            React.createElement("p", null,
+                " Current constraint editors are mostly text-based. The problem with these becomes clear looking at a similar problem: imagine developing UML rules by typing them. You immediately feel that this would be a slow and repetitive process in contrast to creating UML with a design tool. Our product solves a similar issue, but with SHACL instead of UML. Using a visual editor/IDE enables users to easily adopt an unfamiliar technology due to its intuitive visualization which abstracts most of the complexity of the underlying technology. In addition, it increases productivity, allowing for faster development. Our tool also allows for collaborative editing, so SHACL experts and non-experts can easily work together and assist each other. To allow intuitive, fast development of constraints and a clear detection of non-conforming data, our product offers several features:",
+                React.createElement(semantic_ui_react_1.List, { bulleted: true, style: { marginTop: '1em' } },
+                    React.createElement(semantic_ui_react_1.List.Item, null, "An innovative way of visualizing data and constraints"),
+                    React.createElement(semantic_ui_react_1.List.Item, null, "Intuitive building and editing of your own constraints in a visual manner"),
+                    React.createElement(semantic_ui_react_1.List.Item, null, " Pointing out errors clearly, giving users the context they need to understand why their data is non-conforming"),
+                    React.createElement(semantic_ui_react_1.List.Item, null, "Creating templates to further enable rapid development and prevent a repetitive workflow"),
+                    React.createElement(semantic_ui_react_1.List.Item, null, " Working together with others to gain more experience regarding a new technology"),
+                    React.createElement(semantic_ui_react_1.List.Item, null, " Save and exchange your constructed formats")))));
+    };
+    return Section1;
+}(React.Component));
+exports.default = Section1;
+&nbsp;
+},'src/pages/sections/Section1.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2VjdGlvbjEuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTZWN0aW9uMS50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUErQztBQUUvQztJQUF1Qiw0QkFBeUI7SUFBaEQ7O0lBOERBLENBQUM7SUE1REcseUJBQU0sR0FBTjtRQUNJLE9BQU8sQ0FDSDtZQUNJLG9CQUFDLDBCQUFNLElBQUMsRUFBRSxFQUFDLElBQUkscUJBQXdCO1lBQ3ZDLDJsQkFNSTtZQUNKLG9CQUFDLDBCQUFNLElBQUMsRUFBRSxFQUFDLElBQUksRUFBQyxLQUFLLEVBQUMsTUFBTSxxQkFBd0I7WUFDcEQsZ3BCQVNJO1lBQ0osb0JBQUMsMEJBQU0sSUFBQyxFQUFFLEVBQUMsSUFBSSxFQUFDLEtBQUssRUFBQyxNQUFNLGNBQWlCOztZQUVwQiwrQ0FBb0I7O1lBQ00saURBQXNCOztZQUVoRSw2Q0FBa0I7O1lBRzNCLG9CQUFDLHdCQUFJO2dCQUNELG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLEVBQUMsRUFBRSxFQUFDLDhCQUE4QiwyQkFBaUM7Z0JBQ3BGLG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLEVBQUMsRUFBRSxFQUFDLHlCQUF5QixlQUFxQixDQUNoRTtZQUNQLG9CQUFDLDBCQUFNLElBQUMsRUFBRSxFQUFDLElBQUksRUFBQyxLQUFLLEVBQUMsTUFBTSxrQkFBcUI7WUFDakQ7O2dCQVVJLG9CQUFDLHdCQUFJLElBQUMsUUFBUSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsRUFBQyxTQUFTLEVBQUUsS0FBSyxFQUFDO29CQUMzQyxvQkFBQyx3QkFBSSxDQUFDLElBQUksZ0VBQWtFO29CQUM1RSxvQkFBQyx3QkFBSSxDQUFDLElBQUksb0ZBQXNGO29CQUNoRyxvQkFBQyx3QkFBSSxDQUFDLElBQUksMEhBQzhEO29CQUN4RSxvQkFBQyx3QkFBSSxDQUFDLElBQUksbUdBQ3VDO29CQUNqRCxvQkFBQyx3QkFBSSxDQUFDLElBQUksMkZBQ0U7b0JBQ1osb0JBQUMsd0JBQUksQ0FBQyxJQUFJLHNEQUF3RCxDQUMvRCxDQUNQLENBQ0YsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLGVBQUM7QUFBRCxDQUFDLEFBOURELENBQXVCLEtBQUssQ0FBQyxTQUFTLEdBOERyQztBQUVELGtCQUFlLFFBQVEsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7SGVhZGVyLCBMaXN0fSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5cbmNsYXNzIFNlY3Rpb24xIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIDxIZWFkZXIgYXM9XCJoMVwiPiBJbnRyb2R1Y3Rpb24gPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgPHA+IFdlbGNvbWUgdG8gdGhlIHVzZXIgbWFudWFsIG9mIG91ciBVblNIQUNMZWQgcHJvZHVjdCEgVW5TSEFDTGVkIGlzIGEgdmlzdWFsIElERSBmb3IgU2VtYW50aWMgV2ViXG4gICAgICAgICAgICAgICAgICAgIGNvbnN0cmFpbnQgbGFuZ3VhZ2VzIHdoZXJlIHRoZSBjdXJyZW50IHJlbGVhc2Ugc3VwcG9ydHMgdGhlIHJlY2VudGx5IGludHJvZHVjZWQgY29uc3RyYWludCBsYW5ndWFnZVxuICAgICAgICAgICAgICAgICAgICBTSEFDTC4gSWYgbm9uZSBvZiB0aGlzIHNvdW5kcyBmYW1pbGlhciwgZG9uJ3Qgd29ycnkuIFRoZSBmb2xsb3dpbmcgc2VjdGlvbnMgc2hvdWxkIGhlbHAgeW91XG4gICAgICAgICAgICAgICAgICAgIHVuZGVyc3RhbmQgdGhlIGdvYWxkIGFuZCBtZWFuaW5nIG9mIG91ciBwcm9kdWN0IGFuZCBpdHMgc3Vycm91bmRpbmcgdG9waWNzLiBFYWNoIHNlY3Rpb24gaXNcbiAgICAgICAgICAgICAgICAgICAgd3JpdHRlbiBzdWNoIHRoYXQgaXQgY2FuIGJlIHJlYWQgaW5kZXBlbmRlbnRseSBvZiBhbGwgb3RoZXIgc2VjdGlvbnMuIElmIHlvdSBvbmx5IHdpc2ggdG8gcmVhZCBhXG4gICAgICAgICAgICAgICAgICAgIGNlcnRhaW4gc2VjdGlvbiwgeW91IGNhbiBuYXZpZ2F0ZSB0byB5b3VyIHNlY3Rpb24gb2YgY2hvaWNlIGJ5IHVzaW5nIHRoZSB0YWJsZSBvZiBjb250ZW50cy5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPEhlYWRlciBhcz0naDInIGNvbG9yPVwidGVhbFwiPiBTZW1hbnRpYyBXZWIgPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIFRoZSBTZW1hbnRpYyBXZWIgaXMgYW4gZXh0ZW5zaW9uIG9mIHRoZSBjdXJyZW50IFdlYiBleHBhbmRpbmcgaXQgd2l0aFxuICAgICAgICAgICAgICAgICAgICBtZWFuaW5nIGFuZCBhbGxvd2luZyBtYWNoaW5lcyB0byByZWFzb24gYWJvdXQgaW5mb3JtYXRpb24gaW4gYSBodW1hbi1saWtlIHdheS5cbiAgICAgICAgICAgICAgICAgICAgRGVzcGl0ZSBpdHMgZ29vZCBpbnRlbnRpb24sIHRoZSBhYnVuZGFuY2Ugb2YgdW5zdHJ1Y3R1cmVkIGRhdGEgd2l0aGluIHRoZSBTZW1hbnRpYyBXZWJcbiAgICAgICAgICAgICAgICAgICAgaGFtcGVycyB0aGUgY29sbGFib3JhdGlvbiBiZXR3ZWVuIGRpZmZlcmVudCBlbnRpdGllcy4gVG8gb3ZlcmNvbWUgdGhpcywgU0hBQ0xcbiAgICAgICAgICAgICAgICAgICAgYWxsb3dzIHBlb3BsZSB0byBzZXQgdXAgY29uc3RyYWludHMgZm9yIHdoYXQgdGhlaXIgZGF0YSBzaG91bGQgbG9vayBsaWtlIHNvIG9uZSBjYW5cbiAgICAgICAgICAgICAgICAgICAgYXNjZXJ0YWluIGl0cyBleGFjdCBmb3JtYXQgYW5kIGxvb2suIENydWNpYWxseSwgbWFjaGluZXMgY2FuIGFsc28gY2hlY2sgd2hldGhlciBkYXRhXG4gICAgICAgICAgICAgICAgICAgIGNvbmZvcm1zIHRvIHRoZSBjb25zdHJhaW50cywgbWFraW5nIHRoZSBjb250cmFjdCBiZXR3ZWVuIGNvbGxhYm9yYXRpbmcgZW50aXRpZXNcbiAgICAgICAgICAgICAgICAgICAgdmVyaWZpYWJsZSBhbmQgb2ZmZXJpbmcgbW9yZSBzdHJ1Y3R1cmUgdG8gdGhlIFNlbWFudGljIFdlYi5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPEhlYWRlciBhcz0naDInIGNvbG9yPVwidGVhbFwiPiBTSEFDTCA8L0hlYWRlcj5cbiAgICAgICAgICAgICAgICBTaGFwZXMgQ29uc3RyYWludCBMYW5ndWFnZSAoU0hBQ0wpIGlzIGEgY29uc3RyYWludCBsYW5ndWFnZSBmb3IgdmFsaWRhdGluZyBSREYgZ3JhcGhzIGFnYWluc3QgYSBzZXQgb2ZcbiAgICAgICAgICAgICAgICBjb25kaXRpb25zIChvZnRlbiBjYWxsZWQgPGI+IGNvbnN0cmFpbnRzIDwvYj4pLiBUaGVzZSBjb25kaXRpb25zIGFyZSByZXByZXNlbnRlZCBpbiBzaGFwZXMgaW4gdGhlIGZvcm1cbiAgICAgICAgICAgICAgICBvZiBSREYgZ3JhcGhzIGFuZCBmb3IgdGhhdCByZWFzb24gYXJlIG9mdGVuIGNhbGxlZCA8Yj4gc2hhcGVzIGdyYXBocyA8L2I+LiBUaG9zZSBzaGFwZXMgZ3JhcGhzIGFyZSB0aGVuXG4gICAgICAgICAgICAgICAgdmFsaWRhdGVkIGFnYWluc3QgdGhlIG5vcm1hbCBkYXRhICh3aGljaCBpcyBhbHNvIHJlcHJlc2VudGVkIGluIGEgUkRGIGdyYXBoIGFuIGZvciB0aGF0IHJlYXNvbiBpc1xuICAgICAgICAgICAgICAgIGNhbGxlZCBhIDxiPiBkYXRhIGdyYXBoPC9iPi4gU0hBQ0wgYWxsb3dzIHVzIHRvIGdlbmVyYXRlIGFuIGV4YWN0IGZvcm1hdCBvZiBob3cgb3VyIGRhdGEgc2hvdWQgbG9vayBsaWtlXG4gICAgICAgICAgICAgICAgYW5kIGhlbmNlIGltcHJvdmUgZGF0YSBleGNoYW5naW5nIGJldHdlZW4gZGlmZmVyZW50IGVudGl0aWVzLiBGb3IgbW9yZSBpbmZvcm1hdGlvbiBvbiBTSEFDTCBvciBSREYgeW91XG4gICAgICAgICAgICAgICAgY2FuIGZvbGxvdyB0aGUgbGlua3MgYmVsb3cuXG4gICAgICAgICAgICAgICAgPExpc3Q+XG4gICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnIHRvPVwiaHR0cHM6Ly93d3cudzMub3JnL1RSL3NoYWNsL1wiPlNIQUNMIHNwZWNpZmljYXRpb24gPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnIHRvPVwiaHR0cHM6Ly93d3cudzMub3JnL1JERi9cIj5SREYgaW5mbzwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgIDwvTGlzdD5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoMicgY29sb3I9XCJ0ZWFsXCI+IFVuU0hBQ0xlZCA8L0hlYWRlcj5cbiAgICAgICAgICAgICAgICA8cD4gQ3VycmVudCBjb25zdHJhaW50IGVkaXRvcnMgYXJlIG1vc3RseSB0ZXh0LWJhc2VkLiBUaGUgcHJvYmxlbSB3aXRoIHRoZXNlIGJlY29tZXMgY2xlYXIgbG9va2luZyBhdCBhXG4gICAgICAgICAgICAgICAgICAgIHNpbWlsYXIgcHJvYmxlbTogaW1hZ2luZSBkZXZlbG9waW5nIFVNTCBydWxlcyBieSB0eXBpbmcgdGhlbS4gWW91IGltbWVkaWF0ZWx5IGZlZWwgdGhhdCB0aGlzIHdvdWxkXG4gICAgICAgICAgICAgICAgICAgIGJlIGEgc2xvdyBhbmQgcmVwZXRpdGl2ZSBwcm9jZXNzIGluIGNvbnRyYXN0IHRvIGNyZWF0aW5nIFVNTCB3aXRoIGEgZGVzaWduIHRvb2wuIE91ciBwcm9kdWN0IHNvbHZlc1xuICAgICAgICAgICAgICAgICAgICBhIHNpbWlsYXIgaXNzdWUsIGJ1dCB3aXRoIFNIQUNMIGluc3RlYWQgb2YgVU1MLlxuICAgICAgICAgICAgICAgICAgICBVc2luZyBhIHZpc3VhbCBlZGl0b3IvSURFIGVuYWJsZXMgdXNlcnMgdG8gZWFzaWx5IGFkb3B0IGFuIHVuZmFtaWxpYXIgdGVjaG5vbG9neSBkdWUgdG8gaXRzXG4gICAgICAgICAgICAgICAgICAgIGludHVpdGl2ZSB2aXN1YWxpemF0aW9uIHdoaWNoIGFic3RyYWN0cyBtb3N0IG9mIHRoZSBjb21wbGV4aXR5IG9mIHRoZSB1bmRlcmx5aW5nIHRlY2hub2xvZ3kuXG4gICAgICAgICAgICAgICAgICAgIEluIGFkZGl0aW9uLCBpdCBpbmNyZWFzZXMgcHJvZHVjdGl2aXR5LCBhbGxvd2luZyBmb3IgZmFzdGVyIGRldmVsb3BtZW50LlxuICAgICAgICAgICAgICAgICAgICBPdXIgdG9vbCBhbHNvIGFsbG93cyBmb3IgY29sbGFib3JhdGl2ZSBlZGl0aW5nLCBzbyBTSEFDTCBleHBlcnRzIGFuZCBub24tZXhwZXJ0cyBjYW4gZWFzaWx5IHdvcmtcbiAgICAgICAgICAgICAgICAgICAgdG9nZXRoZXIgYW5kIGFzc2lzdCBlYWNoIG90aGVyLiBUbyBhbGxvdyBpbnR1aXRpdmUsIGZhc3QgZGV2ZWxvcG1lbnQgb2YgY29uc3RyYWludHMgYW5kIGEgY2xlYXJcbiAgICAgICAgICAgICAgICAgICAgZGV0ZWN0aW9uIG9mIG5vbi1jb25mb3JtaW5nIGRhdGEsIG91ciBwcm9kdWN0IG9mZmVycyBzZXZlcmFsIGZlYXR1cmVzOlxuICAgICAgICAgICAgICAgICAgICA8TGlzdCBidWxsZXRlZD17dHJ1ZX0gc3R5bGU9e3ttYXJnaW5Ub3A6ICcxZW0nfX0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPkFuIGlubm92YXRpdmUgd2F5IG9mIHZpc3VhbGl6aW5nIGRhdGEgYW5kIGNvbnN0cmFpbnRzPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPkludHVpdGl2ZSBidWlsZGluZyBhbmQgZWRpdGluZyBvZiB5b3VyIG93biBjb25zdHJhaW50cyBpbiBhIHZpc3VhbCBtYW5uZXI8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+IFBvaW50aW5nIG91dCBlcnJvcnMgY2xlYXJseSwgZ2l2aW5nIHVzZXJzIHRoZSBjb250ZXh0XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgdGhleSBuZWVkIHRvIHVuZGVyc3RhbmQgd2h5IHRoZWlyIGRhdGEgaXMgbm9uLWNvbmZvcm1pbmc8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+Q3JlYXRpbmcgdGVtcGxhdGVzIHRvIGZ1cnRoZXIgZW5hYmxlIHJhcGlkIGRldmVsb3BtZW50XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgYW5kIHByZXZlbnQgYSByZXBldGl0aXZlIHdvcmtmbG93PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPiBXb3JraW5nIHRvZ2V0aGVyIHdpdGggb3RoZXJzIHRvIGdhaW4gbW9yZSBleHBlcmllbmNlIHJlZ2FyZGluZyBhIG5ldyB0ZWNobm9sb2d5XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+IFNhdmUgYW5kIGV4Y2hhbmdlIHlvdXIgY29uc3RydWN0ZWQgZm9ybWF0czwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICA8L0xpc3Q+XG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBTZWN0aW9uMTtcbiJdfQ==
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri May 18 2018 16:04:21 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

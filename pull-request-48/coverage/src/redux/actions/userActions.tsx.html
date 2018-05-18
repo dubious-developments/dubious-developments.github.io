@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/redux/actions/userActions.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/redux/actions/</a> userActions.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/14</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/actions/userActions.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+<span class="fstat-no" title="function not covered" >function updateName(name) {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: 'updateUsername',
+        payload: {
+            name: name
+        }
+    };
+}
+exports.updateName = updateName;
+<span class="fstat-no" title="function not covered" >function updateLogin(login) {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: 'updateUserLogin',
+        payload: {
+            login: login
+        }
+    };
+}
+exports.updateLogin = updateLogin;
+<span class="fstat-no" title="function not covered" >function updateEmail(email) {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: 'updateUserEmail',
+        payload: {
+            email: email
+        }
+    };
+}
+exports.updateEmail = updateEmail;
+<span class="fstat-no" title="function not covered" >function updateToken(token) {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: 'updateUserToken',
+        payload: {
+            token: token
+        }
+    };
+}
+exports.updateToken = updateToken;
+&nbsp;
+},'src/redux/actions/userActions.tsx',{}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlckFjdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ1c2VyQWN0aW9ucy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxvQkFBMkIsSUFBUztJQUNoQyxPQUFNO1FBQ0YsSUFBSSxFQUFFLGdCQUFnQjtRQUN0QixPQUFPLEVBQUU7WUFDTCxJQUFJLE1BQUE7U0FDUDtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsZ0NBT0M7QUFFRCxxQkFBNEIsS0FBVTtJQUNsQyxPQUFNO1FBQ0YsSUFBSSxFQUFFLGlCQUFpQjtRQUN2QixPQUFPLEVBQUU7WUFDTCxLQUFLLE9BQUE7U0FDUjtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsa0NBT0M7QUFFRCxxQkFBNEIsS0FBVTtJQUNsQyxPQUFNO1FBQ0YsSUFBSSxFQUFFLGlCQUFpQjtRQUN2QixPQUFPLEVBQUU7WUFDTCxLQUFLLE9BQUE7U0FDUjtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsa0NBT0M7QUFFRCxxQkFBNEIsS0FBVTtJQUNsQyxPQUFNO1FBQ0YsSUFBSSxFQUFFLGlCQUFpQjtRQUN2QixPQUFPLEVBQUU7WUFDTCxLQUFLLE9BQUE7U0FDUjtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsa0NBT0MiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gdXBkYXRlTmFtZShuYW1lOiBhbnkpIHtcbiAgICByZXR1cm57XG4gICAgICAgIHR5cGU6ICd1cGRhdGVVc2VybmFtZScsXG4gICAgICAgIHBheWxvYWQ6IHtcbiAgICAgICAgICAgIG5hbWVcbiAgICAgICAgfVxuICAgIH07XG59XG5cbmV4cG9ydCBmdW5jdGlvbiB1cGRhdGVMb2dpbihsb2dpbjogYW55KSB7XG4gICAgcmV0dXJue1xuICAgICAgICB0eXBlOiAndXBkYXRlVXNlckxvZ2luJyxcbiAgICAgICAgcGF5bG9hZDoge1xuICAgICAgICAgICAgbG9naW5cbiAgICAgICAgfVxuICAgIH07XG59XG5cbmV4cG9ydCBmdW5jdGlvbiB1cGRhdGVFbWFpbChlbWFpbDogYW55KSB7XG4gICAgcmV0dXJue1xuICAgICAgICB0eXBlOiAndXBkYXRlVXNlckVtYWlsJyxcbiAgICAgICAgcGF5bG9hZDoge1xuICAgICAgICAgICAgZW1haWxcbiAgICAgICAgfVxuICAgIH07XG59XG5cbmV4cG9ydCBmdW5jdGlvbiB1cGRhdGVUb2tlbih0b2tlbjogYW55KSB7XG4gICAgcmV0dXJue1xuICAgICAgICB0eXBlOiAndXBkYXRlVXNlclRva2VuJyxcbiAgICAgICAgcGF5bG9hZDoge1xuICAgICAgICAgICAgdG9rZW5cbiAgICAgICAgfVxuICAgIH07XG59Il19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri May 18 2018 16:04:21 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

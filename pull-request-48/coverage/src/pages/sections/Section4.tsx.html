@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pages/sections/Section4.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/pages/sections/</a> Section4.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.07% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/25</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section4.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var semantic_ui_react_1 = require("semantic-ui-react");
+var Section4 = /** @class */ (function (_super) {
+    __extends(Section4, _super);
+<span class="fstat-no" title="function not covered" >    function Section4() {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.imgMargin = {</span>
+            marginTop: '1em',
+            marginBottom: '1em'
+        };
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    Section4.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+        // const s41 = require('../../img/user_manual/s4_1.png');
+<span class="cstat-no" title="statement not covered" >        var s42 = require('../../img/user_manual/s4_2.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s43 = require('../../img/user_manual/s4_3.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s44 = require('../../img/user_manual/s4_4.png');</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement("div", { style: { marginTop: '2em' } },</span>
+            React.createElement(semantic_ui_react_1.Header, { as: "h1" }, " Editing "),
+            React.createElement("p", null, " Editing is the core of UnSHACLed, hence the following sections contain a detailed description on how to edit using UnSHACLed. Besides the built in functionality of our editor, the in-graph editing is also included and discussed in detail. Reading through this section as a whole should give you a good grasp of the core concept of UnSHACLed. "),
+            React.createElement(semantic_ui_react_1.List, null,
+                React.createElement(semantic_ui_react_1.List.Item, null,
+                    React.createElement("a", null, "Editor Functionality"),
+                    React.createElement(semantic_ui_react_1.List.List, null,
+                        React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Undo and redo action"),
+                        React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Delete components"),
+                        React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Copy and paste components"))),
+                React.createElement(semantic_ui_react_1.List.Item, null,
+                    React.createElement("a", null, "In-graph editing "),
+                    React.createElement(semantic_ui_react_1.List.List, null,
+                        React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "TODO ")))),
+            React.createElement(semantic_ui_react_1.Header, { as: "h2" }, " Editor Functionality "),
+            React.createElement("p", null, " The following section contains information on the built in functionality that allows easy-to-use icons and functions to perform actions on the current graph. Each edit function is discussed individually and all options to perform that function are provided. "),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h3', color: "teal" }, " Undo and redo actions "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " undoing and redoing actions "),
+                " on your graph."),
+            React.createElement("p", null, " To undo or redo the last action performed on the graph via the edit buttons, simply click the undo or redo icons in the toolbar on top of the screen. These icon are highlighted in red in the figure below. When these icon are clicked, the editor will revert to a previous state of the graph or convert to a future state depending on which function was chosen."),
+            React.createElement(semantic_ui_react_1.Image, { src: s44, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " The second option to execute the undo or redo funcion is via the top toolbar containing the dropdowns. This time click the 'Edit' dropdown as indicated below "),
+            React.createElement(semantic_ui_react_1.Image, { src: s42, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " This will bring up the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s43, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " From the dropdown menu, you can now choose either the undo function or the redo function. Again the editor will perform the same actions as described above. Besides this second option a third option is also available. The undo function can be used by performing the keyboard shortcuts 'CTRL+Z' while the redo function is done by using the 'CTRL+Y' keyboard keys. The keyboard shortcuts are also visible in the figure above.")));
+    };
+    return Section4;
+}(React.Component));
+exports.default = Section4;
+&nbsp;
+},'src/pages/sections/Section4.tsx',{"../../img/user_manual/s4_2.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s4_2.png","../../img/user_manual/s4_3.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s4_3.png","../../img/user_manual/s4_4.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s4_4.png","react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2VjdGlvbjQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTZWN0aW9uNC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUFzRDtBQUV0RDtJQUF1Qiw0QkFBeUI7SUFBaEQ7UUFBQSxxRUFpRUM7UUEvREcsZUFBUyxHQUFHO1lBQ1IsU0FBUyxFQUFFLEtBQUs7WUFDaEIsWUFBWSxFQUFFLEtBQUs7U0FDdEIsQ0FBQzs7SUE0RE4sQ0FBQztJQTFERyx5QkFBTSxHQUFOO1FBQ0kseURBQXlEO1FBQ3pELElBQU0sR0FBRyxHQUFHLE9BQU8sQ0FBQyxnQ0FBZ0MsQ0FBQyxDQUFDO1FBQ3RELElBQU0sR0FBRyxHQUFHLE9BQU8sQ0FBQyxnQ0FBZ0MsQ0FBQyxDQUFDO1FBQ3RELElBQU0sR0FBRyxHQUFHLE9BQU8sQ0FBQyxnQ0FBZ0MsQ0FBQyxDQUFDO1FBQ3RELE9BQU8sQ0FDSCw2QkFBSyxLQUFLLEVBQUUsRUFBQyxTQUFTLEVBQUUsS0FBSyxFQUFDO1lBQzFCLG9CQUFDLDBCQUFNLElBQUMsRUFBRSxFQUFDLElBQUksZ0JBQW1CO1lBQ2xDLHlYQUd1RTtZQUN2RSxvQkFBQyx3QkFBSTtnQkFDRCxvQkFBQyx3QkFBSSxDQUFDLElBQUk7b0JBQ04sc0RBQTJCO29CQUMzQixvQkFBQyx3QkFBSSxDQUFDLElBQUk7d0JBQ04sb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFDLEdBQUcsMkJBQWlDO3dCQUNsRCxvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyx3QkFBOEI7d0JBQy9DLG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLGdDQUFzQyxDQUMvQyxDQUNKO2dCQUNaLG9CQUFDLHdCQUFJLENBQUMsSUFBSTtvQkFDTixtREFBd0I7b0JBQ3hCLG9CQUFDLHdCQUFJLENBQUMsSUFBSTt3QkFDTixvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyxZQUFrQixDQUMzQixDQUNKLENBQ1Q7WUFHUCxvQkFBQywwQkFBTSxJQUFDLEVBQUUsRUFBQyxJQUFJLDZCQUFnQztZQUMvQyxxU0FFeUY7WUFDekYsb0JBQUMsMEJBQU0sSUFBQyxFQUFFLEVBQUMsSUFBSSxFQUFDLEtBQUssRUFBQyxNQUFNLDhCQUFpQztZQUM3RDs7Z0JBQXdELCtEQUFvQztrQ0FFeEY7WUFDSix5WUFJSTtZQUNKLG9CQUFDLHlCQUFLLElBQUMsR0FBRyxFQUFFLEdBQUcsRUFBRSxRQUFRLEVBQUUsSUFBSSxFQUFFLEtBQUssRUFBRSxJQUFJLENBQUMsU0FBUyxHQUFHO1lBQ3pELGlNQUNzRTtZQUN0RSxvQkFBQyx5QkFBSyxJQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsUUFBUSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLFNBQVMsR0FBRztZQUN6RCxvRUFBeUM7WUFDekMsb0JBQUMseUJBQUssSUFBQyxHQUFHLEVBQUUsR0FBRyxFQUFFLFFBQVEsRUFBRSxJQUFJLEVBQUUsS0FBSyxFQUFFLElBQUksQ0FBQyxTQUFTLEdBQUc7WUFDekQsMGNBS0ksQ0FDRixDQUNULENBQUM7SUFDTixDQUFDO0lBQ0wsZUFBQztBQUFELENBQUMsQUFqRUQsQ0FBdUIsS0FBSyxDQUFDLFNBQVMsR0FpRXJDO0FBRUQsa0JBQWUsUUFBUSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtIZWFkZXIsIExpc3QsIEltYWdlfSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5cbmNsYXNzIFNlY3Rpb240IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICBpbWdNYXJnaW4gPSB7XG4gICAgICAgIG1hcmdpblRvcDogJzFlbScsXG4gICAgICAgIG1hcmdpbkJvdHRvbTogJzFlbSdcbiAgICB9O1xuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICAvLyBjb25zdCBzNDEgPSByZXF1aXJlKCcuLi8uLi9pbWcvdXNlcl9tYW51YWwvczRfMS5wbmcnKTtcbiAgICAgICAgY29uc3QgczQyID0gcmVxdWlyZSgnLi4vLi4vaW1nL3VzZXJfbWFudWFsL3M0XzIucG5nJyk7XG4gICAgICAgIGNvbnN0IHM0MyA9IHJlcXVpcmUoJy4uLy4uL2ltZy91c2VyX21hbnVhbC9zNF8zLnBuZycpO1xuICAgICAgICBjb25zdCBzNDQgPSByZXF1aXJlKCcuLi8uLi9pbWcvdXNlcl9tYW51YWwvczRfNC5wbmcnKTtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e3ttYXJnaW5Ub3A6ICcyZW0nfX0+XG4gICAgICAgICAgICAgICAgPEhlYWRlciBhcz1cImgxXCI+IEVkaXRpbmcgPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgPHA+IEVkaXRpbmcgaXMgdGhlIGNvcmUgb2YgVW5TSEFDTGVkLCBoZW5jZSB0aGUgZm9sbG93aW5nIHNlY3Rpb25zIGNvbnRhaW4gYSBkZXRhaWxlZCBkZXNjcmlwdGlvblxuICAgICAgICAgICAgICAgICAgICBvbiBob3cgdG8gZWRpdCB1c2luZyBVblNIQUNMZWQuIEJlc2lkZXMgdGhlIGJ1aWx0IGluIGZ1bmN0aW9uYWxpdHkgb2Ygb3VyIGVkaXRvciwgdGhlIGluLWdyYXBoXG4gICAgICAgICAgICAgICAgICAgIGVkaXRpbmcgaXMgYWxzbyBpbmNsdWRlZCBhbmQgZGlzY3Vzc2VkIGluIGRldGFpbC4gUmVhZGluZyB0aHJvdWdoIHRoaXMgc2VjdGlvbiBhcyBhIHdob2xlXG4gICAgICAgICAgICAgICAgICAgIHNob3VsZCBnaXZlIHlvdSBhIGdvb2QgZ3Jhc3Agb2YgdGhlIGNvcmUgY29uY2VwdCBvZiBVblNIQUNMZWQuIDwvcD5cbiAgICAgICAgICAgICAgICA8TGlzdD5cbiAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxhPkVkaXRvciBGdW5jdGlvbmFsaXR5PC9hPlxuICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5VbmRvIGFuZCByZWRvIGFjdGlvbjwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnPkRlbGV0ZSBjb21wb25lbnRzPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbSBhcz0nYSc+Q29weSBhbmQgcGFzdGUgY29tcG9uZW50czwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkxpc3Q+XG4gICAgICAgICAgICAgICAgICAgIDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGE+SW4tZ3JhcGggZWRpdGluZyA8L2E+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnPlRPRE8gPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgPC9MaXN0PlxuXG4gICAgICAgICAgICAgICAgey8qKiBFZGl0b3IgZnVuY3Rpb25hbGl0eSAqKi99XG4gICAgICAgICAgICAgICAgPEhlYWRlciBhcz1cImgyXCI+IEVkaXRvciBGdW5jdGlvbmFsaXR5IDwvSGVhZGVyPlxuICAgICAgICAgICAgICAgIDxwPiBUaGUgZm9sbG93aW5nIHNlY3Rpb24gY29udGFpbnMgaW5mb3JtYXRpb24gb24gdGhlIGJ1aWx0IGluIGZ1bmN0aW9uYWxpdHkgdGhhdCBhbGxvd3NcbiAgICAgICAgICAgICAgICAgICAgZWFzeS10by11c2UgaWNvbnMgYW5kIGZ1bmN0aW9ucyB0byBwZXJmb3JtIGFjdGlvbnMgb24gdGhlIGN1cnJlbnQgZ3JhcGguIEVhY2ggZWRpdCBmdW5jdGlvblxuICAgICAgICAgICAgICAgICAgICBpcyBkaXNjdXNzZWQgaW5kaXZpZHVhbGx5IGFuZCBhbGwgb3B0aW9ucyB0byBwZXJmb3JtIHRoYXQgZnVuY3Rpb24gYXJlIHByb3ZpZGVkLiA8L3A+XG4gICAgICAgICAgICAgICAgPEhlYWRlciBhcz0naDMnIGNvbG9yPVwidGVhbFwiPiBVbmRvIGFuZCByZWRvIGFjdGlvbnMgPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgPHA+IFRoZSBmb2xsb3dpbmcgd2lsbCBndWlkZSB5b3UgdGhyb3VnaCB0aGUgcHJvY2VzcyBvZiA8Yj4gdW5kb2luZyBhbmQgcmVkb2luZyBhY3Rpb25zIDwvYj4gb25cbiAgICAgICAgICAgICAgICAgICAgeW91ciBncmFwaC5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPHA+IFRvIHVuZG8gb3IgcmVkbyB0aGUgbGFzdCBhY3Rpb24gcGVyZm9ybWVkIG9uIHRoZSBncmFwaCB2aWEgdGhlIGVkaXQgYnV0dG9ucywgc2ltcGx5IGNsaWNrXG4gICAgICAgICAgICAgICAgICAgIHRoZSB1bmRvIG9yIHJlZG8gaWNvbnMgaW4gdGhlIHRvb2xiYXIgb24gdG9wIG9mIHRoZSBzY3JlZW4uIFRoZXNlIGljb24gYXJlIGhpZ2hsaWdodGVkIGluIHJlZFxuICAgICAgICAgICAgICAgICAgICBpbiB0aGUgZmlndXJlIGJlbG93LiBXaGVuIHRoZXNlIGljb24gYXJlIGNsaWNrZWQsIHRoZSBlZGl0b3Igd2lsbCByZXZlcnQgdG8gYSBwcmV2aW91cyBzdGF0ZVxuICAgICAgICAgICAgICAgICAgICBvZiB0aGUgZ3JhcGggb3IgY29udmVydCB0byBhIGZ1dHVyZSBzdGF0ZSBkZXBlbmRpbmcgb24gd2hpY2ggZnVuY3Rpb24gd2FzIGNob3Nlbi5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czQ0fSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+IFRoZSBzZWNvbmQgb3B0aW9uIHRvIGV4ZWN1dGUgdGhlIHVuZG8gb3IgcmVkbyBmdW5jaW9uIGlzIHZpYSB0aGUgdG9wIHRvb2xiYXIgY29udGFpbmluZyB0aGVcbiAgICAgICAgICAgICAgICBkcm9wZG93bnMuIFRoaXMgdGltZSBjbGljayB0aGUgJ0VkaXQnIGRyb3Bkb3duIGFzIGluZGljYXRlZCBiZWxvdyA8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czQyfSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+IFRoaXMgd2lsbCBicmluZyB1cCB0aGUgZm9sbG93aW5nOjwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzNDN9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cbiAgICAgICAgICAgICAgICA8cD4gRnJvbSB0aGUgZHJvcGRvd24gbWVudSwgeW91IGNhbiBub3cgY2hvb3NlIGVpdGhlciB0aGUgdW5kbyBmdW5jdGlvbiBvciB0aGUgcmVkbyBmdW5jdGlvbi5cbiAgICAgICAgICAgICAgICBBZ2FpbiB0aGUgZWRpdG9yIHdpbGwgcGVyZm9ybSB0aGUgc2FtZSBhY3Rpb25zIGFzIGRlc2NyaWJlZCBhYm92ZS4gQmVzaWRlcyB0aGlzIHNlY29uZCBvcHRpb25cbiAgICAgICAgICAgICAgICBhIHRoaXJkIG9wdGlvbiBpcyBhbHNvIGF2YWlsYWJsZS4gVGhlIHVuZG8gZnVuY3Rpb24gY2FuIGJlIHVzZWQgYnkgcGVyZm9ybWluZyB0aGUga2V5Ym9hcmRcbiAgICAgICAgICAgICAgICBzaG9ydGN1dHMgJ0NUUkwrWicgd2hpbGUgdGhlIHJlZG8gZnVuY3Rpb24gaXMgZG9uZSBieSB1c2luZyB0aGUgJ0NUUkwrWScga2V5Ym9hcmQga2V5cy5cbiAgICAgICAgICAgICAgICBUaGUga2V5Ym9hcmQgc2hvcnRjdXRzIGFyZSBhbHNvIHZpc2libGUgaW4gdGhlIGZpZ3VyZSBhYm92ZS5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IFNlY3Rpb240O1xuIl19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri May 18 2018 16:04:21 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

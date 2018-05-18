@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/redux/reducers/userReducer.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/redux/reducers/</a> userReducer.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.48% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.46% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/reducers/userReducer.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+<span class="fstat-no" title="function not covered" >function userNameReducer(state, action) {</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case 'updateUsername':
+<span class="cstat-no" title="statement not covered" >            return action.payload.name;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
+}
+exports.userNameReducer = userNameReducer;
+<span class="fstat-no" title="function not covered" >function userLoginReducer(state, action) {</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case 'updateUserLogin':
+<span class="cstat-no" title="statement not covered" >            return action.payload.login;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
+}
+exports.userLoginReducer = userLoginReducer;
+<span class="fstat-no" title="function not covered" >function userEmailReducer(state, action) {</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case 'updateUserEmail':
+<span class="cstat-no" title="statement not covered" >            return action.payload.email;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
+}
+exports.userEmailReducer = userEmailReducer;
+<span class="fstat-no" title="function not covered" >function userTokenReducer(state, action) {</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case 'updateUserToken':
+<span class="cstat-no" title="statement not covered" >            return action.payload.token;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
+}
+exports.userTokenReducer = userTokenReducer;
+&nbsp;
+},'src/redux/reducers/userReducer.tsx',{}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlclJlZHVjZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ1c2VyUmVkdWNlci50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSx5QkFBZ0MsS0FBZSxFQUFFLE1BQVc7SUFBNUIsc0JBQUEsRUFBQSxVQUFlO0lBQzNDLFFBQVEsTUFBTSxDQUFDLElBQUksRUFBRTtRQUNqQixLQUFLLGdCQUFnQjtZQUNqQixPQUFPLE1BQU0sQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDO1FBQy9CO1lBQ0ksT0FBTyxLQUFLLENBQUM7S0FDcEI7QUFDTCxDQUFDO0FBUEQsMENBT0M7QUFFRCwwQkFBaUMsS0FBZSxFQUFFLE1BQVc7SUFBNUIsc0JBQUEsRUFBQSxVQUFlO0lBQzVDLFFBQVEsTUFBTSxDQUFDLElBQUksRUFBRTtRQUNqQixLQUFLLGlCQUFpQjtZQUNsQixPQUFPLE1BQU0sQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDO1FBQ2hDO1lBQ0ksT0FBTyxLQUFLLENBQUM7S0FDcEI7QUFDTCxDQUFDO0FBUEQsNENBT0M7QUFFRCwwQkFBaUMsS0FBZSxFQUFFLE1BQVc7SUFBNUIsc0JBQUEsRUFBQSxVQUFlO0lBQzVDLFFBQVEsTUFBTSxDQUFDLElBQUksRUFBRTtRQUNqQixLQUFLLGlCQUFpQjtZQUNsQixPQUFPLE1BQU0sQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDO1FBQ2hDO1lBQ0ksT0FBTyxLQUFLLENBQUM7S0FDcEI7QUFDTCxDQUFDO0FBUEQsNENBT0M7QUFFRCwwQkFBaUMsS0FBZSxFQUFFLE1BQVc7SUFBNUIsc0JBQUEsRUFBQSxVQUFlO0lBQzVDLFFBQVEsTUFBTSxDQUFDLElBQUksRUFBRTtRQUNqQixLQUFLLGlCQUFpQjtZQUNsQixPQUFPLE1BQU0sQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDO1FBQ2hDO1lBQ0ksT0FBTyxLQUFLLENBQUM7S0FDcEI7QUFDTCxDQUFDO0FBUEQsNENBT0MiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gdXNlck5hbWVSZWR1Y2VyKHN0YXRlOiBhbnkgPSAnJywgYWN0aW9uOiBhbnkpIHtcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgICAgIGNhc2UgJ3VwZGF0ZVVzZXJuYW1lJzpcbiAgICAgICAgICAgIHJldHVybiBhY3Rpb24ucGF5bG9hZC5uYW1lO1xuICAgICAgICBkZWZhdWx0IDpcbiAgICAgICAgICAgIHJldHVybiBzdGF0ZTtcbiAgICB9XG59XG5cbmV4cG9ydCBmdW5jdGlvbiB1c2VyTG9naW5SZWR1Y2VyKHN0YXRlOiBhbnkgPSAnJywgYWN0aW9uOiBhbnkpIHtcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgICAgIGNhc2UgJ3VwZGF0ZVVzZXJMb2dpbic6XG4gICAgICAgICAgICByZXR1cm4gYWN0aW9uLnBheWxvYWQubG9naW47XG4gICAgICAgIGRlZmF1bHQgOlxuICAgICAgICAgICAgcmV0dXJuIHN0YXRlO1xuICAgIH1cbn1cblxuZXhwb3J0IGZ1bmN0aW9uIHVzZXJFbWFpbFJlZHVjZXIoc3RhdGU6IGFueSA9ICcnLCBhY3Rpb246IGFueSkge1xuICAgIHN3aXRjaCAoYWN0aW9uLnR5cGUpIHtcbiAgICAgICAgY2FzZSAndXBkYXRlVXNlckVtYWlsJzpcbiAgICAgICAgICAgIHJldHVybiBhY3Rpb24ucGF5bG9hZC5lbWFpbDtcbiAgICAgICAgZGVmYXVsdCA6XG4gICAgICAgICAgICByZXR1cm4gc3RhdGU7XG4gICAgfVxufVxuXG5leHBvcnQgZnVuY3Rpb24gdXNlclRva2VuUmVkdWNlcihzdGF0ZTogYW55ID0gJycsIGFjdGlvbjogYW55KSB7XG4gICAgc3dpdGNoIChhY3Rpb24udHlwZSkge1xuICAgICAgICBjYXNlICd1cGRhdGVVc2VyVG9rZW4nOlxuICAgICAgICAgICAgcmV0dXJuIGFjdGlvbi5wYXlsb2FkLnRva2VuO1xuICAgICAgICBkZWZhdWx0IDpcbiAgICAgICAgICAgIHJldHVybiBzdGF0ZTtcbiAgICB9XG59Il19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri May 18 2018 16:04:21 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
