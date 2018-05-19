@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">73.33% </span>
+        <span class="strong">78.95% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/15</span>
+        <span class='fraction'>15/19</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.43% </span>
+        <span class="strong">77.78% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/14</span>
+        <span class='fraction'>14/18</span>
       </div>
     </div>
   </div>
@@ -84,8 +84,46 @@
 39
 40
 41
-42</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -95,6 +133,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -104,6 +148,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -113,6 +163,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,36 +183,64 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/actions/userActions.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.UPDATE_NAME = 'user:updateName';
+exports.UPDATE_LOGIN = 'user:updateLogin';
+exports.UPDATE_EMAIL = 'user:updateEmail';
+exports.UPDATE_TOKEN = 'user:updateToken';
+/**
+ * Redux action used to be dispatched to the reducers which will update the store.
+ * This action will update the name of the authenticated user in the global store.
+ * @param name: name of the authenticated user
+ * @return {{type: string; payload: {name}}
+ */
 <span class="fstat-no" title="function not covered" >function updateName(name) {</span>
 <span class="cstat-no" title="statement not covered" >    return {</span>
-        type: 'updateUsername',
+        type: exports.UPDATE_NAME,
         payload: {
             name: name
         }
     };
 }
 exports.updateName = updateName;
+/**
+ * Redux action used to be dispatched to the reducers which will update the store.
+ * This action will update the login of the authenticated user in the global store.
+ * @param login: login of the authenticated user
+ * @return {{type: string; payload: {login}}
+ */
 <span class="fstat-no" title="function not covered" >function updateLogin(login) {</span>
 <span class="cstat-no" title="statement not covered" >    return {</span>
-        type: 'updateUserLogin',
+        type: exports.UPDATE_LOGIN,
         payload: {
             login: login
         }
     };
 }
 exports.updateLogin = updateLogin;
+/**
+ * Redux action used to be dispatched to the reducers which will update the store.
+ * This action will update the email of the authenticated user in the global store.
+ * @param email: email of the authenticated user
+ * @return {{type: string; payload: {email}}
+ */
 <span class="fstat-no" title="function not covered" >function updateEmail(email) {</span>
 <span class="cstat-no" title="statement not covered" >    return {</span>
-        type: 'updateUserEmail',
+        type: exports.UPDATE_EMAIL,
         payload: {
             email: email
         }
     };
 }
 exports.updateEmail = updateEmail;
+/**
+ * Redux action used to be dispatched to the reducers which will update the store.
+ * This action will update the token of the authenticated user in the global store.
+ * @param token: token of the authenticated user
+ * @return {{type: string; payload: {token}}
+ */
 <span class="fstat-no" title="function not covered" >function updateToken(token) {</span>
 <span class="cstat-no" title="statement not covered" >    return {</span>
-        type: 'updateUserToken',
+        type: exports.UPDATE_TOKEN,
         payload: {
             token: token
         }
@@ -165,14 +249,14 @@ exports.updateEmail = updateEmail;
 exports.updateToken = updateToken;
 &nbsp;
 },'src/redux/actions/userActions.tsx',{}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlckFjdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ1c2VyQWN0aW9ucy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxvQkFBMkIsSUFBUztJQUNoQyxPQUFNO1FBQ0YsSUFBSSxFQUFFLGdCQUFnQjtRQUN0QixPQUFPLEVBQUU7WUFDTCxJQUFJLE1BQUE7U0FDUDtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsZ0NBT0M7QUFFRCxxQkFBNEIsS0FBVTtJQUNsQyxPQUFNO1FBQ0YsSUFBSSxFQUFFLGlCQUFpQjtRQUN2QixPQUFPLEVBQUU7WUFDTCxLQUFLLE9BQUE7U0FDUjtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsa0NBT0M7QUFFRCxxQkFBNEIsS0FBVTtJQUNsQyxPQUFNO1FBQ0YsSUFBSSxFQUFFLGlCQUFpQjtRQUN2QixPQUFPLEVBQUU7WUFDTCxLQUFLLE9BQUE7U0FDUjtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsa0NBT0M7QUFFRCxxQkFBNEIsS0FBVTtJQUNsQyxPQUFNO1FBQ0YsSUFBSSxFQUFFLGlCQUFpQjtRQUN2QixPQUFPLEVBQUU7WUFDTCxLQUFLLE9BQUE7U0FDUjtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsa0NBT0MiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gdXBkYXRlTmFtZShuYW1lOiBhbnkpIHtcbiAgICByZXR1cm57XG4gICAgICAgIHR5cGU6ICd1cGRhdGVVc2VybmFtZScsXG4gICAgICAgIHBheWxvYWQ6IHtcbiAgICAgICAgICAgIG5hbWVcbiAgICAgICAgfVxuICAgIH07XG59XG5cbmV4cG9ydCBmdW5jdGlvbiB1cGRhdGVMb2dpbihsb2dpbjogYW55KSB7XG4gICAgcmV0dXJue1xuICAgICAgICB0eXBlOiAndXBkYXRlVXNlckxvZ2luJyxcbiAgICAgICAgcGF5bG9hZDoge1xuICAgICAgICAgICAgbG9naW5cbiAgICAgICAgfVxuICAgIH07XG59XG5cbmV4cG9ydCBmdW5jdGlvbiB1cGRhdGVFbWFpbChlbWFpbDogYW55KSB7XG4gICAgcmV0dXJue1xuICAgICAgICB0eXBlOiAndXBkYXRlVXNlckVtYWlsJyxcbiAgICAgICAgcGF5bG9hZDoge1xuICAgICAgICAgICAgZW1haWxcbiAgICAgICAgfVxuICAgIH07XG59XG5cbmV4cG9ydCBmdW5jdGlvbiB1cGRhdGVUb2tlbih0b2tlbjogYW55KSB7XG4gICAgcmV0dXJue1xuICAgICAgICB0eXBlOiAndXBkYXRlVXNlclRva2VuJyxcbiAgICAgICAgcGF5bG9hZDoge1xuICAgICAgICAgICAgdG9rZW5cbiAgICAgICAgfVxuICAgIH07XG59Il19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlckFjdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ1c2VyQWN0aW9ucy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBYSxRQUFBLFdBQVcsR0FBRyxpQkFBaUIsQ0FBQztBQUNoQyxRQUFBLFlBQVksR0FBRyxrQkFBa0IsQ0FBQztBQUNsQyxRQUFBLFlBQVksR0FBRyxrQkFBa0IsQ0FBQztBQUNsQyxRQUFBLFlBQVksR0FBRyxrQkFBa0IsQ0FBQztBQUUvQzs7Ozs7R0FLRztBQUVILG9CQUEyQixJQUFTO0lBQ2hDLE9BQU87UUFDSCxJQUFJLEVBQUUsbUJBQVc7UUFDakIsT0FBTyxFQUFFO1lBQ0wsSUFBSSxNQUFBO1NBQ1A7S0FDSixDQUFDO0FBQ04sQ0FBQztBQVBELGdDQU9DO0FBRUQ7Ozs7O0dBS0c7QUFDSCxxQkFBNEIsS0FBVTtJQUNsQyxPQUFPO1FBQ0gsSUFBSSxFQUFFLG9CQUFZO1FBQ2xCLE9BQU8sRUFBRTtZQUNMLEtBQUssT0FBQTtTQUNSO0tBQ0osQ0FBQztBQUNOLENBQUM7QUFQRCxrQ0FPQztBQUVEOzs7OztHQUtHO0FBQ0gscUJBQTRCLEtBQVU7SUFDbEMsT0FBTztRQUNILElBQUksRUFBRSxvQkFBWTtRQUNsQixPQUFPLEVBQUU7WUFDTCxLQUFLLE9BQUE7U0FDUjtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsa0NBT0M7QUFFRDs7Ozs7R0FLRztBQUNILHFCQUE0QixLQUFVO0lBQ2xDLE9BQU87UUFDSCxJQUFJLEVBQUUsb0JBQVk7UUFDbEIsT0FBTyxFQUFFO1lBQ0wsS0FBSyxPQUFBO1NBQ1I7S0FDSixDQUFDO0FBQ04sQ0FBQztBQVBELGtDQU9DIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IFVQREFURV9OQU1FID0gJ3VzZXI6dXBkYXRlTmFtZSc7XG5leHBvcnQgY29uc3QgVVBEQVRFX0xPR0lOID0gJ3VzZXI6dXBkYXRlTG9naW4nO1xuZXhwb3J0IGNvbnN0IFVQREFURV9FTUFJTCA9ICd1c2VyOnVwZGF0ZUVtYWlsJztcbmV4cG9ydCBjb25zdCBVUERBVEVfVE9LRU4gPSAndXNlcjp1cGRhdGVUb2tlbic7XG5cbi8qKlxuICogUmVkdXggYWN0aW9uIHVzZWQgdG8gYmUgZGlzcGF0Y2hlZCB0byB0aGUgcmVkdWNlcnMgd2hpY2ggd2lsbCB1cGRhdGUgdGhlIHN0b3JlLlxuICogVGhpcyBhY3Rpb24gd2lsbCB1cGRhdGUgdGhlIG5hbWUgb2YgdGhlIGF1dGhlbnRpY2F0ZWQgdXNlciBpbiB0aGUgZ2xvYmFsIHN0b3JlLlxuICogQHBhcmFtIG5hbWU6IG5hbWUgb2YgdGhlIGF1dGhlbnRpY2F0ZWQgdXNlclxuICogQHJldHVybiB7e3R5cGU6IHN0cmluZzsgcGF5bG9hZDoge25hbWV9fVxuICovXG5cbmV4cG9ydCBmdW5jdGlvbiB1cGRhdGVOYW1lKG5hbWU6IGFueSkge1xuICAgIHJldHVybiB7XG4gICAgICAgIHR5cGU6IFVQREFURV9OQU1FLFxuICAgICAgICBwYXlsb2FkOiB7XG4gICAgICAgICAgICBuYW1lXG4gICAgICAgIH1cbiAgICB9O1xufVxuXG4vKipcbiAqIFJlZHV4IGFjdGlvbiB1c2VkIHRvIGJlIGRpc3BhdGNoZWQgdG8gdGhlIHJlZHVjZXJzIHdoaWNoIHdpbGwgdXBkYXRlIHRoZSBzdG9yZS5cbiAqIFRoaXMgYWN0aW9uIHdpbGwgdXBkYXRlIHRoZSBsb2dpbiBvZiB0aGUgYXV0aGVudGljYXRlZCB1c2VyIGluIHRoZSBnbG9iYWwgc3RvcmUuXG4gKiBAcGFyYW0gbG9naW46IGxvZ2luIG9mIHRoZSBhdXRoZW50aWNhdGVkIHVzZXJcbiAqIEByZXR1cm4ge3t0eXBlOiBzdHJpbmc7IHBheWxvYWQ6IHtsb2dpbn19XG4gKi9cbmV4cG9ydCBmdW5jdGlvbiB1cGRhdGVMb2dpbihsb2dpbjogYW55KSB7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgdHlwZTogVVBEQVRFX0xPR0lOLFxuICAgICAgICBwYXlsb2FkOiB7XG4gICAgICAgICAgICBsb2dpblxuICAgICAgICB9XG4gICAgfTtcbn1cblxuLyoqXG4gKiBSZWR1eCBhY3Rpb24gdXNlZCB0byBiZSBkaXNwYXRjaGVkIHRvIHRoZSByZWR1Y2VycyB3aGljaCB3aWxsIHVwZGF0ZSB0aGUgc3RvcmUuXG4gKiBUaGlzIGFjdGlvbiB3aWxsIHVwZGF0ZSB0aGUgZW1haWwgb2YgdGhlIGF1dGhlbnRpY2F0ZWQgdXNlciBpbiB0aGUgZ2xvYmFsIHN0b3JlLlxuICogQHBhcmFtIGVtYWlsOiBlbWFpbCBvZiB0aGUgYXV0aGVudGljYXRlZCB1c2VyXG4gKiBAcmV0dXJuIHt7dHlwZTogc3RyaW5nOyBwYXlsb2FkOiB7ZW1haWx9fVxuICovXG5leHBvcnQgZnVuY3Rpb24gdXBkYXRlRW1haWwoZW1haWw6IGFueSkge1xuICAgIHJldHVybiB7XG4gICAgICAgIHR5cGU6IFVQREFURV9FTUFJTCxcbiAgICAgICAgcGF5bG9hZDoge1xuICAgICAgICAgICAgZW1haWxcbiAgICAgICAgfVxuICAgIH07XG59XG5cbi8qKlxuICogUmVkdXggYWN0aW9uIHVzZWQgdG8gYmUgZGlzcGF0Y2hlZCB0byB0aGUgcmVkdWNlcnMgd2hpY2ggd2lsbCB1cGRhdGUgdGhlIHN0b3JlLlxuICogVGhpcyBhY3Rpb24gd2lsbCB1cGRhdGUgdGhlIHRva2VuIG9mIHRoZSBhdXRoZW50aWNhdGVkIHVzZXIgaW4gdGhlIGdsb2JhbCBzdG9yZS5cbiAqIEBwYXJhbSB0b2tlbjogdG9rZW4gb2YgdGhlIGF1dGhlbnRpY2F0ZWQgdXNlclxuICogQHJldHVybiB7e3R5cGU6IHN0cmluZzsgcGF5bG9hZDoge3Rva2VufX1cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHVwZGF0ZVRva2VuKHRva2VuOiBhbnkpIHtcbiAgICByZXR1cm4ge1xuICAgICAgICB0eXBlOiBVUERBVEVfVE9LRU4sXG4gICAgICAgIHBheWxvYWQ6IHtcbiAgICAgICAgICAgIHRva2VuXG4gICAgICAgIH1cbiAgICB9O1xufSJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 00:46:01 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 08:37:10 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

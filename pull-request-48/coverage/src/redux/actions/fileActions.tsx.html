@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">83.33% </span>
+        <span class="strong">85.71% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/6</span>
+        <span class='fraction'>6/7</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/5</span>
+        <span class='fraction'>5/6</span>
       </div>
     </div>
   </div>
@@ -66,7 +66,9 @@
 21
 22
 23
-24</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+24
+25</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -91,6 +93,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/actions/fileActions.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.APPEND_FILE = 'files:appendFile';
 /**
  * Redux action used to be dispatched to the reducers which will update the store.
  * @param fileName: name of file being opened and which should be added to the global sotre
@@ -100,7 +103,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 <span class="fstat-no" title="function not covered" >function appendFile(fileName, repoName, type) {</span>
 <span class="cstat-no" title="statement not covered" >    return {</span>
-        type: 'appendFile',
+        type: exports.APPEND_FILE,
         payload: {
             fileName: fileName,
             repoName: repoName,
@@ -111,14 +114,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.appendFile = appendFile;
 &nbsp;
 },'src/redux/actions/fileActions.tsx',{}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZUFjdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJmaWxlQWN0aW9ucy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7Ozs7O0dBTUc7QUFDSCxvQkFBMkIsUUFBYSxFQUFFLFFBQWEsRUFBRSxJQUFTO0lBQzlELE9BQU07UUFDRixJQUFJLEVBQUUsWUFBWTtRQUNsQixPQUFPLEVBQUU7WUFDTCxRQUFRLEVBQUUsUUFBUTtZQUNsQixRQUFRLEVBQUUsUUFBUTtZQUNsQixJQUFJLEVBQUUsSUFBSTtTQUNiO0tBQ0osQ0FBQztBQUNOLENBQUM7QUFURCxnQ0FTQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogUmVkdXggYWN0aW9uIHVzZWQgdG8gYmUgZGlzcGF0Y2hlZCB0byB0aGUgcmVkdWNlcnMgd2hpY2ggd2lsbCB1cGRhdGUgdGhlIHN0b3JlLlxuICogQHBhcmFtIGZpbGVOYW1lOiBuYW1lIG9mIGZpbGUgYmVpbmcgb3BlbmVkIGFuZCB3aGljaCBzaG91bGQgYmUgYWRkZWQgdG8gdGhlIGdsb2JhbCBzb3RyZVxuICogQHBhcmFtIHJlcG9OYW1lOiBuYW1lIG9mIHRoZSByZXBvc2l0b3J5IHRoZSBmaWxlIHJlc2lkZXMgaW5cbiAqIEBwYXJhbSB0eXBlOiB0eXBlIG9mIGZpbGUuIGNhbiBlaXRoZXIgYmUgJ1NIQUNMJyBvciAnZGF0YScuXG4gKiBAcmV0dXJuIHt7dHlwZTogc3RyaW5nOyBwYXlsb2FkOiB7ZmlsZU9iamVjdDogYW55fX19XG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBhcHBlbmRGaWxlKGZpbGVOYW1lOiBhbnksIHJlcG9OYW1lOiBhbnksIHR5cGU6IGFueSkge1xuICAgIHJldHVybntcbiAgICAgICAgdHlwZTogJ2FwcGVuZEZpbGUnLFxuICAgICAgICBwYXlsb2FkOiB7XG4gICAgICAgICAgICBmaWxlTmFtZTogZmlsZU5hbWUsXG4gICAgICAgICAgICByZXBvTmFtZTogcmVwb05hbWUsXG4gICAgICAgICAgICB0eXBlOiB0eXBlXG4gICAgICAgIH1cbiAgICB9O1xufVxuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZUFjdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJmaWxlQWN0aW9ucy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBYSxRQUFBLFdBQVcsR0FBRyxrQkFBa0IsQ0FBQztBQUM5Qzs7Ozs7O0dBTUc7QUFDSCxvQkFBMkIsUUFBYSxFQUFFLFFBQWEsRUFBRSxJQUFTO0lBQzlELE9BQU07UUFDRixJQUFJLEVBQUUsbUJBQVc7UUFDakIsT0FBTyxFQUFFO1lBQ0wsUUFBUSxFQUFFLFFBQVE7WUFDbEIsUUFBUSxFQUFFLFFBQVE7WUFDbEIsSUFBSSxFQUFFLElBQUk7U0FDYjtLQUNKLENBQUM7QUFDTixDQUFDO0FBVEQsZ0NBU0MiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgQVBQRU5EX0ZJTEUgPSAnZmlsZXM6YXBwZW5kRmlsZSc7XG4vKipcbiAqIFJlZHV4IGFjdGlvbiB1c2VkIHRvIGJlIGRpc3BhdGNoZWQgdG8gdGhlIHJlZHVjZXJzIHdoaWNoIHdpbGwgdXBkYXRlIHRoZSBzdG9yZS5cbiAqIEBwYXJhbSBmaWxlTmFtZTogbmFtZSBvZiBmaWxlIGJlaW5nIG9wZW5lZCBhbmQgd2hpY2ggc2hvdWxkIGJlIGFkZGVkIHRvIHRoZSBnbG9iYWwgc290cmVcbiAqIEBwYXJhbSByZXBvTmFtZTogbmFtZSBvZiB0aGUgcmVwb3NpdG9yeSB0aGUgZmlsZSByZXNpZGVzIGluXG4gKiBAcGFyYW0gdHlwZTogdHlwZSBvZiBmaWxlLiBjYW4gZWl0aGVyIGJlICdTSEFDTCcgb3IgJ2RhdGEnLlxuICogQHJldHVybiB7e3R5cGU6IHN0cmluZzsgcGF5bG9hZDoge2ZpbGVPYmplY3Q6IGFueX19fVxuICovXG5leHBvcnQgZnVuY3Rpb24gYXBwZW5kRmlsZShmaWxlTmFtZTogYW55LCByZXBvTmFtZTogYW55LCB0eXBlOiBhbnkpIHtcbiAgICByZXR1cm57XG4gICAgICAgIHR5cGU6IEFQUEVORF9GSUxFLFxuICAgICAgICBwYXlsb2FkOiB7XG4gICAgICAgICAgICBmaWxlTmFtZTogZmlsZU5hbWUsXG4gICAgICAgICAgICByZXBvTmFtZTogcmVwb05hbWUsXG4gICAgICAgICAgICB0eXBlOiB0eXBlXG4gICAgICAgIH1cbiAgICB9O1xufVxuIl19
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 00:46:01 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 08:37:10 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

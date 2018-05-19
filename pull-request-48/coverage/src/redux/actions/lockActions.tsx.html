@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">77.78% </span>
+        <span class="strong">81.82% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/9</span>
+        <span class='fraction'>9/11</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,13 +35,13 @@
         <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">80% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>6/8</span>
+        <span class='fraction'>8/10</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -75,7 +75,11 @@
 30
 31
 32
-33</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+33
+34
+35</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -109,6 +113,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/actions/lockActions.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.APPEND_LOCK = 'locks:appendLock';
+exports.FLUSH_LOCK = 'lock:flushLock';
 /**
  * Redux action used to be dispatched to the reducers which will update the store.
  * @param fileName: name of file being on which a lock has been acquired.
@@ -116,7 +122,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 <span class="fstat-no" title="function not covered" >function appendLock(fileName) {</span>
 <span class="cstat-no" title="statement not covered" >    return {</span>
-        type: 'appendLock',
+        type: exports.APPEND_LOCK,
         payload: {
             fileName: fileName,
         }
@@ -132,20 +138,20 @@ exports.appendLock = appendLock;
  */
 <span class="fstat-no" title="function not covered" >function flushLocks() {</span>
 <span class="cstat-no" title="statement not covered" >    return {</span>
-        type: 'flushLocks'
+        type: exports.FLUSH_LOCK
     };
 }
 exports.flushLocks = flushLocks;
 &nbsp;
 },'src/redux/actions/lockActions.tsx',{}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibG9ja0FjdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJsb2NrQWN0aW9ucy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7OztHQUlHO0FBQ0gsb0JBQTJCLFFBQWE7SUFDcEMsT0FBTztRQUNILElBQUksRUFBRSxZQUFZO1FBQ2xCLE9BQU8sRUFBRTtZQUNMLFFBQVEsRUFBRSxRQUFRO1NBQ3JCO0tBQ0osQ0FBQztBQUNOLENBQUM7QUFQRCxnQ0FPQztBQUVEOzs7Ozs7R0FNRztBQUNIO0lBQ0ksT0FBTTtRQUNGLElBQUksRUFBRSxZQUFZO0tBQ3JCLENBQUM7QUFDTixDQUFDO0FBSkQsZ0NBSUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIFJlZHV4IGFjdGlvbiB1c2VkIHRvIGJlIGRpc3BhdGNoZWQgdG8gdGhlIHJlZHVjZXJzIHdoaWNoIHdpbGwgdXBkYXRlIHRoZSBzdG9yZS5cbiAqIEBwYXJhbSBmaWxlTmFtZTogbmFtZSBvZiBmaWxlIGJlaW5nIG9uIHdoaWNoIGEgbG9jayBoYXMgYmVlbiBhY3F1aXJlZC5cbiAqIEByZXR1cm4ge3t0eXBlOiBzdHJpbmc7IHBheWxvYWQ6IHtmaWxlT2JqZWN0OiBhbnl9fX1cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGFwcGVuZExvY2soZmlsZU5hbWU6IGFueSkge1xuICAgIHJldHVybiB7XG4gICAgICAgIHR5cGU6ICdhcHBlbmRMb2NrJyxcbiAgICAgICAgcGF5bG9hZDoge1xuICAgICAgICAgICAgZmlsZU5hbWU6IGZpbGVOYW1lLFxuICAgICAgICB9XG4gICAgfTtcbn1cblxuLyoqXG4gKiBSZWR1eCBhY3Rpb24gdG8gYmUgZGlzcGF0Y2hlZCB0byB0aGUgcmVkdWNlcnMgd2hpY2ggd2lsbCB1cGRhdGUgdGhlIHN0b3JlLlxuICogVGhpcyBhY3Rpb24gd2lsbCBmbHVzaCB0aGUgY3VycmVudCBsb2NrcyBhc3NvY2lhdGVkIHdpdGggYSB1c2VyIGluIHRoZSBnbG9iYWxcbiAqIHN0YXRlIChyZWR1eCBzdG9yZSkuIERvbmUgd2hlbiBhbGwgbG9ja3MgYXJlIHJlbGVhc2VkXG4gKiBAcGFyYW0gbm9uZTpcbiAqIEByZXR1cm4ge3t0eXBlOiBzdHJpbmd9fVxuICovXG5leHBvcnQgZnVuY3Rpb24gZmx1c2hMb2NrcygpIHtcbiAgICByZXR1cm57XG4gICAgICAgIHR5cGU6ICdmbHVzaExvY2tzJ1xuICAgIH07XG59Il19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibG9ja0FjdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJsb2NrQWN0aW9ucy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBYSxRQUFBLFdBQVcsR0FBRyxrQkFBa0IsQ0FBQztBQUNqQyxRQUFBLFVBQVUsR0FBRyxnQkFBZ0IsQ0FBQztBQUMzQzs7OztHQUlHO0FBQ0gsb0JBQTJCLFFBQWE7SUFDcEMsT0FBTztRQUNILElBQUksRUFBRSxtQkFBVztRQUNqQixPQUFPLEVBQUU7WUFDTCxRQUFRLEVBQUUsUUFBUTtTQUNyQjtLQUNKLENBQUM7QUFDTixDQUFDO0FBUEQsZ0NBT0M7QUFFRDs7Ozs7O0dBTUc7QUFDSDtJQUNJLE9BQU07UUFDRixJQUFJLEVBQUUsa0JBQVU7S0FDbkIsQ0FBQztBQUNOLENBQUM7QUFKRCxnQ0FJQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBBUFBFTkRfTE9DSyA9ICdsb2NrczphcHBlbmRMb2NrJztcbmV4cG9ydCBjb25zdCBGTFVTSF9MT0NLID0gJ2xvY2s6Zmx1c2hMb2NrJztcbi8qKlxuICogUmVkdXggYWN0aW9uIHVzZWQgdG8gYmUgZGlzcGF0Y2hlZCB0byB0aGUgcmVkdWNlcnMgd2hpY2ggd2lsbCB1cGRhdGUgdGhlIHN0b3JlLlxuICogQHBhcmFtIGZpbGVOYW1lOiBuYW1lIG9mIGZpbGUgYmVpbmcgb24gd2hpY2ggYSBsb2NrIGhhcyBiZWVuIGFjcXVpcmVkLlxuICogQHJldHVybiB7e3R5cGU6IHN0cmluZzsgcGF5bG9hZDoge2ZpbGVPYmplY3Q6IGFueX19fVxuICovXG5leHBvcnQgZnVuY3Rpb24gYXBwZW5kTG9jayhmaWxlTmFtZTogYW55KSB7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgdHlwZTogQVBQRU5EX0xPQ0ssXG4gICAgICAgIHBheWxvYWQ6IHtcbiAgICAgICAgICAgIGZpbGVOYW1lOiBmaWxlTmFtZSxcbiAgICAgICAgfVxuICAgIH07XG59XG5cbi8qKlxuICogUmVkdXggYWN0aW9uIHRvIGJlIGRpc3BhdGNoZWQgdG8gdGhlIHJlZHVjZXJzIHdoaWNoIHdpbGwgdXBkYXRlIHRoZSBzdG9yZS5cbiAqIFRoaXMgYWN0aW9uIHdpbGwgZmx1c2ggdGhlIGN1cnJlbnQgbG9ja3MgYXNzb2NpYXRlZCB3aXRoIGEgdXNlciBpbiB0aGUgZ2xvYmFsXG4gKiBzdGF0ZSAocmVkdXggc3RvcmUpLiBEb25lIHdoZW4gYWxsIGxvY2tzIGFyZSByZWxlYXNlZFxuICogQHBhcmFtIG5vbmU6XG4gKiBAcmV0dXJuIHt7dHlwZTogc3RyaW5nfX1cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGZsdXNoTG9ja3MoKSB7XG4gICAgcmV0dXJue1xuICAgICAgICB0eXBlOiBGTFVTSF9MT0NLXG4gICAgfTtcbn0iXX0=
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 00:46:01 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 08:37:10 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
