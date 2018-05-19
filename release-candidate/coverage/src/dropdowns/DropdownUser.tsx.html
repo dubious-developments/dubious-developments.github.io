@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dropdowns/DropdownUser.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/dropdowns/</a> DropdownUser.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.54% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>24/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.15% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/dropdowns/DropdownUser.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var semantic_ui_react_1 = require("semantic-ui-react");
+var react_router_dom_1 = require("react-router-dom");
+var react_redux_1 = require("react-redux");
+var UserModal_1 = require("../modals/UserModal");
+/*
+    Component used to create a dropdown component for an authenticated user
+&nbsp;
+ */
+var DropdownUser = /** @class */ (function (_super) {
+    __extends(DropdownUser, _super);
+<span class="fstat-no" title="function not covered" >    function DropdownUser(props) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super.call(this, props) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.state = {</span>
+            infoVisible: false
+        };
+<span class="cstat-no" title="statement not covered" >        _this.closeModalCallback = _this.closeModalCallback.bind(_this);</span>
+<span class="cstat-no" title="statement not covered" >        _this.showUserModal = _this.showUserModal.bind(_this);</span>
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    DropdownUser.prototype.showUserModal = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            infoVisible: true
+        });
+    };
+    DropdownUser.prototype.closeModalCallback = <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            infoVisible: false
+        });
+    };
+    DropdownUser.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var infoVisible = this.state.infoVisible;</span>
+<span class="cstat-no" title="statement not covered" >        console.log(this.props);</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement("div", null,</span>
+            React.createElement(semantic_ui_react_1.Dropdown, { text: this.props.name, pointing: "top right" },
+                React.createElement(semantic_ui_react_1.Dropdown.Menu, null,
+                    React.createElement(semantic_ui_react_1.Dropdown.Item, null,
+                        "Signed in as ",
+                        React.createElement("b", null,
+                            " ",
+                            this.props.login,
+                            " ")),
+                    React.createElement(semantic_ui_react_1.Dropdown.Item, { text: 'My Profile', onClick: this.showUserModal }),
+                    React.createElement(semantic_ui_react_1.Dropdown.Item, { as: react_router_dom_1.Link, to: "/login" }, "Sign out"))),
+            infoVisible ?
+                React.createElement(UserModal_1.default, { visible: infoVisible, login: this.props.login, onClose_cb: this.closeModalCallback })
+                : null));
+    };
+    return DropdownUser;
+}(React.Component));
+var mapStateToProps = <span class="fstat-no" title="function not covered" >function (state) {</span> <span class="cstat-no" title="statement not covered" >return ({</span>
+    name: state.name,
+    login: state.login
+}); };
+exports.default = react_redux_1.connect(mapStateToProps)(DropdownUser);
+&nbsp;
+},'src/dropdowns/DropdownUser.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","react-router-dom":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-router-dom/index.js","react-redux":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-redux/lib/index.js","../modals/UserModal":"/home/travis/build/dubious-developments/UnSHACLed/src/modals/UserModal.tsx"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRHJvcGRvd25Vc2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRHJvcGRvd25Vc2VyLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQTJDO0FBQzNDLHFEQUFzQztBQUN0QywyQ0FBb0M7QUFDcEMsaURBQTRDO0FBRTVDOzs7R0FHRztBQUNIO0lBQTJCLGdDQUF5QjtJQUVoRCxzQkFBWSxLQUFVO1FBQXRCLFlBQ0ksa0JBQU0sS0FBSyxDQUFDLFNBT2Y7UUFORyxLQUFJLENBQUMsS0FBSyxHQUFHO1lBQ1QsV0FBVyxFQUFFLEtBQUs7U0FDckIsQ0FBQztRQUNGLEtBQUksQ0FBQyxrQkFBa0IsR0FBRyxLQUFJLENBQUMsa0JBQWtCLENBQUMsSUFBSSxDQUFDLEtBQUksQ0FBQyxDQUFDO1FBQzdELEtBQUksQ0FBQyxhQUFhLEdBQUcsS0FBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsS0FBSSxDQUFDLENBQUM7O0lBRXZELENBQUM7SUFFRCxvQ0FBYSxHQUFiO1FBQ0ksSUFBSSxDQUFDLFFBQVEsQ0FBQztZQUNWLFdBQVcsRUFBRSxJQUFJO1NBQ3BCLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCx5Q0FBa0IsR0FBbEIsVUFBbUIsSUFBUztRQUN4QixJQUFJLENBQUMsUUFBUSxDQUFDO1lBQ1YsV0FBVyxFQUFFLEtBQUs7U0FDckIsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELDZCQUFNLEdBQU47UUFDUyxJQUFBLG9DQUFXLENBQWU7UUFDL0IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDeEIsT0FBTyxDQUNIO1lBQ0ksb0JBQUMsNEJBQVEsSUFBQyxJQUFJLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLEVBQUUsUUFBUSxFQUFDLFdBQVc7Z0JBQ2pELG9CQUFDLDRCQUFRLENBQUMsSUFBSTtvQkFDVixvQkFBQyw0QkFBUSxDQUFDLElBQUk7O3dCQUNHOzs0QkFBSyxJQUFJLENBQUMsS0FBSyxDQUFDLEtBQUs7Z0NBQU0sQ0FDNUI7b0JBQ2hCLG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLElBQUksRUFBQyxZQUFZLEVBQUMsT0FBTyxFQUFFLElBQUksQ0FBQyxhQUFhLEdBQUc7b0JBQy9ELG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBRSx1QkFBSSxFQUFFLEVBQUUsRUFBQyxRQUFRLGVBRXBCLENBQ0osQ0FDVDtZQUNWLFdBQVcsQ0FBQyxDQUFDO2dCQUNWLG9CQUFDLG1CQUFTLElBQUMsT0FBTyxFQUFFLFdBQVcsRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxLQUFLLEVBQUUsVUFBVSxFQUFFLElBQUksQ0FBQyxrQkFBa0IsR0FBRztnQkFDaEcsQ0FBQyxDQUFDLElBQUksQ0FHUixDQUNULENBQUM7SUFDTixDQUFDO0lBQ0wsbUJBQUM7QUFBRCxDQUFDLEFBaERELENBQTJCLEtBQUssQ0FBQyxTQUFTLEdBZ0R6QztBQUVELElBQU0sZUFBZSxHQUFHLFVBQUMsS0FBSyxJQUFLLE9BQUEsQ0FBQztJQUNoQyxJQUFJLEVBQUUsS0FBSyxDQUFDLElBQUk7SUFDaEIsS0FBSyxFQUFFLEtBQUssQ0FBQyxLQUFLO0NBQ3JCLENBQUMsRUFIaUMsQ0FHakMsQ0FBQztBQUVILGtCQUFlLHFCQUFPLENBQUMsZUFBZSxDQUFDLENBQUMsWUFBWSxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQge0Ryb3Bkb3dufSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5pbXBvcnQge0xpbmt9IGZyb20gXCJyZWFjdC1yb3V0ZXItZG9tXCI7XG5pbXBvcnQge2Nvbm5lY3R9IGZyb20gJ3JlYWN0LXJlZHV4JztcbmltcG9ydCBVc2VyTW9kYWwgZnJvbSAnLi4vbW9kYWxzL1VzZXJNb2RhbCc7XG5cbi8qXG4gICAgQ29tcG9uZW50IHVzZWQgdG8gY3JlYXRlIGEgZHJvcGRvd24gY29tcG9uZW50IGZvciBhbiBhdXRoZW50aWNhdGVkIHVzZXJcblxuICovXG5jbGFzcyBEcm9wZG93blVzZXIgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQ8YW55LCBhbnk+IHtcblxuICAgIGNvbnN0cnVjdG9yKHByb3BzOiBhbnkpIHtcbiAgICAgICAgc3VwZXIocHJvcHMpO1xuICAgICAgICB0aGlzLnN0YXRlID0ge1xuICAgICAgICAgICAgaW5mb1Zpc2libGU6IGZhbHNlXG4gICAgICAgIH07XG4gICAgICAgIHRoaXMuY2xvc2VNb2RhbENhbGxiYWNrID0gdGhpcy5jbG9zZU1vZGFsQ2FsbGJhY2suYmluZCh0aGlzKTtcbiAgICAgICAgdGhpcy5zaG93VXNlck1vZGFsID0gdGhpcy5zaG93VXNlck1vZGFsLmJpbmQodGhpcyk7XG5cbiAgICB9XG5cbiAgICBzaG93VXNlck1vZGFsKCkge1xuICAgICAgICB0aGlzLnNldFN0YXRlKHtcbiAgICAgICAgICAgIGluZm9WaXNpYmxlOiB0cnVlXG4gICAgICAgIH0pO1xuICAgIH1cblxuICAgIGNsb3NlTW9kYWxDYWxsYmFjayhkYXRhOiBhbnkpIHtcbiAgICAgICAgdGhpcy5zZXRTdGF0ZSh7XG4gICAgICAgICAgICBpbmZvVmlzaWJsZTogZmFsc2VcbiAgICAgICAgfSk7XG4gICAgfVxuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICBsZXQge2luZm9WaXNpYmxlfSA9IHRoaXMuc3RhdGU7XG4gICAgICAgIGNvbnNvbGUubG9nKHRoaXMucHJvcHMpO1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8RHJvcGRvd24gdGV4dD17dGhpcy5wcm9wcy5uYW1lfSBwb2ludGluZz1cInRvcCByaWdodFwiPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uTWVudT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNpZ25lZCBpbiBhcyA8Yj4ge3RoaXMucHJvcHMubG9naW59IDwvYj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvRHJvcGRvd24uSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtIHRleHQ9J015IFByb2ZpbGUnIG9uQ2xpY2s9e3RoaXMuc2hvd1VzZXJNb2RhbH0vPlxuICAgICAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkl0ZW0gYXM9e0xpbmt9IHRvPVwiL2xvZ2luXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgU2lnbiBvdXRcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvRHJvcGRvd24uSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgPC9Ecm9wZG93bi5NZW51PlxuICAgICAgICAgICAgICAgIDwvRHJvcGRvd24+XG4gICAgICAgICAgICAgICAge2luZm9WaXNpYmxlID9cbiAgICAgICAgICAgICAgICAgICAgPFVzZXJNb2RhbCB2aXNpYmxlPXtpbmZvVmlzaWJsZX0gbG9naW49e3RoaXMucHJvcHMubG9naW59IG9uQ2xvc2VfY2I9e3RoaXMuY2xvc2VNb2RhbENhbGxiYWNrfS8+XG4gICAgICAgICAgICAgICAgICAgIDogbnVsbFxuICAgICAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgfVxufVxuXG5jb25zdCBtYXBTdGF0ZVRvUHJvcHMgPSAoc3RhdGUpID0+ICh7XG4gICAgbmFtZTogc3RhdGUubmFtZSxcbiAgICBsb2dpbjogc3RhdGUubG9naW5cbn0pO1xuXG5leHBvcnQgZGVmYXVsdCBjb25uZWN0KG1hcFN0YXRlVG9Qcm9wcykoRHJvcGRvd25Vc2VyKTsiXX0=
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 14:00:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
