@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">35.29% </span>
+        <span class="strong">54.55% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>6/17</span>
+        <span class='fraction'>6/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">30% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/10</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/4</span>
+        <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">35.71% </span>
+        <span class="strong">55.56% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/14</span>
+        <span class='fraction'>5/9</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -74,15 +74,11 @@
 29
 30
 31
-32</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+32
+33
+34
+35</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -92,11 +88,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -106,15 +112,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/reducers/fileRecuder.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
-var __assign = (this &amp;&amp; this.__assign) || Object.assign || <span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >function(t) {</span></span>
-<span class="cstat-no" title="statement not covered" >    for (var s, i = 1, n = arguments.length; i &lt; n; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        s = arguments[i];</span>
-<span class="cstat-no" title="statement not covered" >        for (var p in s) <span class="cstat-no" title="statement not covered" >if (Object.prototype.hasOwnProperty.call(s, p))</span></span>
-<span class="cstat-no" title="statement not covered" >            t[p] = s[p];</span>
-    }
-<span class="cstat-no" title="statement not covered" >    return t;</span>
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+var initialState = {
+    content: []
+};
 /**
  * Redux reducers that will be dispatch by an event fired through an action.
  * This reducer will update the 'file' field in the globar store by appending the fileObject
@@ -124,10 +125,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @return {any} new global state
  */
 <span class="fstat-no" title="function not covered" >function fileReducer(state, action) {</span>
-<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = []; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = initialState; </span>}</span>
 <span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
-        case 'updateOpenedFiles':
-<span class="cstat-no" title="statement not covered" >            return __assign({}, state, { files: state.files.concat([action.payload.fileObject]) });</span>
+        case 'appendFile':
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                content: state.content.concat([
+                    {
+                        name: action.payload.fileName,
+                        repo: action.payload.repoName,
+                        type: action.payload.type,
+                    }
+                ])
+            };
         default:
 <span class="cstat-no" title="statement not covered" >            return state;</span>
     }
@@ -135,14 +144,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.fileReducer = fileReducer;
 &nbsp;
 },'src/redux/reducers/fileRecuder.tsx',{}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZVJlY3VkZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJmaWxlUmVjdWRlci50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBOzs7Ozs7O0dBT0c7QUFDSCxxQkFBNEIsS0FBZSxFQUFFLE1BQVc7SUFBNUIsc0JBQUEsRUFBQSxVQUFlO0lBQ3ZDLFFBQVEsTUFBTSxDQUFDLElBQUksRUFBRTtRQUNqQixLQUFLLG1CQUFtQjtZQUNwQixvQkFDTyxLQUFLLElBQ1IsS0FBSyxFQUFNLEtBQUssQ0FBQyxLQUFLLFNBQUUsTUFBTSxDQUFDLE9BQU8sQ0FBQyxVQUFVLE1BQ3BEO1FBQ0w7WUFDSSxPQUFPLEtBQUssQ0FBQztLQUNwQjtBQUNMLENBQUM7QUFWRCxrQ0FVQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogUmVkdXggcmVkdWNlcnMgdGhhdCB3aWxsIGJlIGRpc3BhdGNoIGJ5IGFuIGV2ZW50IGZpcmVkIHRocm91Z2ggYW4gYWN0aW9uLlxuICogVGhpcyByZWR1Y2VyIHdpbGwgdXBkYXRlIHRoZSAnZmlsZScgZmllbGQgaW4gdGhlIGdsb2JhciBzdG9yZSBieSBhcHBlbmRpbmcgdGhlIGZpbGVPYmplY3RcbiAqIGl0IHJlY2VpdmVkIGZyb20gdGhlIGRpc3BhdGNoZXIuXG4gKiBAcGFyYW0gc3RhdGU6IGN1cnJlbnQgc3RhdGUgb2YgdGhlIGdsb2JhbCBzdG9yZVxuICogQHBhcmFtIGFjdGlvbjogdGhlIGRpc3BhdGNoZWQgYWN0aW9uXG4gKiBAcmV0dXJuIHthbnl9IG5ldyBnbG9iYWwgc3RhdGVcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGZpbGVSZWR1Y2VyKHN0YXRlOiBhbnkgPSBbXSwgYWN0aW9uOiBhbnkpIHtcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgICAgIGNhc2UgJ3VwZGF0ZU9wZW5lZEZpbGVzJzpcbiAgICAgICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXG4gICAgICAgICAgICAgICAgZmlsZXM6IFsuLi5zdGF0ZS5maWxlcywgYWN0aW9uLnBheWxvYWQuZmlsZU9iamVjdF1cbiAgICAgICAgICAgIH1cbiAgICAgICAgZGVmYXVsdCA6XG4gICAgICAgICAgICByZXR1cm4gc3RhdGU7XG4gICAgfVxufSJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZVJlY3VkZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJmaWxlUmVjdWRlci50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFNLFlBQVksR0FBRztJQUNqQixPQUFPLEVBQUUsRUFBRTtDQUNkLENBQUM7QUFFRjs7Ozs7OztHQU9HO0FBQ0gscUJBQTRCLEtBQXlCLEVBQUUsTUFBVztJQUF0QyxzQkFBQSxFQUFBLG9CQUF5QjtJQUNqRCxRQUFRLE1BQU0sQ0FBQyxJQUFJLEVBQUU7UUFDakIsS0FBSyxZQUFZO1lBQ2IsT0FBTztnQkFDSCxPQUFPLEVBQ0EsS0FBSyxDQUFDLE9BQU87b0JBQ2hCO3dCQUNJLElBQUksRUFBRSxNQUFNLENBQUMsT0FBTyxDQUFDLFFBQVE7d0JBQzdCLElBQUksRUFBRSxNQUFNLENBQUMsT0FBTyxDQUFDLFFBQVE7d0JBQzdCLElBQUksRUFBRSxNQUFNLENBQUMsT0FBTyxDQUFDLElBQUk7cUJBQzVCO2tCQUNKO2FBQ0osQ0FBQztRQUNOO1lBQ0ksT0FBTyxLQUFLLENBQUM7S0FDcEI7QUFDTCxDQUFDO0FBaEJELGtDQWdCQyIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IGluaXRpYWxTdGF0ZSA9IHtcbiAgICBjb250ZW50OiBbXVxufTtcblxuLyoqXG4gKiBSZWR1eCByZWR1Y2VycyB0aGF0IHdpbGwgYmUgZGlzcGF0Y2ggYnkgYW4gZXZlbnQgZmlyZWQgdGhyb3VnaCBhbiBhY3Rpb24uXG4gKiBUaGlzIHJlZHVjZXIgd2lsbCB1cGRhdGUgdGhlICdmaWxlJyBmaWVsZCBpbiB0aGUgZ2xvYmFyIHN0b3JlIGJ5IGFwcGVuZGluZyB0aGUgZmlsZU9iamVjdFxuICogaXQgcmVjZWl2ZWQgZnJvbSB0aGUgZGlzcGF0Y2hlci5cbiAqIEBwYXJhbSBzdGF0ZTogY3VycmVudCBzdGF0ZSBvZiB0aGUgZ2xvYmFsIHN0b3JlXG4gKiBAcGFyYW0gYWN0aW9uOiB0aGUgZGlzcGF0Y2hlZCBhY3Rpb25cbiAqIEByZXR1cm4ge2FueX0gbmV3IGdsb2JhbCBzdGF0ZVxuICovXG5leHBvcnQgZnVuY3Rpb24gZmlsZVJlZHVjZXIoc3RhdGU6IGFueSA9IGluaXRpYWxTdGF0ZSwgYWN0aW9uOiBhbnkpIHtcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgICAgIGNhc2UgJ2FwcGVuZEZpbGUnOlxuICAgICAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgICAgICBjb250ZW50OiBbXG4gICAgICAgICAgICAgICAgICAgIC4uLnN0YXRlLmNvbnRlbnQsXG4gICAgICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIG5hbWU6IGFjdGlvbi5wYXlsb2FkLmZpbGVOYW1lLFxuICAgICAgICAgICAgICAgICAgICAgICAgcmVwbzogYWN0aW9uLnBheWxvYWQucmVwb05hbWUsXG4gICAgICAgICAgICAgICAgICAgICAgICB0eXBlOiBhY3Rpb24ucGF5bG9hZC50eXBlLFxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgXVxuICAgICAgICAgICAgfTtcbiAgICAgICAgZGVmYXVsdCA6XG4gICAgICAgICAgICByZXR1cm4gc3RhdGU7XG4gICAgfVxufSJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri May 18 2018 21:22:11 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 00:17:26 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
