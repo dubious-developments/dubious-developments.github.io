@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/redux/reducers/fileRecuder.tsx</title>
+    <title>Code coverage report for src/redux/reducers/lockReducer.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,18 +16,18 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">all files</a> / <a href="index.html">src/redux/reducers/</a> fileRecuder.tsx
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/redux/reducers/</a> lockReducer.tsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">54.55% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>6/11</span>
+        <span class='fraction'>6/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>0/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">66.67% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">55.56% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/9</span>
+        <span class='fraction'>5/10</span>
       </div>
     </div>
   </div>
@@ -77,9 +77,13 @@
 32
 33
 34
-35</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+35
+36
+37</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -102,7 +106,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -111,40 +115,42 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/reducers/fileRecuder.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/reducers/lockReducer.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var initialState = {
     content: []
 };
 /**
  * Redux reducers that will be dispatch by an event fired through an action.
- * This reducer will update the 'file' field in the globar store by appending the fileObject
- * it received from the dispatcher.
+ * This reducer will update the 'locks' field in the global store by either
+ * adding a lock for a filename to the 'locks' list or flush all locks that
+ * were acquired. The 'locks' list, is a list of file names for which a lock
+ * has been acquired.
  * @param state: current state of the global store
  * @param action: the dispatched action
  * @return {any} new global state
  */
-<span class="fstat-no" title="function not covered" >function fileReducer(state, action) {</span>
+<span class="fstat-no" title="function not covered" >function lockReducer(state, action) {</span>
 <span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = initialState; </span>}</span>
 <span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
-        case 'appendFile':
+        case 'appendLock':
 <span class="cstat-no" title="statement not covered" >            return {</span>
                 content: state.content.concat([
                     {
                         name: action.payload.fileName,
-                        repo: action.payload.repoName,
-                        type: action.payload.type,
                     }
                 ])
             };
+        case 'flushLocks':
+<span class="cstat-no" title="statement not covered" >            return [];</span>
         default:
 <span class="cstat-no" title="statement not covered" >            return state;</span>
     }
 }
-exports.fileReducer = fileReducer;
+exports.lockReducer = lockReducer;
 &nbsp;
-},'src/redux/reducers/fileRecuder.tsx',{}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlsZVJlY3VkZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJmaWxlUmVjdWRlci50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFNLFlBQVksR0FBRztJQUNqQixPQUFPLEVBQUUsRUFBRTtDQUNkLENBQUM7QUFFRjs7Ozs7OztHQU9HO0FBQ0gscUJBQTRCLEtBQXlCLEVBQUUsTUFBVztJQUF0QyxzQkFBQSxFQUFBLG9CQUF5QjtJQUNqRCxRQUFRLE1BQU0sQ0FBQyxJQUFJLEVBQUU7UUFDakIsS0FBSyxZQUFZO1lBQ2IsT0FBTztnQkFDSCxPQUFPLEVBQ0EsS0FBSyxDQUFDLE9BQU87b0JBQ2hCO3dCQUNJLElBQUksRUFBRSxNQUFNLENBQUMsT0FBTyxDQUFDLFFBQVE7d0JBQzdCLElBQUksRUFBRSxNQUFNLENBQUMsT0FBTyxDQUFDLFFBQVE7d0JBQzdCLElBQUksRUFBRSxNQUFNLENBQUMsT0FBTyxDQUFDLElBQUk7cUJBQzVCO2tCQUNKO2FBQ0osQ0FBQztRQUNOO1lBQ0ksT0FBTyxLQUFLLENBQUM7S0FDcEI7QUFDTCxDQUFDO0FBaEJELGtDQWdCQyIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IGluaXRpYWxTdGF0ZSA9IHtcbiAgICBjb250ZW50OiBbXVxufTtcblxuLyoqXG4gKiBSZWR1eCByZWR1Y2VycyB0aGF0IHdpbGwgYmUgZGlzcGF0Y2ggYnkgYW4gZXZlbnQgZmlyZWQgdGhyb3VnaCBhbiBhY3Rpb24uXG4gKiBUaGlzIHJlZHVjZXIgd2lsbCB1cGRhdGUgdGhlICdmaWxlJyBmaWVsZCBpbiB0aGUgZ2xvYmFyIHN0b3JlIGJ5IGFwcGVuZGluZyB0aGUgZmlsZU9iamVjdFxuICogaXQgcmVjZWl2ZWQgZnJvbSB0aGUgZGlzcGF0Y2hlci5cbiAqIEBwYXJhbSBzdGF0ZTogY3VycmVudCBzdGF0ZSBvZiB0aGUgZ2xvYmFsIHN0b3JlXG4gKiBAcGFyYW0gYWN0aW9uOiB0aGUgZGlzcGF0Y2hlZCBhY3Rpb25cbiAqIEByZXR1cm4ge2FueX0gbmV3IGdsb2JhbCBzdGF0ZVxuICovXG5leHBvcnQgZnVuY3Rpb24gZmlsZVJlZHVjZXIoc3RhdGU6IGFueSA9IGluaXRpYWxTdGF0ZSwgYWN0aW9uOiBhbnkpIHtcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgICAgIGNhc2UgJ2FwcGVuZEZpbGUnOlxuICAgICAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgICAgICBjb250ZW50OiBbXG4gICAgICAgICAgICAgICAgICAgIC4uLnN0YXRlLmNvbnRlbnQsXG4gICAgICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIG5hbWU6IGFjdGlvbi5wYXlsb2FkLmZpbGVOYW1lLFxuICAgICAgICAgICAgICAgICAgICAgICAgcmVwbzogYWN0aW9uLnBheWxvYWQucmVwb05hbWUsXG4gICAgICAgICAgICAgICAgICAgICAgICB0eXBlOiBhY3Rpb24ucGF5bG9hZC50eXBlLFxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgXVxuICAgICAgICAgICAgfTtcbiAgICAgICAgZGVmYXVsdCA6XG4gICAgICAgICAgICByZXR1cm4gc3RhdGU7XG4gICAgfVxufSJdfQ==
+},'src/redux/reducers/lockReducer.tsx',{}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibG9ja1JlZHVjZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJsb2NrUmVkdWNlci50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFNLFlBQVksR0FBRztJQUNqQixPQUFPLEVBQUUsRUFBRTtDQUNkLENBQUM7QUFFRjs7Ozs7Ozs7O0dBU0c7QUFDSCxxQkFBNEIsS0FBeUIsRUFBRSxNQUFXO0lBQXRDLHNCQUFBLEVBQUEsb0JBQXlCO0lBQ2pELFFBQVEsTUFBTSxDQUFDLElBQUksRUFBRTtRQUNqQixLQUFLLFlBQVk7WUFDYixPQUFPO2dCQUNILE9BQU8sRUFDQSxLQUFLLENBQUMsT0FBTztvQkFDaEI7d0JBQ0ksSUFBSSxFQUFFLE1BQU0sQ0FBQyxPQUFPLENBQUMsUUFBUTtxQkFDaEM7a0JBQ0o7YUFDSixDQUFDO1FBQ04sS0FBSyxZQUFZO1lBQ2IsT0FBTyxFQUFFLENBQUM7UUFDZDtZQUNJLE9BQU8sS0FBSyxDQUFDO0tBQ3BCO0FBQ0wsQ0FBQztBQWhCRCxrQ0FnQkMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBpbml0aWFsU3RhdGUgPSB7XG4gICAgY29udGVudDogW11cbn07XG5cbi8qKlxuICogUmVkdXggcmVkdWNlcnMgdGhhdCB3aWxsIGJlIGRpc3BhdGNoIGJ5IGFuIGV2ZW50IGZpcmVkIHRocm91Z2ggYW4gYWN0aW9uLlxuICogVGhpcyByZWR1Y2VyIHdpbGwgdXBkYXRlIHRoZSAnbG9ja3MnIGZpZWxkIGluIHRoZSBnbG9iYWwgc3RvcmUgYnkgZWl0aGVyXG4gKiBhZGRpbmcgYSBsb2NrIGZvciBhIGZpbGVuYW1lIHRvIHRoZSAnbG9ja3MnIGxpc3Qgb3IgZmx1c2ggYWxsIGxvY2tzIHRoYXRcbiAqIHdlcmUgYWNxdWlyZWQuIFRoZSAnbG9ja3MnIGxpc3QsIGlzIGEgbGlzdCBvZiBmaWxlIG5hbWVzIGZvciB3aGljaCBhIGxvY2tcbiAqIGhhcyBiZWVuIGFjcXVpcmVkLlxuICogQHBhcmFtIHN0YXRlOiBjdXJyZW50IHN0YXRlIG9mIHRoZSBnbG9iYWwgc3RvcmVcbiAqIEBwYXJhbSBhY3Rpb246IHRoZSBkaXNwYXRjaGVkIGFjdGlvblxuICogQHJldHVybiB7YW55fSBuZXcgZ2xvYmFsIHN0YXRlXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBsb2NrUmVkdWNlcihzdGF0ZTogYW55ID0gaW5pdGlhbFN0YXRlLCBhY3Rpb246IGFueSkge1xuICAgIHN3aXRjaCAoYWN0aW9uLnR5cGUpIHtcbiAgICAgICAgY2FzZSAnYXBwZW5kTG9jayc6XG4gICAgICAgICAgICByZXR1cm4ge1xuICAgICAgICAgICAgICAgIGNvbnRlbnQ6IFtcbiAgICAgICAgICAgICAgICAgICAgLi4uc3RhdGUuY29udGVudCxcbiAgICAgICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICAgICAgbmFtZTogYWN0aW9uLnBheWxvYWQuZmlsZU5hbWUsXG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICBdXG4gICAgICAgICAgICB9O1xuICAgICAgICBjYXNlICdmbHVzaExvY2tzJzpcbiAgICAgICAgICAgIHJldHVybiBbXTtcbiAgICAgICAgZGVmYXVsdCA6XG4gICAgICAgICAgICByZXR1cm4gc3RhdGU7XG4gICAgfVxufSJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

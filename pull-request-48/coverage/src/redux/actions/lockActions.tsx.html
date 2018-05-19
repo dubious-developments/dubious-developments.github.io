@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/redux/actions/lockActions.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/redux/actions/</a> lockActions.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.78% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/8</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/actions/lockActions.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * Redux action used to be dispatched to the reducers which will update the store.
+ * @param fileName: name of file being on which a lock has been acquired.
+ * @return {{type: string; payload: {fileObject: any}}}
+ */
+<span class="fstat-no" title="function not covered" >function appendLock(fileName) {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: 'appendLock',
+        payload: {
+            fileName: fileName,
+        }
+    };
+}
+exports.appendLock = appendLock;
+/**
+ * Redux action to be dispatched to the reducers which will update the store.
+ * This action will flush the current locks associated with a user in the global
+ * state (redux store). Done when all locks are released
+ * @param none:
+ * @return {{type: string}}
+ */
+<span class="fstat-no" title="function not covered" >function flushLocks() {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: 'flushLocks'
+    };
+}
+exports.flushLocks = flushLocks;
+&nbsp;
+},'src/redux/actions/lockActions.tsx',{}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibG9ja0FjdGlvbnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJsb2NrQWN0aW9ucy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7OztHQUlHO0FBQ0gsb0JBQTJCLFFBQWE7SUFDcEMsT0FBTztRQUNILElBQUksRUFBRSxZQUFZO1FBQ2xCLE9BQU8sRUFBRTtZQUNMLFFBQVEsRUFBRSxRQUFRO1NBQ3JCO0tBQ0osQ0FBQztBQUNOLENBQUM7QUFQRCxnQ0FPQztBQUVEOzs7Ozs7R0FNRztBQUNIO0lBQ0ksT0FBTTtRQUNGLElBQUksRUFBRSxZQUFZO0tBQ3JCLENBQUM7QUFDTixDQUFDO0FBSkQsZ0NBSUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIFJlZHV4IGFjdGlvbiB1c2VkIHRvIGJlIGRpc3BhdGNoZWQgdG8gdGhlIHJlZHVjZXJzIHdoaWNoIHdpbGwgdXBkYXRlIHRoZSBzdG9yZS5cbiAqIEBwYXJhbSBmaWxlTmFtZTogbmFtZSBvZiBmaWxlIGJlaW5nIG9uIHdoaWNoIGEgbG9jayBoYXMgYmVlbiBhY3F1aXJlZC5cbiAqIEByZXR1cm4ge3t0eXBlOiBzdHJpbmc7IHBheWxvYWQ6IHtmaWxlT2JqZWN0OiBhbnl9fX1cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGFwcGVuZExvY2soZmlsZU5hbWU6IGFueSkge1xuICAgIHJldHVybiB7XG4gICAgICAgIHR5cGU6ICdhcHBlbmRMb2NrJyxcbiAgICAgICAgcGF5bG9hZDoge1xuICAgICAgICAgICAgZmlsZU5hbWU6IGZpbGVOYW1lLFxuICAgICAgICB9XG4gICAgfTtcbn1cblxuLyoqXG4gKiBSZWR1eCBhY3Rpb24gdG8gYmUgZGlzcGF0Y2hlZCB0byB0aGUgcmVkdWNlcnMgd2hpY2ggd2lsbCB1cGRhdGUgdGhlIHN0b3JlLlxuICogVGhpcyBhY3Rpb24gd2lsbCBmbHVzaCB0aGUgY3VycmVudCBsb2NrcyBhc3NvY2lhdGVkIHdpdGggYSB1c2VyIGluIHRoZSBnbG9iYWxcbiAqIHN0YXRlIChyZWR1eCBzdG9yZSkuIERvbmUgd2hlbiBhbGwgbG9ja3MgYXJlIHJlbGVhc2VkXG4gKiBAcGFyYW0gbm9uZTpcbiAqIEByZXR1cm4ge3t0eXBlOiBzdHJpbmd9fVxuICovXG5leHBvcnQgZnVuY3Rpb24gZmx1c2hMb2NrcygpIHtcbiAgICByZXR1cm57XG4gICAgICAgIHR5cGU6ICdmbHVzaExvY2tzJ1xuICAgIH07XG59Il19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 00:46:01 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
