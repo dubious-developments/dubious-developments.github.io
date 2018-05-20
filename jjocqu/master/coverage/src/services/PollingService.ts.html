@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">68.75% </span>
+        <span class="strong">64.71% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/16</span>
+        <span class='fraction'>11/17</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>3/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">62.5% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/15</span>
+        <span class='fraction'>10/16</span>
       </div>
     </div>
   </div>
@@ -79,8 +79,6 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -90,7 +88,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -105,8 +105,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * This class is used to poll at regular interval times
  */
 var PollingService = /** @class */ (function () {
-<span class="fstat-no" title="function not covered" >    function PollingService(ms) {</span>
+<span class="fstat-no" title="function not covered" >    function PollingService(ms, pollingFunc) {</span>
 <span class="cstat-no" title="statement not covered" >        this.ms = ms;</span>
+<span class="cstat-no" title="statement not covered" >        this.pollingFunc = pollingFunc;</span>
     }
     PollingService.prototype.startPolling = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        this.schedulePoll();</span>
@@ -118,22 +119,21 @@ var PollingService = /** @class */ (function () {
 <span class="cstat-no" title="statement not covered" >        this.interval = setInterval(this.sendPoll, this.ms);</span>
     };
     PollingService.prototype.sendPoll = <span class="fstat-no" title="function not covered" >function () {</span>
-        // TODO send request here
-<span class="cstat-no" title="statement not covered" >        console.log("pol");</span>
+<span class="cstat-no" title="statement not covered" >        this.pollingFunc();</span>
     };
     return PollingService;
 }());
 exports.default = PollingService;
 &nbsp;
 },'src/services/PollingService.ts',{}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUG9sbGluZ1NlcnZpY2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJQb2xsaW5nU2VydmljZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBOztHQUVHO0FBQ0g7SUFPSSx3QkFBWSxFQUFVO1FBQ2xCLElBQUksQ0FBQyxFQUFFLEdBQUcsRUFBRSxDQUFDO0lBQ2pCLENBQUM7SUFFTSxxQ0FBWSxHQUFuQjtRQUNJLElBQUksQ0FBQyxZQUFZLEVBQUUsQ0FBQztJQUN4QixDQUFDO0lBRU0sb0NBQVcsR0FBbEI7UUFDSSxhQUFhLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxDQUFDO0lBQ2pDLENBQUM7SUFFTyxxQ0FBWSxHQUFwQjtRQUNJLElBQUksQ0FBQyxRQUFRLEdBQUcsV0FBVyxDQUFDLElBQUksQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDO0lBQ3hELENBQUM7SUFFTyxpQ0FBUSxHQUFoQjtRQUNJLHlCQUF5QjtRQUN6QixPQUFPLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3ZCLENBQUM7SUFDTCxxQkFBQztBQUFELENBQUMsQUEzQkQsSUEyQkMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIFRoaXMgY2xhc3MgaXMgdXNlZCB0byBwb2xsIGF0IHJlZ3VsYXIgaW50ZXJ2YWwgdGltZXNcbiAqL1xuZXhwb3J0IGRlZmF1bHQgY2xhc3MgUG9sbGluZ1NlcnZpY2Uge1xuXG4gICAgLy8gbnVtYmVyIG9mIG1pbGxpc2Vjb25kcyBiZXR3ZWVuIDIgY29uc2VjdXRpdmUgcG9sbHNcbiAgICBwcml2YXRlIG1zOiBudW1iZXI7XG5cbiAgICBwcml2YXRlIGludGVydmFsOiBhbnk7XG5cbiAgICBjb25zdHJ1Y3RvcihtczogbnVtYmVyKSB7XG4gICAgICAgIHRoaXMubXMgPSBtcztcbiAgICB9XG5cbiAgICBwdWJsaWMgc3RhcnRQb2xsaW5nKCkge1xuICAgICAgICB0aGlzLnNjaGVkdWxlUG9sbCgpO1xuICAgIH1cblxuICAgIHB1YmxpYyBzdG9wUG9sbGluZygpIHtcbiAgICAgICAgY2xlYXJJbnRlcnZhbCh0aGlzLmludGVydmFsKTtcbiAgICB9XG5cbiAgICBwcml2YXRlIHNjaGVkdWxlUG9sbCgpIHtcbiAgICAgICAgdGhpcy5pbnRlcnZhbCA9IHNldEludGVydmFsKHRoaXMuc2VuZFBvbGwsIHRoaXMubXMpO1xuICAgIH1cblxuICAgIHByaXZhdGUgc2VuZFBvbGwoKSB7XG4gICAgICAgIC8vIFRPRE8gc2VuZCByZXF1ZXN0IGhlcmVcbiAgICAgICAgY29uc29sZS5sb2coXCJwb2xcIik7XG4gICAgfVxufVxuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUG9sbGluZ1NlcnZpY2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJQb2xsaW5nU2VydmljZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBOztHQUVHO0FBQ0g7SUFRSSx3QkFBWSxFQUFVLEVBQUUsV0FBdUI7UUFDM0MsSUFBSSxDQUFDLEVBQUUsR0FBRyxFQUFFLENBQUM7UUFDYixJQUFJLENBQUMsV0FBVyxHQUFHLFdBQVcsQ0FBQztJQUNuQyxDQUFDO0lBRU0scUNBQVksR0FBbkI7UUFDSSxJQUFJLENBQUMsWUFBWSxFQUFFLENBQUM7SUFDeEIsQ0FBQztJQUVNLG9DQUFXLEdBQWxCO1FBQ0ksYUFBYSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUNqQyxDQUFDO0lBRU8scUNBQVksR0FBcEI7UUFDSSxJQUFJLENBQUMsUUFBUSxHQUFHLFdBQVcsQ0FBQyxJQUFJLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQztJQUN4RCxDQUFDO0lBRU8saUNBQVEsR0FBaEI7UUFDSSxJQUFJLENBQUMsV0FBVyxFQUFFLENBQUM7SUFDdkIsQ0FBQztJQUNMLHFCQUFDO0FBQUQsQ0FBQyxBQTVCRCxJQTRCQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogVGhpcyBjbGFzcyBpcyB1c2VkIHRvIHBvbGwgYXQgcmVndWxhciBpbnRlcnZhbCB0aW1lc1xuICovXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBQb2xsaW5nU2VydmljZSB7XG5cbiAgICAvLyBudW1iZXIgb2YgbWlsbGlzZWNvbmRzIGJldHdlZW4gMiBjb25zZWN1dGl2ZSBwb2xsc1xuICAgIHByaXZhdGUgbXM6IG51bWJlcjtcbiAgICBwcml2YXRlIGludGVydmFsOiBhbnk7XG5cbiAgICBwcml2YXRlIHBvbGxpbmdGdW5jOiAoKSA9PiB2b2lkO1xuXG4gICAgY29uc3RydWN0b3IobXM6IG51bWJlciwgcG9sbGluZ0Z1bmM6ICgpID0+IHZvaWQpIHtcbiAgICAgICAgdGhpcy5tcyA9IG1zO1xuICAgICAgICB0aGlzLnBvbGxpbmdGdW5jID0gcG9sbGluZ0Z1bmM7XG4gICAgfVxuXG4gICAgcHVibGljIHN0YXJ0UG9sbGluZygpIHtcbiAgICAgICAgdGhpcy5zY2hlZHVsZVBvbGwoKTtcbiAgICB9XG5cbiAgICBwdWJsaWMgc3RvcFBvbGxpbmcoKSB7XG4gICAgICAgIGNsZWFySW50ZXJ2YWwodGhpcy5pbnRlcnZhbCk7XG4gICAgfVxuXG4gICAgcHJpdmF0ZSBzY2hlZHVsZVBvbGwoKSB7XG4gICAgICAgIHRoaXMuaW50ZXJ2YWwgPSBzZXRJbnRlcnZhbCh0aGlzLnNlbmRQb2xsLCB0aGlzLm1zKTtcbiAgICB9XG5cbiAgICBwcml2YXRlIHNlbmRQb2xsKCkge1xuICAgICAgICB0aGlzLnBvbGxpbmdGdW5jKCk7XG4gICAgfVxufVxuIl19
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 19:53:03 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun May 20 2018 15:16:05 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>
