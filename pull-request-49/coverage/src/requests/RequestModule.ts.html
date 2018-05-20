@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/requests/RequestModule.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/requests/</a> RequestModule.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.76% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>26/105</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.77% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.04% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>25/104</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/requests/RequestModule.ts']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var axios_1 = require("axios");
+/**
+ * RequestModule class which serves several http requests functions for interaction
+ * with bot the collaboration server as well as the GitHub API to other components
+ * of the application.
+ * for more info on how to use:
+ * https://github.com/dubious-developments/UnSHACLed/wiki/Interacting-with-the-collaboration-server#file-access
+ */
+var RequestModule = /** @class */ (function () {
+<span class="fstat-no" title="function not covered" >    function RequestModule() {</span>
+    }
+    /**
+     * Method to receive a token from the collaboration server.
+     * A POST request is used to obtain the token in a plain text from the collaboration server.
+     * The obtained token is used for further authenticatio
+     * @returns {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, Return the obtained token through a promise.
+     */
+    RequestModule.getToken = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.post('http://193.190.127.184:8042/auth/request-token')</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.error("getToken refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to start authentication process through the collaboration server using
+     * a GET request with the earlier obtained token. The collaboration server will redirect
+     * to the GitHub login page and redirect if logged in succesfully
+     * @param token: token associated with authenticated user and obtained using getToken().
+     */
+    RequestModule.AuthWithToken = <span class="fstat-no" title="function not covered" >function (token) {</span>
+<span class="cstat-no" title="statement not covered" >        window.open('http://193.190.127.184:8042/auth/auth/' + token, "_blank", "top=100,left=500,width=500,height=1000");</span>
+    };
+    /**
+     * Method to check wether or not a user with an obtained token is authenticated using a
+     * GET request to the collaboration server including the previously obtained token
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @returns {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, Returns either true or false through a promise.
+     */
+    RequestModule.isAuthenticated = <span class="fstat-no" title="function not covered" >function (token) {</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.get('http://193.190.127.184:8042/auth/is-authenticated/' + token)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.error("isAuthenticated refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to obtain user info for an authenticated user
+     * @param type: specifies type of user info, can be 'login', 'name' or 'email'.
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @returns {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, Returns the requested user info through a promise.
+     */
+    RequestModule.getUserInfo = <span class="fstat-no" title="function not covered" >function (type, token) {</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.get('http://193.190.127.184:8042/user/' + type + '/' + token)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.error("getUserInfo refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to obatin user object from GitHub API
+     * @param login: login from authenticated user
+     * @returns {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, return user object through a promise.
+     */
+    RequestModule.getUserObject = <span class="fstat-no" title="function not covered" >function (login) {</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.get('https://api.github.com/users/' + login)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("getUserObject refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to grab a list of a user's repositories
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @returns {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, return list of repo through a promise.
+     */
+    RequestModule.getUserRepos = <span class="fstat-no" title="function not covered" >function (token) {</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.get('http://193.190.127.184:8042/user/repo-list/' + token)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("getUserRepos refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to fetch files from a repository of choice for an authenticated user
+     * @param repoOwner: owner of repository where file is located
+     * @param repoName: name of repository
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @return {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, returns list of files through a Promise
+     */
+    RequestModule.getFilesFromRepo = <span class="fstat-no" title="function not covered" >function (repoOwner, repoName, token) {</span>
+<span class="cstat-no" title="statement not covered" >        var target = 'http://193.190.127.184:8042/repo/file-names/' + repoOwner + '/' + repoName + '/' + token;</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.get(target)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("getFilesFromRepo refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to read a file from a repository.
+     * @param repoOwner: owner of repository where file is located
+     * @param repoName: name of repository
+     * @param token: token associated with authenticated user and obtained using getToken()
+     * @param fileName: name of file to be read
+     *  @return {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, returns content of file as text
+     */
+    RequestModule.readFile = <span class="fstat-no" title="function not covered" >function (repoOwner, repoName, token, fileName) {</span>
+<span class="cstat-no" title="statement not covered" >        var target = 'http://193.190.127.184:8042/repo/file/' + repoOwner + '/' + repoName + '/' + token + '/' + fileName;</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.get(target)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("readFile refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to check wether user has a lock on a file.
+     * @param repoOwner: owner of repository where file is located
+     * @param repoName: name of repository
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @param filePath: path of file to be created updated
+     * @returns {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, return true if lock has been granted, false otherwise through a Promise.
+     */
+    RequestModule.hasLock = <span class="fstat-no" title="function not covered" >function (repoOwner, repoName, token, filePath) {</span>
+<span class="cstat-no" title="statement not covered" >        var target = 'http://193.190.127.184:8042/repo/has-lock/' + repoOwner + '/' + repoName + '/' + token + '/' + filePath;</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.get(target)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("hasLock refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to request a lock on a file.
+     * @param repoOwner: owner of repository where file is located
+     * @param repoName: name of repository
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @param filePath: path of file to be created updated
+     * @returns {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, return true if lock has been granted, false otherwise through a Promise.
+     */
+    RequestModule.requestLock = <span class="fstat-no" title="function not covered" >function (repoOwner, repoName, token, filePath) {</span>
+<span class="cstat-no" title="statement not covered" >        var target = 'http://193.190.127.184:8042/repo/request-lock/'</span>
+            + repoOwner + '/' + repoName + '/' + token + '/' + filePath;
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.post(target)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("requestLock refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to release a lock on a file.
+     * @param repoOwner: owner of repository where file is located
+     * @param repoName: name of repository
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @param filePath: path of file to be created updated
+     * @returns {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, return true if lock has been released, false otherwise through a Promise.
+     */
+    RequestModule.releaseLock = <span class="fstat-no" title="function not covered" >function (repoOwner, repoName, token, filePath) {</span>
+<span class="cstat-no" title="statement not covered" >        var target = 'http://193.190.127.184:8042/repo/relinquish-lock/'</span>
+            + repoOwner + '/' + repoName + '/' + token + '/' + filePath;
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.post(target)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("releaseLock refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to update or create a file. Lock on file is required to do so.
+     * @param repoOwner: owner of repository where file is located
+     * @param repoName: name of repository
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @param fileName: name of file to be created updated
+     * @param file: file content, incorporated in body of http request
+     */
+    RequestModule.updateFile = <span class="fstat-no" title="function not covered" >function (repoOwner, repoName, token, fileName, file) {</span>
+<span class="cstat-no" title="statement not covered" >        console.log('http://193.190.127.184:8042/repo/file/' + repoOwner + '/' + repoName + '/' + token + '/' + fileName);</span>
+<span class="cstat-no" title="statement not covered" >        var target = 'http://193.190.127.184:8042/repo/file/' + repoOwner + '/' + repoName + '/' + token + '/' + fileName;</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.put(target, file)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span>
+<span class="cstat-no" title="statement not covered" >            return res;</span>
+        })
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.error('updateFile refused: ' + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to stay up to date with the latest version of a file
+     * To allow for efficient polling, a timestamp can optionally be included as the request body.
+     * If the timestamp is omitted, the server acts as if the epoch was provided as a timestamp.
+     * @param repoOwner: owner of repository where file is located
+     * @param repoName: name of repository
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @param filePath: path of filename in directory
+     * @return {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, returns following object through a promise:
+     * {
+              "isModified": true,
+              "lastChange": "2018-05-13T09:14:12.1477890-06:00",
+              "contents": "Edit for file polling testing purposes"
+            }
+     * If no changes were made, the reponse will ommit the content field.
+     */
+    RequestModule.pollForChanges = <span class="fstat-no" title="function not covered" >function (repoOwner, repoName, token, filePath) {</span>
+<span class="cstat-no" title="statement not covered" >        var target = 'http://193.190.127.184:8042/repo/poll-file/' + repoOwner + '/' + repoName + '/' + token + '/' + filePath;</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.get(target)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("pollForChanges refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to create a new repo
+     * @param repoName: name of repo to be created
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @return none
+     */
+    RequestModule.createRepo = <span class="fstat-no" title="function not covered" >function (repoName, token) {</span>
+<span class="cstat-no" title="statement not covered" >        var target = 'http://193.190.127.184:8042/repo/create-repo/' + repoName + '/' + token;</span>
+<span class="cstat-no" title="statement not covered" >        console.log(target);</span>
+<span class="cstat-no" title="statement not covered" >        axios_1.default.post(target)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("createRepo refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to set the contents of an authenticated user's workspace.
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @param content: the content of the current workspace
+     */
+    RequestModule.setWorkspace = <span class="fstat-no" title="function not covered" >function (token, content) {</span>
+<span class="cstat-no" title="statement not covered" >        axios_1.default.put('http://193.190.127.184:8042/workspace/' + token, { content: content })</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("setWorkspace refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /**
+     * Method to fetch the contents of an authenticated user's workspace.
+     * @param token: token associated with authenticated user and obtained using getToken().
+     * @returns {Promise&lt;AxiosResponse&lt;any&gt;&gt;}, return the content as a string and through a Promise.
+     */
+    RequestModule.fetchWorkspace = <span class="fstat-no" title="function not covered" >function (token) {</span>
+<span class="cstat-no" title="statement not covered" >        return axios_1.default.get('http://193.190.127.184:8042/workspace/' + token)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (res) {</span> <span class="cstat-no" title="statement not covered" >return res.data; </span>})
+            .catch(<span class="fstat-no" title="function not covered" >function (error) {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("fetchWorkspace refused: " + error.message);</span>
+<span class="cstat-no" title="statement not covered" >            return error.status;</span>
+        });
+    };
+    /* Non-API methods */
+    /**
+     * Method that will map an array of repos required from the API to
+     * an array able to be loaded in a Dropdown UI component.
+     * @param repoArray
+     */
+    RequestModule.processRepos = <span class="fstat-no" title="function not covered" >function (repoArray) {</span>
+<span class="cstat-no" title="statement not covered" >        var result = [];</span>
+<span class="cstat-no" title="statement not covered" >        for (var i in repoArray) {</span>
+<span class="cstat-no" title="statement not covered" >            result.push({</span>
+                text: repoArray[i].split("/")[1],
+                value: repoArray[i].split("/")[1]
+            });
+        }
+<span class="cstat-no" title="statement not covered" >        return result;</span>
+    };
+    /**
+     * Method that will map an array of files required from the API to
+     * an array able to be loaded in a Dropdown UI component.
+     * @param files: files to be processed
+     */
+    RequestModule.processFiles = <span class="fstat-no" title="function not covered" >function (files) {</span>
+<span class="cstat-no" title="statement not covered" >        var result = [];</span>
+<span class="cstat-no" title="statement not covered" >        for (var i in files) {</span>
+<span class="cstat-no" title="statement not covered" >            result.push({ text: files[i], value: files[i] });</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return result;</span>
+    };
+    return RequestModule;
+}());
+exports.default = RequestModule;
+&nbsp;
+},'src/requests/RequestModule.ts',{"axios":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/axios/index.js"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmVxdWVzdE1vZHVsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlJlcXVlc3RNb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSwrQkFBMEI7QUFFMUI7Ozs7OztHQU1HO0FBRUg7SUFBQTtJQW1UQSxDQUFDO0lBalRHOzs7OztPQUtHO0lBQ0ksc0JBQVEsR0FBZjtRQUNJLE9BQU8sZUFBSyxDQUFDLElBQUksQ0FBQyxnREFBZ0QsQ0FBQzthQUM5RCxJQUFJLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxHQUFHLENBQUMsSUFBSSxFQUFSLENBQVEsQ0FBQzthQUNyQixLQUFLLENBQUMsVUFBQSxLQUFLO1lBQ1IsT0FBTyxDQUFDLEtBQUssQ0FBQyxvQkFBb0IsR0FBRyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUM7WUFDcEQsT0FBTyxLQUFLLENBQUMsTUFBTSxDQUFDO1FBQ3hCLENBQUMsQ0FBQyxDQUFDO0lBQ1gsQ0FBQztJQUVEOzs7OztPQUtHO0lBQ0ksMkJBQWEsR0FBcEIsVUFBcUIsS0FBVTtRQUMzQixNQUFNLENBQUMsSUFBSSxDQUFDLHdDQUF3QyxHQUFHLEtBQUssRUFBRSxRQUFRLEVBQ2xFLHdDQUF3QyxDQUFDLENBQUM7SUFDbEQsQ0FBQztJQUVEOzs7OztPQUtHO0lBQ0ksNkJBQWUsR0FBdEIsVUFBdUIsS0FBVTtRQUM3QixPQUFPLGVBQUssQ0FBQyxHQUFHLENBQUMsb0RBQW9ELEdBQUcsS0FBSyxDQUFDO2FBQ3pFLElBQUksQ0FBQyxVQUFBLEdBQUcsSUFBSSxPQUFBLEdBQUcsQ0FBQyxJQUFJLEVBQVIsQ0FBUSxDQUFDO2FBQ3JCLEtBQUssQ0FBQyxVQUFBLEtBQUs7WUFDUixPQUFPLENBQUMsS0FBSyxDQUFDLDJCQUEyQixHQUFHLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUMzRCxPQUFPLEtBQUssQ0FBQyxNQUFNLENBQUM7UUFDeEIsQ0FBQyxDQUFDLENBQUM7SUFDWCxDQUFDO0lBRUQ7Ozs7O09BS0c7SUFDSSx5QkFBVyxHQUFsQixVQUFtQixJQUFTLEVBQUUsS0FBVTtRQUNwQyxPQUFPLGVBQUssQ0FBQyxHQUFHLENBQUMsbUNBQW1DLEdBQUcsSUFBSSxHQUFHLEdBQUcsR0FBRyxLQUFLLENBQUM7YUFDckUsSUFBSSxDQUFDLFVBQUEsR0FBRyxJQUFJLE9BQUEsR0FBRyxDQUFDLElBQUksRUFBUixDQUFRLENBQUM7YUFDckIsS0FBSyxDQUFDLFVBQUEsS0FBSztZQUNSLE9BQU8sQ0FBQyxLQUFLLENBQUMsdUJBQXVCLEdBQUcsS0FBSyxDQUFDLE9BQU8sQ0FBQyxDQUFDO1lBQ3ZELE9BQU8sS0FBSyxDQUFDLE1BQU0sQ0FBQztRQUN4QixDQUFDLENBQUMsQ0FBQztJQUNYLENBQUM7SUFFRDs7OztPQUlHO0lBQ0ksMkJBQWEsR0FBcEIsVUFBcUIsS0FBVTtRQUMzQixPQUFPLGVBQUssQ0FBQyxHQUFHLENBQUMsK0JBQStCLEdBQUcsS0FBSyxDQUFDO2FBQ3BELElBQUksQ0FBQyxVQUFBLEdBQUcsSUFBSSxPQUFBLEdBQUcsQ0FBQyxJQUFJLEVBQVIsQ0FBUSxDQUFDO2FBQ3JCLEtBQUssQ0FBQyxVQUFBLEtBQUs7WUFDUixPQUFPLENBQUMsR0FBRyxDQUFDLHlCQUF5QixHQUFHLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUN2RCxPQUFPLEtBQUssQ0FBQyxNQUFNLENBQUM7UUFDeEIsQ0FBQyxDQUFDLENBQUM7SUFDWCxDQUFDO0lBRUQ7Ozs7T0FJRztJQUNJLDBCQUFZLEdBQW5CLFVBQW9CLEtBQVU7UUFDMUIsT0FBTyxlQUFLLENBQUMsR0FBRyxDQUFDLDZDQUE2QyxHQUFHLEtBQUssQ0FBQzthQUNsRSxJQUFJLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxHQUFHLENBQUMsSUFBSSxFQUFSLENBQVEsQ0FBQzthQUNyQixLQUFLLENBQUMsVUFBQSxLQUFLO1lBQ1IsT0FBTyxDQUFDLEdBQUcsQ0FBQyx3QkFBd0IsR0FBRyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUM7WUFDdEQsT0FBTyxLQUFLLENBQUMsTUFBTSxDQUFDO1FBQ3hCLENBQUMsQ0FBQyxDQUFDO0lBQ1gsQ0FBQztJQUVEOzs7Ozs7T0FNRztJQUNJLDhCQUFnQixHQUF2QixVQUF3QixTQUFjLEVBQUUsUUFBYSxFQUFFLEtBQVU7UUFDN0QsSUFBTSxNQUFNLEdBQ1IsOENBQThDLEdBQUcsU0FBUyxHQUFHLEdBQUcsR0FBRyxRQUFRLEdBQUcsR0FBRyxHQUFHLEtBQUssQ0FBQztRQUM5RixPQUFPLGVBQUssQ0FBQyxHQUFHLENBQUMsTUFBTSxDQUFDO2FBQ25CLElBQUksQ0FBQyxVQUFBLEdBQUcsSUFBSSxPQUFBLEdBQUcsQ0FBQyxJQUFJLEVBQVIsQ0FBUSxDQUFDO2FBQ3JCLEtBQUssQ0FBQyxVQUFBLEtBQUs7WUFDUixPQUFPLENBQUMsR0FBRyxDQUFDLDRCQUE0QixHQUFHLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUMxRCxPQUFPLEtBQUssQ0FBQyxNQUFNLENBQUM7UUFDeEIsQ0FBQyxDQUFDLENBQUM7SUFDWCxDQUFDO0lBRUQ7Ozs7Ozs7T0FPRztJQUNJLHNCQUFRLEdBQWYsVUFBZ0IsU0FBYyxFQUFFLFFBQWEsRUFBRSxLQUFVLEVBQUUsUUFBYTtRQUNwRSxJQUFNLE1BQU0sR0FDUix3Q0FBd0MsR0FBRyxTQUFTLEdBQUcsR0FBRyxHQUFHLFFBQVEsR0FBRyxHQUFHLEdBQUcsS0FBSyxHQUFHLEdBQUcsR0FBRyxRQUFRLENBQUM7UUFDekcsT0FBTyxlQUFLLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQzthQUNuQixJQUFJLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxHQUFHLENBQUMsSUFBSSxFQUFSLENBQVEsQ0FBQzthQUNyQixLQUFLLENBQUMsVUFBQSxLQUFLO1lBQ1IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxvQkFBb0IsR0FBRyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUM7WUFDbEQsT0FBTyxLQUFLLENBQUMsTUFBTSxDQUFDO1FBQ3hCLENBQUMsQ0FBQyxDQUFDO0lBQ1gsQ0FBQztJQUVEOzs7Ozs7O09BT0c7SUFDSSxxQkFBTyxHQUFkLFVBQWUsU0FBYyxFQUFFLFFBQWEsRUFBRSxLQUFVLEVBQUUsUUFBYTtRQUNuRSxJQUFNLE1BQU0sR0FDUiw0Q0FBNEMsR0FBRyxTQUFTLEdBQUcsR0FBRyxHQUFHLFFBQVEsR0FBRyxHQUFHLEdBQUcsS0FBSyxHQUFHLEdBQUcsR0FBRyxRQUFRLENBQUM7UUFDN0csT0FBTyxlQUFLLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQzthQUNuQixJQUFJLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxHQUFHLENBQUMsSUFBSSxFQUFSLENBQVEsQ0FBQzthQUNyQixLQUFLLENBQUMsVUFBQSxLQUFLO1lBQ1IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxtQkFBbUIsR0FBRyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUM7WUFDakQsT0FBTyxLQUFLLENBQUMsTUFBTSxDQUFDO1FBQ3hCLENBQUMsQ0FBQyxDQUFDO0lBQ1gsQ0FBQztJQUVEOzs7Ozs7O09BT0c7SUFDSSx5QkFBVyxHQUFsQixVQUFtQixTQUFjLEVBQUUsUUFBYSxFQUFFLEtBQVUsRUFBRSxRQUFhO1FBQ3ZFLElBQU0sTUFBTSxHQUFHLGdEQUFnRDtjQUN6RCxTQUFTLEdBQUcsR0FBRyxHQUFHLFFBQVEsR0FBRyxHQUFHLEdBQUcsS0FBSyxHQUFHLEdBQUcsR0FBRyxRQUFRLENBQUM7UUFDaEUsT0FBTyxlQUFLLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQzthQUNwQixJQUFJLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxHQUFHLENBQUMsSUFBSSxFQUFSLENBQVEsQ0FBQzthQUNyQixLQUFLLENBQUMsVUFBQSxLQUFLO1lBQ1IsT0FBTyxDQUFDLEdBQUcsQ0FBQyx1QkFBdUIsR0FBRyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUM7WUFDckQsT0FBTyxLQUFLLENBQUMsTUFBTSxDQUFDO1FBQ3hCLENBQUMsQ0FBQyxDQUFDO0lBQ1gsQ0FBQztJQUVEOzs7Ozs7O09BT0c7SUFDSSx5QkFBVyxHQUFsQixVQUFtQixTQUFjLEVBQUUsUUFBYSxFQUFFLEtBQVUsRUFBRSxRQUFhO1FBQ3ZFLElBQU0sTUFBTSxHQUFHLG1EQUFtRDtjQUM1RCxTQUFTLEdBQUcsR0FBRyxHQUFHLFFBQVEsR0FBRyxHQUFHLEdBQUcsS0FBSyxHQUFHLEdBQUcsR0FBRyxRQUFRLENBQUM7UUFDaEUsT0FBTyxlQUFLLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQzthQUNwQixJQUFJLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxHQUFHLEVBQUgsQ0FBRyxDQUFDO2FBQ2hCLEtBQUssQ0FBQyxVQUFBLEtBQUs7WUFDUixPQUFPLENBQUMsR0FBRyxDQUFDLHVCQUF1QixHQUFHLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUNyRCxPQUFPLEtBQUssQ0FBQyxNQUFNLENBQUM7UUFDeEIsQ0FBQyxDQUFDLENBQUM7SUFDWCxDQUFDO0lBRUQ7Ozs7Ozs7T0FPRztJQUNJLHdCQUFVLEdBQWpCLFVBQWtCLFNBQWMsRUFBRSxRQUFhLEVBQUUsS0FBVSxFQUFFLFFBQWEsRUFBRSxJQUFTO1FBQ2pGLE9BQU8sQ0FBQyxHQUFHLENBQ1Asd0NBQXdDLEdBQUcsU0FBUyxHQUFHLEdBQUcsR0FBRyxRQUFRLEdBQUcsR0FBRyxHQUFHLEtBQUssR0FBRyxHQUFHLEdBQUcsUUFBUSxDQUFDLENBQUM7UUFDMUcsSUFBTSxNQUFNLEdBQ1Isd0NBQXdDLEdBQUcsU0FBUyxHQUFHLEdBQUcsR0FBRyxRQUFRLEdBQUcsR0FBRyxHQUFHLEtBQUssR0FBRyxHQUFHLEdBQUcsUUFBUSxDQUFDO1FBQ3pHLE9BQU8sZUFBSyxDQUFDLEdBQUcsQ0FBQyxNQUFNLEVBQUUsSUFBSSxDQUFDO2FBQ3pCLElBQUksQ0FBQyxVQUFBLEdBQUc7WUFDTCxPQUFPLEdBQUcsQ0FBQztRQUNmLENBQUMsQ0FBQzthQUNELEtBQUssQ0FBQyxVQUFBLEtBQUs7WUFDUixPQUFPLENBQUMsS0FBSyxDQUFDLHNCQUFzQixHQUFHLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUN0RCxPQUFPLEtBQUssQ0FBQyxNQUFNLENBQUM7UUFDeEIsQ0FBQyxDQUFDLENBQUM7SUFDWCxDQUFDO0lBRUQ7Ozs7Ozs7Ozs7Ozs7OztPQWVHO0lBQ0ksNEJBQWMsR0FBckIsVUFBc0IsU0FBYyxFQUFFLFFBQWEsRUFBRSxLQUFVLEVBQUUsUUFBYTtRQUMxRSxJQUFNLE1BQU0sR0FDUiw2Q0FBNkMsR0FBRyxTQUFTLEdBQUcsR0FBRyxHQUFHLFFBQVEsR0FBRyxHQUFHLEdBQUcsS0FBSyxHQUFHLEdBQUcsR0FBRyxRQUFRLENBQUM7UUFDOUcsT0FBTyxlQUFLLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQzthQUNuQixJQUFJLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxHQUFHLENBQUMsSUFBSSxFQUFSLENBQVEsQ0FBQzthQUNyQixLQUFLLENBQUMsVUFBQSxLQUFLO1lBQ1IsT0FBTyxDQUFDLEdBQUcsQ0FBQywwQkFBMEIsR0FBRyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUM7WUFDeEQsT0FBTyxLQUFLLENBQUMsTUFBTSxDQUFDO1FBQ3hCLENBQUMsQ0FBQyxDQUFDO0lBQ1gsQ0FBQztJQUVEOzs7OztPQUtHO0lBQ0ksd0JBQVUsR0FBakIsVUFBa0IsUUFBYSxFQUFFLEtBQVU7UUFDdkMsSUFBTSxNQUFNLEdBQUcsK0NBQStDLEdBQUcsUUFBUSxHQUFHLEdBQUcsR0FBRyxLQUFLLENBQUM7UUFDeEYsT0FBTyxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUNwQixlQUFLLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQzthQUNiLElBQUksQ0FBQyxVQUFBLEdBQUcsSUFBSSxPQUFBLEdBQUcsQ0FBQyxJQUFJLEVBQVIsQ0FBUSxDQUFDO2FBQ3JCLEtBQUssQ0FBQyxVQUFBLEtBQUs7WUFDUixPQUFPLENBQUMsR0FBRyxDQUFDLHNCQUFzQixHQUFHLEtBQUssQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUNwRCxPQUFPLEtBQUssQ0FBQyxNQUFNLENBQUM7UUFDeEIsQ0FBQyxDQUFDLENBQUM7SUFDWCxDQUFDO0lBRUQ7Ozs7T0FJRztJQUNJLDBCQUFZLEdBQW5CLFVBQW9CLEtBQVUsRUFBRSxPQUFZO1FBQ3hDLGVBQUssQ0FBQyxHQUFHLENBQUMsd0NBQXdDLEdBQUcsS0FBSyxFQUFFLEVBQUMsT0FBTyxTQUFBLEVBQUMsQ0FBQzthQUNqRSxJQUFJLENBQUMsVUFBQSxHQUFHLElBQUksT0FBQSxHQUFHLENBQUMsSUFBSSxFQUFSLENBQVEsQ0FBQzthQUNyQixLQUFLLENBQUMsVUFBQSxLQUFLO1lBQ1IsT0FBTyxDQUFDLEdBQUcsQ0FBQyx3QkFBd0IsR0FBRyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUM7WUFDdEQsT0FBTyxLQUFLLENBQUMsTUFBTSxDQUFDO1FBQ3hCLENBQUMsQ0FBQyxDQUFDO0lBRVgsQ0FBQztJQUVEOzs7O09BSUc7SUFDSSw0QkFBYyxHQUFyQixVQUFzQixLQUFVO1FBQzVCLE9BQU8sZUFBSyxDQUFDLEdBQUcsQ0FBQyx3Q0FBd0MsR0FBRyxLQUFLLENBQUM7YUFDN0QsSUFBSSxDQUFDLFVBQUEsR0FBRyxJQUFJLE9BQUEsR0FBRyxDQUFDLElBQUksRUFBUixDQUFRLENBQUM7YUFDckIsS0FBSyxDQUFDLFVBQUEsS0FBSztZQUNSLE9BQU8sQ0FBQyxHQUFHLENBQUMsMEJBQTBCLEdBQUcsS0FBSyxDQUFDLE9BQU8sQ0FBQyxDQUFDO1lBQ3hELE9BQU8sS0FBSyxDQUFDLE1BQU0sQ0FBQztRQUN4QixDQUFDLENBQUMsQ0FBQztJQUNYLENBQUM7SUFFRCxxQkFBcUI7SUFDckI7Ozs7T0FJRztJQUNJLDBCQUFZLEdBQW5CLFVBQW9CLFNBQWM7UUFDOUIsSUFBSSxNQUFNLEdBQVUsRUFBRSxDQUFDO1FBQ3ZCLEtBQUssSUFBSSxDQUFDLElBQUksU0FBUyxFQUFFO1lBQ3JCLE1BQU0sQ0FBQyxJQUFJLENBQ1A7Z0JBQ0ksSUFBSSxFQUFFLFNBQVMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDO2dCQUNoQyxLQUFLLEVBQUUsU0FBUyxDQUFDLENBQUMsQ0FBQyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUM7YUFDcEMsQ0FDSixDQUFDO1NBQ0w7UUFDRCxPQUFPLE1BQU0sQ0FBQztJQUNsQixDQUFDO0lBRUQ7Ozs7T0FJRztJQUNJLDBCQUFZLEdBQW5CLFVBQW9CLEtBQVU7UUFDMUIsSUFBSSxNQUFNLEdBQVUsRUFBRSxDQUFDO1FBQ3ZCLEtBQUssSUFBSSxDQUFDLElBQUksS0FBSyxFQUFFO1lBQ2pCLE1BQU0sQ0FBQyxJQUFJLENBQUMsRUFBQyxJQUFJLEVBQUUsS0FBSyxDQUFDLENBQUMsQ0FBQyxFQUFFLEtBQUssRUFBRSxLQUFLLENBQUMsQ0FBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDO1NBQ2xEO1FBQ0QsT0FBTyxNQUFNLENBQUM7SUFDbEIsQ0FBQztJQUNMLG9CQUFDO0FBQUQsQ0FBQyxBQW5URCxJQW1UQztBQUVELGtCQUFlLGFBQWEsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBheGlvcyBmcm9tICdheGlvcyc7XG5cbi8qKlxuICogUmVxdWVzdE1vZHVsZSBjbGFzcyB3aGljaCBzZXJ2ZXMgc2V2ZXJhbCBodHRwIHJlcXVlc3RzIGZ1bmN0aW9ucyBmb3IgaW50ZXJhY3Rpb25cbiAqIHdpdGggYm90IHRoZSBjb2xsYWJvcmF0aW9uIHNlcnZlciBhcyB3ZWxsIGFzIHRoZSBHaXRIdWIgQVBJIHRvIG90aGVyIGNvbXBvbmVudHNcbiAqIG9mIHRoZSBhcHBsaWNhdGlvbi5cbiAqIGZvciBtb3JlIGluZm8gb24gaG93IHRvIHVzZTpcbiAqIGh0dHBzOi8vZ2l0aHViLmNvbS9kdWJpb3VzLWRldmVsb3BtZW50cy9VblNIQUNMZWQvd2lraS9JbnRlcmFjdGluZy13aXRoLXRoZS1jb2xsYWJvcmF0aW9uLXNlcnZlciNmaWxlLWFjY2Vzc1xuICovXG5cbmNsYXNzIFJlcXVlc3RNb2R1bGUge1xuXG4gICAgLyoqXG4gICAgICogTWV0aG9kIHRvIHJlY2VpdmUgYSB0b2tlbiBmcm9tIHRoZSBjb2xsYWJvcmF0aW9uIHNlcnZlci5cbiAgICAgKiBBIFBPU1QgcmVxdWVzdCBpcyB1c2VkIHRvIG9idGFpbiB0aGUgdG9rZW4gaW4gYSBwbGFpbiB0ZXh0IGZyb20gdGhlIGNvbGxhYm9yYXRpb24gc2VydmVyLlxuICAgICAqIFRoZSBvYnRhaW5lZCB0b2tlbiBpcyB1c2VkIGZvciBmdXJ0aGVyIGF1dGhlbnRpY2F0aW9cbiAgICAgKiBAcmV0dXJucyB7UHJvbWlzZTxBeGlvc1Jlc3BvbnNlPGFueT4+fSwgUmV0dXJuIHRoZSBvYnRhaW5lZCB0b2tlbiB0aHJvdWdoIGEgcHJvbWlzZS5cbiAgICAgKi9cbiAgICBzdGF0aWMgZ2V0VG9rZW4oKSB7XG4gICAgICAgIHJldHVybiBheGlvcy5wb3N0KCdodHRwOi8vMTkzLjE5MC4xMjcuMTg0OjgwNDIvYXV0aC9yZXF1ZXN0LXRva2VuJylcbiAgICAgICAgICAgIC50aGVuKHJlcyA9PiByZXMuZGF0YSlcbiAgICAgICAgICAgIC5jYXRjaChlcnJvciA9PiB7XG4gICAgICAgICAgICAgICAgY29uc29sZS5lcnJvcihcImdldFRva2VuIHJlZnVzZWQ6IFwiICsgZXJyb3IubWVzc2FnZSk7XG4gICAgICAgICAgICAgICAgcmV0dXJuIGVycm9yLnN0YXR1cztcbiAgICAgICAgICAgIH0pO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIE1ldGhvZCB0byBzdGFydCBhdXRoZW50aWNhdGlvbiBwcm9jZXNzIHRocm91Z2ggdGhlIGNvbGxhYm9yYXRpb24gc2VydmVyIHVzaW5nXG4gICAgICogYSBHRVQgcmVxdWVzdCB3aXRoIHRoZSBlYXJsaWVyIG9idGFpbmVkIHRva2VuLiBUaGUgY29sbGFib3JhdGlvbiBzZXJ2ZXIgd2lsbCByZWRpcmVjdFxuICAgICAqIHRvIHRoZSBHaXRIdWIgbG9naW4gcGFnZSBhbmQgcmVkaXJlY3QgaWYgbG9nZ2VkIGluIHN1Y2Nlc2Z1bGx5XG4gICAgICogQHBhcmFtIHRva2VuOiB0b2tlbiBhc3NvY2lhdGVkIHdpdGggYXV0aGVudGljYXRlZCB1c2VyIGFuZCBvYnRhaW5lZCB1c2luZyBnZXRUb2tlbigpLlxuICAgICAqL1xuICAgIHN0YXRpYyBBdXRoV2l0aFRva2VuKHRva2VuOiBhbnkpIHtcbiAgICAgICAgd2luZG93Lm9wZW4oJ2h0dHA6Ly8xOTMuMTkwLjEyNy4xODQ6ODA0Mi9hdXRoL2F1dGgvJyArIHRva2VuLCBcIl9ibGFua1wiLFxuICAgICAgICAgICAgXCJ0b3A9MTAwLGxlZnQ9NTAwLHdpZHRoPTUwMCxoZWlnaHQ9MTAwMFwiKTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdG8gY2hlY2sgd2V0aGVyIG9yIG5vdCBhIHVzZXIgd2l0aCBhbiBvYnRhaW5lZCB0b2tlbiBpcyBhdXRoZW50aWNhdGVkIHVzaW5nIGFcbiAgICAgKiBHRVQgcmVxdWVzdCB0byB0aGUgY29sbGFib3JhdGlvbiBzZXJ2ZXIgaW5jbHVkaW5nIHRoZSBwcmV2aW91c2x5IG9idGFpbmVkIHRva2VuXG4gICAgICogQHBhcmFtIHRva2VuOiB0b2tlbiBhc3NvY2lhdGVkIHdpdGggYXV0aGVudGljYXRlZCB1c2VyIGFuZCBvYnRhaW5lZCB1c2luZyBnZXRUb2tlbigpLlxuICAgICAqIEByZXR1cm5zIHtQcm9taXNlPEF4aW9zUmVzcG9uc2U8YW55Pj59LCBSZXR1cm5zIGVpdGhlciB0cnVlIG9yIGZhbHNlIHRocm91Z2ggYSBwcm9taXNlLlxuICAgICAqL1xuICAgIHN0YXRpYyBpc0F1dGhlbnRpY2F0ZWQodG9rZW46IGFueSkge1xuICAgICAgICByZXR1cm4gYXhpb3MuZ2V0KCdodHRwOi8vMTkzLjE5MC4xMjcuMTg0OjgwNDIvYXV0aC9pcy1hdXRoZW50aWNhdGVkLycgKyB0b2tlbilcbiAgICAgICAgICAgIC50aGVuKHJlcyA9PiByZXMuZGF0YSlcbiAgICAgICAgICAgIC5jYXRjaChlcnJvciA9PiB7XG4gICAgICAgICAgICAgICAgY29uc29sZS5lcnJvcihcImlzQXV0aGVudGljYXRlZCByZWZ1c2VkOiBcIiArIGVycm9yLm1lc3NhZ2UpO1xuICAgICAgICAgICAgICAgIHJldHVybiBlcnJvci5zdGF0dXM7XG4gICAgICAgICAgICB9KTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdG8gb2J0YWluIHVzZXIgaW5mbyBmb3IgYW4gYXV0aGVudGljYXRlZCB1c2VyXG4gICAgICogQHBhcmFtIHR5cGU6IHNwZWNpZmllcyB0eXBlIG9mIHVzZXIgaW5mbywgY2FuIGJlICdsb2dpbicsICduYW1lJyBvciAnZW1haWwnLlxuICAgICAqIEBwYXJhbSB0b2tlbjogdG9rZW4gYXNzb2NpYXRlZCB3aXRoIGF1dGhlbnRpY2F0ZWQgdXNlciBhbmQgb2J0YWluZWQgdXNpbmcgZ2V0VG9rZW4oKS5cbiAgICAgKiBAcmV0dXJucyB7UHJvbWlzZTxBeGlvc1Jlc3BvbnNlPGFueT4+fSwgUmV0dXJucyB0aGUgcmVxdWVzdGVkIHVzZXIgaW5mbyB0aHJvdWdoIGEgcHJvbWlzZS5cbiAgICAgKi9cbiAgICBzdGF0aWMgZ2V0VXNlckluZm8odHlwZTogYW55LCB0b2tlbjogYW55KSB7XG4gICAgICAgIHJldHVybiBheGlvcy5nZXQoJ2h0dHA6Ly8xOTMuMTkwLjEyNy4xODQ6ODA0Mi91c2VyLycgKyB0eXBlICsgJy8nICsgdG9rZW4pXG4gICAgICAgICAgICAudGhlbihyZXMgPT4gcmVzLmRhdGEpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUuZXJyb3IoXCJnZXRVc2VySW5mbyByZWZ1c2VkOiBcIiArIGVycm9yLm1lc3NhZ2UpO1xuICAgICAgICAgICAgICAgIHJldHVybiBlcnJvci5zdGF0dXM7XG4gICAgICAgICAgICB9KTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdG8gb2JhdGluIHVzZXIgb2JqZWN0IGZyb20gR2l0SHViIEFQSVxuICAgICAqIEBwYXJhbSBsb2dpbjogbG9naW4gZnJvbSBhdXRoZW50aWNhdGVkIHVzZXJcbiAgICAgKiBAcmV0dXJucyB7UHJvbWlzZTxBeGlvc1Jlc3BvbnNlPGFueT4+fSwgcmV0dXJuIHVzZXIgb2JqZWN0IHRocm91Z2ggYSBwcm9taXNlLlxuICAgICAqL1xuICAgIHN0YXRpYyBnZXRVc2VyT2JqZWN0KGxvZ2luOiBhbnkpIHtcbiAgICAgICAgcmV0dXJuIGF4aW9zLmdldCgnaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS91c2Vycy8nICsgbG9naW4pXG4gICAgICAgICAgICAudGhlbihyZXMgPT4gcmVzLmRhdGEpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwiZ2V0VXNlck9iamVjdCByZWZ1c2VkOiBcIiArIGVycm9yLm1lc3NhZ2UpO1xuICAgICAgICAgICAgICAgIHJldHVybiBlcnJvci5zdGF0dXM7XG4gICAgICAgICAgICB9KTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdG8gZ3JhYiBhIGxpc3Qgb2YgYSB1c2VyJ3MgcmVwb3NpdG9yaWVzXG4gICAgICogQHBhcmFtIHRva2VuOiB0b2tlbiBhc3NvY2lhdGVkIHdpdGggYXV0aGVudGljYXRlZCB1c2VyIGFuZCBvYnRhaW5lZCB1c2luZyBnZXRUb2tlbigpLlxuICAgICAqIEByZXR1cm5zIHtQcm9taXNlPEF4aW9zUmVzcG9uc2U8YW55Pj59LCByZXR1cm4gbGlzdCBvZiByZXBvIHRocm91Z2ggYSBwcm9taXNlLlxuICAgICAqL1xuICAgIHN0YXRpYyBnZXRVc2VyUmVwb3ModG9rZW46IGFueSkge1xuICAgICAgICByZXR1cm4gYXhpb3MuZ2V0KCdodHRwOi8vMTkzLjE5MC4xMjcuMTg0OjgwNDIvdXNlci9yZXBvLWxpc3QvJyArIHRva2VuKVxuICAgICAgICAgICAgLnRoZW4ocmVzID0+IHJlcy5kYXRhKVxuICAgICAgICAgICAgLmNhdGNoKGVycm9yID0+IHtcbiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhcImdldFVzZXJSZXBvcyByZWZ1c2VkOiBcIiArIGVycm9yLm1lc3NhZ2UpO1xuICAgICAgICAgICAgICAgIHJldHVybiBlcnJvci5zdGF0dXM7XG4gICAgICAgICAgICB9KTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdG8gZmV0Y2ggZmlsZXMgZnJvbSBhIHJlcG9zaXRvcnkgb2YgY2hvaWNlIGZvciBhbiBhdXRoZW50aWNhdGVkIHVzZXJcbiAgICAgKiBAcGFyYW0gcmVwb093bmVyOiBvd25lciBvZiByZXBvc2l0b3J5IHdoZXJlIGZpbGUgaXMgbG9jYXRlZFxuICAgICAqIEBwYXJhbSByZXBvTmFtZTogbmFtZSBvZiByZXBvc2l0b3J5XG4gICAgICogQHBhcmFtIHRva2VuOiB0b2tlbiBhc3NvY2lhdGVkIHdpdGggYXV0aGVudGljYXRlZCB1c2VyIGFuZCBvYnRhaW5lZCB1c2luZyBnZXRUb2tlbigpLlxuICAgICAqIEByZXR1cm4ge1Byb21pc2U8QXhpb3NSZXNwb25zZTxhbnk+Pn0sIHJldHVybnMgbGlzdCBvZiBmaWxlcyB0aHJvdWdoIGEgUHJvbWlzZVxuICAgICAqL1xuICAgIHN0YXRpYyBnZXRGaWxlc0Zyb21SZXBvKHJlcG9Pd25lcjogYW55LCByZXBvTmFtZTogYW55LCB0b2tlbjogYW55KSB7XG4gICAgICAgIGNvbnN0IHRhcmdldCA9XG4gICAgICAgICAgICAnaHR0cDovLzE5My4xOTAuMTI3LjE4NDo4MDQyL3JlcG8vZmlsZS1uYW1lcy8nICsgcmVwb093bmVyICsgJy8nICsgcmVwb05hbWUgKyAnLycgKyB0b2tlbjtcbiAgICAgICAgcmV0dXJuIGF4aW9zLmdldCh0YXJnZXQpXG4gICAgICAgICAgICAudGhlbihyZXMgPT4gcmVzLmRhdGEpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwiZ2V0RmlsZXNGcm9tUmVwbyByZWZ1c2VkOiBcIiArIGVycm9yLm1lc3NhZ2UpO1xuICAgICAgICAgICAgICAgIHJldHVybiBlcnJvci5zdGF0dXM7XG4gICAgICAgICAgICB9KTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdG8gcmVhZCBhIGZpbGUgZnJvbSBhIHJlcG9zaXRvcnkuXG4gICAgICogQHBhcmFtIHJlcG9Pd25lcjogb3duZXIgb2YgcmVwb3NpdG9yeSB3aGVyZSBmaWxlIGlzIGxvY2F0ZWRcbiAgICAgKiBAcGFyYW0gcmVwb05hbWU6IG5hbWUgb2YgcmVwb3NpdG9yeVxuICAgICAqIEBwYXJhbSB0b2tlbjogdG9rZW4gYXNzb2NpYXRlZCB3aXRoIGF1dGhlbnRpY2F0ZWQgdXNlciBhbmQgb2J0YWluZWQgdXNpbmcgZ2V0VG9rZW4oKVxuICAgICAqIEBwYXJhbSBmaWxlTmFtZTogbmFtZSBvZiBmaWxlIHRvIGJlIHJlYWRcbiAgICAgKiAgQHJldHVybiB7UHJvbWlzZTxBeGlvc1Jlc3BvbnNlPGFueT4+fSwgcmV0dXJucyBjb250ZW50IG9mIGZpbGUgYXMgdGV4dFxuICAgICAqL1xuICAgIHN0YXRpYyByZWFkRmlsZShyZXBvT3duZXI6IGFueSwgcmVwb05hbWU6IGFueSwgdG9rZW46IGFueSwgZmlsZU5hbWU6IGFueSkge1xuICAgICAgICBjb25zdCB0YXJnZXQgPVxuICAgICAgICAgICAgJ2h0dHA6Ly8xOTMuMTkwLjEyNy4xODQ6ODA0Mi9yZXBvL2ZpbGUvJyArIHJlcG9Pd25lciArICcvJyArIHJlcG9OYW1lICsgJy8nICsgdG9rZW4gKyAnLycgKyBmaWxlTmFtZTtcbiAgICAgICAgcmV0dXJuIGF4aW9zLmdldCh0YXJnZXQpXG4gICAgICAgICAgICAudGhlbihyZXMgPT4gcmVzLmRhdGEpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwicmVhZEZpbGUgcmVmdXNlZDogXCIgKyBlcnJvci5tZXNzYWdlKTtcbiAgICAgICAgICAgICAgICByZXR1cm4gZXJyb3Iuc3RhdHVzO1xuICAgICAgICAgICAgfSk7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogTWV0aG9kIHRvIGNoZWNrIHdldGhlciB1c2VyIGhhcyBhIGxvY2sgb24gYSBmaWxlLlxuICAgICAqIEBwYXJhbSByZXBvT3duZXI6IG93bmVyIG9mIHJlcG9zaXRvcnkgd2hlcmUgZmlsZSBpcyBsb2NhdGVkXG4gICAgICogQHBhcmFtIHJlcG9OYW1lOiBuYW1lIG9mIHJlcG9zaXRvcnlcbiAgICAgKiBAcGFyYW0gdG9rZW46IHRva2VuIGFzc29jaWF0ZWQgd2l0aCBhdXRoZW50aWNhdGVkIHVzZXIgYW5kIG9idGFpbmVkIHVzaW5nIGdldFRva2VuKCkuXG4gICAgICogQHBhcmFtIGZpbGVQYXRoOiBwYXRoIG9mIGZpbGUgdG8gYmUgY3JlYXRlZCB1cGRhdGVkXG4gICAgICogQHJldHVybnMge1Byb21pc2U8QXhpb3NSZXNwb25zZTxhbnk+Pn0sIHJldHVybiB0cnVlIGlmIGxvY2sgaGFzIGJlZW4gZ3JhbnRlZCwgZmFsc2Ugb3RoZXJ3aXNlIHRocm91Z2ggYSBQcm9taXNlLlxuICAgICAqL1xuICAgIHN0YXRpYyBoYXNMb2NrKHJlcG9Pd25lcjogYW55LCByZXBvTmFtZTogYW55LCB0b2tlbjogYW55LCBmaWxlUGF0aDogYW55KSB7XG4gICAgICAgIGNvbnN0IHRhcmdldCA9XG4gICAgICAgICAgICAnaHR0cDovLzE5My4xOTAuMTI3LjE4NDo4MDQyL3JlcG8vaGFzLWxvY2svJyArIHJlcG9Pd25lciArICcvJyArIHJlcG9OYW1lICsgJy8nICsgdG9rZW4gKyAnLycgKyBmaWxlUGF0aDtcbiAgICAgICAgcmV0dXJuIGF4aW9zLmdldCh0YXJnZXQpXG4gICAgICAgICAgICAudGhlbihyZXMgPT4gcmVzLmRhdGEpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwiaGFzTG9jayByZWZ1c2VkOiBcIiArIGVycm9yLm1lc3NhZ2UpO1xuICAgICAgICAgICAgICAgIHJldHVybiBlcnJvci5zdGF0dXM7XG4gICAgICAgICAgICB9KTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdG8gcmVxdWVzdCBhIGxvY2sgb24gYSBmaWxlLlxuICAgICAqIEBwYXJhbSByZXBvT3duZXI6IG93bmVyIG9mIHJlcG9zaXRvcnkgd2hlcmUgZmlsZSBpcyBsb2NhdGVkXG4gICAgICogQHBhcmFtIHJlcG9OYW1lOiBuYW1lIG9mIHJlcG9zaXRvcnlcbiAgICAgKiBAcGFyYW0gdG9rZW46IHRva2VuIGFzc29jaWF0ZWQgd2l0aCBhdXRoZW50aWNhdGVkIHVzZXIgYW5kIG9idGFpbmVkIHVzaW5nIGdldFRva2VuKCkuXG4gICAgICogQHBhcmFtIGZpbGVQYXRoOiBwYXRoIG9mIGZpbGUgdG8gYmUgY3JlYXRlZCB1cGRhdGVkXG4gICAgICogQHJldHVybnMge1Byb21pc2U8QXhpb3NSZXNwb25zZTxhbnk+Pn0sIHJldHVybiB0cnVlIGlmIGxvY2sgaGFzIGJlZW4gZ3JhbnRlZCwgZmFsc2Ugb3RoZXJ3aXNlIHRocm91Z2ggYSBQcm9taXNlLlxuICAgICAqL1xuICAgIHN0YXRpYyByZXF1ZXN0TG9jayhyZXBvT3duZXI6IGFueSwgcmVwb05hbWU6IGFueSwgdG9rZW46IGFueSwgZmlsZVBhdGg6IGFueSkge1xuICAgICAgICBjb25zdCB0YXJnZXQgPSAnaHR0cDovLzE5My4xOTAuMTI3LjE4NDo4MDQyL3JlcG8vcmVxdWVzdC1sb2NrLydcbiAgICAgICAgICAgICsgcmVwb093bmVyICsgJy8nICsgcmVwb05hbWUgKyAnLycgKyB0b2tlbiArICcvJyArIGZpbGVQYXRoO1xuICAgICAgICByZXR1cm4gYXhpb3MucG9zdCh0YXJnZXQpXG4gICAgICAgICAgICAudGhlbihyZXMgPT4gcmVzLmRhdGEpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwicmVxdWVzdExvY2sgcmVmdXNlZDogXCIgKyBlcnJvci5tZXNzYWdlKTtcbiAgICAgICAgICAgICAgICByZXR1cm4gZXJyb3Iuc3RhdHVzO1xuICAgICAgICAgICAgfSk7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogTWV0aG9kIHRvIHJlbGVhc2UgYSBsb2NrIG9uIGEgZmlsZS5cbiAgICAgKiBAcGFyYW0gcmVwb093bmVyOiBvd25lciBvZiByZXBvc2l0b3J5IHdoZXJlIGZpbGUgaXMgbG9jYXRlZFxuICAgICAqIEBwYXJhbSByZXBvTmFtZTogbmFtZSBvZiByZXBvc2l0b3J5XG4gICAgICogQHBhcmFtIHRva2VuOiB0b2tlbiBhc3NvY2lhdGVkIHdpdGggYXV0aGVudGljYXRlZCB1c2VyIGFuZCBvYnRhaW5lZCB1c2luZyBnZXRUb2tlbigpLlxuICAgICAqIEBwYXJhbSBmaWxlUGF0aDogcGF0aCBvZiBmaWxlIHRvIGJlIGNyZWF0ZWQgdXBkYXRlZFxuICAgICAqIEByZXR1cm5zIHtQcm9taXNlPEF4aW9zUmVzcG9uc2U8YW55Pj59LCByZXR1cm4gdHJ1ZSBpZiBsb2NrIGhhcyBiZWVuIHJlbGVhc2VkLCBmYWxzZSBvdGhlcndpc2UgdGhyb3VnaCBhIFByb21pc2UuXG4gICAgICovXG4gICAgc3RhdGljIHJlbGVhc2VMb2NrKHJlcG9Pd25lcjogYW55LCByZXBvTmFtZTogYW55LCB0b2tlbjogYW55LCBmaWxlUGF0aDogYW55KSB7XG4gICAgICAgIGNvbnN0IHRhcmdldCA9ICdodHRwOi8vMTkzLjE5MC4xMjcuMTg0OjgwNDIvcmVwby9yZWxpbnF1aXNoLWxvY2svJ1xuICAgICAgICAgICAgKyByZXBvT3duZXIgKyAnLycgKyByZXBvTmFtZSArICcvJyArIHRva2VuICsgJy8nICsgZmlsZVBhdGg7XG4gICAgICAgIHJldHVybiBheGlvcy5wb3N0KHRhcmdldClcbiAgICAgICAgICAgIC50aGVuKHJlcyA9PiByZXMpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwicmVsZWFzZUxvY2sgcmVmdXNlZDogXCIgKyBlcnJvci5tZXNzYWdlKTtcbiAgICAgICAgICAgICAgICByZXR1cm4gZXJyb3Iuc3RhdHVzO1xuICAgICAgICAgICAgfSk7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogTWV0aG9kIHRvIHVwZGF0ZSBvciBjcmVhdGUgYSBmaWxlLiBMb2NrIG9uIGZpbGUgaXMgcmVxdWlyZWQgdG8gZG8gc28uXG4gICAgICogQHBhcmFtIHJlcG9Pd25lcjogb3duZXIgb2YgcmVwb3NpdG9yeSB3aGVyZSBmaWxlIGlzIGxvY2F0ZWRcbiAgICAgKiBAcGFyYW0gcmVwb05hbWU6IG5hbWUgb2YgcmVwb3NpdG9yeVxuICAgICAqIEBwYXJhbSB0b2tlbjogdG9rZW4gYXNzb2NpYXRlZCB3aXRoIGF1dGhlbnRpY2F0ZWQgdXNlciBhbmQgb2J0YWluZWQgdXNpbmcgZ2V0VG9rZW4oKS5cbiAgICAgKiBAcGFyYW0gZmlsZU5hbWU6IG5hbWUgb2YgZmlsZSB0byBiZSBjcmVhdGVkIHVwZGF0ZWRcbiAgICAgKiBAcGFyYW0gZmlsZTogZmlsZSBjb250ZW50LCBpbmNvcnBvcmF0ZWQgaW4gYm9keSBvZiBodHRwIHJlcXVlc3RcbiAgICAgKi9cbiAgICBzdGF0aWMgdXBkYXRlRmlsZShyZXBvT3duZXI6IGFueSwgcmVwb05hbWU6IGFueSwgdG9rZW46IGFueSwgZmlsZU5hbWU6IGFueSwgZmlsZTogYW55KSB7XG4gICAgICAgIGNvbnNvbGUubG9nKFxuICAgICAgICAgICAgJ2h0dHA6Ly8xOTMuMTkwLjEyNy4xODQ6ODA0Mi9yZXBvL2ZpbGUvJyArIHJlcG9Pd25lciArICcvJyArIHJlcG9OYW1lICsgJy8nICsgdG9rZW4gKyAnLycgKyBmaWxlTmFtZSk7XG4gICAgICAgIGNvbnN0IHRhcmdldCA9XG4gICAgICAgICAgICAnaHR0cDovLzE5My4xOTAuMTI3LjE4NDo4MDQyL3JlcG8vZmlsZS8nICsgcmVwb093bmVyICsgJy8nICsgcmVwb05hbWUgKyAnLycgKyB0b2tlbiArICcvJyArIGZpbGVOYW1lO1xuICAgICAgICByZXR1cm4gYXhpb3MucHV0KHRhcmdldCwgZmlsZSlcbiAgICAgICAgICAgIC50aGVuKHJlcyA9PiB7XG4gICAgICAgICAgICAgICAgcmV0dXJuIHJlcztcbiAgICAgICAgICAgIH0pXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUuZXJyb3IoJ3VwZGF0ZUZpbGUgcmVmdXNlZDogJyArIGVycm9yLm1lc3NhZ2UpO1xuICAgICAgICAgICAgICAgIHJldHVybiBlcnJvci5zdGF0dXM7XG4gICAgICAgICAgICB9KTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdG8gc3RheSB1cCB0byBkYXRlIHdpdGggdGhlIGxhdGVzdCB2ZXJzaW9uIG9mIGEgZmlsZVxuICAgICAqIFRvIGFsbG93IGZvciBlZmZpY2llbnQgcG9sbGluZywgYSB0aW1lc3RhbXAgY2FuIG9wdGlvbmFsbHkgYmUgaW5jbHVkZWQgYXMgdGhlIHJlcXVlc3QgYm9keS5cbiAgICAgKiBJZiB0aGUgdGltZXN0YW1wIGlzIG9taXR0ZWQsIHRoZSBzZXJ2ZXIgYWN0cyBhcyBpZiB0aGUgZXBvY2ggd2FzIHByb3ZpZGVkIGFzIGEgdGltZXN0YW1wLlxuICAgICAqIEBwYXJhbSByZXBvT3duZXI6IG93bmVyIG9mIHJlcG9zaXRvcnkgd2hlcmUgZmlsZSBpcyBsb2NhdGVkXG4gICAgICogQHBhcmFtIHJlcG9OYW1lOiBuYW1lIG9mIHJlcG9zaXRvcnlcbiAgICAgKiBAcGFyYW0gdG9rZW46IHRva2VuIGFzc29jaWF0ZWQgd2l0aCBhdXRoZW50aWNhdGVkIHVzZXIgYW5kIG9idGFpbmVkIHVzaW5nIGdldFRva2VuKCkuXG4gICAgICogQHBhcmFtIGZpbGVQYXRoOiBwYXRoIG9mIGZpbGVuYW1lIGluIGRpcmVjdG9yeVxuICAgICAqIEByZXR1cm4ge1Byb21pc2U8QXhpb3NSZXNwb25zZTxhbnk+Pn0sIHJldHVybnMgZm9sbG93aW5nIG9iamVjdCB0aHJvdWdoIGEgcHJvbWlzZTpcbiAgICAgKiB7XG4gICAgICAgICAgICAgIFwiaXNNb2RpZmllZFwiOiB0cnVlLFxuICAgICAgICAgICAgICBcImxhc3RDaGFuZ2VcIjogXCIyMDE4LTA1LTEzVDA5OjE0OjEyLjE0Nzc4OTAtMDY6MDBcIixcbiAgICAgICAgICAgICAgXCJjb250ZW50c1wiOiBcIkVkaXQgZm9yIGZpbGUgcG9sbGluZyB0ZXN0aW5nIHB1cnBvc2VzXCJcbiAgICAgICAgICAgIH1cbiAgICAgKiBJZiBubyBjaGFuZ2VzIHdlcmUgbWFkZSwgdGhlIHJlcG9uc2Ugd2lsbCBvbW1pdCB0aGUgY29udGVudCBmaWVsZC5cbiAgICAgKi9cbiAgICBzdGF0aWMgcG9sbEZvckNoYW5nZXMocmVwb093bmVyOiBhbnksIHJlcG9OYW1lOiBhbnksIHRva2VuOiBhbnksIGZpbGVQYXRoOiBhbnkpIHtcbiAgICAgICAgY29uc3QgdGFyZ2V0ID1cbiAgICAgICAgICAgICdodHRwOi8vMTkzLjE5MC4xMjcuMTg0OjgwNDIvcmVwby9wb2xsLWZpbGUvJyArIHJlcG9Pd25lciArICcvJyArIHJlcG9OYW1lICsgJy8nICsgdG9rZW4gKyAnLycgKyBmaWxlUGF0aDtcbiAgICAgICAgcmV0dXJuIGF4aW9zLmdldCh0YXJnZXQpXG4gICAgICAgICAgICAudGhlbihyZXMgPT4gcmVzLmRhdGEpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwicG9sbEZvckNoYW5nZXMgcmVmdXNlZDogXCIgKyBlcnJvci5tZXNzYWdlKTtcbiAgICAgICAgICAgICAgICByZXR1cm4gZXJyb3Iuc3RhdHVzO1xuICAgICAgICAgICAgfSk7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogTWV0aG9kIHRvIGNyZWF0ZSBhIG5ldyByZXBvXG4gICAgICogQHBhcmFtIHJlcG9OYW1lOiBuYW1lIG9mIHJlcG8gdG8gYmUgY3JlYXRlZFxuICAgICAqIEBwYXJhbSB0b2tlbjogdG9rZW4gYXNzb2NpYXRlZCB3aXRoIGF1dGhlbnRpY2F0ZWQgdXNlciBhbmQgb2J0YWluZWQgdXNpbmcgZ2V0VG9rZW4oKS5cbiAgICAgKiBAcmV0dXJuIG5vbmVcbiAgICAgKi9cbiAgICBzdGF0aWMgY3JlYXRlUmVwbyhyZXBvTmFtZTogYW55LCB0b2tlbjogYW55KSB7XG4gICAgICAgIGNvbnN0IHRhcmdldCA9ICdodHRwOi8vMTkzLjE5MC4xMjcuMTg0OjgwNDIvcmVwby9jcmVhdGUtcmVwby8nICsgcmVwb05hbWUgKyAnLycgKyB0b2tlbjtcbiAgICAgICAgY29uc29sZS5sb2codGFyZ2V0KTtcbiAgICAgICAgYXhpb3MucG9zdCh0YXJnZXQpXG4gICAgICAgICAgICAudGhlbihyZXMgPT4gcmVzLmRhdGEpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwiY3JlYXRlUmVwbyByZWZ1c2VkOiBcIiArIGVycm9yLm1lc3NhZ2UpO1xuICAgICAgICAgICAgICAgIHJldHVybiBlcnJvci5zdGF0dXM7XG4gICAgICAgICAgICB9KTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdG8gc2V0IHRoZSBjb250ZW50cyBvZiBhbiBhdXRoZW50aWNhdGVkIHVzZXIncyB3b3Jrc3BhY2UuXG4gICAgICogQHBhcmFtIHRva2VuOiB0b2tlbiBhc3NvY2lhdGVkIHdpdGggYXV0aGVudGljYXRlZCB1c2VyIGFuZCBvYnRhaW5lZCB1c2luZyBnZXRUb2tlbigpLlxuICAgICAqIEBwYXJhbSBjb250ZW50OiB0aGUgY29udGVudCBvZiB0aGUgY3VycmVudCB3b3Jrc3BhY2VcbiAgICAgKi9cbiAgICBzdGF0aWMgc2V0V29ya3NwYWNlKHRva2VuOiBhbnksIGNvbnRlbnQ6IGFueSkge1xuICAgICAgICBheGlvcy5wdXQoJ2h0dHA6Ly8xOTMuMTkwLjEyNy4xODQ6ODA0Mi93b3Jrc3BhY2UvJyArIHRva2VuLCB7Y29udGVudH0pXG4gICAgICAgICAgICAudGhlbihyZXMgPT4gcmVzLmRhdGEpXG4gICAgICAgICAgICAuY2F0Y2goZXJyb3IgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKFwic2V0V29ya3NwYWNlIHJlZnVzZWQ6IFwiICsgZXJyb3IubWVzc2FnZSk7XG4gICAgICAgICAgICAgICAgcmV0dXJuIGVycm9yLnN0YXR1cztcbiAgICAgICAgICAgIH0pO1xuXG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogTWV0aG9kIHRvIGZldGNoIHRoZSBjb250ZW50cyBvZiBhbiBhdXRoZW50aWNhdGVkIHVzZXIncyB3b3Jrc3BhY2UuXG4gICAgICogQHBhcmFtIHRva2VuOiB0b2tlbiBhc3NvY2lhdGVkIHdpdGggYXV0aGVudGljYXRlZCB1c2VyIGFuZCBvYnRhaW5lZCB1c2luZyBnZXRUb2tlbigpLlxuICAgICAqIEByZXR1cm5zIHtQcm9taXNlPEF4aW9zUmVzcG9uc2U8YW55Pj59LCByZXR1cm4gdGhlIGNvbnRlbnQgYXMgYSBzdHJpbmcgYW5kIHRocm91Z2ggYSBQcm9taXNlLlxuICAgICAqL1xuICAgIHN0YXRpYyBmZXRjaFdvcmtzcGFjZSh0b2tlbjogYW55KSB7XG4gICAgICAgIHJldHVybiBheGlvcy5nZXQoJ2h0dHA6Ly8xOTMuMTkwLjEyNy4xODQ6ODA0Mi93b3Jrc3BhY2UvJyArIHRva2VuKVxuICAgICAgICAgICAgLnRoZW4ocmVzID0+IHJlcy5kYXRhKVxuICAgICAgICAgICAgLmNhdGNoKGVycm9yID0+IHtcbiAgICAgICAgICAgICAgICBjb25zb2xlLmxvZyhcImZldGNoV29ya3NwYWNlIHJlZnVzZWQ6IFwiICsgZXJyb3IubWVzc2FnZSk7XG4gICAgICAgICAgICAgICAgcmV0dXJuIGVycm9yLnN0YXR1cztcbiAgICAgICAgICAgIH0pO1xuICAgIH1cblxuICAgIC8qIE5vbi1BUEkgbWV0aG9kcyAqL1xuICAgIC8qKlxuICAgICAqIE1ldGhvZCB0aGF0IHdpbGwgbWFwIGFuIGFycmF5IG9mIHJlcG9zIHJlcXVpcmVkIGZyb20gdGhlIEFQSSB0b1xuICAgICAqIGFuIGFycmF5IGFibGUgdG8gYmUgbG9hZGVkIGluIGEgRHJvcGRvd24gVUkgY29tcG9uZW50LlxuICAgICAqIEBwYXJhbSByZXBvQXJyYXlcbiAgICAgKi9cbiAgICBzdGF0aWMgcHJvY2Vzc1JlcG9zKHJlcG9BcnJheTogYW55KSB7XG4gICAgICAgIGxldCByZXN1bHQ6IGFueVtdID0gW107XG4gICAgICAgIGZvciAobGV0IGkgaW4gcmVwb0FycmF5KSB7XG4gICAgICAgICAgICByZXN1bHQucHVzaChcbiAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgIHRleHQ6IHJlcG9BcnJheVtpXS5zcGxpdChcIi9cIilbMV0sXG4gICAgICAgICAgICAgICAgICAgIHZhbHVlOiByZXBvQXJyYXlbaV0uc3BsaXQoXCIvXCIpWzFdXG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgKTtcbiAgICAgICAgfVxuICAgICAgICByZXR1cm4gcmVzdWx0O1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIE1ldGhvZCB0aGF0IHdpbGwgbWFwIGFuIGFycmF5IG9mIGZpbGVzIHJlcXVpcmVkIGZyb20gdGhlIEFQSSB0b1xuICAgICAqIGFuIGFycmF5IGFibGUgdG8gYmUgbG9hZGVkIGluIGEgRHJvcGRvd24gVUkgY29tcG9uZW50LlxuICAgICAqIEBwYXJhbSBmaWxlczogZmlsZXMgdG8gYmUgcHJvY2Vzc2VkXG4gICAgICovXG4gICAgc3RhdGljIHByb2Nlc3NGaWxlcyhmaWxlczogYW55KSB7XG4gICAgICAgIGxldCByZXN1bHQ6IGFueVtdID0gW107XG4gICAgICAgIGZvciAobGV0IGkgaW4gZmlsZXMpIHtcbiAgICAgICAgICAgIHJlc3VsdC5wdXNoKHt0ZXh0OiBmaWxlc1tpXSwgdmFsdWU6IGZpbGVzW2ldfSk7XG4gICAgICAgIH1cbiAgICAgICAgcmV0dXJuIHJlc3VsdDtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IFJlcXVlc3RNb2R1bGU7Il19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun May 20 2018 19:47:08 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
