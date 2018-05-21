@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75.86% </span>
+        <span class="strong">79.41% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>22/29</span>
+        <span class='fraction'>27/34</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">35.71% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>6/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>20/25</span>
+        <span class='fraction'>25/30</span>
       </div>
     </div>
   </div>
@@ -129,7 +129,53 @@
 84
 85
 86
-87</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -150,11 +196,57 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -233,6 +325,11 @@ var Section1_1 = require("./sections/Section1");
 var Section2_1 = require("./sections/Section2");
 var Section3_1 = require("./sections/Section3");
 var Section4_1 = require("./sections/Section4");
+var Section5_1 = require("./sections/Section5");
+var Section6_1 = require("./sections/Section6");
+var Section7_1 = require("./sections/Section7");
+var Section8_1 = require("./sections/Section8");
+var react_router_hash_link_1 = require("react-router-hash-link");
 var Home = /** @class */ (function (_super) {
     __extends(Home, _super);
 <span class="fstat-no" title="function not covered" >    function Home() {</span>
@@ -245,69 +342,110 @@ var Home = /** @class */ (function (_super) {
                 React.createElement(semantic_ui_react_1.Container, null,
                     React.createElement(semantic_ui_react_1.Menu.Item, { header: true },
                         React.createElement(semantic_ui_react_1.Image, { size: 'mini', src: logo, style: { marginRight: '1.5em' } }),
-                        "Unshacled: User Manual"))),
-            React.createElement(semantic_ui_react_1.Container, { text: true, style: { marginTop: '7em' } },
+                        "UnSHACLed: User Manual"))),
+            React.createElement(semantic_ui_react_1.Container, { text: true, style: { marginTop: '7em', marginBottom: '7em' } },
                 React.createElement(semantic_ui_react_1.Header, { as: 'h1' }, " UnSHACLed Online User Manual"),
                 React.createElement("p", null, "A visual IDE for Semantic Web constraint languages "),
                 React.createElement("p", null,
                     React.createElement("b", null, " Table of Contents ")),
-                React.createElement(semantic_ui_react_1.List, { ordered: true },
+                React.createElement(semantic_ui_react_1.List, { ordered: true, style: { columns: '2', WebkitColumns: '2', MozColumns: '2' } },
                     React.createElement(semantic_ui_react_1.List.Item, null,
-                        React.createElement("a", null, "Introduction"),
+                        React.createElement(react_router_hash_link_1.HashLink, { to: "/support#1" }, "Introduction"),
                         React.createElement(semantic_ui_react_1.List.List, null,
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Semantic Web"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "SHACL"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "UnSHACLed"))),
-                    React.createElement(semantic_ui_react_1.List.Item, { as: 'a' },
-                        React.createElement("a", null, " Getting Started"),
-                        React.createElement(semantic_ui_react_1.List.List, null,
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Create an account"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Login to UnSHACLed"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Logout"))),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#1.1" }, "Semantic Web")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#1.2" }, "SHACL")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#1.3" }, "UnSHACLed")))),
                     React.createElement(semantic_ui_react_1.List.Item, null,
-                        React.createElement("a", null, "File Handling"),
+                        React.createElement(react_router_hash_link_1.HashLink, { to: "/support#2" }, "Getting Started"),
                         React.createElement(semantic_ui_react_1.List.List, null,
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, " Open local files"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Save local files"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Open files from your account "),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Save files to your account "),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Create new projects "),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Create new files in a project "))),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#2.1" }, "Create an account")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#2.2" }, "Login to UnSHACLed")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#2.3" }, "Logout")))),
                     React.createElement(semantic_ui_react_1.List.Item, null,
-                        React.createElement("a", null, "Editing"),
+                        React.createElement(react_router_hash_link_1.HashLink, { to: "/support#3" }, "File Handling"),
                         React.createElement(semantic_ui_react_1.List.List, null,
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Editor functionality"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "In-graph editing"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Extra"))),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#3.1" }, " Open local files")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#3.2" }, "Save local files")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support##3.3" }, "Open files from your account")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#3.4" }, "Save files to your account")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#3.5" }, "Create new projects")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#3.6" }, "Create new files in a project")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#3.6" }, "Load and save workspace")))),
                     React.createElement(semantic_ui_react_1.List.Item, null,
-                        React.createElement("a", null, "Extra"),
+                        React.createElement(react_router_hash_link_1.HashLink, { to: "/support#4" }, "Editing"),
                         React.createElement(semantic_ui_react_1.List.List, null,
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "View"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Support"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Info"))),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                " ",
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#4.1" }, "Editor functionality")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                " ",
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#4.2" }, "In-graph editing")))),
                     React.createElement(semantic_ui_react_1.List.Item, null,
-                        React.createElement("a", null, "Troubleshooting"),
+                        React.createElement(react_router_hash_link_1.HashLink, { to: "/support#7" }, "Conformance"),
                         React.createElement(semantic_ui_react_1.List.List, null,
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Known Bugs"),
-                            React.createElement(semantic_ui_react_1.List.Item, { as: 'a' }, "Contact")))),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#7.1" }, "Conformance Workflow")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#7.2" }, "Visualize conformance")))),
+                    React.createElement(semantic_ui_react_1.List.Item, null,
+                        React.createElement(react_router_hash_link_1.HashLink, { to: "/support#8" }, "Collaborative editing"),
+                        React.createElement(semantic_ui_react_1.List.List, null,
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                " ",
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#8.1" }, "Collaborative situations")))),
+                    React.createElement(semantic_ui_react_1.List.Item, null,
+                        React.createElement(react_router_hash_link_1.HashLink, { to: "/support#5" }, "Extra"),
+                        React.createElement(semantic_ui_react_1.List.List, null,
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#5.1" }, "View")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#5.2" }, "Support")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#5.3" }, "Info")))),
+                    React.createElement(semantic_ui_react_1.List.Item, null,
+                        React.createElement(react_router_hash_link_1.HashLink, { to: "/support#6" }, "Troubleshooting"),
+                        React.createElement(semantic_ui_react_1.List.List, null,
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                " ",
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#6.1" }, "Known Bugs")),
+                            React.createElement(semantic_ui_react_1.List.Item, null,
+                                " ",
+                                React.createElement(react_router_hash_link_1.HashLink, { to: "/support#6.2" }, "Contact"))))),
                 React.createElement(Section1_1.default, null),
                 React.createElement(Section2_1.default, null),
                 React.createElement(Section3_1.default, null),
-                React.createElement(Section4_1.default, null))));
+                React.createElement(Section4_1.default, null),
+                React.createElement(Section7_1.default, null),
+                React.createElement(Section8_1.default, null),
+                React.createElement(Section5_1.default, null),
+                React.createElement(Section6_1.default, null))));
     };
     return Home;
 }(React.Component));
 exports.default = Home;
 &nbsp;
-},'src/pages/UserManual.tsx',{"../img/logo.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/logo.png","react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","./sections/Section1":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section1.tsx","./sections/Section2":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section2.tsx","./sections/Section3":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section3.tsx","./sections/Section4":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section4.tsx"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVXNlck1hbnVhbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlVzZXJNYW51YWwudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBLDZCQUErQjtBQUMvQix1REFBdUU7QUFDdkUsZ0RBQTJDO0FBQzNDLGdEQUEyQztBQUMzQyxnREFBMkM7QUFDM0MsZ0RBQTJDO0FBRTNDO0lBQW1CLHdCQUFlO0lBQWxDOztJQXFGQSxDQUFDO0lBbkZHLHFCQUFNLEdBQU47UUFDSSxJQUFNLElBQUksR0FBRyxPQUFPLENBQUMsaUJBQWlCLENBQUMsQ0FBQztRQUN4QyxPQUFPLENBQ0g7WUFDSSxvQkFBQyx3QkFBSSxJQUFDLEtBQUssRUFBQyxLQUFLLEVBQUMsUUFBUSxFQUFFLElBQUk7Z0JBQzVCLG9CQUFDLDZCQUFTO29CQUNOLG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLE1BQU0sRUFBRSxJQUFJO3dCQUNuQixvQkFBQyx5QkFBSyxJQUNGLElBQUksRUFBQyxNQUFNLEVBQ1gsR0FBRyxFQUFFLElBQUksRUFDVCxLQUFLLEVBQUUsRUFBQyxXQUFXLEVBQUUsT0FBTyxFQUFDLEdBQy9CO2lEQUVNLENBQ0osQ0FDVDtZQUNQLG9CQUFDLDZCQUFTLElBQUMsSUFBSSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsRUFBQyxTQUFTLEVBQUUsS0FBSyxFQUFDO2dCQUM1QyxvQkFBQywwQkFBTSxJQUFDLEVBQUUsRUFBQyxJQUFJLG9DQUF1QztnQkFDdEQscUZBQTBEO2dCQUMxRDtvQkFBRyxxREFBMEIsQ0FBSTtnQkFFakMsb0JBQUMsd0JBQUksSUFBQyxPQUFPLEVBQUUsSUFBSTtvQkFDZixvQkFBQyx3QkFBSSxDQUFDLElBQUk7d0JBQ04sOENBQW1CO3dCQUNuQixvQkFBQyx3QkFBSSxDQUFDLElBQUk7NEJBQ04sb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFDLEdBQUcsbUJBQXlCOzRCQUMxQyxvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyxZQUFrQjs0QkFDbkMsb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFDLEdBQUcsZ0JBQXNCLENBQy9CLENBQ0o7b0JBQ1osb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFDLEdBQUc7d0JBQ2Isa0RBQXVCO3dCQUN2QixvQkFBQyx3QkFBSSxDQUFDLElBQUk7NEJBQ04sb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFDLEdBQUcsd0JBQThCOzRCQUMvQyxvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyx5QkFBK0I7NEJBQ2hELG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLGFBQW1CLENBQzVCLENBQ0o7b0JBQ1osb0JBQUMsd0JBQUksQ0FBQyxJQUFJO3dCQUNOLCtDQUFvQjt3QkFDcEIsb0JBQUMsd0JBQUksQ0FBQyxJQUFJOzRCQUNOLG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLHdCQUE4Qjs0QkFDL0Msb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFDLEdBQUcsdUJBQTZCOzRCQUM5QyxvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyxvQ0FBMEM7NEJBQzNELG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLGtDQUF3Qzs0QkFDekQsb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFDLEdBQUcsMkJBQWlDOzRCQUNsRCxvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyxxQ0FBMkMsQ0FDcEQsQ0FDSjtvQkFDWixvQkFBQyx3QkFBSSxDQUFDLElBQUk7d0JBQ04seUNBQWM7d0JBQ2Qsb0JBQUMsd0JBQUksQ0FBQyxJQUFJOzRCQUNOLG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLDJCQUFpQzs0QkFDbEQsb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFDLEdBQUcsdUJBQTZCOzRCQUM5QyxvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyxZQUFrQixDQUMzQixDQUNKO29CQUNaLG9CQUFDLHdCQUFJLENBQUMsSUFBSTt3QkFDTix1Q0FBWTt3QkFDWixvQkFBQyx3QkFBSSxDQUFDLElBQUk7NEJBQ04sb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFDLEdBQUcsV0FBaUI7NEJBQ2xDLG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLGNBQW9COzRCQUNyQyxvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyxXQUFpQixDQUMxQixDQUNKO29CQUNaLG9CQUFDLHdCQUFJLENBQUMsSUFBSTt3QkFDTixpREFBc0I7d0JBQ3RCLG9CQUFDLHdCQUFJLENBQUMsSUFBSTs0QkFDTixvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyxpQkFBdUI7NEJBQ3hDLG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLGNBQW9CLENBQzdCLENBQ0osQ0FDVDtnQkFFUCxvQkFBQyxrQkFBUSxPQUFFO2dCQUNYLG9CQUFDLGtCQUFRLE9BQUU7Z0JBQ1gsb0JBQUMsa0JBQVEsT0FBRTtnQkFDWCxvQkFBQyxrQkFBUSxPQUFFLENBQ0gsQ0FFVixDQUNULENBQUM7SUFDTixDQUFDO0lBQ0wsV0FBQztBQUFELENBQUMsQUFyRkQsQ0FBbUIsS0FBSyxDQUFDLFNBQVMsR0FxRmpDO0FBRUQsa0JBQWUsSUFBSSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtIZWFkZXIsIE1lbnUsIENvbnRhaW5lciwgSW1hZ2UsIExpc3R9IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcbmltcG9ydCBTZWN0aW9uMSBmcm9tICcuL3NlY3Rpb25zL1NlY3Rpb24xJztcbmltcG9ydCBTZWN0aW9uMiBmcm9tICcuL3NlY3Rpb25zL1NlY3Rpb24yJztcbmltcG9ydCBTZWN0aW9uMyBmcm9tICcuL3NlY3Rpb25zL1NlY3Rpb24zJztcbmltcG9ydCBTZWN0aW9uNCBmcm9tICcuL3NlY3Rpb25zL1NlY3Rpb240JztcblxuY2xhc3MgSG9tZSBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG5cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIGNvbnN0IGxvZ28gPSByZXF1aXJlKCcuLi9pbWcvbG9nby5wbmcnKTtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPE1lbnUgZml4ZWQ9J3RvcCcgaW52ZXJ0ZWQ9e3RydWV9PlxuICAgICAgICAgICAgICAgICAgICA8Q29udGFpbmVyPlxuICAgICAgICAgICAgICAgICAgICAgICAgPE1lbnUuSXRlbSBoZWFkZXI9e3RydWV9PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxJbWFnZVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzaXplPSdtaW5pJ1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzcmM9e2xvZ299XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPXt7bWFyZ2luUmlnaHQ6ICcxLjVlbSd9fVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgVW5zaGFjbGVkOiBVc2VyIE1hbnVhbFxuICAgICAgICAgICAgICAgICAgICAgICAgPC9NZW51Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgIDwvQ29udGFpbmVyPlxuICAgICAgICAgICAgICAgIDwvTWVudT5cbiAgICAgICAgICAgICAgICA8Q29udGFpbmVyIHRleHQ9e3RydWV9IHN0eWxlPXt7bWFyZ2luVG9wOiAnN2VtJ319PlxuICAgICAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoMSc+IFVuU0hBQ0xlZCBPbmxpbmUgVXNlciBNYW51YWw8L0hlYWRlcj5cbiAgICAgICAgICAgICAgICAgICAgPHA+QSB2aXN1YWwgSURFIGZvciBTZW1hbnRpYyBXZWIgY29uc3RyYWludCBsYW5ndWFnZXMgPC9wPlxuICAgICAgICAgICAgICAgICAgICA8cD48Yj4gVGFibGUgb2YgQ29udGVudHMgPC9iPjwvcD5cbiAgICAgICAgICAgICAgICAgICAgey8qIFRhYmxlIG9mIGNvbnRlbnRzICovfVxuICAgICAgICAgICAgICAgICAgICA8TGlzdCBvcmRlcmVkPXt0cnVlfT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGE+SW50cm9kdWN0aW9uPC9hPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkxpc3Q+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnPlNlbWFudGljIFdlYjwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5TSEFDTDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5VblNIQUNMZWQ8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbSBhcz0nYSc+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGE+IEdldHRpbmcgU3RhcnRlZDwvYT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5DcmVhdGUgYW4gYWNjb3VudDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5Mb2dpbiB0byBVblNIQUNMZWQ8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbSBhcz0nYSc+TG9nb3V0PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkxpc3Q+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGE+RmlsZSBIYW5kbGluZzwvYT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz4gT3BlbiBsb2NhbCBmaWxlczwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5TYXZlIGxvY2FsIGZpbGVzPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnPk9wZW4gZmlsZXMgZnJvbSB5b3VyIGFjY291bnQgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnPlNhdmUgZmlsZXMgdG8geW91ciBhY2NvdW50IDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5DcmVhdGUgbmV3IHByb2plY3RzIDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5DcmVhdGUgbmV3IGZpbGVzIGluIGEgcHJvamVjdCA8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YT5FZGl0aW5nPC9hPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkxpc3Q+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnPkVkaXRvciBmdW5jdGlvbmFsaXR5PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnPkluLWdyYXBoIGVkaXRpbmc8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbSBhcz0nYSc+RXh0cmE8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YT5FeHRyYTwvYT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5WaWV3PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnPlN1cHBvcnQ8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbSBhcz0nYSc+SW5mbzwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxhPlRyb3VibGVzaG9vdGluZzwvYT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtIGFzPSdhJz5Lbm93biBCdWdzPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0gYXM9J2EnPkNvbnRhY3Q8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICA8L0xpc3Q+XG4gICAgICAgICAgICAgICAgICAgIHsvKiBDb250ZW50ICovfVxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjEvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjIvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjMvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjQvPlxuICAgICAgICAgICAgICAgIDwvQ29udGFpbmVyPlxuXG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEhvbWU7XG4iXX0=
+},'src/pages/UserManual.tsx',{"../img/logo.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/logo.png","react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","./sections/Section1":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section1.tsx","./sections/Section2":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section2.tsx","./sections/Section3":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section3.tsx","./sections/Section4":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section4.tsx","./sections/Section5":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section5.tsx","./sections/Section6":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section6.tsx","./sections/Section7":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section7.tsx","./sections/Section8":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section8.tsx","react-router-hash-link":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-router-hash-link/lib/index.js"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVXNlck1hbnVhbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlVzZXJNYW51YWwudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBLDZCQUErQjtBQUMvQix1REFBdUU7QUFDdkUsZ0RBQTJDO0FBQzNDLGdEQUEyQztBQUMzQyxnREFBMkM7QUFDM0MsZ0RBQTJDO0FBQzNDLGdEQUEyQztBQUMzQyxnREFBMkM7QUFDM0MsZ0RBQTJDO0FBQzNDLGdEQUEyQztBQUMzQyxpRUFBd0Q7QUFFeEQ7SUFBbUIsd0JBQWU7SUFBbEM7O0lBMkdBLENBQUM7SUF6R0cscUJBQU0sR0FBTjtRQUNJLElBQU0sSUFBSSxHQUFHLE9BQU8sQ0FBQyxpQkFBaUIsQ0FBQyxDQUFDO1FBQ3hDLE9BQU8sQ0FDSDtZQUNJLG9CQUFDLHdCQUFJLElBQUMsS0FBSyxFQUFDLEtBQUssRUFBQyxRQUFRLEVBQUUsSUFBSTtnQkFDNUIsb0JBQUMsNkJBQVM7b0JBQ04sb0JBQUMsd0JBQUksQ0FBQyxJQUFJLElBQUMsTUFBTSxFQUFFLElBQUk7d0JBQ25CLG9CQUFDLHlCQUFLLElBQ0YsSUFBSSxFQUFDLE1BQU0sRUFDWCxHQUFHLEVBQUUsSUFBSSxFQUNULEtBQUssRUFBRSxFQUFDLFdBQVcsRUFBRSxPQUFPLEVBQUMsR0FDL0I7aURBRU0sQ0FDSixDQUNUO1lBQ1Asb0JBQUMsNkJBQVMsSUFBQyxJQUFJLEVBQUUsSUFBSSxFQUFFLEtBQUssRUFBRSxFQUFDLFNBQVMsRUFBRSxLQUFLLEVBQUUsWUFBWSxFQUFFLEtBQUssRUFBQztnQkFDakUsb0JBQUMsMEJBQU0sSUFBQyxFQUFFLEVBQUMsSUFBSSxvQ0FBdUM7Z0JBQ3RELHFGQUEwRDtnQkFDMUQ7b0JBQUcscURBQTBCLENBQUk7Z0JBRWpDLG9CQUFDLHdCQUFJLElBQUMsT0FBTyxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsRUFBQyxPQUFPLEVBQUUsR0FBRyxFQUFFLGFBQWEsRUFBRSxHQUFHLEVBQUUs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YyxjQUFlLENBQVksQ0FDdEQsQ0FDSixDQUNUO2dCQUdQLG9CQUFDLGtCQUFRLE9BQUU7Z0JBQ1gsb0JBQUMsa0JBQVEsT0FBRTtnQkFDWCxvQkFBQyxrQkFBUSxPQUFFO2dCQUNYLG9CQUFDLGtCQUFRLE9BQUU7Z0JBQ1gsb0JBQUMsa0JBQVEsT0FBRTtnQkFDWCxvQkFBQyxrQkFBUSxPQUFFO2dCQUNYLG9CQUFDLGtCQUFRLE9BQUU7Z0JBQ1gsb0JBQUMsa0JBQVEsT0FBRSxDQUNILENBRVYsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLFdBQUM7QUFBRCxDQUFDLEFBM0dELENBQW1CLEtBQUssQ0FBQyxTQUFTLEdBMkdqQztBQUVELGtCQUFlLElBQUksQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7SGVhZGVyLCBNZW51LCBDb250YWluZXIsIEltYWdlLCBMaXN0fSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5pbXBvcnQgU2VjdGlvbjEgZnJvbSAnLi9zZWN0aW9ucy9TZWN0aW9uMSc7XG5pbXBvcnQgU2VjdGlvbjIgZnJvbSAnLi9zZWN0aW9ucy9TZWN0aW9uMic7XG5pbXBvcnQgU2VjdGlvbjMgZnJvbSAnLi9zZWN0aW9ucy9TZWN0aW9uMyc7XG5pbXBvcnQgU2VjdGlvbjQgZnJvbSAnLi9zZWN0aW9ucy9TZWN0aW9uNCc7XG5pbXBvcnQgU2VjdGlvbjUgZnJvbSAnLi9zZWN0aW9ucy9TZWN0aW9uNSc7XG5pbXBvcnQgU2VjdGlvbjYgZnJvbSAnLi9zZWN0aW9ucy9TZWN0aW9uNic7XG5pbXBvcnQgU2VjdGlvbjcgZnJvbSAnLi9zZWN0aW9ucy9TZWN0aW9uNyc7XG5pbXBvcnQgU2VjdGlvbjggZnJvbSAnLi9zZWN0aW9ucy9TZWN0aW9uOCc7XG5pbXBvcnQge0hhc2hMaW5rIGFzIExpbmt9IGZyb20gJ3JlYWN0LXJvdXRlci1oYXNoLWxpbmsnO1xuXG5jbGFzcyBIb21lIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcblxuICAgIHJlbmRlcigpIHtcbiAgICAgICAgY29uc3QgbG9nbyA9IHJlcXVpcmUoJy4uL2ltZy9sb2dvLnBuZycpO1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8TWVudSBmaXhlZD0ndG9wJyBpbnZlcnRlZD17dHJ1ZX0+XG4gICAgICAgICAgICAgICAgICAgIDxDb250YWluZXI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TWVudS5JdGVtIGhlYWRlcj17dHJ1ZX0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPEltYWdlXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNpemU9J21pbmknXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNyYz17bG9nb31cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9e3ttYXJnaW5SaWdodDogJzEuNWVtJ319XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBVblNIQUNMZWQ6IFVzZXIgTWFudWFsXG4gICAgICAgICAgICAgICAgICAgICAgICA8L01lbnUuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgPC9Db250YWluZXI+XG4gICAgICAgICAgICAgICAgPC9NZW51PlxuICAgICAgICAgICAgICAgIDxDb250YWluZXIgdGV4dD17dHJ1ZX0gc3R5bGU9e3ttYXJnaW5Ub3A6ICc3ZW0nLCBtYXJnaW5Cb3R0b206ICc3ZW0nfX0+XG4gICAgICAgICAgICAgICAgICAgIDxIZWFkZXIgYXM9J2gxJz4gVW5TSEFDTGVkIE9ubGluZSBVc2VyIE1hbnVhbDwvSGVhZGVyPlxuICAgICAgICAgICAgICAgICAgICA8cD5BIHZpc3VhbCBJREUgZm9yIFNlbWFudGljIFdlYiBjb25zdHJhaW50IGxhbmd1YWdlcyA8L3A+XG4gICAgICAgICAgICAgICAgICAgIDxwPjxiPiBUYWJsZSBvZiBDb250ZW50cyA8L2I+PC9wPlxuICAgICAgICAgICAgICAgICAgICB7LyogVGFibGUgb2YgY29udGVudHMgKi99XG4gICAgICAgICAgICAgICAgICAgIDxMaXN0IG9yZGVyZWQ9e3RydWV9IHN0eWxlPXt7Y29sdW1uczogJzInLCBXZWJraXRDb2x1bW5zOiAnMicsIE1vekNvbHVtbnM6ICcyJ319PlxuICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGluayB0bz1cIi9zdXBwb3J0IzFcIj5JbnRyb2R1Y3Rpb248L0xpbms+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT48TGluayB0bz1cIi9zdXBwb3J0IzEuMVwiPlNlbWFudGljIFdlYjwvTGluaz48L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT48TGluayB0bz1cIi9zdXBwb3J0IzEuMlwiPlNIQUNMPC9MaW5rPjwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPjxMaW5rIHRvPVwiL3N1cHBvcnQjMS4zXCI+VW5TSEFDTGVkPC9MaW5rPjwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaW5rIHRvPVwiL3N1cHBvcnQjMlwiPkdldHRpbmcgU3RhcnRlZDwvTGluaz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPjxMaW5rIHRvPVwiL3N1cHBvcnQjMi4xXCI+Q3JlYXRlIGFuIGFjY291bnQ8L0xpbms+PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+PExpbmsgdG89XCIvc3VwcG9ydCMyLjJcIj5Mb2dpbiB0byBVblNIQUNMZWQ8L0xpbms+PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+PExpbmsgdG89XCIvc3VwcG9ydCMyLjNcIj5Mb2dvdXQ8L0xpbms+PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkxpc3Q+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpbmsgdG89XCIvc3VwcG9ydCMzXCI+RmlsZSBIYW5kbGluZzwvTGluaz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPjxMaW5rIHRvPVwiL3N1cHBvcnQjMy4xXCI+IE9wZW4gbG9jYWwgZmlsZXM8L0xpbms+PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+PExpbmsgdG89XCIvc3VwcG9ydCMzLjJcIj5TYXZlIGxvY2FsIGZpbGVzPC9MaW5rPjwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpbmsgdG89XCIvc3VwcG9ydCMjMy4zXCI+T3BlbiBmaWxlcyBmcm9tIHlvdXIgYWNjb3VudDwvTGluaz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+PExpbmsgdG89XCIvc3VwcG9ydCMzLjRcIj5TYXZlIGZpbGVzIHRvIHlvdXIgYWNjb3VudDwvTGluaz48L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT48TGluayB0bz1cIi9zdXBwb3J0IzMuNVwiPkNyZWF0ZSBuZXcgcHJvamVjdHM8L0xpbms+PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGluayB0bz1cIi9zdXBwb3J0IzMuNlwiPkNyZWF0ZSBuZXcgZmlsZXMgaW4gYSBwcm9qZWN0PC9MaW5rPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT48TGluayB0bz1cIi9zdXBwb3J0IzMuNlwiPkxvYWQgYW5kIHNhdmUgd29ya3NwYWNlPC9MaW5rPjwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaW5rIHRvPVwiL3N1cHBvcnQjNFwiPkVkaXRpbmc8L0xpbms+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT4gPExpbmsgdG89XCIvc3VwcG9ydCM0LjFcIj5FZGl0b3IgZnVuY3Rpb25hbGl0eTwvTGluaz48L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT4gPExpbmsgdG89XCIvc3VwcG9ydCM0LjJcIj5Jbi1ncmFwaCBlZGl0aW5nPC9MaW5rPjwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5MaXN0PlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaW5rIHRvPVwiL3N1cHBvcnQjN1wiPkNvbmZvcm1hbmNlPC9MaW5rPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkxpc3Q+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+PExpbmsgdG89XCIvc3VwcG9ydCM3LjFcIj5Db25mb3JtYW5jZSBXb3JrZmxvdzwvTGluaz48L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT48TGluayB0bz1cIi9zdXBwb3J0IzcuMlwiPlZpc3VhbGl6ZSBjb25mb3JtYW5jZTwvTGluaz48L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGluayB0bz1cIi9zdXBwb3J0IzhcIj5Db2xsYWJvcmF0aXZlIGVkaXRpbmc8L0xpbms+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT4gPExpbmsgdG89XCIvc3VwcG9ydCM4LjFcIj5Db2xsYWJvcmF0aXZlIHNpdHVhdGlvbnM8L0xpbms+PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkxpc3Q+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpbmsgdG89XCIvc3VwcG9ydCM1XCI+RXh0cmE8L0xpbms+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT48TGluayB0bz1cIi9zdXBwb3J0IzUuMVwiPlZpZXc8L0xpbms+PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMaXN0Lkl0ZW0+PExpbmsgdG89XCIvc3VwcG9ydCM1LjJcIj5TdXBwb3J0PC9MaW5rPjwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPjxMaW5rIHRvPVwiL3N1cHBvcnQjNS4zXCI+SW5mbzwvTGluaz48L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGluayB0bz1cIi9zdXBwb3J0IzZcIj5Ucm91Ymxlc2hvb3Rpbmc8L0xpbms+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuTGlzdD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExpc3QuSXRlbT4gPExpbmsgdG89XCIvc3VwcG9ydCM2LjFcIj5Lbm93biBCdWdzPC9MaW5rPjwvTGlzdC5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TGlzdC5JdGVtPiA8TGluayB0bz1cIi9zdXBwb3J0IzYuMlwiPkNvbnRhY3Q8L0xpbms+PC9MaXN0Lkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9MaXN0Lkxpc3Q+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xpc3QuSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgPC9MaXN0PlxuXG4gICAgICAgICAgICAgICAgICAgIHsvKiBDb250ZW50ICovfVxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjEvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjIvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjMvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjQvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjcvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjgvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjUvPlxuICAgICAgICAgICAgICAgICAgICA8U2VjdGlvbjYvPlxuICAgICAgICAgICAgICAgIDwvQ29udGFpbmVyPlxuXG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEhvbWU7XG4iXX0=
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat May 19 2018 14:00:09 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>
