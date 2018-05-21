@@ -76,7 +76,11 @@
 31
 32
 33
-34</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+34
+35
+36
+37
+38</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -92,10 +96,14 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -125,11 +133,15 @@ var React = require("react");
 var semantic_ui_react_1 = require("semantic-ui-react");
 var navbarHome_1 = require("../components/navbarHome");
 var containerHome_1 = require("../components/containerHome");
+/**
+ * Component containing the content of the home page.
+ */
 var Home = /** @class */ (function (_super) {
     __extends(Home, _super);
 <span class="fstat-no" title="function not covered" >    function Home() {</span>
 <span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
     }
+    /** Render component **/
     Home.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        return (React.createElement("div", { className: "homePage" },</span>
             React.createElement(semantic_ui_react_1.Segment, { inverted: true, textAlign: "center", style: { height: '100vh' }, vertical: true },
@@ -141,14 +153,14 @@ var Home = /** @class */ (function (_super) {
 exports.default = Home;
 &nbsp;
 },'src/pages/Home.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","../components/navbarHome":"/home/travis/build/dubious-developments/UnSHACLed/src/components/navbarHome.tsx","../components/containerHome":"/home/travis/build/dubious-developments/UnSHACLed/src/components/containerHome.tsx"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSG9tZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkhvbWUudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBLDZCQUErQjtBQUMvQix1REFBMkM7QUFDM0MsdURBQThDO0FBQzlDLDZEQUFrRDtBQUVsRDtJQUFtQix3QkFBZTtJQUFsQzs7SUF1QkEsQ0FBQztJQXJCRyxxQkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNILDZCQUFLLFNBQVMsRUFBQyxVQUFVO1lBQ3JCLG9CQUFDLDJCQUFPLElBQ0osUUFBUSxFQUFFLElBQUksRUFDZCxTQUFTLEVBQUMsUUFBUSxFQUNsQixLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsT0FBTyxFQUFDLEVBQ3hCLFFBQVEsRUFBRSxJQUFJO2dCQUtkLG9CQUFDLG9CQUFNLE9BQUU7Z0JBSVQsb0JBQUMsdUJBQU8sT0FBRSxDQUNKLENBQ1IsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLFdBQUM7QUFBRCxDQUFDLEFBdkJELENBQW1CLEtBQUssQ0FBQyxTQUFTLEdBdUJqQztBQUNELGtCQUFlLElBQUksQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IFNlZ21lbnR9IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcbmltcG9ydCBOYXZiYXIgZnJvbSAnLi4vY29tcG9uZW50cy9uYXZiYXJIb21lJztcbmltcG9ydCBIb21lQ29uIGZyb20gJy4uL2NvbXBvbmVudHMvY29udGFpbmVySG9tZSc7XG5cbmNsYXNzIEhvbWUgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJob21lUGFnZVwiPlxuICAgICAgICAgICAgICAgIDxTZWdtZW50XG4gICAgICAgICAgICAgICAgICAgIGludmVydGVkPXt0cnVlfVxuICAgICAgICAgICAgICAgICAgICB0ZXh0QWxpZ249XCJjZW50ZXJcIlxuICAgICAgICAgICAgICAgICAgICBzdHlsZT17e2hlaWdodDogJzEwMHZoJ319XG4gICAgICAgICAgICAgICAgICAgIHZlcnRpY2FsPXt0cnVlfVxuICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgey8qXG4gICAgICAgICAgICAgICAgICAgICBOYXZpZ2F0aW9uIEJhclxuICAgICAgICAgICAgICAgICAgICAgKi99XG4gICAgICAgICAgICAgICAgICAgIDxOYXZiYXIvPlxuICAgICAgICAgICAgICAgICAgICB7LypcbiAgICAgICAgICAgICAgICAgICAgIE1haW4gQ29udGFpbmVyXG4gICAgICAgICAgICAgICAgICAgICAqL31cbiAgICAgICAgICAgICAgICAgICAgPEhvbWVDb24vPlxuICAgICAgICAgICAgICAgIDwvU2VnbWVudD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cbmV4cG9ydCBkZWZhdWx0IEhvbWU7XG4iXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSG9tZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkhvbWUudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBLDZCQUErQjtBQUMvQix1REFBMEM7QUFDMUMsdURBQThDO0FBQzlDLDZEQUFrRDtBQUVsRDs7R0FFRztBQUNIO0lBQW1CLHdCQUFlO0lBQWxDOztJQXVCQSxDQUFDO0lBdEJHLHdCQUF3QjtJQUN4QixxQkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNILDZCQUFLLFNBQVMsRUFBQyxVQUFVO1lBQ3JCLG9CQUFDLDJCQUFPLElBQ0osUUFBUSxFQUFFLElBQUksRUFDZCxTQUFTLEVBQUMsUUFBUSxFQUNsQixLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsT0FBTyxFQUFDLEVBQ3hCLFFBQVEsRUFBRSxJQUFJO2dCQUtkLG9CQUFDLG9CQUFNLE9BQUU7Z0JBSVQsb0JBQUMsdUJBQU8sT0FBRSxDQUNKLENBQ1IsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLFdBQUM7QUFBRCxDQUFDLEFBdkJELENBQW1CLEtBQUssQ0FBQyxTQUFTLEdBdUJqQztBQUVELGtCQUFlLElBQUksQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7U2VnbWVudH0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuaW1wb3J0IE5hdmJhciBmcm9tICcuLi9jb21wb25lbnRzL25hdmJhckhvbWUnO1xuaW1wb3J0IEhvbWVDb24gZnJvbSAnLi4vY29tcG9uZW50cy9jb250YWluZXJIb21lJztcblxuLyoqXG4gKiBDb21wb25lbnQgY29udGFpbmluZyB0aGUgY29udGVudCBvZiB0aGUgaG9tZSBwYWdlLlxuICovXG5jbGFzcyBIb21lIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICAvKiogUmVuZGVyIGNvbXBvbmVudCAqKi9cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImhvbWVQYWdlXCI+XG4gICAgICAgICAgICAgICAgPFNlZ21lbnRcbiAgICAgICAgICAgICAgICAgICAgaW52ZXJ0ZWQ9e3RydWV9XG4gICAgICAgICAgICAgICAgICAgIHRleHRBbGlnbj1cImNlbnRlclwiXG4gICAgICAgICAgICAgICAgICAgIHN0eWxlPXt7aGVpZ2h0OiAnMTAwdmgnfX1cbiAgICAgICAgICAgICAgICAgICAgdmVydGljYWw9e3RydWV9XG4gICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICB7LypcbiAgICAgICAgICAgICAgICAgICAgIE5hdmlnYXRpb24gQmFyXG4gICAgICAgICAgICAgICAgICAgICAqL31cbiAgICAgICAgICAgICAgICAgICAgPE5hdmJhci8+XG4gICAgICAgICAgICAgICAgICAgIHsvKlxuICAgICAgICAgICAgICAgICAgICAgTWFpbiBDb250YWluZXJcbiAgICAgICAgICAgICAgICAgICAgICovfVxuICAgICAgICAgICAgICAgICAgICA8SG9tZUNvbi8+XG4gICAgICAgICAgICAgICAgPC9TZWdtZW50PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBIb21lO1xuIl19
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 21:33:32 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>

@@ -77,7 +77,13 @@
 32
 33
 34
-35</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+35
+36
+37
+38
+39
+40
+41</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -91,8 +97,13 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -100,6 +111,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -125,8 +137,13 @@ var __extends = (this &amp;&amp; this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_router_dom_1 = require("react-router-dom");
+/** Deprecated login component **/
 var Login = /** @class */ (function (_super) {
     __extends(Login, _super);
+    /**
+     * Constructor of component
+     * @param props
+     */
 <span class="fstat-no" title="function not covered" >    function Login(props) {</span>
 <span class="cstat-no" title="statement not covered" >        var _this = _super.call(this, props) || this;</span>
 <span class="cstat-no" title="statement not covered" >        _this.state = {</span>
@@ -135,6 +152,7 @@ var Login = /** @class */ (function (_super) {
         };
 <span class="cstat-no" title="statement not covered" >        return _this;</span>
     }
+    /** Render component **/
     Login.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        return (React.createElement("div", null,</span>
             React.createElement("label", null, "Log in page")));
@@ -144,14 +162,14 @@ var Login = /** @class */ (function (_super) {
 exports.default = react_router_dom_1.withRouter(Login);
 &nbsp;
 },'src/components/Login.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","react-router-dom":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-router-dom/index.js"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9naW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJMb2dpbi50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHFEQUE4QztBQUU5QztJQUFvQix5QkFBeUI7SUFFekMsZUFBWSxLQUFhO1FBQXpCLFlBQ0ksa0JBQU0sS0FBSyxDQUFDLFNBS2Y7UUFKRyxLQUFJLENBQUMsS0FBSyxHQUFHO1lBQ1QsUUFBUSxFQUFFLEVBQUU7WUFDWixRQUFRLEVBQUUsRUFBRTtTQUNmLENBQUM7O0lBQ04sQ0FBQztJQUVELHNCQUFNLEdBQU47UUFDSSxPQUFNLENBQ0Y7WUFDSSxpREFBMEIsQ0FDeEIsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUVMLFlBQUM7QUFBRCxDQUFDLEFBbEJELENBQW9CLEtBQUssQ0FBQyxTQUFTLEdBa0JsQztBQUVELGtCQUFlLDZCQUFVLENBQUMsS0FBSyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyB3aXRoUm91dGVyIH0gZnJvbSAncmVhY3Qtcm91dGVyLWRvbSc7XG5cbmNsYXNzIExvZ2luIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICBjb25zdHJ1Y3Rvcihwcm9wczogc3RyaW5nKSB7XG4gICAgICAgIHN1cGVyKHByb3BzKTtcbiAgICAgICAgdGhpcy5zdGF0ZSA9IHtcbiAgICAgICAgICAgIHVzZXJuYW1lOiBcIlwiLFxuICAgICAgICAgICAgcGFzc3dvcmQ6IFwiXCJcbiAgICAgICAgfTtcbiAgICB9XG5cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybihcbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPGxhYmVsPkxvZyBpbiBwYWdlPC9sYWJlbD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cblxufVxuXG5leHBvcnQgZGVmYXVsdCB3aXRoUm91dGVyKExvZ2luKTsiXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9naW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJMb2dpbi50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHFEQUE4QztBQUU5QyxrQ0FBa0M7QUFFbEM7SUFBb0IseUJBQXlCO0lBRXpDOzs7T0FHRztJQUNILGVBQVksS0FBYTtRQUF6QixZQUNJLGtCQUFNLEtBQUssQ0FBQyxTQUtmO1FBSkcsS0FBSSxDQUFDLEtBQUssR0FBRztZQUNULFFBQVEsRUFBRSxFQUFFO1lBQ1osUUFBUSxFQUFFLEVBQUU7U0FDZixDQUFDOztJQUNOLENBQUM7SUFFRCx3QkFBd0I7SUFDeEIsc0JBQU0sR0FBTjtRQUNJLE9BQU0sQ0FDRjtZQUNJLGlEQUEwQixDQUN4QixDQUNULENBQUM7SUFDTixDQUFDO0lBRUwsWUFBQztBQUFELENBQUMsQUF2QkQsQ0FBb0IsS0FBSyxDQUFDLFNBQVMsR0F1QmxDO0FBRUQsa0JBQWUsNkJBQVUsQ0FBQyxLQUFLLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IHdpdGhSb3V0ZXIgfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJztcblxuLyoqIERlcHJlY2F0ZWQgbG9naW4gY29tcG9uZW50ICoqL1xuXG5jbGFzcyBMb2dpbiBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgLyoqXG4gICAgICogQ29uc3RydWN0b3Igb2YgY29tcG9uZW50XG4gICAgICogQHBhcmFtIHByb3BzXG4gICAgICovXG4gICAgY29uc3RydWN0b3IocHJvcHM6IHN0cmluZykge1xuICAgICAgICBzdXBlcihwcm9wcyk7XG4gICAgICAgIHRoaXMuc3RhdGUgPSB7XG4gICAgICAgICAgICB1c2VybmFtZTogXCJcIixcbiAgICAgICAgICAgIHBhc3N3b3JkOiBcIlwiXG4gICAgICAgIH07XG4gICAgfVxuXG4gICAgLyoqIFJlbmRlciBjb21wb25lbnQgKiovXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4oXG4gICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgIDxsYWJlbD5Mb2cgaW4gcGFnZTwvbGFiZWw+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG5cbn1cblxuZXhwb3J0IGRlZmF1bHQgd2l0aFJvdXRlcihMb2dpbik7Il19
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 21:33:32 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>

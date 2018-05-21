@@ -75,7 +75,11 @@
 30
 31
 32
-33</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+33
+34
+35
+36
+37</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -91,10 +95,14 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -123,11 +131,15 @@ var React = require("react");
 var semantic_ui_react_1 = require("semantic-ui-react");
 var navbarHome_1 = require("../components/navbarHome");
 var SignupForm_1 = require("../form/SignupForm");
+/**
+ * Component containing the content of the sign-up page.
+ */
 var Signup = /** @class */ (function (_super) {
     __extends(Signup, _super);
 <span class="fstat-no" title="function not covered" >    function Signup() {</span>
 <span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
     }
+    /** Render component **/
     Signup.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Segment, { inverted: true, textAlign: "center", style: { height: '100vh' }, vertical: true },</span>
             React.createElement(navbarHome_1.default, null),
@@ -138,14 +150,14 @@ var Signup = /** @class */ (function (_super) {
 exports.default = Signup;
 &nbsp;
 },'src/pages/Signup.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","../components/navbarHome":"/home/travis/build/dubious-developments/UnSHACLed/src/components/navbarHome.tsx","../form/SignupForm":"/home/travis/build/dubious-developments/UnSHACLed/src/form/SignupForm.tsx"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2lnbnVwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU2lnbnVwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQTBDO0FBQzFDLHVEQUE4QztBQUM5QyxpREFBNEM7QUFFNUM7SUFBcUIsMEJBQXlCO0lBQTlDOztJQWVBLENBQUM7SUFiRyx1QkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNILG9CQUFDLDJCQUFPLElBQ0osUUFBUSxFQUFFLElBQUksRUFDZCxTQUFTLEVBQUMsUUFBUSxFQUNsQixLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsT0FBTyxFQUFDLEVBQ3hCLFFBQVEsRUFBRSxJQUFJO1lBRWQsb0JBQUMsb0JBQU0sT0FBRTtZQUNULG9CQUFDLG9CQUFVLE9BQUUsQ0FDUCxDQUNiLENBQUM7SUFDTixDQUFDO0lBQ0wsYUFBQztBQUFELENBQUMsQUFmRCxDQUFxQixLQUFLLENBQUMsU0FBUyxHQWVuQztBQUVELGtCQUFlLE1BQU0sQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7U2VnbWVudH0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuaW1wb3J0IE5hdmJhciBmcm9tICcuLi9jb21wb25lbnRzL25hdmJhckhvbWUnO1xuaW1wb3J0IFNpZ251cEZvcm0gZnJvbSAnLi4vZm9ybS9TaWdudXBGb3JtJztcblxuY2xhc3MgU2lnbnVwIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8U2VnbWVudFxuICAgICAgICAgICAgICAgIGludmVydGVkPXt0cnVlfVxuICAgICAgICAgICAgICAgIHRleHRBbGlnbj1cImNlbnRlclwiXG4gICAgICAgICAgICAgICAgc3R5bGU9e3toZWlnaHQ6ICcxMDB2aCd9fVxuICAgICAgICAgICAgICAgIHZlcnRpY2FsPXt0cnVlfVxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIDxOYXZiYXIvPlxuICAgICAgICAgICAgICAgIDxTaWdudXBGb3JtLz5cbiAgICAgICAgICAgIDwvU2VnbWVudD5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IFNpZ251cDtcbiJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2lnbnVwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU2lnbnVwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQTBDO0FBQzFDLHVEQUE4QztBQUM5QyxpREFBNEM7QUFFNUM7O0dBRUc7QUFDSDtJQUFxQiwwQkFBeUI7SUFBOUM7O0lBZUEsQ0FBQztJQWRHLHdCQUF3QjtJQUN4Qix1QkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNILG9CQUFDLDJCQUFPLElBQ0osUUFBUSxFQUFFLElBQUksRUFDZCxTQUFTLEVBQUMsUUFBUSxFQUNsQixLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsT0FBTyxFQUFDLEVBQ3hCLFFBQVEsRUFBRSxJQUFJO1lBRWQsb0JBQUMsb0JBQU0sT0FBRTtZQUNULG9CQUFDLG9CQUFVLE9BQUUsQ0FDUCxDQUNiLENBQUM7SUFDTixDQUFDO0lBQ0wsYUFBQztBQUFELENBQUMsQUFmRCxDQUFxQixLQUFLLENBQUMsU0FBUyxHQWVuQztBQUVELGtCQUFlLE1BQU0sQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7U2VnbWVudH0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuaW1wb3J0IE5hdmJhciBmcm9tICcuLi9jb21wb25lbnRzL25hdmJhckhvbWUnO1xuaW1wb3J0IFNpZ251cEZvcm0gZnJvbSAnLi4vZm9ybS9TaWdudXBGb3JtJztcblxuLyoqXG4gKiBDb21wb25lbnQgY29udGFpbmluZyB0aGUgY29udGVudCBvZiB0aGUgc2lnbi11cCBwYWdlLlxuICovXG5jbGFzcyBTaWdudXAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQ8YW55LCBhbnk+IHtcbiAgICAvKiogUmVuZGVyIGNvbXBvbmVudCAqKi9cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8U2VnbWVudFxuICAgICAgICAgICAgICAgIGludmVydGVkPXt0cnVlfVxuICAgICAgICAgICAgICAgIHRleHRBbGlnbj1cImNlbnRlclwiXG4gICAgICAgICAgICAgICAgc3R5bGU9e3toZWlnaHQ6ICcxMDB2aCd9fVxuICAgICAgICAgICAgICAgIHZlcnRpY2FsPXt0cnVlfVxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIDxOYXZiYXIvPlxuICAgICAgICAgICAgICAgIDxTaWdudXBGb3JtLz5cbiAgICAgICAgICAgIDwvU2VnbWVudD5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IFNpZ251cDtcbiJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 21:33:32 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>

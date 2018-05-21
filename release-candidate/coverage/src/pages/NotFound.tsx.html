@@ -83,7 +83,11 @@
 38
 39
 40
-41</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+41
+42
+43
+44
+45</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -98,10 +102,14 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -138,11 +146,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var semantic_ui_react_1 = require("semantic-ui-react");
 var navbarHome_1 = require("../components/navbarHome");
+/**
+ * Component containing the content of the not-found page.
+ */
 var NotFound = /** @class */ (function (_super) {
     __extends(NotFound, _super);
 <span class="fstat-no" title="function not covered" >    function NotFound() {</span>
 <span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
     }
+    /** Render component **/
     NotFound.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        return (React.createElement("div", { className: "homePage" },</span>
             React.createElement(semantic_ui_react_1.Segment, { inverted: true, textAlign: "center", style: { height: '100vh' }, vertical: true },
@@ -162,14 +174,14 @@ var NotFound = /** @class */ (function (_super) {
 exports.default = NotFound;
 &nbsp;
 },'src/pages/NotFound.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","../components/navbarHome":"/home/travis/build/dubious-developments/UnSHACLed/src/components/navbarHome.tsx"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTm90Rm91bmQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJOb3RGb3VuZC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUFrRDtBQUNsRCx1REFBOEM7QUFFOUM7SUFBdUIsNEJBQWU7SUFBdEM7O0lBMENBLENBQUM7SUF4Q0cseUJBQU0sR0FBTjtRQUNJLE9BQU8sQ0FDSCw2QkFBSyxTQUFTLEVBQUMsVUFBVTtZQUNyQixvQkFBQywyQkFBTyxJQUNKLFFBQVEsRUFBRSxJQUFJLEVBQ2QsU0FBUyxFQUFDLFFBQVEsRUFDbEIsS0FBSyxFQUFFLEVBQUMsTUFBTSxFQUFFLE9BQU8sRUFBQyxFQUN4QixRQUFRLEVBQUUsSUFBSTtnQkFLZCxvQkFBQyxvQkFBTSxPQUFFO2dCQUlULG9CQUFDLDBCQUFNLElBQ0gsRUFBRSxFQUFDLElBQUksRUFDUCxPQUFPLEVBQUMsS0FBSyxFQUNiLEtBQUssRUFBQyxNQUFNLEVBQ1osUUFBUSxFQUFFLElBQUksRUFDZCxLQUFLLEVBQUU7d0JBQ0gsUUFBUSxFQUFFLE1BQU07d0JBQ2hCLFVBQVUsRUFBRSxNQUFNO3dCQUNsQixTQUFTLEVBQUUsS0FBSztxQkFDbkIsR0FDSDtnQkFFRiwyQkFDSSxLQUFLLEVBQUU7d0JBQ0gsUUFBUSxFQUFFLE9BQU87d0JBQ2pCLFNBQVMsRUFBRSxPQUFPO3FCQUNyQiwrREFHRCxDQUNFLENBQ1IsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLGVBQUM7QUFBRCxDQUFDLEFBMUNELENBQXVCLEtBQUssQ0FBQyxTQUFTLEdBMENyQztBQUNELGtCQUFlLFFBQVEsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7U2VnbWVudCwgSGVhZGVyfSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5pbXBvcnQgTmF2YmFyIGZyb20gJy4uL2NvbXBvbmVudHMvbmF2YmFySG9tZSc7XG5cbmNsYXNzIE5vdEZvdW5kIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcblxuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaG9tZVBhZ2VcIj5cbiAgICAgICAgICAgICAgICA8U2VnbWVudFxuICAgICAgICAgICAgICAgICAgICBpbnZlcnRlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICAgICAgdGV4dEFsaWduPVwiY2VudGVyXCJcbiAgICAgICAgICAgICAgICAgICAgc3R5bGU9e3toZWlnaHQ6ICcxMDB2aCd9fVxuICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbD17dHJ1ZX1cbiAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgIHsvKlxuICAgICAgICAgICAgICAgICAgICAgTmF2aWdhdGlvbiBCYXJcbiAgICAgICAgICAgICAgICAgICAgICovfVxuICAgICAgICAgICAgICAgICAgICA8TmF2YmFyLz5cbiAgICAgICAgICAgICAgICAgICAgey8qXG4gICAgICAgICAgICAgICAgICAgICBNYWluIENvbnRhaW5lclxuICAgICAgICAgICAgICAgICAgICAgKi99XG4gICAgICAgICAgICAgICAgICAgIDxIZWFkZXJcbiAgICAgICAgICAgICAgICAgICAgICAgIGFzPVwiaDFcIlxuICAgICAgICAgICAgICAgICAgICAgICAgY29udGVudD1cIjQwNFwiXG4gICAgICAgICAgICAgICAgICAgICAgICBjb2xvcj1cInRlYWxcIlxuICAgICAgICAgICAgICAgICAgICAgICAgaW52ZXJ0ZWQ9e3RydWV9XG4gICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT17e1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZvbnRTaXplOiAnMTVlbScsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9udFdlaWdodDogJ2JvbGQnLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1hcmdpblRvcDogJzEwJScsXG4gICAgICAgICAgICAgICAgICAgICAgICB9fVxuICAgICAgICAgICAgICAgICAgICAvPlxuXG4gICAgICAgICAgICAgICAgICAgIDxwIFxuICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9e3tcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBmb250U2l6ZTogJzEuNWVtJyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBtYXJnaW5Ub3A6ICcxLjVlbSdcbiAgICAgICAgICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICAgIFRoZSBsaW5rZWQgZGF0YSB5b3Ugd2VyZSBsb29raW5nIGZvciBjb3VsZCBub3QgYmUgZm91bmQuXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8L1NlZ21lbnQ+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5leHBvcnQgZGVmYXVsdCBOb3RGb3VuZDtcbiJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTm90Rm91bmQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJOb3RGb3VuZC50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUFrRDtBQUNsRCx1REFBOEM7QUFFOUM7O0dBRUc7QUFDSDtJQUF1Qiw0QkFBZTtJQUF0Qzs7SUEwQ0EsQ0FBQztJQXpDRyx3QkFBd0I7SUFDeEIseUJBQU0sR0FBTjtRQUNJLE9BQU8sQ0FDSCw2QkFBSyxTQUFTLEVBQUMsVUFBVTtZQUNyQixvQkFBQywyQkFBTyxJQUNKLFFBQVEsRUFBRSxJQUFJLEVBQ2QsU0FBUyxFQUFDLFFBQVEsRUFDbEIsS0FBSyxFQUFFLEVBQUMsTUFBTSxFQUFFLE9BQU8sRUFBQyxFQUN4QixRQUFRLEVBQUUsSUFBSTtnQkFLZCxvQkFBQyxvQkFBTSxPQUFFO2dCQUlULG9CQUFDLDBCQUFNLElBQ0gsRUFBRSxFQUFDLElBQUksRUFDUCxPQUFPLEVBQUMsS0FBSyxFQUNiLEtBQUssRUFBQyxNQUFNLEVBQ1osUUFBUSxFQUFFLElBQUksRUFDZCxLQUFLLEVBQUU7d0JBQ0gsUUFBUSxFQUFFLE1BQU07d0JBQ2hCLFVBQVUsRUFBRSxNQUFNO3dCQUNsQixTQUFTLEVBQUUsS0FBSztxQkFDbkIsR0FDSDtnQkFFRiwyQkFDSSxLQUFLLEVBQUU7d0JBQ0gsUUFBUSxFQUFFLE9BQU87d0JBQ2pCLFNBQVMsRUFBRSxPQUFPO3FCQUNyQiwrREFHRCxDQUNFLENBQ1IsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLGVBQUM7QUFBRCxDQUFDLEFBMUNELENBQXVCLEtBQUssQ0FBQyxTQUFTLEdBMENyQztBQUVELGtCQUFlLFFBQVEsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7U2VnbWVudCwgSGVhZGVyfSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5pbXBvcnQgTmF2YmFyIGZyb20gJy4uL2NvbXBvbmVudHMvbmF2YmFySG9tZSc7XG5cbi8qKlxuICogQ29tcG9uZW50IGNvbnRhaW5pbmcgdGhlIGNvbnRlbnQgb2YgdGhlIG5vdC1mb3VuZCBwYWdlLlxuICovXG5jbGFzcyBOb3RGb3VuZCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gICAgLyoqIFJlbmRlciBjb21wb25lbnQgKiovXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJob21lUGFnZVwiPlxuICAgICAgICAgICAgICAgIDxTZWdtZW50XG4gICAgICAgICAgICAgICAgICAgIGludmVydGVkPXt0cnVlfVxuICAgICAgICAgICAgICAgICAgICB0ZXh0QWxpZ249XCJjZW50ZXJcIlxuICAgICAgICAgICAgICAgICAgICBzdHlsZT17e2hlaWdodDogJzEwMHZoJ319XG4gICAgICAgICAgICAgICAgICAgIHZlcnRpY2FsPXt0cnVlfVxuICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgey8qXG4gICAgICAgICAgICAgICAgICAgICBOYXZpZ2F0aW9uIEJhclxuICAgICAgICAgICAgICAgICAgICAgKi99XG4gICAgICAgICAgICAgICAgICAgIDxOYXZiYXIvPlxuICAgICAgICAgICAgICAgICAgICB7LypcbiAgICAgICAgICAgICAgICAgICAgIE1haW4gQ29udGFpbmVyXG4gICAgICAgICAgICAgICAgICAgICAqL31cbiAgICAgICAgICAgICAgICAgICAgPEhlYWRlclxuICAgICAgICAgICAgICAgICAgICAgICAgYXM9XCJoMVwiXG4gICAgICAgICAgICAgICAgICAgICAgICBjb250ZW50PVwiNDA0XCJcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yPVwidGVhbFwiXG4gICAgICAgICAgICAgICAgICAgICAgICBpbnZlcnRlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPXt7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9udFNpemU6ICcxNWVtJyxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBmb250V2VpZ2h0OiAnYm9sZCcsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbWFyZ2luVG9wOiAnMTAlJyxcbiAgICAgICAgICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICAgICAgICAgIC8+XG5cbiAgICAgICAgICAgICAgICAgICAgPHBcbiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPXt7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZm9udFNpemU6ICcxLjVlbScsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbWFyZ2luVG9wOiAnMS41ZW0nXG4gICAgICAgICAgICAgICAgICAgICAgICB9fVxuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgICBUaGUgbGlua2VkIGRhdGEgeW91IHdlcmUgbG9va2luZyBmb3IgY291bGQgbm90IGJlIGZvdW5kLlxuICAgICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPC9TZWdtZW50PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBOb3RGb3VuZDtcbiJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 21:33:32 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>

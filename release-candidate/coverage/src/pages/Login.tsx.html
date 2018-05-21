@@ -76,7 +76,11 @@
 31
 32
 33
-34</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+34
+35
+36
+37
+38</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -92,10 +96,14 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -125,11 +133,15 @@ var React = require("react");
 var LoginForm_1 = require("../form/LoginForm");
 var semantic_ui_react_1 = require("semantic-ui-react");
 var navbarHome_1 = require("../components/navbarHome");
+/**
+ * Component containing the content of the login page.
+ */
 var Login = /** @class */ (function (_super) {
     __extends(Login, _super);
 <span class="fstat-no" title="function not covered" >    function Login() {</span>
 <span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
     }
+    /** Render component **/
     Login.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        return (React.createElement("div", { className: "loginPage" },</span>
             React.createElement(semantic_ui_react_1.Segment, { inverted: true, textAlign: "center", style: { height: '100vh' }, vertical: true },
@@ -141,14 +153,14 @@ var Login = /** @class */ (function (_super) {
 exports.default = Login;
 &nbsp;
 },'src/pages/Login.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","../form/LoginForm":"/home/travis/build/dubious-developments/UnSHACLed/src/form/LoginForm.tsx","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","../components/navbarHome":"/home/travis/build/dubious-developments/UnSHACLed/src/components/navbarHome.tsx"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9naW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJMb2dpbi50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLCtDQUEwQztBQUMxQyx1REFBNEM7QUFDNUMsdURBQThDO0FBRTlDO0lBQW9CLHlCQUF5QjtJQUE3Qzs7SUFtQkEsQ0FBQztJQWpCRyxzQkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNILDZCQUFLLFNBQVMsRUFBQyxXQUFXO1lBRXRCLG9CQUFDLDJCQUFPLElBQ0osUUFBUSxFQUFFLElBQUksRUFDZCxTQUFTLEVBQUMsUUFBUSxFQUNsQixLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsT0FBTyxFQUFDLEVBQ3hCLFFBQVEsRUFBRSxJQUFJO2dCQUVkLG9CQUFDLG9CQUFNLE9BQUU7Z0JBQ1Qsb0JBQUMsbUJBQVMsT0FBRSxDQUNOLENBQ1IsQ0FDVCxDQUNJO0lBQ1QsQ0FBQztJQUNMLFlBQUM7QUFBRCxDQUFDLEFBbkJELENBQW9CLEtBQUssQ0FBQyxTQUFTLEdBbUJsQztBQUNELGtCQUFlLEtBQUssQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBMb2dpbkZvcm0gZnJvbSAnLi4vZm9ybS9Mb2dpbkZvcm0nO1xuaW1wb3J0IHsgU2VnbWVudCB9IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcbmltcG9ydCBOYXZiYXIgZnJvbSAnLi4vY29tcG9uZW50cy9uYXZiYXJIb21lJztcblxuY2xhc3MgTG9naW4gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQ8YW55LCBhbnk+IHtcblxuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibG9naW5QYWdlXCI+XG5cbiAgICAgICAgICAgICAgICA8U2VnbWVudFxuICAgICAgICAgICAgICAgICAgICBpbnZlcnRlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICAgICAgdGV4dEFsaWduPVwiY2VudGVyXCJcbiAgICAgICAgICAgICAgICAgICAgc3R5bGU9e3toZWlnaHQ6ICcxMDB2aCd9fVxuICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbD17dHJ1ZX1cbiAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgIDxOYXZiYXIvPlxuICAgICAgICAgICAgICAgICAgICA8TG9naW5Gb3JtLz5cbiAgICAgICAgICAgICAgICA8L1NlZ21lbnQ+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKVxuICAgICAgICAgICAgO1xuICAgIH1cbn1cbmV4cG9ydCBkZWZhdWx0IExvZ2luO1xuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9naW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJMb2dpbi50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLCtDQUEwQztBQUMxQyx1REFBMEM7QUFDMUMsdURBQThDO0FBRTlDOztHQUVHO0FBQ0g7SUFBb0IseUJBQXlCO0lBQTdDOztJQW1CQSxDQUFDO0lBbEJHLHdCQUF3QjtJQUN4QixzQkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNILDZCQUFLLFNBQVMsRUFBQyxXQUFXO1lBRXRCLG9CQUFDLDJCQUFPLElBQ0osUUFBUSxFQUFFLElBQUksRUFDZCxTQUFTLEVBQUMsUUFBUSxFQUNsQixLQUFLLEVBQUUsRUFBQyxNQUFNLEVBQUUsT0FBTyxFQUFDLEVBQ3hCLFFBQVEsRUFBRSxJQUFJO2dCQUVkLG9CQUFDLG9CQUFNLE9BQUU7Z0JBQ1Qsb0JBQUMsbUJBQVMsT0FBRSxDQUNOLENBQ1IsQ0FDVCxDQUNJO0lBQ1QsQ0FBQztJQUNMLFlBQUM7QUFBRCxDQUFDLEFBbkJELENBQW9CLEtBQUssQ0FBQyxTQUFTLEdBbUJsQztBQUVELGtCQUFlLEtBQUssQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBMb2dpbkZvcm0gZnJvbSAnLi4vZm9ybS9Mb2dpbkZvcm0nO1xuaW1wb3J0IHtTZWdtZW50fSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5pbXBvcnQgTmF2YmFyIGZyb20gJy4uL2NvbXBvbmVudHMvbmF2YmFySG9tZSc7XG5cbi8qKlxuICogQ29tcG9uZW50IGNvbnRhaW5pbmcgdGhlIGNvbnRlbnQgb2YgdGhlIGxvZ2luIHBhZ2UuXG4gKi9cbmNsYXNzIExvZ2luIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG4gICAgLyoqIFJlbmRlciBjb21wb25lbnQgKiovXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJsb2dpblBhZ2VcIj5cblxuICAgICAgICAgICAgICAgIDxTZWdtZW50XG4gICAgICAgICAgICAgICAgICAgIGludmVydGVkPXt0cnVlfVxuICAgICAgICAgICAgICAgICAgICB0ZXh0QWxpZ249XCJjZW50ZXJcIlxuICAgICAgICAgICAgICAgICAgICBzdHlsZT17e2hlaWdodDogJzEwMHZoJ319XG4gICAgICAgICAgICAgICAgICAgIHZlcnRpY2FsPXt0cnVlfVxuICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgPE5hdmJhci8+XG4gICAgICAgICAgICAgICAgICAgIDxMb2dpbkZvcm0vPlxuICAgICAgICAgICAgICAgIDwvU2VnbWVudD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApXG4gICAgICAgICAgICA7XG4gICAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBMb2dpbjtcbiJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 21:33:32 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>

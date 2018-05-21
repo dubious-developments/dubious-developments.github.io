@@ -87,7 +87,12 @@
 42
 43
 44
-45</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+45
+46
+47
+48
+49
+50</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -108,8 +113,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -145,16 +155,21 @@ var __extends = (this &amp;&amp; this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var semantic_ui_react_1 = require("semantic-ui-react");
-/*
-    Component used to create pop-up for draggable elements within the sidebar
-    Requires several props from the parent, which can be found in interfaces.d.ts
+/**
+ Component used to create pop-up for draggable elements within the sidebar
+ Requires several props from the parent, which can be found in interfaces.d.ts
 &nbsp;
  */
 var SidebarPopup = /** @class */ (function (_super) {
     __extends(SidebarPopup, _super);
+    /**
+     * Constructor of component
+     * @param props
+     */
 <span class="fstat-no" title="function not covered" >    function SidebarPopup(props) {</span>
 <span class="cstat-no" title="statement not covered" >        return _super.call(this, props) || this;</span>
     }
+    /** Render component **/
     SidebarPopup.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        var str = this.props.header_title;</span>
 <span class="cstat-no" title="statement not covered" >        var preview = require('../img/' + str.replace(/ /g, '') + '.png');</span>
@@ -174,14 +189,14 @@ var SidebarPopup = /** @class */ (function (_super) {
 exports.default = SidebarPopup;
 &nbsp;
 },'src/components/sidebarPopup.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","./interfaces/interfaces":"/home/travis/build/dubious-developments/UnSHACLed/src/components/interfaces/interfaces.d.ts"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2lkZWJhclBvcHVwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsic2lkZWJhclBvcHVwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQXlFO0FBR3pFOzs7O0dBSUc7QUFDSDtJQUEyQixnQ0FBdUM7SUFFOUQsc0JBQVksS0FBVTtlQUNsQixrQkFBTSxLQUFLLENBQUM7SUFDaEIsQ0FBQztJQUVELDZCQUFNLEdBQU47UUFDSSxJQUFJLEdBQUcsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLFlBQVksQ0FBQztRQUNsQyxJQUFNLE9BQU8sR0FBRyxPQUFPLENBQUMsU0FBUyxHQUFHLEdBQUcsQ0FBQyxPQUFPLENBQUMsSUFBSSxFQUFFLEVBQUUsQ0FBQyxHQUFHLE1BQU0sQ0FBQyxDQUFDO1FBQ3BFLE9BQU8sQ0FDSCxvQkFBQyx5QkFBSyxJQUNGLE9BQU8sRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLE9BQU8sRUFDM0IsU0FBUyxFQUFFLElBQUksRUFDZixJQUFJLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxNQUFNLEVBQ3ZCLFFBQVEsRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLFVBQVUsRUFDL0IsUUFBUSxFQUFFLElBQUksRUFDZCxLQUFLLEVBQUU7Z0JBQ0gsT0FBTyxFQUFDLEdBQUc7YUFDZDtZQUVELG9CQUFDLDJCQUFPLElBQUMsS0FBSyxFQUFFLElBQUksRUFBRSxPQUFPLEVBQUUsSUFBSSxFQUFFLFNBQVMsRUFBQyxRQUFRO2dCQUNuRCxvQkFBQywwQkFBTSxJQUFDLEVBQUUsRUFBQyxJQUFJOztvQkFBRyxJQUFJLENBQUMsS0FBSyxDQUFDLFlBQVk7d0JBQVc7Z0JBQ3BELG9CQUFDLDJCQUFPLE9BQUU7Z0JBQ1Ysb0JBQUMseUJBQUssSUFDRixHQUFHLEVBQUUsT0FBTyxFQUNaLElBQUksRUFBQyxNQUFNLEVBQ1gsUUFBUSxFQUFFLElBQUksR0FDaEIsQ0FDSSxDQUNOLENBQ1gsQ0FBQztJQUNOLENBQUM7SUFDTCxtQkFBQztBQUFELENBQUMsQUFoQ0QsQ0FBMkIsS0FBSyxDQUFDLFNBQVMsR0FnQ3pDO0FBRUQsa0JBQWUsWUFBWSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtQb3B1cCwgU2VnbWVudCwgSGVhZGVyLCBEaXZpZGVyLCBJbWFnZX0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuaW1wb3J0IHtTaWRlYmFyUG9wdXBQcm9wc30gZnJvbSAnLi9pbnRlcmZhY2VzL2ludGVyZmFjZXMnO1xuXG4vKlxuICAgIENvbXBvbmVudCB1c2VkIHRvIGNyZWF0ZSBwb3AtdXAgZm9yIGRyYWdnYWJsZSBlbGVtZW50cyB3aXRoaW4gdGhlIHNpZGViYXJcbiAgICBSZXF1aXJlcyBzZXZlcmFsIHByb3BzIGZyb20gdGhlIHBhcmVudCwgd2hpY2ggY2FuIGJlIGZvdW5kIGluIGludGVyZmFjZXMuZC50c1xuXG4gKi9cbmNsYXNzIFNpZGViYXJQb3B1cCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxTaWRlYmFyUG9wdXBQcm9wcywgYW55PiB7XG5cbiAgICBjb25zdHJ1Y3Rvcihwcm9wczogYW55KSB7XG4gICAgICAgIHN1cGVyKHByb3BzKTtcbiAgICB9XG5cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIGxldCBzdHIgPSB0aGlzLnByb3BzLmhlYWRlcl90aXRsZTtcbiAgICAgICAgY29uc3QgcHJldmlldyA9IHJlcXVpcmUoJy4uL2ltZy8nICsgc3RyLnJlcGxhY2UoLyAvZywgJycpICsgJy5wbmcnKTtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxQb3B1cFxuICAgICAgICAgICAgICAgIHRyaWdnZXI9e3RoaXMucHJvcHMudHJpZ2dlcn1cbiAgICAgICAgICAgICAgICBob3ZlcmFibGU9e3RydWV9XG4gICAgICAgICAgICAgICAgc2l6ZT17dGhpcy5wcm9wcy5wX3NpemV9XG4gICAgICAgICAgICAgICAgcG9zaXRpb249e3RoaXMucHJvcHMucF9wb3NpdGlvbn1cbiAgICAgICAgICAgICAgICBpbnZlcnRlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICBzdHlsZT17e1xuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOicwJ1xuICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPFNlZ21lbnQgYmFzaWM9e3RydWV9IGNvbXBhY3Q9e3RydWV9IHRleHRBbGlnbj1cImNlbnRlclwiPlxuICAgICAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoNCc+IHt0aGlzLnByb3BzLmhlYWRlcl90aXRsZX0gPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgICAgIDxEaXZpZGVyLz5cbiAgICAgICAgICAgICAgICAgICAgPEltYWdlXG4gICAgICAgICAgICAgICAgICAgICAgICBzcmM9e3ByZXZpZXd9XG4gICAgICAgICAgICAgICAgICAgICAgICBzaXplPVwidGlueVwiXG4gICAgICAgICAgICAgICAgICAgICAgICBjZW50ZXJlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICA8L1NlZ21lbnQ+XG4gICAgICAgICAgICA8L1BvcHVwPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgU2lkZWJhclBvcHVwOyJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2lkZWJhclBvcHVwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsic2lkZWJhclBvcHVwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQXlFO0FBR3pFOzs7O0dBSUc7QUFDSDtJQUEyQixnQ0FBdUM7SUFFOUQ7OztPQUdHO0lBQ0gsc0JBQVksS0FBVTtlQUNsQixrQkFBTSxLQUFLLENBQUM7SUFDaEIsQ0FBQztJQUVELHdCQUF3QjtJQUN4Qiw2QkFBTSxHQUFOO1FBQ0ksSUFBSSxHQUFHLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxZQUFZLENBQUM7UUFDbEMsSUFBTSxPQUFPLEdBQUcsT0FBTyxDQUFDLFNBQVMsR0FBRyxHQUFHLENBQUMsT0FBTyxDQUFDLElBQUksRUFBRSxFQUFFLENBQUMsR0FBRyxNQUFNLENBQUMsQ0FBQztRQUNwRSxPQUFPLENBQ0gsb0JBQUMseUJBQUssSUFDRixPQUFPLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxPQUFPLEVBQzNCLFNBQVMsRUFBRSxJQUFJLEVBQ2YsSUFBSSxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsTUFBTSxFQUN2QixRQUFRLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxVQUFVLEVBQy9CLFFBQVEsRUFBRSxJQUFJLEVBQ2QsS0FBSyxFQUFFO2dCQUNILE9BQU8sRUFBRSxHQUFHO2FBQ2Y7WUFFRCxvQkFBQywyQkFBTyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsT0FBTyxFQUFFLElBQUksRUFBRSxTQUFTLEVBQUMsUUFBUTtnQkFDbkQsb0JBQUMsMEJBQU0sSUFBQyxFQUFFLEVBQUMsSUFBSTs7b0JBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxZQUFZO3dCQUFXO2dCQUNwRCxvQkFBQywyQkFBTyxPQUFFO2dCQUNWLG9CQUFDLHlCQUFLLElBQ0YsR0FBRyxFQUFFLE9BQU8sRUFDWixJQUFJLEVBQUMsTUFBTSxFQUNYLFFBQVEsRUFBRSxJQUFJLEdBQ2hCLENBQ0ksQ0FDTixDQUNYLENBQUM7SUFDTixDQUFDO0lBQ0wsbUJBQUM7QUFBRCxDQUFDLEFBckNELENBQTJCLEtBQUssQ0FBQyxTQUFTLEdBcUN6QztBQUVELGtCQUFlLFlBQVksQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7UG9wdXAsIFNlZ21lbnQsIEhlYWRlciwgRGl2aWRlciwgSW1hZ2V9IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcbmltcG9ydCB7U2lkZWJhclBvcHVwUHJvcHN9IGZyb20gJy4vaW50ZXJmYWNlcy9pbnRlcmZhY2VzJztcblxuLyoqXG4gQ29tcG9uZW50IHVzZWQgdG8gY3JlYXRlIHBvcC11cCBmb3IgZHJhZ2dhYmxlIGVsZW1lbnRzIHdpdGhpbiB0aGUgc2lkZWJhclxuIFJlcXVpcmVzIHNldmVyYWwgcHJvcHMgZnJvbSB0aGUgcGFyZW50LCB3aGljaCBjYW4gYmUgZm91bmQgaW4gaW50ZXJmYWNlcy5kLnRzXG5cbiAqL1xuY2xhc3MgU2lkZWJhclBvcHVwIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PFNpZGViYXJQb3B1cFByb3BzLCBhbnk+IHtcblxuICAgIC8qKlxuICAgICAqIENvbnN0cnVjdG9yIG9mIGNvbXBvbmVudFxuICAgICAqIEBwYXJhbSBwcm9wc1xuICAgICAqL1xuICAgIGNvbnN0cnVjdG9yKHByb3BzOiBhbnkpIHtcbiAgICAgICAgc3VwZXIocHJvcHMpO1xuICAgIH1cblxuICAgIC8qKiBSZW5kZXIgY29tcG9uZW50ICoqL1xuICAgIHJlbmRlcigpIHtcbiAgICAgICAgbGV0IHN0ciA9IHRoaXMucHJvcHMuaGVhZGVyX3RpdGxlO1xuICAgICAgICBjb25zdCBwcmV2aWV3ID0gcmVxdWlyZSgnLi4vaW1nLycgKyBzdHIucmVwbGFjZSgvIC9nLCAnJykgKyAnLnBuZycpO1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPFBvcHVwXG4gICAgICAgICAgICAgICAgdHJpZ2dlcj17dGhpcy5wcm9wcy50cmlnZ2VyfVxuICAgICAgICAgICAgICAgIGhvdmVyYWJsZT17dHJ1ZX1cbiAgICAgICAgICAgICAgICBzaXplPXt0aGlzLnByb3BzLnBfc2l6ZX1cbiAgICAgICAgICAgICAgICBwb3NpdGlvbj17dGhpcy5wcm9wcy5wX3Bvc2l0aW9ufVxuICAgICAgICAgICAgICAgIGludmVydGVkPXt0cnVlfVxuICAgICAgICAgICAgICAgIHN0eWxlPXt7XG4gICAgICAgICAgICAgICAgICAgIHBhZGRpbmc6ICcwJ1xuICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPFNlZ21lbnQgYmFzaWM9e3RydWV9IGNvbXBhY3Q9e3RydWV9IHRleHRBbGlnbj1cImNlbnRlclwiPlxuICAgICAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoNCc+IHt0aGlzLnByb3BzLmhlYWRlcl90aXRsZX0gPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgICAgIDxEaXZpZGVyLz5cbiAgICAgICAgICAgICAgICAgICAgPEltYWdlXG4gICAgICAgICAgICAgICAgICAgICAgICBzcmM9e3ByZXZpZXd9XG4gICAgICAgICAgICAgICAgICAgICAgICBzaXplPVwidGlueVwiXG4gICAgICAgICAgICAgICAgICAgICAgICBjZW50ZXJlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICA8L1NlZ21lbnQ+XG4gICAgICAgICAgICA8L1BvcHVwPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgU2lkZWJhclBvcHVwOyJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 21:33:32 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>

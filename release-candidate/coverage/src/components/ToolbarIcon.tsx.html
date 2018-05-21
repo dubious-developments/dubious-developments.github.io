@@ -76,7 +76,12 @@
 31
 32
 33
-34</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+34
+35
+36
+37
+38
+39</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -97,8 +102,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -123,16 +133,21 @@ var __extends = (this &amp;&amp; this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var semantic_ui_react_1 = require("semantic-ui-react");
-/*
-    Component used to create toolbar icon items
-    Requires several props from the parent, which can be found in interfaces.d.ts
+/**
+ Component used to create toolbar icon items
+ Requires several props from the parent, which can be found in interfaces.d.ts
 &nbsp;
- */
+ **/
 var ToolbarIcon = /** @class */ (function (_super) {
     __extends(ToolbarIcon, _super);
+    /**
+     * Constructor of component
+     * @param props
+     */
 <span class="fstat-no" title="function not covered" >    function ToolbarIcon(props) {</span>
 <span class="cstat-no" title="statement not covered" >        return _super.call(this, props) || this;</span>
     }
+    /** Render component **/
     ToolbarIcon.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Popup, { trigger: React.createElement(semantic_ui_react_1.Menu.Item, { as: "a", id: this.props.t_id, content: React.createElement(semantic_ui_react_1.Icon, { name: this.props.icon_name }) }), content: this.props.p_content, size: this.props.p_size, position: this.props.p_position, inverted: true }));</span>
     };
@@ -141,14 +156,14 @@ var ToolbarIcon = /** @class */ (function (_super) {
 exports.default = ToolbarIcon;
 &nbsp;
 },'src/components/ToolbarIcon.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","./interfaces/interfaces":"/home/travis/build/dubious-developments/UnSHACLed/src/components/interfaces/interfaces.d.ts"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVG9vbGJhckljb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUb29sYmFySWNvbi50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUFvRDtBQUdwRDs7OztHQUlHO0FBQ0g7SUFBMEIsK0JBQXNDO0lBRTVELHFCQUFZLEtBQVU7ZUFDbEIsa0JBQU0sS0FBSyxDQUFDO0lBQ2hCLENBQUM7SUFFRCw0QkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNILG9CQUFDLHlCQUFLLElBQ0YsT0FBTyxFQUFFLG9CQUFDLHdCQUFJLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBQyxHQUFHLEVBQUMsRUFBRSxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxFQUFFLE9BQU8sRUFBRSxvQkFBQyx3QkFBSSxJQUFDLElBQUksRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLFNBQVMsR0FBRyxHQUFHLEVBQy9GLE9BQU8sRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLFNBQVMsRUFDN0IsSUFBSSxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsTUFBTSxFQUN2QixRQUFRLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxVQUFVLEVBQy9CLFFBQVEsRUFBRSxJQUFJLEdBQ2hCLENBQ0wsQ0FBQztJQUNOLENBQUM7SUFDTCxrQkFBQztBQUFELENBQUMsQUFqQkQsQ0FBMEIsS0FBSyxDQUFDLFNBQVMsR0FpQnhDO0FBRUQsa0JBQWUsV0FBVyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtNZW51LCBJY29uLCBQb3B1cH0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuaW1wb3J0IHtUb29sYmFySWNvblByb3BzfSBmcm9tICcuL2ludGVyZmFjZXMvaW50ZXJmYWNlcyc7XG5cbi8qXG4gICAgQ29tcG9uZW50IHVzZWQgdG8gY3JlYXRlIHRvb2xiYXIgaWNvbiBpdGVtc1xuICAgIFJlcXVpcmVzIHNldmVyYWwgcHJvcHMgZnJvbSB0aGUgcGFyZW50LCB3aGljaCBjYW4gYmUgZm91bmQgaW4gaW50ZXJmYWNlcy5kLnRzXG5cbiAqL1xuY2xhc3MgVG9vbGJhckljb24gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQ8VG9vbGJhckljb25Qcm9wcywgYW55PiB7XG5cbiAgICBjb25zdHJ1Y3Rvcihwcm9wczogYW55KSB7XG4gICAgICAgIHN1cGVyKHByb3BzKTtcbiAgICB9XG5cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8UG9wdXBcbiAgICAgICAgICAgICAgICB0cmlnZ2VyPXs8TWVudS5JdGVtIGFzPVwiYVwiIGlkPXt0aGlzLnByb3BzLnRfaWR9IGNvbnRlbnQ9ezxJY29uIG5hbWU9e3RoaXMucHJvcHMuaWNvbl9uYW1lfS8+fS8+fVxuICAgICAgICAgICAgICAgIGNvbnRlbnQ9e3RoaXMucHJvcHMucF9jb250ZW50fVxuICAgICAgICAgICAgICAgIHNpemU9e3RoaXMucHJvcHMucF9zaXplfVxuICAgICAgICAgICAgICAgIHBvc2l0aW9uPXt0aGlzLnByb3BzLnBfcG9zaXRpb259XG4gICAgICAgICAgICAgICAgaW52ZXJ0ZWQ9e3RydWV9XG4gICAgICAgICAgICAvPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgVG9vbGJhckljb247Il19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVG9vbGJhckljb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUb29sYmFySWNvbi50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUFvRDtBQUdwRDs7OztJQUlJO0FBQ0o7SUFBMEIsK0JBQXNDO0lBRTVEOzs7T0FHRztJQUNILHFCQUFZLEtBQVU7ZUFDbEIsa0JBQU0sS0FBSyxDQUFDO0lBQ2hCLENBQUM7SUFFRCx3QkFBd0I7SUFDeEIsNEJBQU0sR0FBTjtRQUNJLE9BQU8sQ0FDSCxvQkFBQyx5QkFBSyxJQUNGLE9BQU8sRUFBRSxvQkFBQyx3QkFBSSxDQUFDLElBQUksSUFBQyxFQUFFLEVBQUMsR0FBRyxFQUFDLEVBQUUsRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksRUFBRSxPQUFPLEVBQUUsb0JBQUMsd0JBQUksSUFBQyxJQUFJLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLEdBQUcsR0FBRyxFQUMvRixPQUFPLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLEVBQzdCLElBQUksRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLE1BQU0sRUFDdkIsUUFBUSxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsVUFBVSxFQUMvQixRQUFRLEVBQUUsSUFBSSxHQUNoQixDQUNMLENBQUM7SUFDTixDQUFDO0lBQ0wsa0JBQUM7QUFBRCxDQUFDLEFBdEJELENBQTBCLEtBQUssQ0FBQyxTQUFTLEdBc0J4QztBQUVELGtCQUFlLFdBQVcsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7TWVudSwgSWNvbiwgUG9wdXB9IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcbmltcG9ydCB7VG9vbGJhckljb25Qcm9wc30gZnJvbSAnLi9pbnRlcmZhY2VzL2ludGVyZmFjZXMnO1xuXG4vKipcbiBDb21wb25lbnQgdXNlZCB0byBjcmVhdGUgdG9vbGJhciBpY29uIGl0ZW1zXG4gUmVxdWlyZXMgc2V2ZXJhbCBwcm9wcyBmcm9tIHRoZSBwYXJlbnQsIHdoaWNoIGNhbiBiZSBmb3VuZCBpbiBpbnRlcmZhY2VzLmQudHNcblxuICoqL1xuY2xhc3MgVG9vbGJhckljb24gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQ8VG9vbGJhckljb25Qcm9wcywgYW55PiB7XG5cbiAgICAvKipcbiAgICAgKiBDb25zdHJ1Y3RvciBvZiBjb21wb25lbnRcbiAgICAgKiBAcGFyYW0gcHJvcHNcbiAgICAgKi9cbiAgICBjb25zdHJ1Y3Rvcihwcm9wczogYW55KSB7XG4gICAgICAgIHN1cGVyKHByb3BzKTtcbiAgICB9XG5cbiAgICAvKiogUmVuZGVyIGNvbXBvbmVudCAqKi9cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8UG9wdXBcbiAgICAgICAgICAgICAgICB0cmlnZ2VyPXs8TWVudS5JdGVtIGFzPVwiYVwiIGlkPXt0aGlzLnByb3BzLnRfaWR9IGNvbnRlbnQ9ezxJY29uIG5hbWU9e3RoaXMucHJvcHMuaWNvbl9uYW1lfS8+fS8+fVxuICAgICAgICAgICAgICAgIGNvbnRlbnQ9e3RoaXMucHJvcHMucF9jb250ZW50fVxuICAgICAgICAgICAgICAgIHNpemU9e3RoaXMucHJvcHMucF9zaXplfVxuICAgICAgICAgICAgICAgIHBvc2l0aW9uPXt0aGlzLnByb3BzLnBfcG9zaXRpb259XG4gICAgICAgICAgICAgICAgaW52ZXJ0ZWQ9e3RydWV9XG4gICAgICAgICAgICAvPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgVG9vbGJhckljb247Il19
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 21:33:32 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>

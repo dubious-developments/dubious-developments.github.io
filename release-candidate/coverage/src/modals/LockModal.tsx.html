@@ -81,7 +81,15 @@
 36
 37
 38
-39</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+39
+40
+41
+42
+43
+44
+45
+46
+47</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -95,10 +103,18 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -133,11 +149,19 @@ var __extends = (this &amp;&amp; this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var semantic_ui_react_1 = require("semantic-ui-react");
+/**
+ * Component used to provide a modal mechanism to inform the user he/she lacks a lock.
+ */
 var LockModal = /** @class */ (function (_super) {
     __extends(LockModal, _super);
+    /**
+     * Constructor of component
+     * @param props
+     */
 <span class="fstat-no" title="function not covered" >    function LockModal(props) {</span>
 <span class="cstat-no" title="statement not covered" >        return _super.call(this, props) || this;</span>
     }
+    /** Render component **/
     LockModal.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Modal, { closeIcon: false, mountNode: document.getElementById("root"), style: {</span>
                 marginTop: '0 !important',
@@ -149,21 +173,21 @@ var LockModal = /** @class */ (function (_super) {
             }, open: this.props.open },
             React.createElement(semantic_ui_react_1.Header, { icon: 'lock', content: 'Lock warning' }),
             React.createElement(semantic_ui_react_1.Modal.Content, null,
-                React.createElement("p", null, "File is locked by another user."))));
+                React.createElement("p", null, "You have no lock on this file."))));
     };
     return LockModal;
 }(React.Component));
 exports.default = LockModal;
 &nbsp;
 },'src/modals/LockModal.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9ja01vZGFsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTG9ja01vZGFsLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQWdEO0FBRWhEO0lBQXdCLDZCQUF5QjtJQUU3QyxtQkFBWSxLQUFVO2VBQ2xCLGtCQUFNLEtBQUssQ0FBQztJQUNoQixDQUFDO0lBRUQsMEJBQU0sR0FBTjtRQUNJLE9BQU8sQ0FDSCxvQkFBQyx5QkFBSyxJQUNGLFNBQVMsRUFBRSxLQUFLLEVBQ2hCLFNBQVMsRUFBRSxRQUFRLENBQUMsY0FBYyxDQUFDLE1BQU0sQ0FBQyxFQUMxQyxLQUFLLEVBQUU7Z0JBQ0gsU0FBUyxFQUFFLGNBQWM7Z0JBQ3pCLFVBQVUsRUFBRSxNQUFNO2dCQUNsQixXQUFXLEVBQUUsTUFBTTtnQkFDbkIsUUFBUSxFQUFFLFVBQVU7Z0JBQ3BCLEdBQUcsRUFBRSxLQUFLO2dCQUNWLFNBQVMsRUFBRSxrQkFBa0I7YUFDaEMsRUFFRCxJQUFJLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJO1lBRXJCLG9CQUFDLDBCQUFNLElBQUMsSUFBSSxFQUFDLE1BQU0sRUFBQyxPQUFPLEVBQUMsY0FBYyxHQUFFO1lBQzVDLG9CQUFDLHlCQUFLLENBQUMsT0FBTztnQkFDVixpRUFFSSxDQUNRLENBQ1osQ0FDWCxDQUFDO0lBQ04sQ0FBQztJQUNMLGdCQUFDO0FBQUQsQ0FBQyxBQS9CRCxDQUF3QixLQUFLLENBQUMsU0FBUyxHQStCdEM7QUFFRCxrQkFBZSxTQUFTLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCB7SGVhZGVyLCBNb2RhbH0gZnJvbSBcInNlbWFudGljLXVpLXJlYWN0XCI7XG5cbmNsYXNzIExvY2tNb2RhbCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgY29uc3RydWN0b3IocHJvcHM6IGFueSkge1xuICAgICAgICBzdXBlcihwcm9wcyk7XG4gICAgfVxuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPE1vZGFsXG4gICAgICAgICAgICAgICAgY2xvc2VJY29uPXtmYWxzZX1cbiAgICAgICAgICAgICAgICBtb3VudE5vZGU9e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwicm9vdFwiKX1cbiAgICAgICAgICAgICAgICBzdHlsZT17e1xuICAgICAgICAgICAgICAgICAgICBtYXJnaW5Ub3A6ICcwICFpbXBvcnRhbnQnLFxuICAgICAgICAgICAgICAgICAgICBtYXJnaW5MZWZ0OiAnYXV0bycsXG4gICAgICAgICAgICAgICAgICAgIG1hcmdpblJpZ2h0OiAnYXV0bycsXG4gICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiAncmVsYXRpdmUnLFxuICAgICAgICAgICAgICAgICAgICB0b3A6ICc1MCUnLFxuICAgICAgICAgICAgICAgICAgICB0cmFuc2Zvcm06ICd0cmFuc2xhdGVZKC01MCUpJ1xuICAgICAgICAgICAgICAgIH19XG5cbiAgICAgICAgICAgICAgICBvcGVuPXt0aGlzLnByb3BzLm9wZW59XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPEhlYWRlciBpY29uPSdsb2NrJyBjb250ZW50PSdMb2NrIHdhcm5pbmcnLz5cbiAgICAgICAgICAgICAgICA8TW9kYWwuQ29udGVudD5cbiAgICAgICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgICAgICBGaWxlIGlzIGxvY2tlZCBieSBhbm90aGVyIHVzZXIuXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8L01vZGFsLkNvbnRlbnQ+XG4gICAgICAgICAgICA8L01vZGFsPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgTG9ja01vZGFsOyJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9ja01vZGFsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTG9ja01vZGFsLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQWdEO0FBRWhEOztHQUVHO0FBQ0g7SUFBd0IsNkJBQXlCO0lBRTdDOzs7T0FHRztJQUVILG1CQUFZLEtBQVU7ZUFDbEIsa0JBQU0sS0FBSyxDQUFDO0lBQ2hCLENBQUM7SUFFRCx3QkFBd0I7SUFDeEIsMEJBQU0sR0FBTjtRQUNJLE9BQU8sQ0FDSCxvQkFBQyx5QkFBSyxJQUNGLFNBQVMsRUFBRSxLQUFLLEVBQ2hCLFNBQVMsRUFBRSxRQUFRLENBQUMsY0FBYyxDQUFDLE1BQU0sQ0FBQyxFQUMxQyxLQUFLLEVBQUU7Z0JBQ0gsU0FBUyxFQUFFLGNBQWM7Z0JBQ3pCLFVBQVUsRUFBRSxNQUFNO2dCQUNsQixXQUFXLEVBQUUsTUFBTTtnQkFDbkIsUUFBUSxFQUFFLFVBQVU7Z0JBQ3BCLEdBQUcsRUFBRSxLQUFLO2dCQUNWLFNBQVMsRUFBRSxrQkFBa0I7YUFDaEMsRUFFRCxJQUFJLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJO1lBRXJCLG9CQUFDLDBCQUFNLElBQUMsSUFBSSxFQUFDLE1BQU0sRUFBQyxPQUFPLEVBQUMsY0FBYyxHQUFFO1lBQzVDLG9CQUFDLHlCQUFLLENBQUMsT0FBTztnQkFDVixnRUFFSSxDQUNRLENBQ1osQ0FDWCxDQUFDO0lBQ04sQ0FBQztJQUNMLGdCQUFDO0FBQUQsQ0FBQyxBQXJDRCxDQUF3QixLQUFLLENBQUMsU0FBUyxHQXFDdEM7QUFFRCxrQkFBZSxTQUFTLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCB7SGVhZGVyLCBNb2RhbH0gZnJvbSBcInNlbWFudGljLXVpLXJlYWN0XCI7XG5cbi8qKlxuICogQ29tcG9uZW50IHVzZWQgdG8gcHJvdmlkZSBhIG1vZGFsIG1lY2hhbmlzbSB0byBpbmZvcm0gdGhlIHVzZXIgaGUvc2hlIGxhY2tzIGEgbG9jay5cbiAqL1xuY2xhc3MgTG9ja01vZGFsIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICAvKipcbiAgICAgKiBDb25zdHJ1Y3RvciBvZiBjb21wb25lbnRcbiAgICAgKiBAcGFyYW0gcHJvcHNcbiAgICAgKi9cblxuICAgIGNvbnN0cnVjdG9yKHByb3BzOiBhbnkpIHtcbiAgICAgICAgc3VwZXIocHJvcHMpO1xuICAgIH1cblxuICAgIC8qKiBSZW5kZXIgY29tcG9uZW50ICoqL1xuICAgIHJlbmRlcigpIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxNb2RhbFxuICAgICAgICAgICAgICAgIGNsb3NlSWNvbj17ZmFsc2V9XG4gICAgICAgICAgICAgICAgbW91bnROb2RlPXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcInJvb3RcIil9XG4gICAgICAgICAgICAgICAgc3R5bGU9e3tcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luVG9wOiAnMCAhaW1wb3J0YW50JyxcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luTGVmdDogJ2F1dG8nLFxuICAgICAgICAgICAgICAgICAgICBtYXJnaW5SaWdodDogJ2F1dG8nLFxuICAgICAgICAgICAgICAgICAgICBwb3NpdGlvbjogJ3JlbGF0aXZlJyxcbiAgICAgICAgICAgICAgICAgICAgdG9wOiAnNTAlJyxcbiAgICAgICAgICAgICAgICAgICAgdHJhbnNmb3JtOiAndHJhbnNsYXRlWSgtNTAlKSdcbiAgICAgICAgICAgICAgICB9fVxuXG4gICAgICAgICAgICAgICAgb3Blbj17dGhpcy5wcm9wcy5vcGVufVxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIDxIZWFkZXIgaWNvbj0nbG9jaycgY29udGVudD0nTG9jayB3YXJuaW5nJy8+XG4gICAgICAgICAgICAgICAgPE1vZGFsLkNvbnRlbnQ+XG4gICAgICAgICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgICAgICAgICAgWW91IGhhdmUgbm8gbG9jayBvbiB0aGlzIGZpbGUuXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8L01vZGFsLkNvbnRlbnQ+XG4gICAgICAgICAgICA8L01vZGFsPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgTG9ja01vZGFsOyJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 21:33:32 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>

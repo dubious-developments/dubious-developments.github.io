@@ -88,7 +88,11 @@
 43
 44
 45
-46</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+46
+47
+48
+49
+50</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -110,10 +114,14 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -155,11 +163,15 @@ var Contact_1 = require("../pages/Contact");
 var NotFound_1 = require("../pages/NotFound");
 var Signup_1 = require("../pages/Signup");
 var UserManual_1 = require("../pages/UserManual");
+/**
+ *  Component which contains all the routes in the application, used by React Router.
+ */
 var Routes = /** @class */ (function (_super) {
     __extends(Routes, _super);
 <span class="fstat-no" title="function not covered" >    function Routes() {</span>
 <span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
     }
+    /** Render component **/
     Routes.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        return (React.createElement("div", { style: { height: '100%' } },</span>
             React.createElement(react_router_dom_1.Switch, null,
@@ -177,14 +189,14 @@ var Routes = /** @class */ (function (_super) {
 exports.default = Routes;
 &nbsp;
 },'src/components/Routes.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","react-router-dom":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-router-dom/index.js","../pages/Login":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/Login.tsx","../pages/Home":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/Home.tsx","../pages/Work":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/Work.tsx","../pages/About":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/About.tsx","../pages/Contact":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/Contact.tsx","../pages/NotFound":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/NotFound.tsx","../pages/Signup":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/Signup.tsx","../pages/UserManual":"/home/travis/build/dubious-developments/UnSHACLed/src/pages/UserManual.tsx"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUm91dGVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUm91dGVzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IscURBQWlEO0FBQ2pELHdDQUFtQztBQUNuQyxzQ0FBaUM7QUFDakMsc0NBQWlDO0FBQ2pDLHdDQUFtQztBQUNuQyw0Q0FBdUM7QUFDdkMsOENBQXlDO0FBQ3pDLDBDQUFxQztBQUNyQyxrREFBNkM7QUFFN0M7SUFBcUIsMEJBQXlCO0lBQTlDOztJQWtCQSxDQUFDO0lBaEJHLHVCQUFNLEdBQU47UUFDSSxPQUFPLENBQ0gsNkJBQUssS0FBSyxFQUFFLEVBQUMsTUFBTSxFQUFDLE1BQU0sRUFBQztZQUN2QixvQkFBQyx5QkFBTTtnQkFDSCxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLEdBQUcsRUFBQyxTQUFTLEVBQUUsY0FBSSxHQUFHO2dCQUMvQyxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLFFBQVEsRUFBQyxTQUFTLEVBQUUsZUFBSyxHQUFHO2dCQUNyRCxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLFNBQVMsRUFBQyxTQUFTLEVBQUUsZ0JBQU0sR0FBRztnQkFDdkQsb0JBQUMsd0JBQUssSUFBQyxLQUFLLEVBQUUsSUFBSSxFQUFFLElBQUksRUFBQyxPQUFPLEVBQUMsU0FBUyxFQUFFLGNBQUksR0FBRztnQkFDbkQsb0JBQUMsd0JBQUssSUFBQyxLQUFLLEVBQUUsSUFBSSxFQUFFLElBQUksRUFBQyxRQUFRLEVBQUMsU0FBUyxFQUFFLGVBQUssR0FBRztnQkFDckQsb0JBQUMsd0JBQUssSUFBQyxLQUFLLEVBQUUsSUFBSSxFQUFFLElBQUksRUFBQyxVQUFVLEVBQUMsU0FBUyxFQUFFLGlCQUFPLEdBQUc7Z0JBQ3pELG9CQUFDLHdCQUFLLElBQUMsS0FBSyxFQUFFLElBQUksRUFBRSxJQUFJLEVBQUMsVUFBVSxFQUFDLFNBQVMsRUFBRSxvQkFBVSxHQUFHO2dCQUM1RCxvQkFBQyx3QkFBSyxJQUFDLFNBQVMsRUFBRSxrQkFBUSxHQUFJLENBQ3pCLENBQ1AsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLGFBQUM7QUFBRCxDQUFDLEFBbEJELENBQXFCLEtBQUssQ0FBQyxTQUFTLEdBa0JuQztBQUVELGtCQUFlLE1BQU0sQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IFN3aXRjaCwgUm91dGUgfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJztcbmltcG9ydCBMb2dpbiBmcm9tIFwiLi4vcGFnZXMvTG9naW5cIjtcbmltcG9ydCBIb21lIGZyb20gXCIuLi9wYWdlcy9Ib21lXCI7XG5pbXBvcnQgV29yayBmcm9tIFwiLi4vcGFnZXMvV29ya1wiO1xuaW1wb3J0IEFib3V0IGZyb20gXCIuLi9wYWdlcy9BYm91dFwiO1xuaW1wb3J0IENvbnRhY3QgZnJvbSBcIi4uL3BhZ2VzL0NvbnRhY3RcIjtcbmltcG9ydCBOb3RGb3VuZCBmcm9tIFwiLi4vcGFnZXMvTm90Rm91bmRcIjtcbmltcG9ydCBTaWdudXAgZnJvbSBcIi4uL3BhZ2VzL1NpZ251cFwiO1xuaW1wb3J0IFVzZXJNYW51YWwgZnJvbSBcIi4uL3BhZ2VzL1VzZXJNYW51YWxcIjtcblxuY2xhc3MgUm91dGVzIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8ZGl2IHN0eWxlPXt7aGVpZ2h0OicxMDAlJ319PlxuICAgICAgICAgICAgICAgIDxTd2l0Y2g+XG4gICAgICAgICAgICAgICAgICAgIDxSb3V0ZSBleGFjdD17dHJ1ZX0gcGF0aD1cIi9cIiBjb21wb25lbnQ9e0hvbWV9Lz5cbiAgICAgICAgICAgICAgICAgICAgPFJvdXRlIGV4YWN0PXt0cnVlfSBwYXRoPVwiL2xvZ2luXCIgY29tcG9uZW50PXtMb2dpbn0vPlxuICAgICAgICAgICAgICAgICAgICA8Um91dGUgZXhhY3Q9e3RydWV9IHBhdGg9XCIvc2lnbnVwXCIgY29tcG9uZW50PXtTaWdudXB9Lz5cbiAgICAgICAgICAgICAgICAgICAgPFJvdXRlIGV4YWN0PXt0cnVlfSBwYXRoPVwiL3VzZXJcIiBjb21wb25lbnQ9e1dvcmt9Lz5cbiAgICAgICAgICAgICAgICAgICAgPFJvdXRlIGV4YWN0PXt0cnVlfSBwYXRoPVwiL2Fib3V0XCIgY29tcG9uZW50PXtBYm91dH0vPlxuICAgICAgICAgICAgICAgICAgICA8Um91dGUgZXhhY3Q9e3RydWV9IHBhdGg9XCIvY29udGFjdFwiIGNvbXBvbmVudD17Q29udGFjdH0vPlxuICAgICAgICAgICAgICAgICAgICA8Um91dGUgZXhhY3Q9e3RydWV9IHBhdGg9XCIvc3VwcG9ydFwiIGNvbXBvbmVudD17VXNlck1hbnVhbH0vPlxuICAgICAgICAgICAgICAgICAgICA8Um91dGUgY29tcG9uZW50PXtOb3RGb3VuZH0gLz5cbiAgICAgICAgICAgICAgICA8L1N3aXRjaD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgUm91dGVzOyJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUm91dGVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUm91dGVzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IscURBQWlEO0FBQ2pELHdDQUFtQztBQUNuQyxzQ0FBaUM7QUFDakMsc0NBQWlDO0FBQ2pDLHdDQUFtQztBQUNuQyw0Q0FBdUM7QUFDdkMsOENBQXlDO0FBQ3pDLDBDQUFxQztBQUNyQyxrREFBNkM7QUFFN0M7O0dBRUc7QUFDSDtJQUFxQiwwQkFBeUI7SUFBOUM7O0lBbUJBLENBQUM7SUFqQkcsd0JBQXdCO0lBQ3hCLHVCQUFNLEdBQU47UUFDSSxPQUFPLENBQ0gsNkJBQUssS0FBSyxFQUFFLEVBQUMsTUFBTSxFQUFDLE1BQU0sRUFBQztZQUN2QixvQkFBQyx5QkFBTTtnQkFDSCxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLEdBQUcsRUFBQyxTQUFTLEVBQUUsY0FBSSxHQUFHO2dCQUMvQyxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLFFBQVEsRUFBQyxTQUFTLEVBQUUsZUFBSyxHQUFHO2dCQUNyRCxvQkFBQyx3QkFBSyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFDLFNBQVMsRUFBQyxTQUFTLEVBQUUsZ0JBQU0sR0FBRztnQkFDdkQsb0JBQUMsd0JBQUssSUFBQyxLQUFLLEVBQUUsSUFBSSxFQUFFLElBQUksRUFBQyxPQUFPLEVBQUMsU0FBUyxFQUFFLGNBQUksR0FBRztnQkFDbkQsb0JBQUMsd0JBQUssSUFBQyxLQUFLLEVBQUUsSUFBSSxFQUFFLElBQUksRUFBQyxRQUFRLEVBQUMsU0FBUyxFQUFFLGVBQUssR0FBRztnQkFDckQsb0JBQUMsd0JBQUssSUFBQyxLQUFLLEVBQUUsSUFBSSxFQUFFLElBQUksRUFBQyxVQUFVLEVBQUMsU0FBUyxFQUFFLGlCQUFPLEdBQUc7Z0JBQ3pELG9CQUFDLHdCQUFLLElBQUMsS0FBSyxFQUFFLElBQUksRUFBRSxJQUFJLEVBQUMsVUFBVSxFQUFDLFNBQVMsRUFBRSxvQkFBVSxHQUFHO2dCQUM1RCxvQkFBQyx3QkFBSyxJQUFDLFNBQVMsRUFBRSxrQkFBUSxHQUFJLENBQ3pCLENBQ1AsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLGFBQUM7QUFBRCxDQUFDLEFBbkJELENBQXFCLEtBQUssQ0FBQyxTQUFTLEdBbUJuQztBQUVELGtCQUFlLE1BQU0sQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IFN3aXRjaCwgUm91dGUgfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJztcbmltcG9ydCBMb2dpbiBmcm9tIFwiLi4vcGFnZXMvTG9naW5cIjtcbmltcG9ydCBIb21lIGZyb20gXCIuLi9wYWdlcy9Ib21lXCI7XG5pbXBvcnQgV29yayBmcm9tIFwiLi4vcGFnZXMvV29ya1wiO1xuaW1wb3J0IEFib3V0IGZyb20gXCIuLi9wYWdlcy9BYm91dFwiO1xuaW1wb3J0IENvbnRhY3QgZnJvbSBcIi4uL3BhZ2VzL0NvbnRhY3RcIjtcbmltcG9ydCBOb3RGb3VuZCBmcm9tIFwiLi4vcGFnZXMvTm90Rm91bmRcIjtcbmltcG9ydCBTaWdudXAgZnJvbSBcIi4uL3BhZ2VzL1NpZ251cFwiO1xuaW1wb3J0IFVzZXJNYW51YWwgZnJvbSBcIi4uL3BhZ2VzL1VzZXJNYW51YWxcIjtcblxuLyoqXG4gKiAgQ29tcG9uZW50IHdoaWNoIGNvbnRhaW5zIGFsbCB0aGUgcm91dGVzIGluIHRoZSBhcHBsaWNhdGlvbiwgdXNlZCBieSBSZWFjdCBSb3V0ZXIuXG4gKi9cbmNsYXNzIFJvdXRlcyBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgLyoqIFJlbmRlciBjb21wb25lbnQgKiovXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBzdHlsZT17e2hlaWdodDonMTAwJSd9fT5cbiAgICAgICAgICAgICAgICA8U3dpdGNoPlxuICAgICAgICAgICAgICAgICAgICA8Um91dGUgZXhhY3Q9e3RydWV9IHBhdGg9XCIvXCIgY29tcG9uZW50PXtIb21lfS8+XG4gICAgICAgICAgICAgICAgICAgIDxSb3V0ZSBleGFjdD17dHJ1ZX0gcGF0aD1cIi9sb2dpblwiIGNvbXBvbmVudD17TG9naW59Lz5cbiAgICAgICAgICAgICAgICAgICAgPFJvdXRlIGV4YWN0PXt0cnVlfSBwYXRoPVwiL3NpZ251cFwiIGNvbXBvbmVudD17U2lnbnVwfS8+XG4gICAgICAgICAgICAgICAgICAgIDxSb3V0ZSBleGFjdD17dHJ1ZX0gcGF0aD1cIi91c2VyXCIgY29tcG9uZW50PXtXb3JrfS8+XG4gICAgICAgICAgICAgICAgICAgIDxSb3V0ZSBleGFjdD17dHJ1ZX0gcGF0aD1cIi9hYm91dFwiIGNvbXBvbmVudD17QWJvdXR9Lz5cbiAgICAgICAgICAgICAgICAgICAgPFJvdXRlIGV4YWN0PXt0cnVlfSBwYXRoPVwiL2NvbnRhY3RcIiBjb21wb25lbnQ9e0NvbnRhY3R9Lz5cbiAgICAgICAgICAgICAgICAgICAgPFJvdXRlIGV4YWN0PXt0cnVlfSBwYXRoPVwiL3N1cHBvcnRcIiBjb21wb25lbnQ9e1VzZXJNYW51YWx9Lz5cbiAgICAgICAgICAgICAgICAgICAgPFJvdXRlIGNvbXBvbmVudD17Tm90Rm91bmR9IC8+XG4gICAgICAgICAgICAgICAgPC9Td2l0Y2g+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IFJvdXRlczsiXX0=
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 15:05:29 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 21:33:32 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>
