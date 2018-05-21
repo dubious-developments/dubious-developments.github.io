@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">64.71% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/17</span>
+        <span class='fraction'>10/15</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.5% </span>
+        <span class="strong">42.86% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/8</span>
+        <span class='fraction'>3/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">62.5% </span>
+        <span class="strong">64.29% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/16</span>
+        <span class='fraction'>9/14</span>
       </div>
     </div>
   </div>
@@ -68,10 +68,7 @@
 23
 24
 25
-26
-27
-28
-29</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+26</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -79,9 +76,6 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
@@ -105,9 +99,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * This class is used to poll at regular interval times
  */
 var PollingService = /** @class */ (function () {
-<span class="fstat-no" title="function not covered" >    function PollingService(ms, pollingFunc) {</span>
+<span class="fstat-no" title="function not covered" >    function PollingService(ms, sendPoll) {</span>
 <span class="cstat-no" title="statement not covered" >        this.ms = ms;</span>
-<span class="cstat-no" title="statement not covered" >        this.pollingFunc = pollingFunc;</span>
+<span class="cstat-no" title="statement not covered" >        this.sendPoll = sendPoll;</span>
     }
     PollingService.prototype.startPolling = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        this.schedulePoll();</span>
@@ -118,22 +112,19 @@ var PollingService = /** @class */ (function () {
     PollingService.prototype.schedulePoll = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        this.interval = setInterval(this.sendPoll, this.ms);</span>
     };
-    PollingService.prototype.sendPoll = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >        this.pollingFunc();</span>
-    };
     return PollingService;
 }());
 exports.default = PollingService;
 &nbsp;
 },'src/services/PollingService.ts',{}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUG9sbGluZ1NlcnZpY2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJQb2xsaW5nU2VydmljZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBOztHQUVHO0FBQ0g7SUFRSSx3QkFBWSxFQUFVLEVBQUUsV0FBdUI7UUFDM0MsSUFBSSxDQUFDLEVBQUUsR0FBRyxFQUFFLENBQUM7UUFDYixJQUFJLENBQUMsV0FBVyxHQUFHLFdBQVcsQ0FBQztJQUNuQyxDQUFDO0lBRU0scUNBQVksR0FBbkI7UUFDSSxJQUFJLENBQUMsWUFBWSxFQUFFLENBQUM7SUFDeEIsQ0FBQztJQUVNLG9DQUFXLEdBQWxCO1FBQ0ksYUFBYSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUNqQyxDQUFDO0lBRU8scUNBQVksR0FBcEI7UUFDSSxJQUFJLENBQUMsUUFBUSxHQUFHLFdBQVcsQ0FBQyxJQUFJLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQztJQUN4RCxDQUFDO0lBRU8saUNBQVEsR0FBaEI7UUFDSSxJQUFJLENBQUMsV0FBVyxFQUFFLENBQUM7SUFDdkIsQ0FBQztJQUNMLHFCQUFDO0FBQUQsQ0FBQyxBQTVCRCxJQTRCQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogVGhpcyBjbGFzcyBpcyB1c2VkIHRvIHBvbGwgYXQgcmVndWxhciBpbnRlcnZhbCB0aW1lc1xuICovXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBQb2xsaW5nU2VydmljZSB7XG5cbiAgICAvLyBudW1iZXIgb2YgbWlsbGlzZWNvbmRzIGJldHdlZW4gMiBjb25zZWN1dGl2ZSBwb2xsc1xuICAgIHByaXZhdGUgbXM6IG51bWJlcjtcbiAgICBwcml2YXRlIGludGVydmFsOiBhbnk7XG5cbiAgICBwcml2YXRlIHBvbGxpbmdGdW5jOiAoKSA9PiB2b2lkO1xuXG4gICAgY29uc3RydWN0b3IobXM6IG51bWJlciwgcG9sbGluZ0Z1bmM6ICgpID0+IHZvaWQpIHtcbiAgICAgICAgdGhpcy5tcyA9IG1zO1xuICAgICAgICB0aGlzLnBvbGxpbmdGdW5jID0gcG9sbGluZ0Z1bmM7XG4gICAgfVxuXG4gICAgcHVibGljIHN0YXJ0UG9sbGluZygpIHtcbiAgICAgICAgdGhpcy5zY2hlZHVsZVBvbGwoKTtcbiAgICB9XG5cbiAgICBwdWJsaWMgc3RvcFBvbGxpbmcoKSB7XG4gICAgICAgIGNsZWFySW50ZXJ2YWwodGhpcy5pbnRlcnZhbCk7XG4gICAgfVxuXG4gICAgcHJpdmF0ZSBzY2hlZHVsZVBvbGwoKSB7XG4gICAgICAgIHRoaXMuaW50ZXJ2YWwgPSBzZXRJbnRlcnZhbCh0aGlzLnNlbmRQb2xsLCB0aGlzLm1zKTtcbiAgICB9XG5cbiAgICBwcml2YXRlIHNlbmRQb2xsKCkge1xuICAgICAgICB0aGlzLnBvbGxpbmdGdW5jKCk7XG4gICAgfVxufVxuIl19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUG9sbGluZ1NlcnZpY2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJQb2xsaW5nU2VydmljZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBOztHQUVHO0FBQ0g7SUFRSSx3QkFBWSxFQUFVLEVBQUUsUUFBb0I7UUFDeEMsSUFBSSxDQUFDLEVBQUUsR0FBRyxFQUFFLENBQUM7UUFDYixJQUFJLENBQUMsUUFBUSxHQUFHLFFBQVEsQ0FBQztJQUM3QixDQUFDO0lBRU0scUNBQVksR0FBbkI7UUFDSSxJQUFJLENBQUMsWUFBWSxFQUFFLENBQUM7SUFDeEIsQ0FBQztJQUVNLG9DQUFXLEdBQWxCO1FBQ0ksYUFBYSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUNqQyxDQUFDO0lBRU8scUNBQVksR0FBcEI7UUFDSSxJQUFJLENBQUMsUUFBUSxHQUFHLFdBQVcsQ0FBQyxJQUFJLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxFQUFFLENBQUMsQ0FBQztJQUN4RCxDQUFDO0lBQ0wscUJBQUM7QUFBRCxDQUFDLEFBeEJELElBd0JDIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBUaGlzIGNsYXNzIGlzIHVzZWQgdG8gcG9sbCBhdCByZWd1bGFyIGludGVydmFsIHRpbWVzXG4gKi9cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIFBvbGxpbmdTZXJ2aWNlIHtcblxuICAgIC8vIG51bWJlciBvZiBtaWxsaXNlY29uZHMgYmV0d2VlbiAyIGNvbnNlY3V0aXZlIHBvbGxzXG4gICAgcHJpdmF0ZSBtczogbnVtYmVyO1xuICAgIHByaXZhdGUgaW50ZXJ2YWw6IGFueTtcblxuICAgIHByaXZhdGUgc2VuZFBvbGw6ICgpID0+IHZvaWQ7XG5cbiAgICBjb25zdHJ1Y3RvcihtczogbnVtYmVyLCBzZW5kUG9sbDogKCkgPT4gdm9pZCkge1xuICAgICAgICB0aGlzLm1zID0gbXM7XG4gICAgICAgIHRoaXMuc2VuZFBvbGwgPSBzZW5kUG9sbDtcbiAgICB9XG5cbiAgICBwdWJsaWMgc3RhcnRQb2xsaW5nKCkge1xuICAgICAgICB0aGlzLnNjaGVkdWxlUG9sbCgpO1xuICAgIH1cblxuICAgIHB1YmxpYyBzdG9wUG9sbGluZygpIHtcbiAgICAgICAgY2xlYXJJbnRlcnZhbCh0aGlzLmludGVydmFsKTtcbiAgICB9XG5cbiAgICBwcml2YXRlIHNjaGVkdWxlUG9sbCgpIHtcbiAgICAgICAgdGhpcy5pbnRlcnZhbCA9IHNldEludGVydmFsKHRoaXMuc2VuZFBvbGwsIHRoaXMubXMpO1xuICAgIH1cbn1cbiJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 12:28:49 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 14:52:48 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>

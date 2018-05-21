@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">61.54% </span>
+        <span class="strong">59.09% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>24/39</span>
+        <span class='fraction'>26/44</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">33.33% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>5/15</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">46.15% </span>
+        <span class="strong">42.86% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/13</span>
+        <span class='fraction'>6/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">64.71% </span>
+        <span class="strong">61.54% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>22/34</span>
+        <span class='fraction'>24/39</span>
       </div>
     </div>
   </div>
@@ -113,7 +113,17 @@
 68
 69
 70
-71</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -130,6 +140,7 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,6 +155,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -154,6 +166,14 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -200,6 +220,7 @@ var semantic_ui_react_1 = require("semantic-ui-react");
 var react_router_dom_1 = require("react-router-dom");
 var react_redux_1 = require("react-redux");
 var UserModal_1 = require("../modals/UserModal");
+var dataAccessProvider_1 = require("../persistence/dataAccessProvider");
 /*
     Component used to create a dropdown component for an authenticated user
 &nbsp;
@@ -213,6 +234,7 @@ var DropdownUser = /** @class */ (function (_super) {
         };
 <span class="cstat-no" title="statement not covered" >        _this.closeModalCallback = _this.closeModalCallback.bind(_this);</span>
 <span class="cstat-no" title="statement not covered" >        _this.showUserModal = _this.showUserModal.bind(_this);</span>
+<span class="cstat-no" title="statement not covered" >        _this.stopPollingService = _this.stopPollingService.bind(_this);</span>
 <span class="cstat-no" title="statement not covered" >        return _this;</span>
     }
     DropdownUser.prototype.showUserModal = <span class="fstat-no" title="function not covered" >function () {</span>
@@ -224,6 +246,14 @@ var DropdownUser = /** @class */ (function (_super) {
 <span class="cstat-no" title="statement not covered" >        this.setState({</span>
             infoVisible: false
         });
+    };
+    /**
+     * Method that will invoke the backedn and stop all polling services
+     * @return: none
+     */
+    DropdownUser.prototype.stopPollingService = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var remotefileDAO = dataAccessProvider_1.DataAccessProvider.getInstance().getRemoteFileDAO();</span>
+<span class="cstat-no" title="statement not covered" >        remotefileDAO.stop();</span>
     };
     DropdownUser.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        var infoVisible = this.state.infoVisible;</span>
@@ -238,7 +268,7 @@ var DropdownUser = /** @class */ (function (_super) {
                             this.props.login,
                             " ")),
                     React.createElement(semantic_ui_react_1.Dropdown.Item, { text: 'My Profile', onClick: this.showUserModal }),
-                    React.createElement(semantic_ui_react_1.Dropdown.Item, { as: react_router_dom_1.Link, to: "/login" }, "Sign out"))),
+                    React.createElement(semantic_ui_react_1.Dropdown.Item, { as: react_router_dom_1.Link, to: "/login", onClick: this.stopPollingService }, "Sign out"))),
             infoVisible ?
                 React.createElement(UserModal_1.default, { visible: infoVisible, login: this.props.login, onClose_cb: this.closeModalCallback })
                 : null));
@@ -251,15 +281,15 @@ var mapStateToProps = <span class="fstat-no" title="function not covered" >funct
 }); };
 exports.default = react_redux_1.connect(mapStateToProps)(DropdownUser);
 &nbsp;
-},'src/dropdowns/DropdownUser.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","react-router-dom":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-router-dom/index.js","react-redux":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-redux/lib/index.js","../modals/UserModal":"/home/travis/build/dubious-developments/UnSHACLed/src/modals/UserModal.tsx"}];})(this);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRHJvcGRvd25Vc2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRHJvcGRvd25Vc2VyLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQTJDO0FBQzNDLHFEQUFzQztBQUN0QywyQ0FBb0M7QUFDcEMsaURBQTRDO0FBRTVDOzs7R0FHRztBQUNIO0lBQTJCLGdDQUF5QjtJQUVoRCxzQkFBWSxLQUFVO1FBQXRCLFlBQ0ksa0JBQU0sS0FBSyxDQUFDLFNBT2Y7UUFORyxLQUFJLENBQUMsS0FBSyxHQUFHO1lBQ1QsV0FBVyxFQUFFLEtBQUs7U0FDckIsQ0FBQztRQUNGLEtBQUksQ0FBQyxrQkFBa0IsR0FBRyxLQUFJLENBQUMsa0JBQWtCLENBQUMsSUFBSSxDQUFDLEtBQUksQ0FBQyxDQUFDO1FBQzdELEtBQUksQ0FBQyxhQUFhLEdBQUcsS0FBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsS0FBSSxDQUFDLENBQUM7O0lBRXZELENBQUM7SUFFRCxvQ0FBYSxHQUFiO1FBQ0ksSUFBSSxDQUFDLFFBQVEsQ0FBQztZQUNWLFdBQVcsRUFBRSxJQUFJO1NBQ3BCLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCx5Q0FBa0IsR0FBbEIsVUFBbUIsSUFBUztRQUN4QixJQUFJLENBQUMsUUFBUSxDQUFDO1lBQ1YsV0FBVyxFQUFFLEtBQUs7U0FDckIsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELDZCQUFNLEdBQU47UUFDUyxJQUFBLG9DQUFXLENBQWU7UUFDL0IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDeEIsT0FBTyxDQUNIO1lBQ0ksb0JBQUMsNEJBQVEsSUFBQyxJQUFJLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLEVBQUUsUUFBUSxFQUFDLFdBQVc7Z0JBQ2pELG9CQUFDLDRCQUFRLENBQUMsSUFBSTtvQkFDVixvQkFBQyw0QkFBUSxDQUFDLElBQUk7O3dCQUNHOzs0QkFBSyxJQUFJLENBQUMsS0FBSyxDQUFDLEtBQUs7Z0NBQU0sQ0FDNUI7b0JBQ2hCLG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLElBQUksRUFBQyxZQUFZLEVBQUMsT0FBTyxFQUFFLElBQUksQ0FBQyxhQUFhLEdBQUc7b0JBQy9ELG9CQUFDLDRCQUFRLENBQUMsSUFBSSxJQUFDLEVBQUUsRUFBRSx1QkFBSSxFQUFFLEVBQUUsRUFBQyxRQUFRLGVBRXBCLENBQ0osQ0FDVDtZQUNWLFdBQVcsQ0FBQyxDQUFDO2dCQUNWLG9CQUFDLG1CQUFTLElBQUMsT0FBTyxFQUFFLFdBQVcsRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxLQUFLLEVBQUUsVUFBVSxFQUFFLElBQUksQ0FBQyxrQkFBa0IsR0FBRztnQkFDaEcsQ0FBQyxDQUFDLElBQUksQ0FHUixDQUNULENBQUM7SUFDTixDQUFDO0lBQ0wsbUJBQUM7QUFBRCxDQUFDLEFBaERELENBQTJCLEtBQUssQ0FBQyxTQUFTLEdBZ0R6QztBQUVELElBQU0sZUFBZSxHQUFHLFVBQUMsS0FBSyxJQUFLLE9BQUEsQ0FBQztJQUNoQyxJQUFJLEVBQUUsS0FBSyxDQUFDLElBQUk7SUFDaEIsS0FBSyxFQUFFLEtBQUssQ0FBQyxLQUFLO0NBQ3JCLENBQUMsRUFIaUMsQ0FHakMsQ0FBQztBQUVILGtCQUFlLHFCQUFPLENBQUMsZUFBZSxDQUFDLENBQUMsWUFBWSxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQge0Ryb3Bkb3dufSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5pbXBvcnQge0xpbmt9IGZyb20gXCJyZWFjdC1yb3V0ZXItZG9tXCI7XG5pbXBvcnQge2Nvbm5lY3R9IGZyb20gJ3JlYWN0LXJlZHV4JztcbmltcG9ydCBVc2VyTW9kYWwgZnJvbSAnLi4vbW9kYWxzL1VzZXJNb2RhbCc7XG5cbi8qXG4gICAgQ29tcG9uZW50IHVzZWQgdG8gY3JlYXRlIGEgZHJvcGRvd24gY29tcG9uZW50IGZvciBhbiBhdXRoZW50aWNhdGVkIHVzZXJcblxuICovXG5jbGFzcyBEcm9wZG93blVzZXIgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQ8YW55LCBhbnk+IHtcblxuICAgIGNvbnN0cnVjdG9yKHByb3BzOiBhbnkpIHtcbiAgICAgICAgc3VwZXIocHJvcHMpO1xuICAgICAgICB0aGlzLnN0YXRlID0ge1xuICAgICAgICAgICAgaW5mb1Zpc2libGU6IGZhbHNlXG4gICAgICAgIH07XG4gICAgICAgIHRoaXMuY2xvc2VNb2RhbENhbGxiYWNrID0gdGhpcy5jbG9zZU1vZGFsQ2FsbGJhY2suYmluZCh0aGlzKTtcbiAgICAgICAgdGhpcy5zaG93VXNlck1vZGFsID0gdGhpcy5zaG93VXNlck1vZGFsLmJpbmQodGhpcyk7XG5cbiAgICB9XG5cbiAgICBzaG93VXNlck1vZGFsKCkge1xuICAgICAgICB0aGlzLnNldFN0YXRlKHtcbiAgICAgICAgICAgIGluZm9WaXNpYmxlOiB0cnVlXG4gICAgICAgIH0pO1xuICAgIH1cblxuICAgIGNsb3NlTW9kYWxDYWxsYmFjayhkYXRhOiBhbnkpIHtcbiAgICAgICAgdGhpcy5zZXRTdGF0ZSh7XG4gICAgICAgICAgICBpbmZvVmlzaWJsZTogZmFsc2VcbiAgICAgICAgfSk7XG4gICAgfVxuXG4gICAgcmVuZGVyKCkge1xuICAgICAgICBsZXQge2luZm9WaXNpYmxlfSA9IHRoaXMuc3RhdGU7XG4gICAgICAgIGNvbnNvbGUubG9nKHRoaXMucHJvcHMpO1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8RHJvcGRvd24gdGV4dD17dGhpcy5wcm9wcy5uYW1lfSBwb2ludGluZz1cInRvcCByaWdodFwiPlxuICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uTWVudT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNpZ25lZCBpbiBhcyA8Yj4ge3RoaXMucHJvcHMubG9naW59IDwvYj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvRHJvcGRvd24uSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtIHRleHQ9J015IFByb2ZpbGUnIG9uQ2xpY2s9e3RoaXMuc2hvd1VzZXJNb2RhbH0vPlxuICAgICAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLkl0ZW0gYXM9e0xpbmt9IHRvPVwiL2xvZ2luXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgU2lnbiBvdXRcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvRHJvcGRvd24uSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgPC9Ecm9wZG93bi5NZW51PlxuICAgICAgICAgICAgICAgIDwvRHJvcGRvd24+XG4gICAgICAgICAgICAgICAge2luZm9WaXNpYmxlID9cbiAgICAgICAgICAgICAgICAgICAgPFVzZXJNb2RhbCB2aXNpYmxlPXtpbmZvVmlzaWJsZX0gbG9naW49e3RoaXMucHJvcHMubG9naW59IG9uQ2xvc2VfY2I9e3RoaXMuY2xvc2VNb2RhbENhbGxiYWNrfS8+XG4gICAgICAgICAgICAgICAgICAgIDogbnVsbFxuICAgICAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICk7XG4gICAgfVxufVxuXG5jb25zdCBtYXBTdGF0ZVRvUHJvcHMgPSAoc3RhdGUpID0+ICh7XG4gICAgbmFtZTogc3RhdGUubmFtZSxcbiAgICBsb2dpbjogc3RhdGUubG9naW5cbn0pO1xuXG5leHBvcnQgZGVmYXVsdCBjb25uZWN0KG1hcFN0YXRlVG9Qcm9wcykoRHJvcGRvd25Vc2VyKTsiXX0=
+},'src/dropdowns/DropdownUser.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","react-router-dom":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-router-dom/index.js","react-redux":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-redux/lib/index.js","../modals/UserModal":"/home/travis/build/dubious-developments/UnSHACLed/src/modals/UserModal.tsx","../persistence/dataAccessProvider":"/home/travis/build/dubious-developments/UnSHACLed/src/persistence/dataAccessProvider.ts"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRHJvcGRvd25Vc2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRHJvcGRvd25Vc2VyLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQTJDO0FBQzNDLHFEQUFzQztBQUN0QywyQ0FBb0M7QUFDcEMsaURBQTRDO0FBQzVDLHdFQUFxRTtBQUVyRTs7O0dBR0c7QUFDSDtJQUEyQixnQ0FBeUI7SUFFaEQsc0JBQVksS0FBVTtRQUF0QixZQUNJLGtCQUFNLEtBQUssQ0FBQyxTQVFmO1FBUEcsS0FBSSxDQUFDLEtBQUssR0FBRztZQUNULFdBQVcsRUFBRSxLQUFLO1NBQ3JCLENBQUM7UUFDRixLQUFJLENBQUMsa0JBQWtCLEdBQUcsS0FBSSxDQUFDLGtCQUFrQixDQUFDLElBQUksQ0FBQyxLQUFJLENBQUMsQ0FBQztRQUM3RCxLQUFJLENBQUMsYUFBYSxHQUFHLEtBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLEtBQUksQ0FBQyxDQUFDO1FBQ25ELEtBQUksQ0FBQyxrQkFBa0IsR0FBRyxLQUFJLENBQUMsa0JBQWtCLENBQUMsSUFBSSxDQUFDLEtBQUksQ0FBQyxDQUFDOztJQUVqRSxDQUFDO0lBRUQsb0NBQWEsR0FBYjtRQUNJLElBQUksQ0FBQyxRQUFRLENBQUM7WUFDVixXQUFXLEVBQUUsSUFBSTtTQUNwQixDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQseUNBQWtCLEdBQWxCLFVBQW1CLElBQVM7UUFDeEIsSUFBSSxDQUFDLFFBQVEsQ0FBQztZQUNWLFdBQVcsRUFBRSxLQUFLO1NBQ3JCLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRDs7O09BR0c7SUFDSCx5Q0FBa0IsR0FBbEI7UUFDSSxJQUFJLGFBQWEsR0FBRyx1Q0FBa0IsQ0FBQyxXQUFXLEVBQUUsQ0FBQyxnQkFBZ0IsRUFBRSxDQUFDO1FBQ3hFLGFBQWEsQ0FBQyxJQUFJLEVBQUUsQ0FBQztJQUN6QixDQUFDO0lBRUQsNkJBQU0sR0FBTjtRQUNTLElBQUEsb0NBQVcsQ0FBZTtRQUMvQixPQUFPLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUN4QixPQUFPLENBQ0g7WUFDSSxvQkFBQyw0QkFBUSxJQUFDLElBQUksRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksRUFBRSxRQUFRLEVBQUMsV0FBVztnQkFDakQsb0JBQUMsNEJBQVEsQ0FBQyxJQUFJO29CQUNWLG9CQUFDLDRCQUFRLENBQUMsSUFBSTs7d0JBQ0c7OzRCQUFLLElBQUksQ0FBQyxLQUFLLENBQUMsS0FBSztnQ0FBTSxDQUM1QjtvQkFDaEIsb0JBQUMsNEJBQVEsQ0FBQyxJQUFJLElBQUMsSUFBSSxFQUFDLFlBQVksRUFBQyxPQUFPLEVBQUUsSUFBSSxDQUFDLGFBQWEsR0FBRztvQkFDL0Qsb0JBQUMsNEJBQVEsQ0FBQyxJQUFJLElBQUMsRUFBRSxFQUFFLHVCQUFJLEVBQUUsRUFBRSxFQUFDLFFBQVEsRUFBQyxPQUFPLEVBQUUsSUFBSSxDQUFDLGtCQUFrQixlQUVyRCxDQUNKLENBQ1Q7WUFDVixXQUFXLENBQUMsQ0FBQztnQkFDVixvQkFBQyxtQkFBUyxJQUFDLE9BQU8sRUFBRSxXQUFXLEVBQUUsS0FBSyxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsS0FBSyxFQUFFLFVBQVUsRUFBRSxJQUFJLENBQUMsa0JBQWtCLEdBQUc7Z0JBQ2hHLENBQUMsQ0FBQyxJQUFJLENBR1IsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLG1CQUFDO0FBQUQsQ0FBQyxBQTFERCxDQUEyQixLQUFLLENBQUMsU0FBUyxHQTBEekM7QUFFRCxJQUFNLGVBQWUsR0FBRyxVQUFDLEtBQUssSUFBSyxPQUFBLENBQUM7SUFDaEMsSUFBSSxFQUFFLEtBQUssQ0FBQyxJQUFJO0lBQ2hCLEtBQUssRUFBRSxLQUFLLENBQUMsS0FBSztDQUNyQixDQUFDLEVBSGlDLENBR2pDLENBQUM7QUFFSCxrQkFBZSxxQkFBTyxDQUFDLGVBQWUsQ0FBQyxDQUFDLFlBQVksQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtEcm9wZG93bn0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuaW1wb3J0IHtMaW5rfSBmcm9tIFwicmVhY3Qtcm91dGVyLWRvbVwiO1xuaW1wb3J0IHtjb25uZWN0fSBmcm9tICdyZWFjdC1yZWR1eCc7XG5pbXBvcnQgVXNlck1vZGFsIGZyb20gJy4uL21vZGFscy9Vc2VyTW9kYWwnO1xuaW1wb3J0IHtEYXRhQWNjZXNzUHJvdmlkZXJ9IGZyb20gXCIuLi9wZXJzaXN0ZW5jZS9kYXRhQWNjZXNzUHJvdmlkZXJcIjtcblxuLypcbiAgICBDb21wb25lbnQgdXNlZCB0byBjcmVhdGUgYSBkcm9wZG93biBjb21wb25lbnQgZm9yIGFuIGF1dGhlbnRpY2F0ZWQgdXNlclxuXG4gKi9cbmNsYXNzIERyb3Bkb3duVXNlciBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgY29uc3RydWN0b3IocHJvcHM6IGFueSkge1xuICAgICAgICBzdXBlcihwcm9wcyk7XG4gICAgICAgIHRoaXMuc3RhdGUgPSB7XG4gICAgICAgICAgICBpbmZvVmlzaWJsZTogZmFsc2VcbiAgICAgICAgfTtcbiAgICAgICAgdGhpcy5jbG9zZU1vZGFsQ2FsbGJhY2sgPSB0aGlzLmNsb3NlTW9kYWxDYWxsYmFjay5iaW5kKHRoaXMpO1xuICAgICAgICB0aGlzLnNob3dVc2VyTW9kYWwgPSB0aGlzLnNob3dVc2VyTW9kYWwuYmluZCh0aGlzKTtcbiAgICAgICAgdGhpcy5zdG9wUG9sbGluZ1NlcnZpY2UgPSB0aGlzLnN0b3BQb2xsaW5nU2VydmljZS5iaW5kKHRoaXMpO1xuXG4gICAgfVxuXG4gICAgc2hvd1VzZXJNb2RhbCgpIHtcbiAgICAgICAgdGhpcy5zZXRTdGF0ZSh7XG4gICAgICAgICAgICBpbmZvVmlzaWJsZTogdHJ1ZVxuICAgICAgICB9KTtcbiAgICB9XG5cbiAgICBjbG9zZU1vZGFsQ2FsbGJhY2soZGF0YTogYW55KSB7XG4gICAgICAgIHRoaXMuc2V0U3RhdGUoe1xuICAgICAgICAgICAgaW5mb1Zpc2libGU6IGZhbHNlXG4gICAgICAgIH0pO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIE1ldGhvZCB0aGF0IHdpbGwgaW52b2tlIHRoZSBiYWNrZWRuIGFuZCBzdG9wIGFsbCBwb2xsaW5nIHNlcnZpY2VzXG4gICAgICogQHJldHVybjogbm9uZVxuICAgICAqL1xuICAgIHN0b3BQb2xsaW5nU2VydmljZSgpIHtcbiAgICAgICAgbGV0IHJlbW90ZWZpbGVEQU8gPSBEYXRhQWNjZXNzUHJvdmlkZXIuZ2V0SW5zdGFuY2UoKS5nZXRSZW1vdGVGaWxlREFPKCk7XG4gICAgICAgIHJlbW90ZWZpbGVEQU8uc3RvcCgpO1xuICAgIH1cblxuICAgIHJlbmRlcigpIHtcbiAgICAgICAgbGV0IHtpbmZvVmlzaWJsZX0gPSB0aGlzLnN0YXRlO1xuICAgICAgICBjb25zb2xlLmxvZyh0aGlzLnByb3BzKTtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPERyb3Bkb3duIHRleHQ9e3RoaXMucHJvcHMubmFtZX0gcG9pbnRpbmc9XCJ0b3AgcmlnaHRcIj5cbiAgICAgICAgICAgICAgICAgICAgPERyb3Bkb3duLk1lbnU+XG4gICAgICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBTaWduZWQgaW4gYXMgPGI+IHt0aGlzLnByb3BzLmxvZ2lufSA8L2I+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0Ryb3Bkb3duLkl0ZW0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8RHJvcGRvd24uSXRlbSB0ZXh0PSdNeSBQcm9maWxlJyBvbkNsaWNrPXt0aGlzLnNob3dVc2VyTW9kYWx9Lz5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxEcm9wZG93bi5JdGVtIGFzPXtMaW5rfSB0bz1cIi9sb2dpblwiIG9uQ2xpY2s9e3RoaXMuc3RvcFBvbGxpbmdTZXJ2aWNlfT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBTaWduIG91dFxuICAgICAgICAgICAgICAgICAgICAgICAgPC9Ecm9wZG93bi5JdGVtPlxuICAgICAgICAgICAgICAgICAgICA8L0Ryb3Bkb3duLk1lbnU+XG4gICAgICAgICAgICAgICAgPC9Ecm9wZG93bj5cbiAgICAgICAgICAgICAgICB7aW5mb1Zpc2libGUgP1xuICAgICAgICAgICAgICAgICAgICA8VXNlck1vZGFsIHZpc2libGU9e2luZm9WaXNpYmxlfSBsb2dpbj17dGhpcy5wcm9wcy5sb2dpbn0gb25DbG9zZV9jYj17dGhpcy5jbG9zZU1vZGFsQ2FsbGJhY2t9Lz5cbiAgICAgICAgICAgICAgICAgICAgOiBudWxsXG4gICAgICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmNvbnN0IG1hcFN0YXRlVG9Qcm9wcyA9IChzdGF0ZSkgPT4gKHtcbiAgICBuYW1lOiBzdGF0ZS5uYW1lLFxuICAgIGxvZ2luOiBzdGF0ZS5sb2dpblxufSk7XG5cbmV4cG9ydCBkZWZhdWx0IGNvbm5lY3QobWFwU3RhdGVUb1Byb3BzKShEcm9wZG93blVzZXIpOyJdfQ==
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 12:28:49 GMT+0000 (UTC)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 21 2018 14:52:48 GMT+0000 (UTC)
 </div>
 </div>
 <script src="../../prettify.js"></script>
