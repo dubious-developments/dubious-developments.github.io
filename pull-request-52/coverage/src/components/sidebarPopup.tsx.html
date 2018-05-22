@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/sidebarPopup.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> sidebarPopup.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.23% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.46% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.73% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/components/sidebarPopup.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var semantic_ui_react_1 = require("semantic-ui-react");
+/**
+ Component used to create pop-up for draggable elements within the sidebar
+ Requires several props from the parent, which can be found in interfaces.d.ts
+&nbsp;
+ */
+var SidebarPopup = /** @class */ (function (_super) {
+    __extends(SidebarPopup, _super);
+    /**
+     * Constructor of component
+     * @param props
+     */
+<span class="fstat-no" title="function not covered" >    function SidebarPopup(props) {</span>
+<span class="cstat-no" title="statement not covered" >        return _super.call(this, props) || this;</span>
+    }
+    /** Render component **/
+    SidebarPopup.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var str = this.props.header_title;</span>
+<span class="cstat-no" title="statement not covered" >        var preview = require('../img/' + str.replace(/ /g, '') + '.png');</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement(semantic_ui_react_1.Popup, { trigger: this.props.trigger, hoverable: true, size: this.props.p_size, position: this.props.p_position, inverted: true, style: {</span>
+                padding: '0'
+            } },
+            React.createElement(semantic_ui_react_1.Segment, { basic: true, compact: true, textAlign: "center" },
+                React.createElement(semantic_ui_react_1.Header, { as: 'h4' },
+                    " ",
+                    this.props.header_title,
+                    " "),
+                React.createElement(semantic_ui_react_1.Divider, null),
+                React.createElement(semantic_ui_react_1.Image, { src: preview, size: "tiny", centered: true }))));
+    };
+    return SidebarPopup;
+}(React.Component));
+exports.default = SidebarPopup;
+&nbsp;
+},'src/components/sidebarPopup.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","./interfaces/interfaces":"/home/travis/build/dubious-developments/UnSHACLed/src/components/interfaces/interfaces.d.ts"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2lkZWJhclBvcHVwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsic2lkZWJhclBvcHVwLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSw2QkFBK0I7QUFDL0IsdURBQXlFO0FBR3pFOzs7O0dBSUc7QUFDSDtJQUEyQixnQ0FBdUM7SUFFOUQ7OztPQUdHO0lBQ0gsc0JBQVksS0FBVTtlQUNsQixrQkFBTSxLQUFLLENBQUM7SUFDaEIsQ0FBQztJQUVELHdCQUF3QjtJQUN4Qiw2QkFBTSxHQUFOO1FBQ0ksSUFBSSxHQUFHLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxZQUFZLENBQUM7UUFDbEMsSUFBTSxPQUFPLEdBQUcsT0FBTyxDQUFDLFNBQVMsR0FBRyxHQUFHLENBQUMsT0FBTyxDQUFDLElBQUksRUFBRSxFQUFFLENBQUMsR0FBRyxNQUFNLENBQUMsQ0FBQztRQUNwRSxPQUFPLENBQ0gsb0JBQUMseUJBQUssSUFDRixPQUFPLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxPQUFPLEVBQzNCLFNBQVMsRUFBRSxJQUFJLEVBQ2YsSUFBSSxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsTUFBTSxFQUN2QixRQUFRLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxVQUFVLEVBQy9CLFFBQVEsRUFBRSxJQUFJLEVBQ2QsS0FBSyxFQUFFO2dCQUNILE9BQU8sRUFBRSxHQUFHO2FBQ2Y7WUFFRCxvQkFBQywyQkFBTyxJQUFDLEtBQUssRUFBRSxJQUFJLEVBQUUsT0FBTyxFQUFFLElBQUksRUFBRSxTQUFTLEVBQUMsUUFBUTtnQkFDbkQsb0JBQUMsMEJBQU0sSUFBQyxFQUFFLEVBQUMsSUFBSTs7b0JBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxZQUFZO3dCQUFXO2dCQUNwRCxvQkFBQywyQkFBTyxPQUFFO2dCQUNWLG9CQUFDLHlCQUFLLElBQ0YsR0FBRyxFQUFFLE9BQU8sRUFDWixJQUFJLEVBQUMsTUFBTSxFQUNYLFFBQVEsRUFBRSxJQUFJLEdBQ2hCLENBQ0ksQ0FDTixDQUNYLENBQUM7SUFDTixDQUFDO0lBQ0wsbUJBQUM7QUFBRCxDQUFDLEFBckNELENBQTJCLEtBQUssQ0FBQyxTQUFTLEdBcUN6QztBQUVELGtCQUFlLFlBQVksQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7UG9wdXAsIFNlZ21lbnQsIEhlYWRlciwgRGl2aWRlciwgSW1hZ2V9IGZyb20gJ3NlbWFudGljLXVpLXJlYWN0JztcbmltcG9ydCB7U2lkZWJhclBvcHVwUHJvcHN9IGZyb20gJy4vaW50ZXJmYWNlcy9pbnRlcmZhY2VzJztcblxuLyoqXG4gQ29tcG9uZW50IHVzZWQgdG8gY3JlYXRlIHBvcC11cCBmb3IgZHJhZ2dhYmxlIGVsZW1lbnRzIHdpdGhpbiB0aGUgc2lkZWJhclxuIFJlcXVpcmVzIHNldmVyYWwgcHJvcHMgZnJvbSB0aGUgcGFyZW50LCB3aGljaCBjYW4gYmUgZm91bmQgaW4gaW50ZXJmYWNlcy5kLnRzXG5cbiAqL1xuY2xhc3MgU2lkZWJhclBvcHVwIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PFNpZGViYXJQb3B1cFByb3BzLCBhbnk+IHtcblxuICAgIC8qKlxuICAgICAqIENvbnN0cnVjdG9yIG9mIGNvbXBvbmVudFxuICAgICAqIEBwYXJhbSBwcm9wc1xuICAgICAqL1xuICAgIGNvbnN0cnVjdG9yKHByb3BzOiBhbnkpIHtcbiAgICAgICAgc3VwZXIocHJvcHMpO1xuICAgIH1cblxuICAgIC8qKiBSZW5kZXIgY29tcG9uZW50ICoqL1xuICAgIHJlbmRlcigpIHtcbiAgICAgICAgbGV0IHN0ciA9IHRoaXMucHJvcHMuaGVhZGVyX3RpdGxlO1xuICAgICAgICBjb25zdCBwcmV2aWV3ID0gcmVxdWlyZSgnLi4vaW1nLycgKyBzdHIucmVwbGFjZSgvIC9nLCAnJykgKyAnLnBuZycpO1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPFBvcHVwXG4gICAgICAgICAgICAgICAgdHJpZ2dlcj17dGhpcy5wcm9wcy50cmlnZ2VyfVxuICAgICAgICAgICAgICAgIGhvdmVyYWJsZT17dHJ1ZX1cbiAgICAgICAgICAgICAgICBzaXplPXt0aGlzLnByb3BzLnBfc2l6ZX1cbiAgICAgICAgICAgICAgICBwb3NpdGlvbj17dGhpcy5wcm9wcy5wX3Bvc2l0aW9ufVxuICAgICAgICAgICAgICAgIGludmVydGVkPXt0cnVlfVxuICAgICAgICAgICAgICAgIHN0eWxlPXt7XG4gICAgICAgICAgICAgICAgICAgIHBhZGRpbmc6ICcwJ1xuICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPFNlZ21lbnQgYmFzaWM9e3RydWV9IGNvbXBhY3Q9e3RydWV9IHRleHRBbGlnbj1cImNlbnRlclwiPlxuICAgICAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoNCc+IHt0aGlzLnByb3BzLmhlYWRlcl90aXRsZX0gPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgICAgIDxEaXZpZGVyLz5cbiAgICAgICAgICAgICAgICAgICAgPEltYWdlXG4gICAgICAgICAgICAgICAgICAgICAgICBzcmM9e3ByZXZpZXd9XG4gICAgICAgICAgICAgICAgICAgICAgICBzaXplPVwidGlueVwiXG4gICAgICAgICAgICAgICAgICAgICAgICBjZW50ZXJlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICA8L1NlZ21lbnQ+XG4gICAgICAgICAgICA8L1BvcHVwPlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgU2lkZWJhclBvcHVwOyJdfQ==
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 22 2018 09:53:40 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

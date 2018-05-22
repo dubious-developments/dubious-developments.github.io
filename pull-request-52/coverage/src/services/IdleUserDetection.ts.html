@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/services/IdleUserDetection.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/services/</a> IdleUserDetection.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.64% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/11</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/services/IdleUserDetection.ts']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * This class is used to store the time since the last user action
+ * A user action is a click or a key pressed
+ */
+var IdleUserDetection = /** @class */ (function () {
+<span class="fstat-no" title="function not covered" >    function IdleUserDetection(ms) {</span>
+<span class="cstat-no" title="statement not covered" >        this.ms = ms;</span>
+    }
+    /**
+     * @param f the function to execute when the user becomes idle
+     */
+    IdleUserDetection.prototype.userAction = <span class="fstat-no" title="function not covered" >function (f) {</span>
+        // remove previous timeouts by user action
+<span class="cstat-no" title="statement not covered" >        if (this.plannedTimeout) {</span>
+<span class="cstat-no" title="statement not covered" >            clearTimeout(this.plannedTimeout);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.plannedTimeout = setTimeout(f, this.ms);</span>
+    };
+    return IdleUserDetection;
+}());
+exports.default = IdleUserDetection;
+&nbsp;
+},'src/services/IdleUserDetection.ts',{}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSWRsZVVzZXJEZXRlY3Rpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJJZGxlVXNlckRldGVjdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBOzs7R0FHRztBQUNIO0lBU0ksMkJBQVksRUFBVTtRQUNsQixJQUFJLENBQUMsRUFBRSxHQUFHLEVBQUUsQ0FBQztJQUNqQixDQUFDO0lBRUQ7O09BRUc7SUFDSSxzQ0FBVSxHQUFqQixVQUFrQixDQUFlO1FBQzdCLDBDQUEwQztRQUMxQyxJQUFJLElBQUksQ0FBQyxjQUFjLEVBQUU7WUFDckIsWUFBWSxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsQ0FBQztTQUNyQztRQUVELElBQUksQ0FBQyxjQUFjLEdBQUcsVUFBVSxDQUFDLENBQUMsRUFBRSxJQUFJLENBQUMsRUFBRSxDQUFDLENBQUM7SUFDakQsQ0FBQztJQUVMLHdCQUFDO0FBQUQsQ0FBQyxBQXpCRCxJQXlCQyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogVGhpcyBjbGFzcyBpcyB1c2VkIHRvIHN0b3JlIHRoZSB0aW1lIHNpbmNlIHRoZSBsYXN0IHVzZXIgYWN0aW9uXG4gKiBBIHVzZXIgYWN0aW9uIGlzIGEgY2xpY2sgb3IgYSBrZXkgcHJlc3NlZFxuICovXG5leHBvcnQgZGVmYXVsdCBjbGFzcyBJZGxlVXNlckRldGVjdGlvbiB7XG5cbiAgICAvLyBudW1iZXIgb2YgbWlsbGlzZWNvbmRzIHVzZXIgbmVlZHMgdG8gYmUgaW5hY3RpdmVcbiAgICAvLyBwcml2YXRlIG1zOiBudW1iZXIgPSAyMDAwO1xuICAgIHByaXZhdGUgbXM6IG51bWJlcjtcblxuICAgIC8vIHRoZSB0aW1lb3V0XG4gICAgcHJpdmF0ZSBwbGFubmVkVGltZW91dDogYW55O1xuXG4gICAgY29uc3RydWN0b3IobXM6IG51bWJlcikge1xuICAgICAgICB0aGlzLm1zID0gbXM7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogQHBhcmFtIGYgdGhlIGZ1bmN0aW9uIHRvIGV4ZWN1dGUgd2hlbiB0aGUgdXNlciBiZWNvbWVzIGlkbGVcbiAgICAgKi9cbiAgICBwdWJsaWMgdXNlckFjdGlvbihmOiAoKCkgPT4gdm9pZCkpOiB2b2lkIHtcbiAgICAgICAgLy8gcmVtb3ZlIHByZXZpb3VzIHRpbWVvdXRzIGJ5IHVzZXIgYWN0aW9uXG4gICAgICAgIGlmICh0aGlzLnBsYW5uZWRUaW1lb3V0KSB7XG4gICAgICAgICAgICBjbGVhclRpbWVvdXQodGhpcy5wbGFubmVkVGltZW91dCk7XG4gICAgICAgIH1cblxuICAgICAgICB0aGlzLnBsYW5uZWRUaW1lb3V0ID0gc2V0VGltZW91dChmLCB0aGlzLm1zKTtcbiAgICB9XG5cbn1cbiJdfQ==
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 22 2018 09:53:40 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

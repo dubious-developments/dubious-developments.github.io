@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pages/sections/Section2.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/pages/sections/</a> Section2.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.43% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.61% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/31</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section2.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var semantic_ui_react_1 = require("semantic-ui-react");
+/**
+ * Component containing the second section of the user manual.
+ */
+var Section2 = /** @class */ (function (_super) {
+    __extends(Section2, _super);
+<span class="fstat-no" title="function not covered" >    function Section2() {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.imgMargin = {</span>
+            marginTop: '1em',
+            marginBottom: '1em'
+        };
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    /** Render component **/
+    Section2.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var s21 = require('../../img/user_manual/s2_1.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s22 = require('../../img/user_manual/s2_2.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s23 = require('../../img/user_manual/s2_3.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s24 = require('../../img/user_manual/s2_4.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s25 = require('../../img/user_manual/s2_5.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s26 = require('../../img/user_manual/s2_6.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s27 = require('../../img/user_manual/s2_7.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s28 = require('../../img/user_manual/s2_8.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s29 = require('../../img/user_manual/s2_9.png');</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement("div", { style: { marginTop: '2em' }, id: "2" },</span>
+            React.createElement(semantic_ui_react_1.Header, { as: "h1" }, " Getting Started "),
+            React.createElement("p", null, " To be able to use the UnSHACLed editor, you must create an account at first. The following sections will aide the end user in setting up such an account, signing in with the account and signing out from the editor."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "2.1" }, " Create an account "),
+            React.createElement("p", null,
+                "The first step in joining UnSHACLed is creating an account to authenticate. This account enables the end user to remotely store or fetch files and work collaboratively with others. To create an account on arrival on our home page, click the sign-up button as indicated in the figure below. The following will guide you through the process of ",
+                React.createElement("b", null, " creating an account "),
+                "."),
+            React.createElement(semantic_ui_react_1.Image, { src: s22, centered: true, style: this.imgMargin, size: "big" }),
+            React.createElement("p", null, "After doing so, you will arrive at the sign-up page as illustrated below:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s23, centered: true, style: this.imgMargin, size: "big" }),
+            React.createElement("p", null, "The sign-up is designed to assist the user in creating an account as much as possible. UnSHACLed accounts are powered by GitHub, as we use git for all our remote interactions through our server. All instructions are at the sign-up page itself, but will be repeated here once more. To create an account, click the 'Sign up for GitHub' button below. This will bring you to the sign-up page of GitHub which should look like the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s24, centered: true, style: this.imgMargin, size: "big" }),
+            React.createElement("p", null, "The next step in creating an account is picking a username, an email and a password. As you can see in the figure above, GitHub requires some rules on each of these elements. First of all you need to pick a username that is still available on GitHub. Next, a valid e-mail address should be specified as this will be needed to validate your account afterwards. Finally the password you choose, should contain at least one lowercase letter, one numeral and at least seven characters. After picking three valid fields to create your account, press the 'Create an account' button at the bottom of the page. From here on you will need to complete two more steps to create your account. These steps are rather trivial as they include only filling in some user informationn"),
+            React.createElement("p", null, "After successfully setting up your account, you can go to the login page, to authenticate yourself with UnSHACLed. To do so follow the links in the text (first paragraph or Step 4) to the login page. For more information on how to login, see the 'Login to UnSHACLed' section."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "2.2" }, " Login to UnSHACLed "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " creating an account "),
+                "."),
+            React.createElement("p", null, " After you successfully set up an account to login, you can navigate to the login-page by clicking the 'Login' button on our home page as indicated in the figure below. If you do not have an account yet, please consult the section on how to 'Create an account' first."),
+            React.createElement(semantic_ui_react_1.Image, { src: s21, centered: true, style: this.imgMargin, size: "big" }),
+            React.createElement("p", null, "Next you will arrive at the login page which should like the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s25, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, "To be able to log into our UnSHACLed editor, you have to authenticate yourself first. The first step in doing so, is clicking the 'Sign in' button. This will open a pop-up window where you are able to login with your account credentials. An example of how such a pop-up should like is given below. If you do not have an account, you can click the 'Sign-up' button. This will navigate you to the sign-up page allowing you set up an account as described in the 'Create an account' section."),
+            React.createElement(semantic_ui_react_1.Image, { src: s27, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, "Next, login with your account credentials through GitHub as illustrated in the figure above. When you are ready, click the 'Sign in' button to authenticate. If your credentials were correct, you will see a confirmation message, indicating you successfully authenticated to our server. This message could va ry, but should look like the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s28, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, "After successfully completing the authentication, you can close the pop-up window and return to the UnSHACLed editor. To start editing, you simply click the 'Start editing button'. If you are authenticated, this action will navigate you to the workspace where you are all set to go. If not, the authentication failed and following error message should be displayed:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s26, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, "If you see this message, please try to authenticate again."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "2.3" }, " Logout "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " logging out from the editor "),
+                "."),
+            React.createElement("p", null, "If you are done editing, or want to switch to a different account you can log out from the editor. To logout, click the user info drop down in the right corner of the top toolbar. This will bring up the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s29, centered: true, style: this.imgMargin, size: "small" }),
+            React.createElement("p", null, "To logout, you simply click the 'Sign out' option. This will navigate you back to the login page after which you are successfully logged out. If you want to login with another account, please read the section on how to 'Login to UnSHACLed'.")));
+    };
+    return Section2;
+}(React.Component));
+exports.default = Section2;
+&nbsp;
+},'src/pages/sections/Section2.tsx',{"../../img/user_manual/s2_1.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s2_1.png","../../img/user_manual/s2_2.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s2_2.png","../../img/user_manual/s2_3.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s2_3.png","../../img/user_manual/s2_4.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s2_4.png","../../img/user_manual/s2_5.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s2_5.png","../../img/user_manual/s2_6.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s2_6.png","../../img/user_manual/s2_7.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s2_7.png","../../img/user_manual/s2_8.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s2_8.png","../../img/user_manual/s2_9.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s2_9.png","react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2VjdGlvbjIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTZWN0aW9uMi50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUFnRDtBQUVoRDs7R0FFRztBQUNIO0lBQXVCLDRCQUF5QjtJQUFoRDtRQUFBLHFFQTBIQztRQXZIRyxlQUFTLEdBQUc7WUFDUixTQUFTLEVBQUUsS0FBSztZQUNoQixZQUFZLEVBQUUsS0FBSztTQUN0QixDQUFDOztJQW9ITixDQUFDO0lBbEhHLHdCQUF3QjtJQUN4Qix5QkFBTSxHQUFOO1FBQ0ksSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsT0FBTyxDQUNILDZCQUFLLEtBQUssRUFBRSxFQUFDLFNBQVMsRUFBRSxLQUFLLEVBQUMsRUFBRSxFQUFFLEVBQUMsR0FBRztZQUNsQyxvQkFBQywwQkFBTSxJQUFDLEVBQUUsRUFBQyxJQUFJLHdCQUEyQjtZQUMxQyx5UEFHSTtZQUlKLG9CQUFDLDBCQUFNLElBQUMsRUFBRSxFQUFDLElBQUksRUFBQyxLQUFLLEVBQUMsTUFBTSxFQUFDLEVBQUUsRUFBQyxLQUFLLDBCQUE2QjtZQUNsRTs7Z0JBSXdELHVEQUE0QjtvQkFDaEY7WUFDSixvQkFBQyx5QkFBSyxJQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsUUFBUSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLFNBQVMsRUFBRSxJQUFJLEVBQUMsS0FBSyxHQUFFO1lBQ3BFLDJHQUVJO1lBQ0osb0JBQUMseUJBQUssSUFBQyxHQUFHLEVBQUUsR0FBRyxFQUFFLFFBQVEsRUFBRSxJQUFJLEVBQUUsS0FBSyxFQUFFLElBQUksQ0FBQyxTQUFTLEVBQUUsSUFBSSxFQUFDLEtBQUssR0FBRTtZQUNwRSxxZEFNSTtZQUNKLG9CQUFDLHlCQUFLLElBQUMsR0FBRyxFQUFFLEdBQUcsRUFBRSxRQUFRLEVBQUUsSUFBSSxFQUFFLEtBQUssRUFBRSxJQUFJLENBQUMsU0FBUyxFQUFFLElBQUksRUFBQyxLQUFLLEdBQUU7WUFDcEUsZ3lCQVNJO1lBQ0oscVRBSUk7WUFJSixvQkFBQywwQkFBTSxJQUFDLEVBQUUsRUFBQyxJQUFJLEVBQUMsS0FBSyxFQUFDLE1BQU0sRUFBQyxFQUFFLEVBQUMsS0FBSywyQkFBOEI7WUFDbkU7O2dCQUF3RCx1REFBNEI7b0JBQUs7WUFDekYsNlNBR0k7WUFDSixvQkFBQyx5QkFBSyxJQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsUUFBUSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLFNBQVMsRUFBRSxJQUFJLEVBQUMsS0FBSyxHQUFFO1lBQ3BFLHlHQUVJO1lBQ0osb0JBQUMseUJBQUssSUFBQyxHQUFHLEVBQUUsR0FBRyxFQUFFLFFBQVEsRUFBRSxJQUFJLEVBQUUsS0FBSyxFQUFFLElBQUksQ0FBQyxTQUFTLEdBQUc7WUFDekQseWdCQU9JO1lBQ0osb0JBQUMseUJBQUssSUFBQyxHQUFHLEVBQUUsR0FBRyxFQUFFLFFBQVEsRUFBRSxJQUFJLEVBQUUsS0FBSyxFQUFFLElBQUksQ0FBQyxTQUFTLEdBQUc7WUFDekQsNFhBS0k7WUFDSixvQkFBQyx5QkFBSyxJQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsUUFBUSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLFNBQVMsR0FBRztZQUN6RCwrWUFLSTtZQUNKLG9CQUFDLHlCQUFLLElBQUMsR0FBRyxFQUFFLEdBQUcsRUFBRSxRQUFRLEVBQUUsSUFBSSxFQUFFLEtBQUssRUFBRSxJQUFJLENBQUMsU0FBUyxHQUFHO1lBQ3pELDRGQUVJO1lBR0osb0JBQUMsMEJBQU0sSUFBQyxFQUFFLEVBQUMsSUFBSSxFQUFDLEtBQUssRUFBQyxNQUFNLEVBQUMsRUFBRSxFQUFDLEtBQUssZUFBa0I7WUFDdkQ7O2dCQUF3RCwrREFBb0M7b0JBQUs7WUFDakcsdVBBSUk7WUFDSixvQkFBQyx5QkFBSyxJQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsUUFBUSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLFNBQVMsRUFBRSxJQUFJLEVBQUMsT0FBTyxHQUFFO1lBQ3RFLGtSQUlJLENBQ0YsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLGVBQUM7QUFBRCxDQUFDLEFBMUhELENBQXVCLEtBQUssQ0FBQyxTQUFTLEdBMEhyQztBQUVELGtCQUFlLFFBQVEsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7SGVhZGVyLCBJbWFnZX0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuXG4vKipcbiAqIENvbXBvbmVudCBjb250YWluaW5nIHRoZSBzZWNvbmQgc2VjdGlvbiBvZiB0aGUgdXNlciBtYW51YWwuXG4gKi9cbmNsYXNzIFNlY3Rpb24yIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50PGFueSwgYW55PiB7XG5cbiAgICBjb25zdDtcbiAgICBpbWdNYXJnaW4gPSB7XG4gICAgICAgIG1hcmdpblRvcDogJzFlbScsXG4gICAgICAgIG1hcmdpbkJvdHRvbTogJzFlbSdcbiAgICB9O1xuXG4gICAgLyoqIFJlbmRlciBjb21wb25lbnQgKiovXG4gICAgcmVuZGVyKCkge1xuICAgICAgICBjb25zdCBzMjEgPSByZXF1aXJlKCcuLi8uLi9pbWcvdXNlcl9tYW51YWwvczJfMS5wbmcnKTtcbiAgICAgICAgY29uc3QgczIyID0gcmVxdWlyZSgnLi4vLi4vaW1nL3VzZXJfbWFudWFsL3MyXzIucG5nJyk7XG4gICAgICAgIGNvbnN0IHMyMyA9IHJlcXVpcmUoJy4uLy4uL2ltZy91c2VyX21hbnVhbC9zMl8zLnBuZycpO1xuICAgICAgICBjb25zdCBzMjQgPSByZXF1aXJlKCcuLi8uLi9pbWcvdXNlcl9tYW51YWwvczJfNC5wbmcnKTtcbiAgICAgICAgY29uc3QgczI1ID0gcmVxdWlyZSgnLi4vLi4vaW1nL3VzZXJfbWFudWFsL3MyXzUucG5nJyk7XG4gICAgICAgIGNvbnN0IHMyNiA9IHJlcXVpcmUoJy4uLy4uL2ltZy91c2VyX21hbnVhbC9zMl82LnBuZycpO1xuICAgICAgICBjb25zdCBzMjcgPSByZXF1aXJlKCcuLi8uLi9pbWcvdXNlcl9tYW51YWwvczJfNy5wbmcnKTtcbiAgICAgICAgY29uc3QgczI4ID0gcmVxdWlyZSgnLi4vLi4vaW1nL3VzZXJfbWFudWFsL3MyXzgucG5nJyk7XG4gICAgICAgIGNvbnN0IHMyOSA9IHJlcXVpcmUoJy4uLy4uL2ltZy91c2VyX21hbnVhbC9zMl85LnBuZycpO1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBzdHlsZT17e21hcmdpblRvcDogJzJlbSd9fSBpZD1cIjJcIj5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPVwiaDFcIj4gR2V0dGluZyBTdGFydGVkIDwvSGVhZGVyPlxuICAgICAgICAgICAgICAgIDxwPiBUbyBiZSBhYmxlIHRvIHVzZSB0aGUgVW5TSEFDTGVkIGVkaXRvciwgeW91IG11c3QgY3JlYXRlIGFuIGFjY291bnQgYXQgZmlyc3QuIFRoZSBmb2xsb3dpbmcgc2VjdGlvbnNcbiAgICAgICAgICAgICAgICAgICAgd2lsbCBhaWRlIHRoZSBlbmQgdXNlciBpbiBzZXR0aW5nIHVwIHN1Y2ggYW4gYWNjb3VudCwgc2lnbmluZyBpbiB3aXRoIHRoZSBhY2NvdW50IGFuZCBzaWduaW5nIG91dFxuICAgICAgICAgICAgICAgICAgICBmcm9tIHRoZSBlZGl0b3IuXG4gICAgICAgICAgICAgICAgPC9wPlxuXG4gICAgICAgICAgICAgICAgey8qKiBDcmVhdGUgYW4gYWNjb3VudCAqKi99XG5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoMicgY29sb3I9XCJ0ZWFsXCIgaWQ9XCIyLjFcIj4gQ3JlYXRlIGFuIGFjY291bnQgPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIFRoZSBmaXJzdCBzdGVwIGluIGpvaW5pbmcgVW5TSEFDTGVkIGlzIGNyZWF0aW5nIGFuIGFjY291bnQgdG8gYXV0aGVudGljYXRlLiBUaGlzIGFjY291bnQgZW5hYmxlc1xuICAgICAgICAgICAgICAgICAgICB0aGUgZW5kIHVzZXIgdG8gcmVtb3RlbHkgc3RvcmUgb3IgZmV0Y2ggZmlsZXMgYW5kIHdvcmsgY29sbGFib3JhdGl2ZWx5IHdpdGggb3RoZXJzLiBUbyBjcmVhdGUgYW5cbiAgICAgICAgICAgICAgICAgICAgYWNjb3VudCBvbiBhcnJpdmFsIG9uIG91ciBob21lIHBhZ2UsIGNsaWNrIHRoZSBzaWduLXVwIGJ1dHRvbiBhcyBpbmRpY2F0ZWQgaW4gdGhlIGZpZ3VyZSBiZWxvdy5cbiAgICAgICAgICAgICAgICAgICAgVGhlIGZvbGxvd2luZyB3aWxsIGd1aWRlIHlvdSB0aHJvdWdoIHRoZSBwcm9jZXNzIG9mIDxiPiBjcmVhdGluZyBhbiBhY2NvdW50IDwvYj4uXG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MyMn0gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0gc2l6ZT1cImJpZ1wiLz5cbiAgICAgICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgICAgICAgQWZ0ZXIgZG9pbmcgc28sIHlvdSB3aWxsIGFycml2ZSBhdCB0aGUgc2lnbi11cCBwYWdlIGFzIGlsbHVzdHJhdGVkIGJlbG93OlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMjN9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59IHNpemU9XCJiaWdcIi8+XG4gICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIFRoZSBzaWduLXVwIGlzIGRlc2lnbmVkIHRvIGFzc2lzdCB0aGUgdXNlciBpbiBjcmVhdGluZyBhbiBhY2NvdW50IGFzIG11Y2ggYXMgcG9zc2libGUuIFVuU0hBQ0xlZFxuICAgICAgICAgICAgICAgICAgICBhY2NvdW50cyBhcmUgcG93ZXJlZCBieSBHaXRIdWIsIGFzIHdlIHVzZSBnaXQgZm9yIGFsbCBvdXIgcmVtb3RlIGludGVyYWN0aW9ucyB0aHJvdWdoIG91ciBzZXJ2ZXIuXG4gICAgICAgICAgICAgICAgICAgIEFsbCBpbnN0cnVjdGlvbnMgYXJlIGF0IHRoZSBzaWduLXVwIHBhZ2UgaXRzZWxmLCBidXQgd2lsbCBiZSByZXBlYXRlZCBoZXJlIG9uY2UgbW9yZS4gVG8gY3JlYXRlIGFuXG4gICAgICAgICAgICAgICAgICAgIGFjY291bnQsIGNsaWNrIHRoZSAnU2lnbiB1cCBmb3IgR2l0SHViJyBidXR0b24gYmVsb3cuIFRoaXMgd2lsbCBicmluZyB5b3UgdG8gdGhlIHNpZ24tdXAgcGFnZSBvZlxuICAgICAgICAgICAgICAgICAgICBHaXRIdWIgd2hpY2ggc2hvdWxkIGxvb2sgbGlrZSB0aGUgZm9sbG93aW5nOlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMjR9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59IHNpemU9XCJiaWdcIi8+XG4gICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIFRoZSBuZXh0IHN0ZXAgaW4gY3JlYXRpbmcgYW4gYWNjb3VudCBpcyBwaWNraW5nIGEgdXNlcm5hbWUsIGFuIGVtYWlsIGFuZCBhIHBhc3N3b3JkLiBBcyB5b3UgY2FuIHNlZVxuICAgICAgICAgICAgICAgICAgICBpbiB0aGUgZmlndXJlIGFib3ZlLCBHaXRIdWIgcmVxdWlyZXMgc29tZSBydWxlcyBvbiBlYWNoIG9mIHRoZXNlIGVsZW1lbnRzLiBGaXJzdCBvZiBhbGwgeW91IG5lZWRcbiAgICAgICAgICAgICAgICAgICAgdG8gcGljayBhIHVzZXJuYW1lIHRoYXQgaXMgc3RpbGwgYXZhaWxhYmxlIG9uIEdpdEh1Yi4gTmV4dCwgYSB2YWxpZCBlLW1haWwgYWRkcmVzcyBzaG91bGQgYmVcbiAgICAgICAgICAgICAgICAgICAgc3BlY2lmaWVkIGFzIHRoaXMgd2lsbCBiZSBuZWVkZWQgdG8gdmFsaWRhdGUgeW91ciBhY2NvdW50IGFmdGVyd2FyZHMuIEZpbmFsbHkgdGhlIHBhc3N3b3JkIHlvdVxuICAgICAgICAgICAgICAgICAgICBjaG9vc2UsIHNob3VsZCBjb250YWluIGF0IGxlYXN0IG9uZSBsb3dlcmNhc2UgbGV0dGVyLCBvbmUgbnVtZXJhbCBhbmQgYXQgbGVhc3Qgc2V2ZW4gY2hhcmFjdGVycy5cbiAgICAgICAgICAgICAgICAgICAgQWZ0ZXIgcGlja2luZyB0aHJlZSB2YWxpZCBmaWVsZHMgdG8gY3JlYXRlIHlvdXIgYWNjb3VudCwgcHJlc3MgdGhlICdDcmVhdGUgYW4gYWNjb3VudCcgYnV0dG9uXG4gICAgICAgICAgICAgICAgICAgIGF0IHRoZSBib3R0b20gb2YgdGhlIHBhZ2UuIEZyb20gaGVyZSBvbiB5b3Ugd2lsbCBuZWVkIHRvIGNvbXBsZXRlIHR3byBtb3JlIHN0ZXBzIHRvIGNyZWF0ZSB5b3VyXG4gICAgICAgICAgICAgICAgICAgIGFjY291bnQuIFRoZXNlIHN0ZXBzIGFyZSByYXRoZXIgdHJpdmlhbCBhcyB0aGV5IGluY2x1ZGUgb25seSBmaWxsaW5nIGluIHNvbWUgdXNlciBpbmZvcm1hdGlvbm5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIEFmdGVyIHN1Y2Nlc3NmdWxseSBzZXR0aW5nIHVwIHlvdXIgYWNjb3VudCwgeW91IGNhbiBnbyB0byB0aGUgbG9naW4gcGFnZSwgdG8gYXV0aGVudGljYXRlIHlvdXJzZWxmXG4gICAgICAgICAgICAgICAgICAgIHdpdGggVW5TSEFDTGVkLiBUbyBkbyBzbyBmb2xsb3cgdGhlIGxpbmtzIGluIHRoZSB0ZXh0IChmaXJzdCBwYXJhZ3JhcGggb3IgU3RlcCA0KSB0byB0aGUgbG9naW4gcGFnZS5cbiAgICAgICAgICAgICAgICAgICAgRm9yIG1vcmUgaW5mb3JtYXRpb24gb24gaG93IHRvIGxvZ2luLCBzZWUgdGhlICdMb2dpbiB0byBVblNIQUNMZWQnIHNlY3Rpb24uXG4gICAgICAgICAgICAgICAgPC9wPlxuXG4gICAgICAgICAgICAgICAgey8qKiBMb2dpbiB0byBVblNIQUNMZWQgKiovfVxuXG4gICAgICAgICAgICAgICAgPEhlYWRlciBhcz0naDInIGNvbG9yPVwidGVhbFwiIGlkPVwiMi4yXCI+IExvZ2luIHRvIFVuU0hBQ0xlZCA8L0hlYWRlcj5cbiAgICAgICAgICAgICAgICA8cD4gVGhlIGZvbGxvd2luZyB3aWxsIGd1aWRlIHlvdSB0aHJvdWdoIHRoZSBwcm9jZXNzIG9mIDxiPiBjcmVhdGluZyBhbiBhY2NvdW50IDwvYj4uPC9wPlxuICAgICAgICAgICAgICAgIDxwPiBBZnRlciB5b3Ugc3VjY2Vzc2Z1bGx5IHNldCB1cCBhbiBhY2NvdW50IHRvIGxvZ2luLCB5b3UgY2FuIG5hdmlnYXRlIHRvIHRoZSBsb2dpbi1wYWdlIGJ5IGNsaWNraW5nXG4gICAgICAgICAgICAgICAgICAgIHRoZSAnTG9naW4nIGJ1dHRvbiBvbiBvdXIgaG9tZSBwYWdlIGFzIGluZGljYXRlZCBpbiB0aGUgZmlndXJlIGJlbG93LiBJZiB5b3UgZG8gbm90IGhhdmUgYW4gYWNjb3VudFxuICAgICAgICAgICAgICAgICAgICB5ZXQsIHBsZWFzZSBjb25zdWx0IHRoZSBzZWN0aW9uIG9uIGhvdyB0byAnQ3JlYXRlIGFuIGFjY291bnQnIGZpcnN0LlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMjF9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59IHNpemU9XCJiaWdcIi8+XG4gICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIE5leHQgeW91IHdpbGwgYXJyaXZlIGF0IHRoZSBsb2dpbiBwYWdlIHdoaWNoIHNob3VsZCBsaWtlIHRoZSBmb2xsb3dpbmc6XG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MyNX0gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0vPlxuICAgICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgICAgICBUbyBiZSBhYmxlIHRvIGxvZyBpbnRvIG91ciBVblNIQUNMZWQgZWRpdG9yLCB5b3UgaGF2ZSB0byBhdXRoZW50aWNhdGUgeW91cnNlbGYgZmlyc3QuIFRoZSBmaXJzdFxuICAgICAgICAgICAgICAgICAgICBzdGVwIGluIGRvaW5nIHNvLCBpcyBjbGlja2luZyB0aGUgJ1NpZ24gaW4nIGJ1dHRvbi4gVGhpcyB3aWxsIG9wZW4gYSBwb3AtdXAgd2luZG93IHdoZXJlIHlvdVxuICAgICAgICAgICAgICAgICAgICBhcmUgYWJsZSB0byBsb2dpbiB3aXRoIHlvdXIgYWNjb3VudCBjcmVkZW50aWFscy4gQW4gZXhhbXBsZSBvZiBob3cgc3VjaCBhIHBvcC11cCBzaG91bGQgbGlrZVxuICAgICAgICAgICAgICAgICAgICBpcyBnaXZlbiBiZWxvdy4gSWYgeW91IGRvIG5vdCBoYXZlIGFuIGFjY291bnQsIHlvdSBjYW4gY2xpY2sgdGhlICdTaWduLXVwJyBidXR0b24uIFRoaXMgd2lsbFxuICAgICAgICAgICAgICAgICAgICBuYXZpZ2F0ZSB5b3UgdG8gdGhlIHNpZ24tdXAgcGFnZSBhbGxvd2luZyB5b3Ugc2V0IHVwIGFuIGFjY291bnQgYXMgZGVzY3JpYmVkIGluIHRoZSAnQ3JlYXRlIGFuXG4gICAgICAgICAgICAgICAgICAgIGFjY291bnQnIHNlY3Rpb24uXG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MyN30gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0vPlxuICAgICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgICAgICBOZXh0LCBsb2dpbiB3aXRoIHlvdXIgYWNjb3VudCBjcmVkZW50aWFscyB0aHJvdWdoIEdpdEh1YiBhcyBpbGx1c3RyYXRlZCBpbiB0aGUgZmlndXJlIGFib3ZlLlxuICAgICAgICAgICAgICAgICAgICBXaGVuIHlvdSBhcmUgcmVhZHksIGNsaWNrIHRoZSAnU2lnbiBpbicgYnV0dG9uIHRvIGF1dGhlbnRpY2F0ZS4gSWYgeW91ciBjcmVkZW50aWFscyB3ZXJlIGNvcnJlY3QsXG4gICAgICAgICAgICAgICAgICAgIHlvdSB3aWxsIHNlZSBhIGNvbmZpcm1hdGlvbiBtZXNzYWdlLCBpbmRpY2F0aW5nIHlvdSBzdWNjZXNzZnVsbHkgYXV0aGVudGljYXRlZCB0byBvdXIgc2VydmVyLiBUaGlzXG4gICAgICAgICAgICAgICAgICAgIG1lc3NhZ2UgY291bGQgdmEgcnksIGJ1dCBzaG91bGQgbG9vayBsaWtlIHRoZSBmb2xsb3dpbmc6XG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MyOH0gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0vPlxuICAgICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgICAgICBBZnRlciBzdWNjZXNzZnVsbHkgY29tcGxldGluZyB0aGUgYXV0aGVudGljYXRpb24sIHlvdSBjYW4gY2xvc2UgdGhlIHBvcC11cCB3aW5kb3cgYW5kIHJldHVyblxuICAgICAgICAgICAgICAgICAgICB0byB0aGUgVW5TSEFDTGVkIGVkaXRvci4gVG8gc3RhcnQgZWRpdGluZywgeW91IHNpbXBseSBjbGljayB0aGUgJ1N0YXJ0IGVkaXRpbmcgYnV0dG9uJy4gSWZcbiAgICAgICAgICAgICAgICAgICAgeW91IGFyZSBhdXRoZW50aWNhdGVkLCB0aGlzIGFjdGlvbiB3aWxsIG5hdmlnYXRlIHlvdSB0byB0aGUgd29ya3NwYWNlIHdoZXJlIHlvdSBhcmUgYWxsIHNldCB0byBnby5cbiAgICAgICAgICAgICAgICAgICAgSWYgbm90LCB0aGUgYXV0aGVudGljYXRpb24gZmFpbGVkIGFuZCBmb2xsb3dpbmcgZXJyb3IgbWVzc2FnZSBzaG91bGQgYmUgZGlzcGxheWVkOlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMjZ9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cbiAgICAgICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgICAgICAgSWYgeW91IHNlZSB0aGlzIG1lc3NhZ2UsIHBsZWFzZSB0cnkgdG8gYXV0aGVudGljYXRlIGFnYWluLlxuICAgICAgICAgICAgICAgIDwvcD5cblxuICAgICAgICAgICAgICAgIHsvKiogTG9nb3V0IGZyb20gVW5TSEFDTGVkICoqL31cbiAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoMicgY29sb3I9XCJ0ZWFsXCIgaWQ9XCIyLjNcIj4gTG9nb3V0IDwvSGVhZGVyPlxuICAgICAgICAgICAgICAgIDxwPiBUaGUgZm9sbG93aW5nIHdpbGwgZ3VpZGUgeW91IHRocm91Z2ggdGhlIHByb2Nlc3Mgb2YgPGI+IGxvZ2dpbmcgb3V0IGZyb20gdGhlIGVkaXRvciA8L2I+LjwvcD5cbiAgICAgICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgICAgICAgSWYgeW91IGFyZSBkb25lIGVkaXRpbmcsIG9yIHdhbnQgdG8gc3dpdGNoIHRvIGEgZGlmZmVyZW50IGFjY291bnQgeW91IGNhbiBsb2cgb3V0IGZyb20gdGhlXG4gICAgICAgICAgICAgICAgICAgIGVkaXRvci4gVG8gbG9nb3V0LCBjbGljayB0aGUgdXNlciBpbmZvIGRyb3AgZG93biBpbiB0aGUgcmlnaHQgY29ybmVyIG9mIHRoZSB0b3AgdG9vbGJhci4gVGhpc1xuICAgICAgICAgICAgICAgICAgICB3aWxsIGJyaW5nIHVwIHRoZSBmb2xsb3dpbmc6XG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MyOX0gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0gc2l6ZT1cInNtYWxsXCIvPlxuICAgICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgICAgICBUbyBsb2dvdXQsIHlvdSBzaW1wbHkgY2xpY2sgdGhlICdTaWduIG91dCcgb3B0aW9uLiBUaGlzIHdpbGwgbmF2aWdhdGUgeW91IGJhY2sgdG8gdGhlIGxvZ2luIHBhZ2VcbiAgICAgICAgICAgICAgICAgICAgYWZ0ZXIgd2hpY2ggeW91IGFyZSBzdWNjZXNzZnVsbHkgbG9nZ2VkIG91dC4gSWYgeW91IHdhbnQgdG8gbG9naW4gd2l0aCBhbm90aGVyIGFjY291bnQsIHBsZWFzZVxuICAgICAgICAgICAgICAgICAgICByZWFkIHRoZSBzZWN0aW9uIG9uIGhvdyB0byAnTG9naW4gdG8gVW5TSEFDTGVkJy5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IFNlY3Rpb24yO1xuIl19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue May 22 2018 09:53:40 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
