@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/pages/sections/Section3.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/pages/sections/</a> Section3.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/pages/sections/Section3.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var semantic_ui_react_1 = require("semantic-ui-react");
+/**
+ * Component containing the third section of the user manual.
+ */
+var Section3 = /** @class */ (function (_super) {
+    __extends(Section3, _super);
+<span class="fstat-no" title="function not covered" >    function Section3() {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.imgMargin = {</span>
+            marginTop: '1em',
+            marginBottom: '1em'
+        };
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    /** Render component **/
+    Section3.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var s31 = require('../../img/user_manual/s3_1.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s32 = require('../../img/user_manual/s3_2.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s33 = require('../../img/user_manual/s3_3.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s34 = require('../../img/user_manual/s3_4.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s35 = require('../../img/user_manual/s3_5.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s36 = require('../../img/user_manual/s3_6.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s37 = require('../../img/user_manual/s3_7.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s38 = require('../../img/user_manual/s3_8.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s39 = require('../../img/user_manual/s3_9.png');</span>
+<span class="cstat-no" title="statement not covered" >        var s310 = require('../../img/user_manual/s3_10.png');</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement("div", { style: { marginTop: '2em' } },</span>
+            React.createElement(semantic_ui_react_1.Header, { as: "h1", id: "3" }, " File Handling "),
+            React.createElement("p", null,
+                " There are a number of possible ways to store or retrieve files in the UnSHACLed editor. Two main options are offered to the end user. First of all a local/offline option where a user can load data/ SHACL graphs from their computer and store them locally as well. After the authentication step, no further online connection is needed for this option. The second option is a remote/online option where a user can fetch and store their data/SHACL graph to their account. To make use of UnSHACLed, users need to create a GitHub account. This account is linked to the UnSHACLed editor and allows storing and fetching of files remotely for each individual user. Consequently, a online connection is required to be able to access and store your files. If a user wants to use the collaborative feature of the editor, the second option is required. The following sections contain information on how to execute each of these options. All file handling functions are located within the 'File' option in the toolbar at the top of the editors screen. Only files with a",
+                React.createElement("b", null, " .ttl "),
+                " extension are currently supported by the editor."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "3.1" }, " Open local files "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " opening local files "),
+                " into the editor."),
+            React.createElement(semantic_ui_react_1.Image, { src: s31, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " First open the 'File' dropdown from the toolbar, as made visible in the figure above. This will bring up the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s32, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " Next, select the 'Open local graph' option from the drop down. A horizontal drop down will open which allows the user to choose between importing either a data graph or SHACL graph. An example can be seen below:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s35, centered: true, style: this.imgMargin }),
+            React.createElement("p", null,
+                "Selecting one should result in the editor opening a file picker, enabling the user to select their local file and open it through the editor. If a valid data or SHACL graph was specified, the editor will load and represent the file as a graph.",
+                React.createElement("b", null, " Note"),
+                " that the editor allows opening multiple files in one session. A user can open and edit multiple files simultaneously and store them individually. For more information on how to store files, see the sections on 'save local files'. An example of how the file picker looks like is given below:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s36, centered: true, style: this.imgMargin }),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "3.2" }, " Save local files "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " saving local files "),
+                ". "),
+            React.createElement(semantic_ui_react_1.Image, { src: s31, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " First open the 'File' drop down from the toolbar, as made visible in the figure above. This will bring up the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s32, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " Next select the 'Save local graph' option from the drop down. A horizontal drop down will open which allows the user to choose between the currently opened files. Two options are available here. If no files were opened, the following option can be observed:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s37, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, "As no files were opened in the editor, the user is not able to save. If you see this, please open a file first as described in the section on how to 'open local files'. If files were openened, the editor should give the follwiing option:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s38, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, "Here, one is able to choose which of the currently opened files to store locally. After selecting the file of choice, the editor will generate a .ttl file which will be downloaded by your browser and stored wherever you set your Downloads folder."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "3.3" }, " Open files from your account "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " opening files from your remote account "),
+                "into the editor."),
+            React.createElement(semantic_ui_react_1.Image, { src: s31, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " First open the 'File' dropdown from the toolbar, as made visible in the figure above. This will bring up the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s32, centered: true, style: this.imgMargin }),
+            "Next, select the ",
+            React.createElement("b", null, "'Open graph from account'"),
+            " option from the dropdown. Following pop-up will be visible on screen:",
+            React.createElement(semantic_ui_react_1.Image, { src: s39, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " Through this pop-up screen, select one of your projects from the selection field. If your authentication was successful, all your projects linked to your account should be visible. Selecting a project will result in a extra selection field being visible. An example of this is given below:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s310, centered: true, style: this.imgMargin }),
+            React.createElement("p", null,
+                " Now select a file of your choice within your previously selected project in the appeared selection menu. If you select both a project and file, the 'Open' button should no longer be disabled. After selecting a file, specify the type of file you want to upload. Choose 'data' if you want to open a data graph or choose 'SHACL' if you want to open a SHACL graph. If you are satisfied with your choice, click the 'Open' button. This will open the remote file into the editor. If the selected file is a valid ",
+                React.createElement("b", null, ".ttl"),
+                " file and a valid data or SHACL graph, the editor will load and represent your remote file as a graph. If you want to cancel the process of opening a remote graph, you can either click the 'Cancel' button or the closing icon in the top right corner of the pop-up."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "3.4" }, " Save files to your account "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " saving files to your remote account")),
+            React.createElement(semantic_ui_react_1.Image, { src: s31, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " First open the 'File' dropdown from the toolbar, as made visible in the figure above. This will bring up the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s32, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " Next select the 'Save graph to account' option from the drop down. A horizontal drop down will open which allows the user to choose between the currently opened files. Two options are available here. If no files were opened, a similar option as the following can be observed:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s37, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, "As no files were opened in the editor, the user is not able to save. If you see this, please open a file first as described in the section on how to 'open graph from your account'. If files were opened, the editor should give a similar option as the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s38, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, "Here one is able to choose which of the currently opened files to store remotely. After selecting the file of choice, the editor will store the file into your remote project linked to your account."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "3.5" }, " Create new project "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " creating a new project for your remote account ")),
+            React.createElement(semantic_ui_react_1.Image, { src: s31, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " First open the 'File' drop down from the toolbar, as made visible in the figure above. This will bring up the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s32, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " Next select the 'New Project' option from the drop down. Following pop-up will be visible on screen:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s33, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, "Through this pop-up screen, choose a fitting name for the project you want to create in the input field. Whenever the input field is not empty, the 'Create' button will no longer be disabled. If you are satisfied with your chosen project name, click the 'Create' button. The editor will create a project and link it to your account. As this project is newly created, it does not contain any files yet. To do so, add new files as described in the 'Create new files in a project' section. If you want to cancel the process of creating a new project, you can either click the 'Cancel' button or the closing icon in the top right corner of the pop-up."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "3.6" }, " Create new files in a project "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " creating new files for a project linked to your remote account ")),
+            React.createElement(semantic_ui_react_1.Image, { src: s31, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " First open the 'File' drop down from the toolbar, as made visible in the figure above. This will bring up the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s32, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " Next select the 'New File' option from the drop down. Following pop-up will be visible on screen:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s34, centered: true, style: this.imgMargin }),
+            React.createElement("p", null,
+                "Through this pop-up screen, select one of your projects from the selection field. If your authentication was successful, all your projects linked to your account should be visible. After selecting a project, choose a fitting name for the file you want to create in the input field. After selecting a filename, specify the type of file you want to create. Choose 'data' if you want to create a data graph or choose 'SHACL' if you want to create a SHACL graph. Whenever the input field is not empty, the 'Create' button will no longer be disabled. If you are satisfied with your chosen file name and project, click 'Create' button. The editor will create a new file and store it into your remote project.",
+                React.createElement("b", null, " Note "),
+                " that the editor will ",
+                React.createElement("b", null, " not "),
+                " open the newly created file. To start editing in this file, please open the file first as described in 'Open graph from account' section. If you want to cancel the process of creating a new project, you can either click the 'Cancel' button or the closing icon in the top right corner of the pop-up."),
+            React.createElement(semantic_ui_react_1.Header, { as: 'h2', color: "teal", id: "3.7" }, " Load and save workspace "),
+            React.createElement("p", null,
+                " The following will guide you through the process of ",
+                React.createElement("b", null, " loading or saving your current workspace")),
+            React.createElement(semantic_ui_react_1.Image, { src: s31, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " First open the 'File' dropdown from the toolbar, as made visible in the figure above. This will bring up the following:"),
+            React.createElement(semantic_ui_react_1.Image, { src: s32, centered: true, style: this.imgMargin }),
+            React.createElement("p", null, " Next select the 'Load workspace' or'Save workspace' option from the drop down."),
+            React.createElement("p", null, "When 'Load workspace' is chosen, the last stored workspace of the authenticated user is loaded in from the server. You can now see where you left off the last time you saved your workspace. When 'Save workspace\" is chosen, the current workspace is stored on the server which allows to load it back in during another sessions.")));
+    };
+    return Section3;
+}(React.Component));
+exports.default = Section3;
+&nbsp;
+},'src/pages/sections/Section3.tsx',{"../../img/user_manual/s3_1.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_1.png","../../img/user_manual/s3_2.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_2.png","../../img/user_manual/s3_3.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_3.png","../../img/user_manual/s3_4.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_4.png","../../img/user_manual/s3_5.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_5.png","../../img/user_manual/s3_6.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_6.png","../../img/user_manual/s3_7.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_7.png","../../img/user_manual/s3_8.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_8.png","../../img/user_manual/s3_9.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_9.png","../../img/user_manual/s3_10.png":"/home/travis/build/dubious-developments/UnSHACLed/src/img/user_manual/s3_10.png","react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2VjdGlvbjMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTZWN0aW9uMy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLHVEQUFnRDtBQUVoRDs7R0FFRztBQUNIO0lBQXVCLDRCQUF5QjtJQUFoRDtRQUFBLHFFQXNOQztRQW5ORyxlQUFTLEdBQUc7WUFDUixTQUFTLEVBQUUsS0FBSztZQUNoQixZQUFZLEVBQUUsS0FBSztTQUN0QixDQUFDOztJQWdOTixDQUFDO0lBOU1HLHdCQUF3QjtJQUN4Qix5QkFBTSxHQUFOO1FBQ0ksSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxHQUFHLEdBQUcsT0FBTyxDQUFDLGdDQUFnQyxDQUFDLENBQUM7UUFDdEQsSUFBTSxJQUFJLEdBQUcsT0FBTyxDQUFDLGlDQUFpQyxDQUFDLENBQUM7UUFDeEQsT0FBTyxDQUNILDZCQUFLLEtBQUssRUFBRSxFQUFDLFNBQVMsRUFBRSxLQUFLLEVBQUM7WUFDMUIsb0JBQUMsMEJBQU0sSUFBQyxFQUFFLEVBQUMsSUFBSSxFQUFDLEVBQUUsRUFBQyxHQUFHLHNCQUF5QjtZQUMv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WUFDSixvQkFBQyx5QkFBSyxJQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsUUFBUSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLFNBQVMsR0FBRztZQUN6RCwySkFDK0I7WUFDL0Isb0JBQUMseUJBQUssSUFBQyxHQUFHLEVBQUUsR0FBRyxFQUFFLFFBQVEsRUFBRSxJQUFJLEVBQUUsS0FBSyxFQUFFLElBQUksQ0FBQyxTQUFTLEdBQUc7WUFDekQsb0lBQ0k7WUFDSixvQkFBQyx5QkFBSyxJQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsUUFBUSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLFNBQVMsR0FBRztZQUN6RDs7Z0JBVUksd0NBQWE7O2dCQUFzQix1Q0FBWTs4VEFJL0M7WUFHSixvQkFBQywwQkFBTSxJQUFDLEVBQUUsRUFBQyxJQUFJLEVBQUMsS0FBSyxFQUFDLE1BQU0sRUFBQyxFQUFFLEVBQUMsS0FBSyxnQ0FBbUM7WUFDeEU7O2dCQUF3RCwyRUFDcEQsQ0FDQTtZQUNKLG9CQUFDLHlCQUFLLElBQUMsR0FBRyxFQUFFLEdBQUcsRUFBRSxRQUFRLEVBQUUsSUFBSSxFQUFFLEtBQUssRUFBRSxJQUFJLENBQUMsU0FBUyxHQUFHO1lBQ3pELDBKQUMrQjtZQUMvQixvQkFBQyx5QkFBSyxJQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUUsUUFBUSxFQUFFLElBQUksRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLFNBQVMsR0FBRztZQUN6RCxpSEFDSTtZQUNKLHdXQUtJLENBQ0YsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLGVBQUM7QUFBRCxDQUFDLEFBdE5ELENBQXVCLEtBQUssQ0FBQyxTQUFTLEdBc05yQztBQUVELGtCQUFlLFFBQVEsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7SGVhZGVyLCBJbWFnZX0gZnJvbSAnc2VtYW50aWMtdWktcmVhY3QnO1xuXG4vKipcbiAqIENvbXBvbmVudCBjb250YWluaW5nIHRoZSB0aGlyZCBzZWN0aW9uIG9mIHRoZSB1c2VyIG1hbnVhbC5cbiAqL1xuY2xhc3MgU2VjdGlvbjMgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQ8YW55LCBhbnk+IHtcblxuICAgIGNvbnN0O1xuICAgIGltZ01hcmdpbiA9IHtcbiAgICAgICAgbWFyZ2luVG9wOiAnMWVtJyxcbiAgICAgICAgbWFyZ2luQm90dG9tOiAnMWVtJ1xuICAgIH07XG5cbiAgICAvKiogUmVuZGVyIGNvbXBvbmVudCAqKi9cbiAgICByZW5kZXIoKSB7XG4gICAgICAgIGNvbnN0IHMzMSA9IHJlcXVpcmUoJy4uLy4uL2ltZy91c2VyX21hbnVhbC9zM18xLnBuZycpO1xuICAgICAgICBjb25zdCBzMzIgPSByZXF1aXJlKCcuLi8uLi9pbWcvdXNlcl9tYW51YWwvczNfMi5wbmcnKTtcbiAgICAgICAgY29uc3QgczMzID0gcmVxdWlyZSgnLi4vLi4vaW1nL3VzZXJfbWFudWFsL3MzXzMucG5nJyk7XG4gICAgICAgIGNvbnN0IHMzNCA9IHJlcXVpcmUoJy4uLy4uL2ltZy91c2VyX21hbnVhbC9zM180LnBuZycpO1xuICAgICAgICBjb25zdCBzMzUgPSByZXF1aXJlKCcuLi8uLi9pbWcvdXNlcl9tYW51YWwvczNfNS5wbmcnKTtcbiAgICAgICAgY29uc3QgczM2ID0gcmVxdWlyZSgnLi4vLi4vaW1nL3VzZXJfbWFudWFsL3MzXzYucG5nJyk7XG4gICAgICAgIGNvbnN0IHMzNyA9IHJlcXVpcmUoJy4uLy4uL2ltZy91c2VyX21hbnVhbC9zM183LnBuZycpO1xuICAgICAgICBjb25zdCBzMzggPSByZXF1aXJlKCcuLi8uLi9pbWcvdXNlcl9tYW51YWwvczNfOC5wbmcnKTtcbiAgICAgICAgY29uc3QgczM5ID0gcmVxdWlyZSgnLi4vLi4vaW1nL3VzZXJfbWFudWFsL3MzXzkucG5nJyk7XG4gICAgICAgIGNvbnN0IHMzMTAgPSByZXF1aXJlKCcuLi8uLi9pbWcvdXNlcl9tYW51YWwvczNfMTAucG5nJyk7XG4gICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICA8ZGl2IHN0eWxlPXt7bWFyZ2luVG9wOiAnMmVtJ319PlxuICAgICAgICAgICAgICAgIDxIZWFkZXIgYXM9XCJoMVwiIGlkPVwiM1wiPiBGaWxlIEhhbmRsaW5nIDwvSGVhZGVyPlxuICAgICAgICAgICAgICAgIDxwPiBUaGVyZSBhcmUgYSBudW1iZXIgb2YgcG9zc2libGUgd2F5cyB0byBzdG9yZSBvciByZXRyaWV2ZSBmaWxlcyBpbiB0aGUgVW5TSEFDTGVkIGVkaXRvci4gVHdvXG4gICAgICAgICAgICAgICAgICAgIG1haW4gb3B0aW9ucyBhcmUgb2ZmZXJlZCB0byB0aGUgZW5kIHVzZXIuIEZpcnN0IG9mIGFsbCBhIGxvY2FsL29mZmxpbmUgb3B0aW9uIHdoZXJlIGEgdXNlclxuICAgICAgICAgICAgICAgICAgICBjYW4gbG9hZCBkYXRhLyBTSEFDTCBncmFwaHMgZnJvbSB0aGVpciBjb21wdXRlciBhbmQgc3RvcmUgdGhlbSBsb2NhbGx5IGFzIHdlbGwuIEFmdGVyIHRoZVxuICAgICAgICAgICAgICAgICAgICBhdXRoZW50aWNhdGlvbiBzdGVwLCBubyBmdXJ0aGVyIG9ubGluZSBjb25uZWN0aW9uIGlzIG5lZWRlZCBmb3IgdGhpcyBvcHRpb24uXG4gICAgICAgICAgICAgICAgICAgIFRoZSBzZWNvbmQgb3B0aW9uIGlzIGEgcmVtb3RlL29ubGluZVxuICAgICAgICAgICAgICAgICAgICBvcHRpb24gd2hlcmUgYSB1c2VyIGNhbiBmZXRjaCBhbmQgc3RvcmUgdGhlaXIgZGF0YS9TSEFDTCBncmFwaCB0byB0aGVpciBhY2NvdW50LiBUbyBtYWtlIHVzZSBvZlxuICAgICAgICAgICAgICAgICAgICBVblNIQUNMZWQsIHVzZXJzIG5lZWQgdG8gY3JlYXRlIGEgR2l0SHViIGFjY291bnQuIFRoaXMgYWNjb3VudCBpcyBsaW5rZWQgdG8gdGhlIFVuU0hBQ0xlZCBlZGl0b3JcbiAgICAgICAgICAgICAgICAgICAgYW5kIGFsbG93cyBzdG9yaW5nIGFuZCBmZXRjaGluZyBvZiBmaWxlcyByZW1vdGVseSBmb3IgZWFjaCBpbmRpdmlkdWFsIHVzZXIuIENvbnNlcXVlbnRseSwgYSBvbmxpbmVcbiAgICAgICAgICAgICAgICAgICAgY29ubmVjdGlvbiBpcyByZXF1aXJlZCB0byBiZSBhYmxlIHRvIGFjY2VzcyBhbmQgc3RvcmUgeW91ciBmaWxlcy4gSWYgYSB1c2VyIHdhbnRzIHRvIHVzZVxuICAgICAgICAgICAgICAgICAgICB0aGUgY29sbGFib3JhdGl2ZSBmZWF0dXJlIG9mIHRoZSBlZGl0b3IsIHRoZSBzZWNvbmQgb3B0aW9uIGlzIHJlcXVpcmVkLiBUaGUgZm9sbG93aW5nIHNlY3Rpb25zXG4gICAgICAgICAgICAgICAgICAgIGNvbnRhaW4gaW5mb3JtYXRpb24gb24gaG93IHRvIGV4ZWN1dGUgZWFjaCBvZiB0aGVzZSBvcHRpb25zLiBBbGwgZmlsZSBoYW5kbGluZyBmdW5jdGlvbnMgYXJlXG4gICAgICAgICAgICAgICAgICAgIGxvY2F0ZWQgd2l0aGluIHRoZSAnRmlsZScgb3B0aW9uIGluIHRoZSB0b29sYmFyIGF0IHRoZSB0b3Agb2YgdGhlIGVkaXRvcnMgc2NyZWVuLiBPbmx5IGZpbGVzIHdpdGggYVxuICAgICAgICAgICAgICAgICAgICA8Yj4gLnR0bCA8L2I+IGV4dGVuc2lvbiBhcmUgY3VycmVudGx5IHN1cHBvcnRlZCBieSB0aGUgZWRpdG9yLlxuICAgICAgICAgICAgICAgIDwvcD5cblxuICAgICAgICAgICAgICAgIHsvKiogT3BlbiBsb2NhbCBmaWxlcyAqKi99XG5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoMicgY29sb3I9XCJ0ZWFsXCIgaWQ9XCIzLjFcIj4gT3BlbiBsb2NhbCBmaWxlcyA8L0hlYWRlcj5cbiAgICAgICAgICAgICAgICA8cD4gVGhlIGZvbGxvd2luZyB3aWxsIGd1aWRlIHlvdSB0aHJvdWdoIHRoZSBwcm9jZXNzIG9mIDxiPiBvcGVuaW5nIGxvY2FsIGZpbGVzIDwvYj4gaW50byB0aGUgZWRpdG9yLlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMzF9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cbiAgICAgICAgICAgICAgICA8cD4gRmlyc3Qgb3BlbiB0aGUgJ0ZpbGUnIGRyb3Bkb3duIGZyb20gdGhlIHRvb2xiYXIsIGFzIG1hZGUgdmlzaWJsZSBpbiB0aGUgZmlndXJlIGFib3ZlLiBUaGlzIHdpbGxcbiAgICAgICAgICAgICAgICAgICAgYnJpbmcgdXAgdGhlIGZvbGxvd2luZzo8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czMyfSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+IE5leHQsIHNlbGVjdCB0aGUgJ09wZW4gbG9jYWwgZ3JhcGgnIG9wdGlvbiBmcm9tIHRoZSBkcm9wIGRvd24uIEEgaG9yaXpvbnRhbCBkcm9wIGRvd24gd2lsbCBvcGVuXG4gICAgICAgICAgICAgICAgICAgIHdoaWNoIGFsbG93cyB0aGUgdXNlciB0byBjaG9vc2UgYmV0d2VlbiBpbXBvcnRpbmcgZWl0aGVyIGEgZGF0YSBncmFwaCBvciBTSEFDTCBncmFwaC4gQW4gZXhhbXBsZVxuICAgICAgICAgICAgICAgICAgICBjYW4gYmUgc2VlbiBiZWxvdzo8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czM1fSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+U2VsZWN0aW5nIG9uZSBzaG91bGQgcmVzdWx0IGluIHRoZSBlZGl0b3Igb3BlbmluZ1xuICAgICAgICAgICAgICAgICAgICBhIGZpbGUgcGlja2VyLCBlbmFibGluZyB0aGUgdXNlciB0byBzZWxlY3QgdGhlaXIgbG9jYWwgZmlsZSBhbmQgb3BlbiBpdCB0aHJvdWdoIHRoZSBlZGl0b3IuXG4gICAgICAgICAgICAgICAgICAgIElmIGEgdmFsaWQgZGF0YSBvciBTSEFDTCBncmFwaCB3YXMgc3BlY2lmaWVkLCB0aGUgZWRpdG9yIHdpbGwgbG9hZCBhbmQgcmVwcmVzZW50IHRoZSBmaWxlIGFzIGFcbiAgICAgICAgICAgICAgICAgICAgZ3JhcGguXG4gICAgICAgICAgICAgICAgICAgIDxiPiBOb3RlPC9iPiB0aGF0IHRoZSBlZGl0b3IgYWxsb3dzIG9wZW5pbmcgbXVsdGlwbGUgZmlsZXMgaW4gb25lIHNlc3Npb24uIEEgdXNlciBjYW4gb3BlbiBhbmQgZWRpdFxuICAgICAgICAgICAgICAgICAgICBtdWx0aXBsZSBmaWxlcyBzaW11bHRhbmVvdXNseSBhbmQgc3RvcmUgdGhlbSBpbmRpdmlkdWFsbHkuIEZvciBtb3JlIGluZm9ybWF0aW9uIG9uIGhvdyB0byBzdG9yZVxuICAgICAgICAgICAgICAgICAgICBmaWxlcywgc2VlIHRoZSBzZWN0aW9ucyBvbiAnc2F2ZSBsb2NhbCBmaWxlcycuIEFuIGV4YW1wbGUgb2YgaG93IHRoZSBmaWxlIHBpY2tlciBsb29rcyBsaWtlIGlzIGdpdmVuXG4gICAgICAgICAgICAgICAgICAgIGJlbG93OlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMzZ9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cblxuICAgICAgICAgICAgICAgIHsvKiogU2F2ZSBsb2NhbCBmaWxlcyoqL31cblxuICAgICAgICAgICAgICAgIDxIZWFkZXIgYXM9J2gyJyBjb2xvcj1cInRlYWxcIiBpZD1cIjMuMlwiPiBTYXZlIGxvY2FsIGZpbGVzIDwvSGVhZGVyPlxuICAgICAgICAgICAgICAgIDxwPiBUaGUgZm9sbG93aW5nIHdpbGwgZ3VpZGUgeW91IHRocm91Z2ggdGhlIHByb2Nlc3Mgb2YgPGI+IHNhdmluZyBsb2NhbCBmaWxlcyA8L2I+LiA8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czMxfSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+IEZpcnN0IG9wZW4gdGhlICdGaWxlJyBkcm9wIGRvd24gZnJvbSB0aGUgdG9vbGJhciwgYXMgbWFkZSB2aXNpYmxlIGluIHRoZSBmaWd1cmUgYWJvdmUuIFRoaXMgd2lsbFxuICAgICAgICAgICAgICAgICAgICBicmluZyB1cCB0aGUgZm9sbG93aW5nOjwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMzJ9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cbiAgICAgICAgICAgICAgICA8cD4gTmV4dCBzZWxlY3QgdGhlICdTYXZlIGxvY2FsIGdyYXBoJyBvcHRpb24gZnJvbSB0aGUgZHJvcCBkb3duLiBBIGhvcml6b250YWwgZHJvcCBkb3duIHdpbGwgb3BlblxuICAgICAgICAgICAgICAgICAgICB3aGljaCBhbGxvd3MgdGhlIHVzZXIgdG8gY2hvb3NlIGJldHdlZW4gdGhlIGN1cnJlbnRseSBvcGVuZWQgZmlsZXMuIFR3byBvcHRpb25zIGFyZSBhdmFpbGFibGUgaGVyZS5cbiAgICAgICAgICAgICAgICAgICAgSWYgbm8gZmlsZXMgd2VyZSBvcGVuZWQsIHRoZSBmb2xsb3dpbmcgb3B0aW9uIGNhbiBiZSBvYnNlcnZlZDpcbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czM3fSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIEFzIG5vIGZpbGVzIHdlcmUgb3BlbmVkIGluIHRoZSBlZGl0b3IsIHRoZSB1c2VyIGlzIG5vdCBhYmxlIHRvIHNhdmUuIElmIHlvdSBzZWUgdGhpcywgcGxlYXNlIG9wZW5cbiAgICAgICAgICAgICAgICAgICAgYSBmaWxlIGZpcnN0IGFzIGRlc2NyaWJlZCBpbiB0aGUgc2VjdGlvbiBvbiBob3cgdG8gJ29wZW4gbG9jYWwgZmlsZXMnLiBJZiBmaWxlcyB3ZXJlIG9wZW5lbmVkLCB0aGVcbiAgICAgICAgICAgICAgICAgICAgZWRpdG9yIHNob3VsZCBnaXZlIHRoZSBmb2xsd2lpbmcgb3B0aW9uOlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMzh9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cbiAgICAgICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgICAgICAgSGVyZSwgb25lIGlzIGFibGUgdG8gY2hvb3NlIHdoaWNoIG9mIHRoZSBjdXJyZW50bHkgb3BlbmVkIGZpbGVzIHRvIHN0b3JlIGxvY2FsbHkuIEFmdGVyIHNlbGVjdGluZ1xuICAgICAgICAgICAgICAgICAgICB0aGUgZmlsZSBvZiBjaG9pY2UsIHRoZSBlZGl0b3Igd2lsbCBnZW5lcmF0ZSBhIC50dGwgZmlsZSB3aGljaCB3aWxsIGJlIGRvd25sb2FkZWQgYnkgeW91clxuICAgICAgICAgICAgICAgICAgICBicm93c2VyIGFuZCBzdG9yZWQgd2hlcmV2ZXIgeW91IHNldCB5b3VyIERvd25sb2FkcyBmb2xkZXIuXG4gICAgICAgICAgICAgICAgPC9wPlxuXG4gICAgICAgICAgICAgICAgey8qKiBPcGVuIGZpbGVzIHRvIHlvdXIgYWNjb3VudCAqKi99XG5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoMicgY29sb3I9XCJ0ZWFsXCIgaWQ9XCIzLjNcIj4gT3BlbiBmaWxlcyBmcm9tIHlvdXIgYWNjb3VudCA8L0hlYWRlcj5cbiAgICAgICAgICAgICAgICA8cD4gVGhlIGZvbGxvd2luZyB3aWxsIGd1aWRlIHlvdSB0aHJvdWdoIHRoZSBwcm9jZXNzIG9mIDxiPiBvcGVuaW5nIGZpbGVzIGZyb20geW91ciByZW1vdGUgYWNjb3VudCA8L2I+XG4gICAgICAgICAgICAgICAgICAgIGludG8gdGhlIGVkaXRvci5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czMxfSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+IEZpcnN0IG9wZW4gdGhlICdGaWxlJyBkcm9wZG93biBmcm9tIHRoZSB0b29sYmFyLCBhcyBtYWRlIHZpc2libGUgaW4gdGhlIGZpZ3VyZSBhYm92ZS4gVGhpcyB3aWxsXG4gICAgICAgICAgICAgICAgICAgIGJyaW5nIHVwIHRoZSBmb2xsb3dpbmc6PC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MzMn0gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0vPlxuICAgICAgICAgICAgICAgIE5leHQsIHNlbGVjdCB0aGUgPGI+J09wZW4gZ3JhcGggZnJvbSBhY2NvdW50JzwvYj4gb3B0aW9uIGZyb20gdGhlIGRyb3Bkb3duLlxuICAgICAgICAgICAgICAgIEZvbGxvd2luZyBwb3AtdXAgd2lsbCBiZSB2aXNpYmxlIG9uIHNjcmVlbjpcbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMzl9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cbiAgICAgICAgICAgICAgICA8cD4gVGhyb3VnaCB0aGlzIHBvcC11cCBzY3JlZW4sIHNlbGVjdCBvbmUgb2YgeW91ciBwcm9qZWN0cyBmcm9tIHRoZSBzZWxlY3Rpb24gZmllbGQuIElmIHlvdXJcbiAgICAgICAgICAgICAgICAgICAgYXV0aGVudGljYXRpb24gd2FzIHN1Y2Nlc3NmdWwsIGFsbCB5b3VyIHByb2plY3RzIGxpbmtlZCB0byB5b3VyIGFjY291bnQgc2hvdWxkIGJlIHZpc2libGUuXG4gICAgICAgICAgICAgICAgICAgIFNlbGVjdGluZyBhIHByb2plY3Qgd2lsbCByZXN1bHQgaW4gYSBleHRyYSBzZWxlY3Rpb24gZmllbGQgYmVpbmcgdmlzaWJsZS4gQW4gZXhhbXBsZSBvZiB0aGlzXG4gICAgICAgICAgICAgICAgICAgIGlzIGdpdmVuIGJlbG93OlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMzEwfSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+IE5vdyBzZWxlY3QgYSBmaWxlIG9mIHlvdXIgY2hvaWNlIHdpdGhpbiB5b3VyIHByZXZpb3VzbHkgc2VsZWN0ZWQgcHJvamVjdCBpbiB0aGUgYXBwZWFyZWRcbiAgICAgICAgICAgICAgICAgICAgc2VsZWN0aW9uIG1lbnUuIElmIHlvdSBzZWxlY3QgYm90aCBhIHByb2plY3QgYW5kIGZpbGUsIHRoZSAnT3BlbicgYnV0dG9uIHNob3VsZCBubyBsb25nZXIgYmVcbiAgICAgICAgICAgICAgICAgICAgZGlzYWJsZWQuIEFmdGVyIHNlbGVjdGluZyBhIGZpbGUsIHNwZWNpZnkgdGhlIHR5cGUgb2YgZmlsZSB5b3Ugd2FudCB0byB1cGxvYWQuIENob29zZSAnZGF0YScgaWYgeW91XG4gICAgICAgICAgICAgICAgICAgIHdhbnQgdG8gb3BlbiBhIGRhdGEgZ3JhcGggb3IgY2hvb3NlICdTSEFDTCcgaWYgeW91IHdhbnQgdG8gb3BlbiBhIFNIQUNMIGdyYXBoLlxuICAgICAgICAgICAgICAgICAgICBJZiB5b3UgYXJlIHNhdGlzZmllZCB3aXRoIHlvdXIgY2hvaWNlLCBjbGljayB0aGUgJ09wZW4nIGJ1dHRvbi4gVGhpcyB3aWxsIG9wZW5cbiAgICAgICAgICAgICAgICAgICAgdGhlIHJlbW90ZSBmaWxlIGludG8gdGhlIGVkaXRvci4gSWYgdGhlIHNlbGVjdGVkIGZpbGUgaXMgYSB2YWxpZCA8Yj4udHRsPC9iPiBmaWxlIGFuZCBhIHZhbGlkXG4gICAgICAgICAgICAgICAgICAgIGRhdGEgb3IgU0hBQ0wgZ3JhcGgsIHRoZSBlZGl0b3Igd2lsbCBsb2FkIGFuZCByZXByZXNlbnQgeW91ciByZW1vdGUgZmlsZSBhcyBhIGdyYXBoLlxuICAgICAgICAgICAgICAgICAgICBJZiB5b3Ugd2FudCB0byBjYW5jZWwgdGhlIHByb2Nlc3Mgb2Ygb3BlbmluZyBhIHJlbW90ZSBncmFwaCwgeW91IGNhbiBlaXRoZXJcbiAgICAgICAgICAgICAgICAgICAgY2xpY2sgdGhlICdDYW5jZWwnIGJ1dHRvbiBvciB0aGUgY2xvc2luZyBpY29uIGluIHRoZSB0b3AgcmlnaHQgY29ybmVyIG9mIHRoZSBwb3AtdXAuXG4gICAgICAgICAgICAgICAgPC9wPlxuXG4gICAgICAgICAgICAgICAgey8qKiBTYXZlIGZpbGVzIHRvIHlvdXIgYWNjb3VudCoqL31cblxuICAgICAgICAgICAgICAgIDxIZWFkZXIgYXM9J2gyJyBjb2xvcj1cInRlYWxcIiBpZD1cIjMuNFwiPiBTYXZlIGZpbGVzIHRvIHlvdXIgYWNjb3VudCA8L0hlYWRlcj5cbiAgICAgICAgICAgICAgICA8cD4gVGhlIGZvbGxvd2luZyB3aWxsIGd1aWRlIHlvdSB0aHJvdWdoIHRoZSBwcm9jZXNzIG9mIDxiPiBzYXZpbmcgZmlsZXMgdG8geW91ciByZW1vdGUgYWNjb3VudDwvYj5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czMxfSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+IEZpcnN0IG9wZW4gdGhlICdGaWxlJyBkcm9wZG93biBmcm9tIHRoZSB0b29sYmFyLCBhcyBtYWRlIHZpc2libGUgaW4gdGhlIGZpZ3VyZSBhYm92ZS4gVGhpcyB3aWxsXG4gICAgICAgICAgICAgICAgICAgIGJyaW5nIHVwIHRoZSBmb2xsb3dpbmc6PC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MzMn0gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0vPlxuICAgICAgICAgICAgICAgIDxwPiBOZXh0IHNlbGVjdCB0aGUgJ1NhdmUgZ3JhcGggdG8gYWNjb3VudCcgb3B0aW9uIGZyb20gdGhlIGRyb3AgZG93bi4gQSBob3Jpem9udGFsIGRyb3AgZG93biB3aWxsIG9wZW5cbiAgICAgICAgICAgICAgICAgICAgd2hpY2ggYWxsb3dzIHRoZSB1c2VyIHRvIGNob29zZSBiZXR3ZWVuIHRoZSBjdXJyZW50bHkgb3BlbmVkIGZpbGVzLiBUd28gb3B0aW9ucyBhcmUgYXZhaWxhYmxlIGhlcmUuXG4gICAgICAgICAgICAgICAgICAgIElmIG5vIGZpbGVzIHdlcmUgb3BlbmVkLCBhIHNpbWlsYXIgb3B0aW9uIGFzIHRoZSBmb2xsb3dpbmcgY2FuIGJlIG9ic2VydmVkOlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMzd9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cbiAgICAgICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgICAgICAgQXMgbm8gZmlsZXMgd2VyZSBvcGVuZWQgaW4gdGhlIGVkaXRvciwgdGhlIHVzZXIgaXMgbm90IGFibGUgdG8gc2F2ZS4gSWYgeW91IHNlZSB0aGlzLCBwbGVhc2Ugb3BlblxuICAgICAgICAgICAgICAgICAgICBhIGZpbGUgZmlyc3QgYXMgZGVzY3JpYmVkIGluIHRoZSBzZWN0aW9uIG9uIGhvdyB0byAnb3BlbiBncmFwaCBmcm9tIHlvdXIgYWNjb3VudCcuXG4gICAgICAgICAgICAgICAgICAgIElmIGZpbGVzIHdlcmUgb3BlbmVkLCB0aGUgZWRpdG9yIHNob3VsZCBnaXZlIGEgc2ltaWxhciBvcHRpb24gYXMgdGhlIGZvbGxvd2luZzpcbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czM4fSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIEhlcmUgb25lIGlzIGFibGUgdG8gY2hvb3NlIHdoaWNoIG9mIHRoZSBjdXJyZW50bHkgb3BlbmVkIGZpbGVzIHRvIHN0b3JlIHJlbW90ZWx5LiBBZnRlciBzZWxlY3RpbmdcbiAgICAgICAgICAgICAgICAgICAgdGhlIGZpbGUgb2YgY2hvaWNlLCB0aGUgZWRpdG9yIHdpbGwgc3RvcmUgdGhlIGZpbGUgaW50byB5b3VyIHJlbW90ZSBwcm9qZWN0IGxpbmtlZCB0byB5b3VyXG4gICAgICAgICAgICAgICAgICAgIGFjY291bnQuXG4gICAgICAgICAgICAgICAgPC9wPlxuXG4gICAgICAgICAgICAgICAgey8qKiBDcmVhdGUgbmV3IHByb2plY3QgKiovfVxuICAgICAgICAgICAgICAgIDxIZWFkZXIgYXM9J2gyJyBjb2xvcj1cInRlYWxcIiBpZD1cIjMuNVwiPiBDcmVhdGUgbmV3IHByb2plY3QgPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgPHA+IFRoZSBmb2xsb3dpbmcgd2lsbCBndWlkZSB5b3UgdGhyb3VnaCB0aGUgcHJvY2VzcyBvZiA8Yj4gY3JlYXRpbmcgYSBuZXcgcHJvamVjdCBmb3IgeW91clxuICAgICAgICAgICAgICAgICAgICByZW1vdGUgYWNjb3VudCA8L2I+XG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MzMX0gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0vPlxuICAgICAgICAgICAgICAgIDxwPiBGaXJzdCBvcGVuIHRoZSAnRmlsZScgZHJvcCBkb3duIGZyb20gdGhlIHRvb2xiYXIsIGFzIG1hZGUgdmlzaWJsZSBpbiB0aGUgZmlndXJlIGFib3ZlLiBUaGlzIHdpbGxcbiAgICAgICAgICAgICAgICAgICAgYnJpbmcgdXAgdGhlIGZvbGxvd2luZzo8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czMyfSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+IE5leHQgc2VsZWN0IHRoZSAnTmV3IFByb2plY3QnIG9wdGlvbiBmcm9tIHRoZSBkcm9wIGRvd24uIEZvbGxvd2luZyBwb3AtdXAgd2lsbCBiZSB2aXNpYmxlIG9uIHNjcmVlbjpcbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czMzfSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIFRocm91Z2ggdGhpcyBwb3AtdXAgc2NyZWVuLCBjaG9vc2UgYSBmaXR0aW5nIG5hbWUgZm9yIHRoZSBwcm9qZWN0IHlvdSB3YW50IHRvIGNyZWF0ZVxuICAgICAgICAgICAgICAgICAgICBpbiB0aGUgaW5wdXQgZmllbGQuIFdoZW5ldmVyIHRoZSBpbnB1dCBmaWVsZCBpcyBub3QgZW1wdHksIHRoZSAnQ3JlYXRlJyBidXR0b24gd2lsbCBubyBsb25nZXIgYmVcbiAgICAgICAgICAgICAgICAgICAgZGlzYWJsZWQuIElmIHlvdSBhcmUgc2F0aXNmaWVkIHdpdGggeW91ciBjaG9zZW4gcHJvamVjdCBuYW1lLCBjbGljayB0aGUgJ0NyZWF0ZScgYnV0dG9uLiBUaGUgZWRpdG9yXG4gICAgICAgICAgICAgICAgICAgIHdpbGwgY3JlYXRlIGEgcHJvamVjdCBhbmQgbGluayBpdCB0byB5b3VyIGFjY291bnQuIEFzIHRoaXMgcHJvamVjdCBpcyBuZXdseSBjcmVhdGVkLCBpdCBkb2VzXG4gICAgICAgICAgICAgICAgICAgIG5vdCBjb250YWluIGFueSBmaWxlcyB5ZXQuIFRvIGRvIHNvLCBhZGQgbmV3IGZpbGVzIGFzIGRlc2NyaWJlZCBpbiB0aGUgJ0NyZWF0ZSBuZXcgZmlsZXMgaW5cbiAgICAgICAgICAgICAgICAgICAgYSBwcm9qZWN0JyBzZWN0aW9uLiBJZiB5b3Ugd2FudCB0byBjYW5jZWwgdGhlIHByb2Nlc3Mgb2YgY3JlYXRpbmcgYSBuZXcgcHJvamVjdCwgeW91IGNhbiBlaXRoZXJcbiAgICAgICAgICAgICAgICAgICAgY2xpY2sgdGhlICdDYW5jZWwnIGJ1dHRvbiBvciB0aGUgY2xvc2luZyBpY29uIGluIHRoZSB0b3AgcmlnaHQgY29ybmVyIG9mIHRoZSBwb3AtdXAuXG4gICAgICAgICAgICAgICAgPC9wPlxuXG4gICAgICAgICAgICAgICAgey8qKiBDcmVhdGUgbmV3IGZpbGVzIGluIGEgcHJvamVjdCAqKi99XG5cbiAgICAgICAgICAgICAgICA8SGVhZGVyIGFzPSdoMicgY29sb3I9XCJ0ZWFsXCIgaWQ9XCIzLjZcIj4gQ3JlYXRlIG5ldyBmaWxlcyBpbiBhIHByb2plY3QgPC9IZWFkZXI+XG4gICAgICAgICAgICAgICAgPHA+IFRoZSBmb2xsb3dpbmcgd2lsbCBndWlkZSB5b3UgdGhyb3VnaCB0aGUgcHJvY2VzcyBvZiA8Yj4gY3JlYXRpbmcgbmV3IGZpbGVzIGZvciBhIHByb2plY3QgbGlua2VkXG4gICAgICAgICAgICAgICAgICAgIHRvIHlvdXIgcmVtb3RlIGFjY291bnQgPC9iPlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMzF9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cbiAgICAgICAgICAgICAgICA8cD4gRmlyc3Qgb3BlbiB0aGUgJ0ZpbGUnIGRyb3AgZG93biBmcm9tIHRoZSB0b29sYmFyLCBhcyBtYWRlIHZpc2libGUgaW4gdGhlIGZpZ3VyZSBhYm92ZS4gVGhpcyB3aWxsXG4gICAgICAgICAgICAgICAgICAgIGJyaW5nIHVwIHRoZSBmb2xsb3dpbmc6PC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MzMn0gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0vPlxuICAgICAgICAgICAgICAgIDxwPiBOZXh0IHNlbGVjdCB0aGUgJ05ldyBGaWxlJyBvcHRpb24gZnJvbSB0aGUgZHJvcCBkb3duLiBGb2xsb3dpbmcgcG9wLXVwIHdpbGwgYmUgdmlzaWJsZSBvbiBzY3JlZW46XG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxJbWFnZSBzcmM9e3MzNH0gY2VudGVyZWQ9e3RydWV9IHN0eWxlPXt0aGlzLmltZ01hcmdpbn0vPlxuICAgICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgICAgICBUaHJvdWdoIHRoaXMgcG9wLXVwIHNjcmVlbiwgc2VsZWN0IG9uZSBvZiB5b3VyIHByb2plY3RzIGZyb20gdGhlIHNlbGVjdGlvbiBmaWVsZC4gSWYgeW91clxuICAgICAgICAgICAgICAgICAgICBhdXRoZW50aWNhdGlvbiB3YXMgc3VjY2Vzc2Z1bCwgYWxsIHlvdXIgcHJvamVjdHMgbGlua2VkIHRvIHlvdXIgYWNjb3VudCBzaG91bGQgYmUgdmlzaWJsZS5cbiAgICAgICAgICAgICAgICAgICAgQWZ0ZXIgc2VsZWN0aW5nIGEgcHJvamVjdCwgY2hvb3NlIGEgZml0dGluZyBuYW1lIGZvciB0aGUgZmlsZSB5b3Ugd2FudCB0byBjcmVhdGVcbiAgICAgICAgICAgICAgICAgICAgaW4gdGhlIGlucHV0IGZpZWxkLiBBZnRlciBzZWxlY3RpbmcgYSBmaWxlbmFtZSxcbiAgICAgICAgICAgICAgICAgICAgc3BlY2lmeSB0aGUgdHlwZSBvZiBmaWxlIHlvdSB3YW50IHRvIGNyZWF0ZS4gQ2hvb3NlICdkYXRhJyBpZiB5b3VcbiAgICAgICAgICAgICAgICAgICAgd2FudCB0byBjcmVhdGUgYSBkYXRhIGdyYXBoIG9yIGNob29zZSAnU0hBQ0wnIGlmIHlvdSB3YW50IHRvIGNyZWF0ZSBhIFNIQUNMIGdyYXBoLlxuICAgICAgICAgICAgICAgICAgICBXaGVuZXZlciB0aGUgaW5wdXQgZmllbGQgaXMgbm90IGVtcHR5LCB0aGUgJ0NyZWF0ZScgYnV0dG9uIHdpbGwgbm8gbG9uZ2VyIGJlXG4gICAgICAgICAgICAgICAgICAgIGRpc2FibGVkLiBJZiB5b3UgYXJlIHNhdGlzZmllZCB3aXRoIHlvdXIgY2hvc2VuIGZpbGUgbmFtZSBhbmQgcHJvamVjdCxcbiAgICAgICAgICAgICAgICAgICAgY2xpY2sgJ0NyZWF0ZScgYnV0dG9uLiBUaGUgZWRpdG9yIHdpbGwgY3JlYXRlIGEgbmV3IGZpbGUgYW5kIHN0b3JlIGl0IGludG8geW91ciByZW1vdGUgcHJvamVjdC5cbiAgICAgICAgICAgICAgICAgICAgPGI+IE5vdGUgPC9iPiB0aGF0IHRoZSBlZGl0b3Igd2lsbCA8Yj4gbm90IDwvYj4gb3BlbiB0aGUgbmV3bHkgY3JlYXRlZCBmaWxlLiBUbyBzdGFydCBlZGl0aW5nXG4gICAgICAgICAgICAgICAgICAgIGluIHRoaXMgZmlsZSwgcGxlYXNlIG9wZW4gdGhlIGZpbGUgZmlyc3QgYXMgZGVzY3JpYmVkIGluICdPcGVuIGdyYXBoIGZyb20gYWNjb3VudCcgc2VjdGlvbi5cbiAgICAgICAgICAgICAgICAgICAgSWYgeW91IHdhbnQgdG8gY2FuY2VsIHRoZSBwcm9jZXNzIG9mIGNyZWF0aW5nIGEgbmV3IHByb2plY3QsIHlvdSBjYW4gZWl0aGVyXG4gICAgICAgICAgICAgICAgICAgIGNsaWNrIHRoZSAnQ2FuY2VsJyBidXR0b24gb3IgdGhlIGNsb3NpbmcgaWNvbiBpbiB0aGUgdG9wIHJpZ2h0IGNvcm5lciBvZiB0aGUgcG9wLXVwLlxuICAgICAgICAgICAgICAgIDwvcD5cblxuICAgICAgICAgICAgICAgIHsvKiogTG9hZCBhbmQgc2F2ZSB3b3Jrc3BhY2UgKiovfVxuICAgICAgICAgICAgICAgIDxIZWFkZXIgYXM9J2gyJyBjb2xvcj1cInRlYWxcIiBpZD1cIjMuN1wiPiBMb2FkIGFuZCBzYXZlIHdvcmtzcGFjZSA8L0hlYWRlcj5cbiAgICAgICAgICAgICAgICA8cD4gVGhlIGZvbGxvd2luZyB3aWxsIGd1aWRlIHlvdSB0aHJvdWdoIHRoZSBwcm9jZXNzIG9mIDxiPiBsb2FkaW5nIG9yIHNhdmluZyB5b3VyIGN1cnJlbnQgd29ya3NwYWNlXG4gICAgICAgICAgICAgICAgPC9iPlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8SW1hZ2Ugc3JjPXtzMzF9IGNlbnRlcmVkPXt0cnVlfSBzdHlsZT17dGhpcy5pbWdNYXJnaW59Lz5cbiAgICAgICAgICAgICAgICA8cD4gRmlyc3Qgb3BlbiB0aGUgJ0ZpbGUnIGRyb3Bkb3duIGZyb20gdGhlIHRvb2xiYXIsIGFzIG1hZGUgdmlzaWJsZSBpbiB0aGUgZmlndXJlIGFib3ZlLiBUaGlzIHdpbGxcbiAgICAgICAgICAgICAgICAgICAgYnJpbmcgdXAgdGhlIGZvbGxvd2luZzo8L3A+XG4gICAgICAgICAgICAgICAgPEltYWdlIHNyYz17czMyfSBjZW50ZXJlZD17dHJ1ZX0gc3R5bGU9e3RoaXMuaW1nTWFyZ2lufS8+XG4gICAgICAgICAgICAgICAgPHA+IE5leHQgc2VsZWN0IHRoZSAnTG9hZCB3b3Jrc3BhY2UnIG9yJ1NhdmUgd29ya3NwYWNlJyBvcHRpb24gZnJvbSB0aGUgZHJvcCBkb3duLlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgICAgICAgV2hlbiAnTG9hZCB3b3Jrc3BhY2UnIGlzIGNob3NlbiwgdGhlIGxhc3Qgc3RvcmVkIHdvcmtzcGFjZSBvZiB0aGUgYXV0aGVudGljYXRlZCB1c2VyXG4gICAgICAgICAgICAgICAgICAgIGlzIGxvYWRlZCBpbiBmcm9tIHRoZSBzZXJ2ZXIuIFlvdSBjYW4gbm93IHNlZSB3aGVyZSB5b3UgbGVmdCBvZmYgdGhlIGxhc3QgdGltZVxuICAgICAgICAgICAgICAgICAgICB5b3Ugc2F2ZWQgeW91ciB3b3Jrc3BhY2UuIFdoZW4gJ1NhdmUgd29ya3NwYWNlXCIgaXMgY2hvc2VuLCB0aGUgY3VycmVudCB3b3Jrc3BhY2VcbiAgICAgICAgICAgICAgICAgICAgaXMgc3RvcmVkIG9uIHRoZSBzZXJ2ZXIgd2hpY2ggYWxsb3dzIHRvIGxvYWQgaXQgYmFjayBpbiBkdXJpbmcgYW5vdGhlciBzZXNzaW9ucy5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKTtcbiAgICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IFNlY3Rpb24zO1xuIl19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 28 2018 17:31:24 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/treeView.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> treeView.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.06% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>24/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.32% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.15% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.16% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>22/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/components/treeView.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var react_treebeard_1 = require("react-treebeard");
+var semantic_ui_react_1 = require("semantic-ui-react");
+var treeView_1 = require("../style/treeView");
+react_treebeard_1.decorators.Header = <span class="fstat-no" title="function not covered" >function (_a) {</span>
+<span class="cstat-no" title="statement not covered" >    var style = _a.style, node = _a.node;</span>
+<span class="cstat-no" title="statement not covered" >    var iconStyle = { marginRight: '5px' };</span>
+<span class="cstat-no" title="statement not covered" >    var iconName = node.children ? "folder outline" : "file outline";</span>
+<span class="cstat-no" title="statement not covered" >    return (React.createElement("div", { style: style.base },</span>
+        React.createElement("div", { style: style.title },
+            React.createElement(semantic_ui_react_1.Icon, { name: iconName, size: "large", inverted: true, style: iconStyle }),
+            node.name)));
+};
+react_treebeard_1.decorators.Toggle = <span class="fstat-no" title="function not covered" >function (_a) {</span>
+<span class="cstat-no" title="statement not covered" >    var style = _a.style;</span>
+<span class="cstat-no" title="statement not covered" >    var height = style.height, width = style.width;</span>
+<span class="cstat-no" title="statement not covered" >    var points = "0,0 0," + 12 + " " + 12 + "," + 7;</span>
+<span class="cstat-no" title="statement not covered" >    return (React.createElement("div", { style: style.base },</span>
+        React.createElement("div", { style: style.wrapper },
+            React.createElement("svg", { height: height, width: width },
+                React.createElement("polygon", { points: points, style: style.arrow })))));
+};
+var data = {
+    name: 'my-project',
+    children: [
+        {
+            name: 'constraints',
+            children: [
+                { name: 'building.shacl' },
+                { name: 'person.shacl' }
+            ],
+        },
+        {
+            name: 'graph',
+            children: [
+                { name: 'graph1.mx' },
+                { name: 'graph2.mx' }
+            ],
+        }
+    ]
+};
+var Tree = /** @class */ (function (_super) {
+    __extends(Tree, _super);
+    /**
+     * Constructor of component
+     * @param props
+     */
+<span class="fstat-no" title="function not covered" >    function Tree(props) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super.call(this, props) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.state = {};</span>
+<span class="cstat-no" title="statement not covered" >        _this.onToggle = _this.onToggle.bind(_this);</span>
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    /**
+     * Method that will handle onToggle
+     * @param node
+     * @param toggled
+     */
+    Tree.prototype.onToggle = <span class="fstat-no" title="function not covered" >function (node, toggled) {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.state.cursor) {</span>
+<span class="cstat-no" title="statement not covered" >            this.state.cursor.active = false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        node.active = true;</span>
+<span class="cstat-no" title="statement not covered" >        if (node.children) {</span>
+<span class="cstat-no" title="statement not covered" >            node.toggled = toggled;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            cursor: node
+        });
+    };
+    /** Render component **/
+    Tree.prototype.render = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return (React.createElement("div", null,</span>
+            React.createElement(react_treebeard_1.Treebeard, { data: data, onToggle: this.onToggle, style: treeView_1.default, decorators: react_treebeard_1.decorators })));
+    };
+    return Tree;
+}(React.Component));
+exports.default = Tree;
+&nbsp;
+},'src/components/treeView.tsx',{"react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react/index.js","react-treebeard":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/react-treebeard/index.js","semantic-ui-react":"/home/travis/build/dubious-developments/UnSHACLed/node_modules/semantic-ui-react/dist/commonjs/index.js","../style/treeView":"/home/travis/build/dubious-developments/UnSHACLed/src/style/treeView.ts"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidHJlZVZpZXcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ0cmVlVmlldy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsNkJBQStCO0FBQy9CLG1EQUFzRDtBQUN0RCx1REFBdUM7QUFDdkMsOENBQTRDO0FBRTVDLDRCQUFVLENBQUMsTUFBTSxHQUFHLFVBQUMsRUFBYTtRQUFaLGdCQUFLLEVBQUUsY0FBSTtJQUM3QixJQUFNLFNBQVMsR0FBRyxFQUFDLFdBQVcsRUFBRSxLQUFLLEVBQUMsQ0FBQztJQUN2QyxJQUFNLFFBQVEsR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDLENBQUMsY0FBYyxDQUFDO0lBRW5FLE9BQU8sQ0FDSCw2QkFBSyxLQUFLLEVBQUUsS0FBSyxDQUFDLElBQUk7UUFDbEIsNkJBQUssS0FBSyxFQUFFLEtBQUssQ0FBQyxLQUFLO1lBQ25CLG9CQUFDLHdCQUFJLElBQ0QsSUFBSSxFQUFFLFFBQVEsRUFDZCxJQUFJLEVBQUMsT0FBTyxFQUNaLFFBQVEsRUFBRSxJQUFJLEVBQ2QsS0FBSyxFQUFFLFNBQVMsR0FDbEI7WUFDRCxJQUFJLENBQUMsSUFBSSxDQUNSLENBQ0osQ0FDVCxDQUFDO0FBQ04sQ0FBQyxDQUFDO0FBRUYsNEJBQVUsQ0FBQyxNQUFNLEdBQUcsVUFBQyxFQUFPO1FBQU4sZ0JBQUs7SUFDaEIsSUFBQSxxQkFBTSxFQUFFLG1CQUFLLENBQVU7SUFDOUIsSUFBTSxNQUFNLEdBQUcsV0FBUyxFQUFFLFNBQUksRUFBRSxTQUFJLENBQUcsQ0FBQztJQUV4QyxPQUFPLENBQ0gsNkJBQUssS0FBSyxFQUFFLEtBQUssQ0FBQyxJQUFJO1FBQ2xCLDZCQUFLLEtBQUssRUFBRSxLQUFLLENBQUMsT0FBTztZQUNyQiw2QkFBSyxNQUFNLEVBQUUsTUFBTSxFQUFFLEtBQUssRUFBRSxLQUFLO2dCQUM3QixpQ0FDSSxNQUFNLEVBQUUsTUFBTSxFQUNkLEtBQUssRUFBRSxLQUFLLENBQUMsS0FBSyxHQUNwQixDQUNBLENBQ0osQ0FDSixDQUNULENBQUM7QUFDTixDQUFDLENBQUM7QUFFRixJQUFNLElBQUksR0FBRztJQUNULElBQUksRUFBRSxZQUFZO0lBQ2xCLFFBQVEsRUFBRTtRQUNOO1lBQ0ksSUFBSSxFQUFFLGFBQWE7WUFDbkIsUUFBUSxFQUFFO2dCQUNOLEVBQUMsSUFBSSxFQUFFLGdCQUFnQixFQUFDO2dCQUN4QixFQUFDLElBQUksRUFBRSxjQUFjLEVBQUM7YUFDekI7U0FDSjtRQUNEO1lBQ0ksSUFBSSxFQUFFLE9BQU87WUFDYixRQUFRLEVBQUU7Z0JBQ04sRUFBQyxJQUFJLEVBQUUsV0FBVyxFQUFDO2dCQUNuQixFQUFDLElBQUksRUFBRSxXQUFXLEVBQUM7YUFDdEI7U0FDSjtLQUVKO0NBQ0osQ0FBQztBQUVGO0lBQW1CLHdCQUF5QjtJQUV4Qzs7O09BR0c7SUFDSCxjQUFZLEtBQVU7UUFBdEIsWUFDSSxrQkFBTSxLQUFLLENBQUMsU0FHZjtRQUZHLEtBQUksQ0FBQyxLQUFLLEdBQUcsRUFBRSxDQUFDO1FBQ2hCLEtBQUksQ0FBQyxRQUFRLEdBQUcsS0FBSSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsS0FBSSxDQUFDLENBQUM7O0lBQzdDLENBQUM7SUFFRDs7OztPQUlHO0lBQ0gsdUJBQVEsR0FBUixVQUFTLElBQVMsRUFBRSxPQUFZO1FBQzVCLElBQUksSUFBSSxDQUFDLEtBQUssQ0FBQyxNQUFNLEVBQUU7WUFDbkIsSUFBSSxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUMsTUFBTSxHQUFHLEtBQUssQ0FBQztTQUNwQztRQUNELElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO1FBQ25CLElBQUksSUFBSSxDQUFDLFFBQVEsRUFBRTtZQUNmLElBQUksQ0FBQyxPQUFPLEdBQUcsT0FBTyxDQUFDO1NBQzFCO1FBQ0QsSUFBSSxDQUFDLFFBQVEsQ0FBQztZQUNWLE1BQU0sRUFBRSxJQUFJO1NBQ2YsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELHdCQUF3QjtJQUN4QixxQkFBTSxHQUFOO1FBQ0ksT0FBTyxDQUNIO1lBQ0ksb0JBQUMsMkJBQVMsSUFDTixJQUFJLEVBQUUsSUFBSSxFQUNWLFFBQVEsRUFBRSxJQUFJLENBQUMsUUFBUSxFQUN2QixLQUFLLEVBQUUsa0JBQVcsRUFDbEIsVUFBVSxFQUFFLDRCQUFVLEdBQ3hCLENBQ0EsQ0FDVCxDQUFDO0lBQ04sQ0FBQztJQUNMLFdBQUM7QUFBRCxDQUFDLEFBM0NELENBQW1CLEtBQUssQ0FBQyxTQUFTLEdBMkNqQztBQUVELGtCQUFlLElBQUksQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7VHJlZWJlYXJkLCBkZWNvcmF0b3JzfSBmcm9tICdyZWFjdC10cmVlYmVhcmQnO1xuaW1wb3J0IHtJY29ufSBmcm9tICdzZW1hbnRpYy11aS1yZWFjdCc7XG5pbXBvcnQgY3VzdG9tU3R5bGUgZnJvbSAnLi4vc3R5bGUvdHJlZVZpZXcnO1xuXG5kZWNvcmF0b3JzLkhlYWRlciA9ICh7c3R5bGUsIG5vZGV9KSA9PiB7XG4gICAgY29uc3QgaWNvblN0eWxlID0ge21hcmdpblJpZ2h0OiAnNXB4J307XG4gICAgY29uc3QgaWNvbk5hbWUgPSBub2RlLmNoaWxkcmVuID8gXCJmb2xkZXIgb3V0bGluZVwiIDogXCJmaWxlIG91dGxpbmVcIjtcblxuICAgIHJldHVybiAoXG4gICAgICAgIDxkaXYgc3R5bGU9e3N0eWxlLmJhc2V9PlxuICAgICAgICAgICAgPGRpdiBzdHlsZT17c3R5bGUudGl0bGV9PlxuICAgICAgICAgICAgICAgIDxJY29uXG4gICAgICAgICAgICAgICAgICAgIG5hbWU9e2ljb25OYW1lfVxuICAgICAgICAgICAgICAgICAgICBzaXplPVwibGFyZ2VcIlxuICAgICAgICAgICAgICAgICAgICBpbnZlcnRlZD17dHJ1ZX1cbiAgICAgICAgICAgICAgICAgICAgc3R5bGU9e2ljb25TdHlsZX1cbiAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgIHtub2RlLm5hbWV9XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgKTtcbn07XG5cbmRlY29yYXRvcnMuVG9nZ2xlID0gKHtzdHlsZX0pID0+IHtcbiAgICBjb25zdCB7aGVpZ2h0LCB3aWR0aH0gPSBzdHlsZTtcbiAgICBjb25zdCBwb2ludHMgPSBgMCwwIDAsJHsxMn0gJHsxMn0sJHs3fWA7XG5cbiAgICByZXR1cm4gKFxuICAgICAgICA8ZGl2IHN0eWxlPXtzdHlsZS5iYXNlfT5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e3N0eWxlLndyYXBwZXJ9PlxuICAgICAgICAgICAgICAgIDxzdmcgaGVpZ2h0PXtoZWlnaHR9IHdpZHRoPXt3aWR0aH0+XG4gICAgICAgICAgICAgICAgICAgIDxwb2x5Z29uXG4gICAgICAgICAgICAgICAgICAgICAgICBwb2ludHM9e3BvaW50c31cbiAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPXtzdHlsZS5hcnJvd31cbiAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICA8L3N2Zz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICApO1xufTtcblxuY29uc3QgZGF0YSA9IHtcbiAgICBuYW1lOiAnbXktcHJvamVjdCcsXG4gICAgY2hpbGRyZW46IFtcbiAgICAgICAge1xuICAgICAgICAgICAgbmFtZTogJ2NvbnN0cmFpbnRzJyxcbiAgICAgICAgICAgIGNoaWxkcmVuOiBbXG4gICAgICAgICAgICAgICAge25hbWU6ICdidWlsZGluZy5zaGFjbCd9LFxuICAgICAgICAgICAgICAgIHtuYW1lOiAncGVyc29uLnNoYWNsJ31cbiAgICAgICAgICAgIF0sXG4gICAgICAgIH0sXG4gICAgICAgIHtcbiAgICAgICAgICAgIG5hbWU6ICdncmFwaCcsXG4gICAgICAgICAgICBjaGlsZHJlbjogW1xuICAgICAgICAgICAgICAgIHtuYW1lOiAnZ3JhcGgxLm14J30sXG4gICAgICAgICAgICAgICAge25hbWU6ICdncmFwaDIubXgnfVxuICAgICAgICAgICAgXSxcbiAgICAgICAgfVxuXG4gICAgXVxufTtcblxuY2xhc3MgVHJlZSBleHRlbmRzIFJlYWN0LkNvbXBvbmVudDxhbnksIGFueT4ge1xuXG4gICAgLyoqXG4gICAgICogQ29uc3RydWN0b3Igb2YgY29tcG9uZW50XG4gICAgICogQHBhcmFtIHByb3BzXG4gICAgICovXG4gICAgY29uc3RydWN0b3IocHJvcHM6IGFueSkge1xuICAgICAgICBzdXBlcihwcm9wcyk7XG4gICAgICAgIHRoaXMuc3RhdGUgPSB7fTtcbiAgICAgICAgdGhpcy5vblRvZ2dsZSA9IHRoaXMub25Ub2dnbGUuYmluZCh0aGlzKTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBNZXRob2QgdGhhdCB3aWxsIGhhbmRsZSBvblRvZ2dsZVxuICAgICAqIEBwYXJhbSBub2RlXG4gICAgICogQHBhcmFtIHRvZ2dsZWRcbiAgICAgKi9cbiAgICBvblRvZ2dsZShub2RlOiBhbnksIHRvZ2dsZWQ6IGFueSkge1xuICAgICAgICBpZiAodGhpcy5zdGF0ZS5jdXJzb3IpIHtcbiAgICAgICAgICAgIHRoaXMuc3RhdGUuY3Vyc29yLmFjdGl2ZSA9IGZhbHNlO1xuICAgICAgICB9XG4gICAgICAgIG5vZGUuYWN0aXZlID0gdHJ1ZTtcbiAgICAgICAgaWYgKG5vZGUuY2hpbGRyZW4pIHtcbiAgICAgICAgICAgIG5vZGUudG9nZ2xlZCA9IHRvZ2dsZWQ7XG4gICAgICAgIH1cbiAgICAgICAgdGhpcy5zZXRTdGF0ZSh7XG4gICAgICAgICAgICBjdXJzb3I6IG5vZGVcbiAgICAgICAgfSk7XG4gICAgfVxuXG4gICAgLyoqIFJlbmRlciBjb21wb25lbnQgKiovXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8VHJlZWJlYXJkXG4gICAgICAgICAgICAgICAgICAgIGRhdGE9e2RhdGF9XG4gICAgICAgICAgICAgICAgICAgIG9uVG9nZ2xlPXt0aGlzLm9uVG9nZ2xlfVxuICAgICAgICAgICAgICAgICAgICBzdHlsZT17Y3VzdG9tU3R5bGV9XG4gICAgICAgICAgICAgICAgICAgIGRlY29yYXRvcnM9e2RlY29yYXRvcnN9XG4gICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgVHJlZTsiXX0=
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 28 2018 17:31:24 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

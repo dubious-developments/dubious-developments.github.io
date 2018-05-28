@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/persistence/dataAccessProvider.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/persistence/</a> dataAccessProvider.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.1% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>27/29</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/persistence/dataAccessProvider.ts']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var model_1 = require("../entities/model");
+var localFileDAO_1 = require("./localFileDAO");
+var ValidationService_1 = require("../conformance/ValidationService");
+var remoteFileDAO_1 = require("./remoteFileDAO");
+/**
+ * This class provides access to most of the application's key components.
+ */
+var DataAccessProvider = /** @class */ (function () {
+    /**
+     * Create a new Data Access Provider.
+     */
+    function DataAccessProvider() {
+        // temporarily create model here
+        this._model = new model_1.Model();
+        // This can not be 'lazy initialized' since the registering of observers happens in the constructor
+        this.validationService = new ValidationService_1.ValidationService(this._model);
+    }
+    Object.defineProperty(DataAccessProvider.prototype, "model", {
+        /**
+         * Retrieve the model.
+         * @returns {Model}
+         */
+        get: function () {
+            return this._model;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * Retrieve an instance of this data access provider.
+     * @returns {DataAccessProvider}
+     */
+    DataAccessProvider.getInstance = function () {
+        return this._instance;
+    };
+    /**
+     * Retrieve the local file DAO.
+     * @returns {LocalFileDAO}
+     */
+    DataAccessProvider.prototype.getLocalFileDAO = function () {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (this.localFileDAO) {
+<span class="cstat-no" title="statement not covered" >            return this.localFileDAO;</span>
+        }
+        else {
+            this.localFileDAO = new localFileDAO_1.LocalFileDAO(this._model);
+            return this.localFileDAO;
+        }
+    };
+    /**
+     * Retrieve the remote file DAO.
+     * @returns {RemoteFileDAO}
+     */
+    DataAccessProvider.prototype.getRemoteFileDAO = function () {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (this.remoteFileDAO) {
+<span class="cstat-no" title="statement not covered" >            return this.remoteFileDAO;</span>
+        }
+        else {
+            this.remoteFileDAO = new remoteFileDAO_1.RemoteFileDAO(this._model);
+            return this.remoteFileDAO;
+        }
+    };
+    /**
+     * Retrieve the validation service.
+     * @returns {ValidationService}
+     */
+    DataAccessProvider.prototype.getValidationService = function () {
+        return this.validationService;
+    };
+    DataAccessProvider._instance = new DataAccessProvider();
+    return DataAccessProvider;
+}());
+exports.DataAccessProvider = DataAccessProvider;
+&nbsp;
+},'src/persistence/dataAccessProvider.ts',{"../entities/model":"/home/travis/build/dubious-developments/UnSHACLed/src/entities/model.ts","./localFileDAO":"/home/travis/build/dubious-developments/UnSHACLed/src/persistence/localFileDAO.ts","../conformance/ValidationService":"/home/travis/build/dubious-developments/UnSHACLed/src/conformance/ValidationService.ts","./remoteFileDAO":"/home/travis/build/dubious-developments/UnSHACLed/src/persistence/remoteFileDAO.ts"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGF0YUFjY2Vzc1Byb3ZpZGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiZGF0YUFjY2Vzc1Byb3ZpZGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsMkNBQXdDO0FBQ3hDLCtDQUE0QztBQUM1QyxzRUFBbUU7QUFDbkUsaURBQThDO0FBRTlDOztHQUVHO0FBQ0g7SUFVSTs7T0FFRztJQUNIO1FBQ0ksZ0NBQWdDO1FBQ2hDLElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxhQUFLLEVBQUUsQ0FBQztRQUUxQixtR0FBbUc7UUFDbkcsSUFBSSxDQUFDLGlCQUFpQixHQUFHLElBQUkscUNBQWlCLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDO0lBQ2hFLENBQUM7SUFNRCxzQkFBSSxxQ0FBSztRQUpUOzs7V0FHRzthQUNIO1lBQ0ksT0FBTyxJQUFJLENBQUMsTUFBTSxDQUFDO1FBQ3ZCLENBQUM7OztPQUFBO0lBRUQ7OztPQUdHO0lBQ1csOEJBQVcsR0FBekI7UUFDSSxPQUFPLElBQUksQ0FBQyxTQUFTLENBQUM7SUFDMUIsQ0FBQztJQUVEOzs7T0FHRztJQUNJLDRDQUFlLEdBQXRCO1FBQ0ksSUFBSSxJQUFJLENBQUMsWUFBWSxFQUFFO1lBQ25CLE9BQU8sSUFBSSxDQUFDLFlBQVksQ0FBQztTQUM1QjthQUFNO1lBQ0gsSUFBSSxDQUFDLFlBQVksR0FBRyxJQUFJLDJCQUFZLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDO1lBQ2xELE9BQU8sSUFBSSxDQUFDLFlBQVksQ0FBQztTQUM1QjtJQUNMLENBQUM7SUFFRDs7O09BR0c7SUFDSSw2Q0FBZ0IsR0FBdkI7UUFDSSxJQUFJLElBQUksQ0FBQyxhQUFhLEVBQUU7WUFDcEIsT0FBTyxJQUFJLENBQUMsYUFBYSxDQUFDO1NBQzdCO2FBQU07WUFDSCxJQUFJLENBQUMsYUFBYSxHQUFHLElBQUksNkJBQWEsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUM7WUFDcEQsT0FBTyxJQUFJLENBQUMsYUFBYSxDQUFDO1NBQzdCO0lBQ0wsQ0FBQztJQUVEOzs7T0FHRztJQUNJLGlEQUFvQixHQUEzQjtRQUNJLE9BQU8sSUFBSSxDQUFDLGlCQUFpQixDQUFDO0lBQ2xDLENBQUM7SUFuRWMsNEJBQVMsR0FBdUIsSUFBSSxrQkFBa0IsRUFBRSxDQUFDO0lBcUU1RSx5QkFBQztDQUFBLEFBdkVELElBdUVDO0FBdkVZLGdEQUFrQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7TW9kZWx9IGZyb20gXCIuLi9lbnRpdGllcy9tb2RlbFwiO1xuaW1wb3J0IHtMb2NhbEZpbGVEQU99IGZyb20gXCIuL2xvY2FsRmlsZURBT1wiO1xuaW1wb3J0IHtWYWxpZGF0aW9uU2VydmljZX0gZnJvbSBcIi4uL2NvbmZvcm1hbmNlL1ZhbGlkYXRpb25TZXJ2aWNlXCI7XG5pbXBvcnQge1JlbW90ZUZpbGVEQU99IGZyb20gXCIuL3JlbW90ZUZpbGVEQU9cIjtcblxuLyoqXG4gKiBUaGlzIGNsYXNzIHByb3ZpZGVzIGFjY2VzcyB0byBtb3N0IG9mIHRoZSBhcHBsaWNhdGlvbidzIGtleSBjb21wb25lbnRzLlxuICovXG5leHBvcnQgY2xhc3MgRGF0YUFjY2Vzc1Byb3ZpZGVyIHtcblxuICAgIHByaXZhdGUgc3RhdGljIF9pbnN0YW5jZTogRGF0YUFjY2Vzc1Byb3ZpZGVyID0gbmV3IERhdGFBY2Nlc3NQcm92aWRlcigpO1xuICAgIHByaXZhdGUgbG9jYWxGaWxlREFPOiBMb2NhbEZpbGVEQU87XG4gICAgcHJpdmF0ZSByZW1vdGVGaWxlREFPOiBSZW1vdGVGaWxlREFPO1xuICAgIHByaXZhdGUgdmFsaWRhdGlvblNlcnZpY2U6IFZhbGlkYXRpb25TZXJ2aWNlO1xuXG4gICAgLy8gdG1wIGZpZWxkXG4gICAgcHJpdmF0ZSBfbW9kZWw6IE1vZGVsO1xuXG4gICAgLyoqXG4gICAgICogQ3JlYXRlIGEgbmV3IERhdGEgQWNjZXNzIFByb3ZpZGVyLlxuICAgICAqL1xuICAgIHByaXZhdGUgY29uc3RydWN0b3IoKSB7XG4gICAgICAgIC8vIHRlbXBvcmFyaWx5IGNyZWF0ZSBtb2RlbCBoZXJlXG4gICAgICAgIHRoaXMuX21vZGVsID0gbmV3IE1vZGVsKCk7XG5cbiAgICAgICAgLy8gVGhpcyBjYW4gbm90IGJlICdsYXp5IGluaXRpYWxpemVkJyBzaW5jZSB0aGUgcmVnaXN0ZXJpbmcgb2Ygb2JzZXJ2ZXJzIGhhcHBlbnMgaW4gdGhlIGNvbnN0cnVjdG9yXG4gICAgICAgIHRoaXMudmFsaWRhdGlvblNlcnZpY2UgPSBuZXcgVmFsaWRhdGlvblNlcnZpY2UodGhpcy5fbW9kZWwpO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIFJldHJpZXZlIHRoZSBtb2RlbC5cbiAgICAgKiBAcmV0dXJucyB7TW9kZWx9XG4gICAgICovXG4gICAgZ2V0IG1vZGVsKCk6IE1vZGVsIHtcbiAgICAgICAgcmV0dXJuIHRoaXMuX21vZGVsO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIFJldHJpZXZlIGFuIGluc3RhbmNlIG9mIHRoaXMgZGF0YSBhY2Nlc3MgcHJvdmlkZXIuXG4gICAgICogQHJldHVybnMge0RhdGFBY2Nlc3NQcm92aWRlcn1cbiAgICAgKi9cbiAgICBwdWJsaWMgc3RhdGljIGdldEluc3RhbmNlKCk6IERhdGFBY2Nlc3NQcm92aWRlciB7XG4gICAgICAgIHJldHVybiB0aGlzLl9pbnN0YW5jZTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBSZXRyaWV2ZSB0aGUgbG9jYWwgZmlsZSBEQU8uXG4gICAgICogQHJldHVybnMge0xvY2FsRmlsZURBT31cbiAgICAgKi9cbiAgICBwdWJsaWMgZ2V0TG9jYWxGaWxlREFPKCk6IExvY2FsRmlsZURBTyB7XG4gICAgICAgIGlmICh0aGlzLmxvY2FsRmlsZURBTykge1xuICAgICAgICAgICAgcmV0dXJuIHRoaXMubG9jYWxGaWxlREFPO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgdGhpcy5sb2NhbEZpbGVEQU8gPSBuZXcgTG9jYWxGaWxlREFPKHRoaXMuX21vZGVsKTtcbiAgICAgICAgICAgIHJldHVybiB0aGlzLmxvY2FsRmlsZURBTztcbiAgICAgICAgfVxuICAgIH1cblxuICAgIC8qKlxuICAgICAqIFJldHJpZXZlIHRoZSByZW1vdGUgZmlsZSBEQU8uXG4gICAgICogQHJldHVybnMge1JlbW90ZUZpbGVEQU99XG4gICAgICovXG4gICAgcHVibGljIGdldFJlbW90ZUZpbGVEQU8oKTogUmVtb3RlRmlsZURBTyB7XG4gICAgICAgIGlmICh0aGlzLnJlbW90ZUZpbGVEQU8pIHtcbiAgICAgICAgICAgIHJldHVybiB0aGlzLnJlbW90ZUZpbGVEQU87XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICB0aGlzLnJlbW90ZUZpbGVEQU8gPSBuZXcgUmVtb3RlRmlsZURBTyh0aGlzLl9tb2RlbCk7XG4gICAgICAgICAgICByZXR1cm4gdGhpcy5yZW1vdGVGaWxlREFPO1xuICAgICAgICB9XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogUmV0cmlldmUgdGhlIHZhbGlkYXRpb24gc2VydmljZS5cbiAgICAgKiBAcmV0dXJucyB7VmFsaWRhdGlvblNlcnZpY2V9XG4gICAgICovXG4gICAgcHVibGljIGdldFZhbGlkYXRpb25TZXJ2aWNlKCk6IFZhbGlkYXRpb25TZXJ2aWNlIHtcbiAgICAgICAgcmV0dXJuIHRoaXMudmFsaWRhdGlvblNlcnZpY2U7XG4gICAgfVxuXG59Il19
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 28 2018 17:31:24 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

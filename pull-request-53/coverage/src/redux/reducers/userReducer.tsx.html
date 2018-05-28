@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/redux/reducers/userReducer.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/redux/reducers/</a> userReducer.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.9% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.39% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/33</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(global){global.wrappers['/home/travis/build/dubious-developments/UnSHACLed/src/redux/reducers/userReducer.tsx']=[function(require,module,exports,__dirname,__filename){ "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var userActions_1 = require("../actions/userActions");
+/**
+ * Redux reducers that will be dispatch by an event fired through an action.
+ * This reducer will update the 'name' field in the global store by appending replacing the
+ * name it received from the action.
+ * @param state: current state of the global store
+ * @param action: the dispatched action
+ * @return {any} new global state
+ */
+<span class="fstat-no" title="function not covered" >function userNameReducer(state, action) {</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case userActions_1.UPDATE_NAME:
+<span class="cstat-no" title="statement not covered" >            return action.payload.name;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
+}
+exports.userNameReducer = userNameReducer;
+/**
+ * Redux reducers that will be dispatch by an event fired through an action.
+ * This reducer will update the 'login' field in the global store by appending replacing the
+ * login it received from the action.
+ * @param state: current state of the global store
+ * @param action: the dispatched action
+ * @return {any} new global state
+ */
+<span class="fstat-no" title="function not covered" >function userLoginReducer(state, action) {</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case userActions_1.UPDATE_LOGIN:
+<span class="cstat-no" title="statement not covered" >            return action.payload.login;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
+}
+exports.userLoginReducer = userLoginReducer;
+/**
+ * Redux reducers that will be dispatch by an event fired through an action.
+ * This reducer will update the 'email' field in the global store by appending replacing the
+ * email it received from the action.
+ * @param state: current state of the global store
+ * @param action: the dispatched action
+ * @return {any} new global state
+ */
+<span class="fstat-no" title="function not covered" >function userEmailReducer(state, action) {</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case userActions_1.UPDATE_EMAIL:
+<span class="cstat-no" title="statement not covered" >            return action.payload.email;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
+}
+exports.userEmailReducer = userEmailReducer;
+/**
+ * Redux reducers that will be dispatch by an event fired through an action.
+ * This reducer will update the 'token' field in the global store by appending replacing the
+ * token it received from the action.
+ * @param state: current state of the global store
+ * @param action: the dispatched action
+ * @return {any} new global state
+ */
+<span class="fstat-no" title="function not covered" >function userTokenReducer(state, action) {</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case userActions_1.UPDATE_TOKEN:
+<span class="cstat-no" title="statement not covered" >            return action.payload.token;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
+}
+exports.userTokenReducer = userTokenReducer;
+/**
+ * Redux reducers that will be dispatch by an event fired through an action.
+ * This reducer will update the 'auth' field in the global store by changing its state to true
+ * @param state: current state of the global store
+ * @param action: the dispatched action
+ * @return {any} new global state
+ */
+<span class="fstat-no" title="function not covered" >function authReducer(state, action) {</span>
+<span class="cstat-no" title="statement not covered" >    if (state === void 0) { <span class="cstat-no" title="statement not covered" >state = false; </span>}</span>
+<span class="cstat-no" title="statement not covered" >    switch (action.type) {</span>
+        case userActions_1.UPDATE_AUTH:
+<span class="cstat-no" title="statement not covered" >            return action.payload.auth;</span>
+        default:
+<span class="cstat-no" title="statement not covered" >            return state;</span>
+    }
+}
+exports.authReducer = authReducer;
+&nbsp;
+},'src/redux/reducers/userReducer.tsx',{"../actions/userActions":"/home/travis/build/dubious-developments/UnSHACLed/src/redux/actions/userActions.tsx"}];})(this);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXNlclJlZHVjZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ1c2VyUmVkdWNlci50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxzREFBMEc7QUFFMUc7Ozs7Ozs7R0FPRztBQUNILHlCQUFnQyxLQUFlLEVBQUUsTUFBVztJQUE1QixzQkFBQSxFQUFBLFVBQWU7SUFDM0MsUUFBUSxNQUFNLENBQUMsSUFBSSxFQUFFO1FBQ2pCLEtBQUsseUJBQVc7WUFDWixPQUFPLE1BQU0sQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDO1FBQy9CO1lBQ0ksT0FBTyxLQUFLLENBQUM7S0FDcEI7QUFDTCxDQUFDO0FBUEQsMENBT0M7QUFFRDs7Ozs7OztHQU9HO0FBQ0gsMEJBQWlDLEtBQWUsRUFBRSxNQUFXO0lBQTVCLHNCQUFBLEVBQUEsVUFBZTtJQUM1QyxRQUFRLE1BQU0sQ0FBQyxJQUFJLEVBQUU7UUFDakIsS0FBSywwQkFBWTtZQUNiLE9BQU8sTUFBTSxDQUFDLE9BQU8sQ0FBQyxLQUFLLENBQUM7UUFDaEM7WUFDSSxPQUFPLEtBQUssQ0FBQztLQUNwQjtBQUNMLENBQUM7QUFQRCw0Q0FPQztBQUVEOzs7Ozs7O0dBT0c7QUFDSCwwQkFBaUMsS0FBZSxFQUFFLE1BQVc7SUFBNUIsc0JBQUEsRUFBQSxVQUFlO0lBQzVDLFFBQVEsTUFBTSxDQUFDLElBQUksRUFBRTtRQUNqQixLQUFLLDBCQUFZO1lBQ2IsT0FBTyxNQUFNLENBQUMsT0FBTyxDQUFDLEtBQUssQ0FBQztRQUNoQztZQUNJLE9BQU8sS0FBSyxDQUFDO0tBQ3BCO0FBQ0wsQ0FBQztBQVBELDRDQU9DO0FBRUQ7Ozs7Ozs7R0FPRztBQUNILDBCQUFpQyxLQUFlLEVBQUUsTUFBVztJQUE1QixzQkFBQSxFQUFBLFVBQWU7SUFDNUMsUUFBUSxNQUFNLENBQUMsSUFBSSxFQUFFO1FBQ2pCLEtBQUssMEJBQVk7WUFDYixPQUFPLE1BQU0sQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDO1FBQ2hDO1lBQ0ksT0FBTyxLQUFLLENBQUM7S0FDcEI7QUFDTCxDQUFDO0FBUEQsNENBT0M7QUFFRDs7Ozs7O0dBTUc7QUFDSCxxQkFBNEIsS0FBa0IsRUFBRSxNQUFXO0lBQS9CLHNCQUFBLEVBQUEsYUFBa0I7SUFDMUMsUUFBUSxNQUFNLENBQUMsSUFBSSxFQUFFO1FBQ2pCLEtBQUsseUJBQVc7WUFDWixPQUFPLE1BQU0sQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDO1FBQy9CO1lBQ0ksT0FBTyxLQUFLLENBQUM7S0FDcEI7QUFDTCxDQUFDO0FBUEQsa0NBT0MiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge1VQREFURV9FTUFJTCwgVVBEQVRFX0xPR0lOLCBVUERBVEVfTkFNRSwgVVBEQVRFX1RPS0VOLCBVUERBVEVfQVVUSH0gZnJvbSBcIi4uL2FjdGlvbnMvdXNlckFjdGlvbnNcIjtcblxuLyoqXG4gKiBSZWR1eCByZWR1Y2VycyB0aGF0IHdpbGwgYmUgZGlzcGF0Y2ggYnkgYW4gZXZlbnQgZmlyZWQgdGhyb3VnaCBhbiBhY3Rpb24uXG4gKiBUaGlzIHJlZHVjZXIgd2lsbCB1cGRhdGUgdGhlICduYW1lJyBmaWVsZCBpbiB0aGUgZ2xvYmFsIHN0b3JlIGJ5IGFwcGVuZGluZyByZXBsYWNpbmcgdGhlIFxuICogbmFtZSBpdCByZWNlaXZlZCBmcm9tIHRoZSBhY3Rpb24uXG4gKiBAcGFyYW0gc3RhdGU6IGN1cnJlbnQgc3RhdGUgb2YgdGhlIGdsb2JhbCBzdG9yZVxuICogQHBhcmFtIGFjdGlvbjogdGhlIGRpc3BhdGNoZWQgYWN0aW9uXG4gKiBAcmV0dXJuIHthbnl9IG5ldyBnbG9iYWwgc3RhdGVcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHVzZXJOYW1lUmVkdWNlcihzdGF0ZTogYW55ID0gJycsIGFjdGlvbjogYW55KSB7XG4gICAgc3dpdGNoIChhY3Rpb24udHlwZSkge1xuICAgICAgICBjYXNlIFVQREFURV9OQU1FOlxuICAgICAgICAgICAgcmV0dXJuIGFjdGlvbi5wYXlsb2FkLm5hbWU7XG4gICAgICAgIGRlZmF1bHQgOlxuICAgICAgICAgICAgcmV0dXJuIHN0YXRlO1xuICAgIH1cbn1cblxuLyoqXG4gKiBSZWR1eCByZWR1Y2VycyB0aGF0IHdpbGwgYmUgZGlzcGF0Y2ggYnkgYW4gZXZlbnQgZmlyZWQgdGhyb3VnaCBhbiBhY3Rpb24uXG4gKiBUaGlzIHJlZHVjZXIgd2lsbCB1cGRhdGUgdGhlICdsb2dpbicgZmllbGQgaW4gdGhlIGdsb2JhbCBzdG9yZSBieSBhcHBlbmRpbmcgcmVwbGFjaW5nIHRoZVxuICogbG9naW4gaXQgcmVjZWl2ZWQgZnJvbSB0aGUgYWN0aW9uLlxuICogQHBhcmFtIHN0YXRlOiBjdXJyZW50IHN0YXRlIG9mIHRoZSBnbG9iYWwgc3RvcmVcbiAqIEBwYXJhbSBhY3Rpb246IHRoZSBkaXNwYXRjaGVkIGFjdGlvblxuICogQHJldHVybiB7YW55fSBuZXcgZ2xvYmFsIHN0YXRlXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiB1c2VyTG9naW5SZWR1Y2VyKHN0YXRlOiBhbnkgPSAnJywgYWN0aW9uOiBhbnkpIHtcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgICAgIGNhc2UgVVBEQVRFX0xPR0lOOlxuICAgICAgICAgICAgcmV0dXJuIGFjdGlvbi5wYXlsb2FkLmxvZ2luO1xuICAgICAgICBkZWZhdWx0IDpcbiAgICAgICAgICAgIHJldHVybiBzdGF0ZTtcbiAgICB9XG59XG5cbi8qKlxuICogUmVkdXggcmVkdWNlcnMgdGhhdCB3aWxsIGJlIGRpc3BhdGNoIGJ5IGFuIGV2ZW50IGZpcmVkIHRocm91Z2ggYW4gYWN0aW9uLlxuICogVGhpcyByZWR1Y2VyIHdpbGwgdXBkYXRlIHRoZSAnZW1haWwnIGZpZWxkIGluIHRoZSBnbG9iYWwgc3RvcmUgYnkgYXBwZW5kaW5nIHJlcGxhY2luZyB0aGVcbiAqIGVtYWlsIGl0IHJlY2VpdmVkIGZyb20gdGhlIGFjdGlvbi5cbiAqIEBwYXJhbSBzdGF0ZTogY3VycmVudCBzdGF0ZSBvZiB0aGUgZ2xvYmFsIHN0b3JlXG4gKiBAcGFyYW0gYWN0aW9uOiB0aGUgZGlzcGF0Y2hlZCBhY3Rpb25cbiAqIEByZXR1cm4ge2FueX0gbmV3IGdsb2JhbCBzdGF0ZVxuICovXG5leHBvcnQgZnVuY3Rpb24gdXNlckVtYWlsUmVkdWNlcihzdGF0ZTogYW55ID0gJycsIGFjdGlvbjogYW55KSB7XG4gICAgc3dpdGNoIChhY3Rpb24udHlwZSkge1xuICAgICAgICBjYXNlIFVQREFURV9FTUFJTDpcbiAgICAgICAgICAgIHJldHVybiBhY3Rpb24ucGF5bG9hZC5lbWFpbDtcbiAgICAgICAgZGVmYXVsdCA6XG4gICAgICAgICAgICByZXR1cm4gc3RhdGU7XG4gICAgfVxufVxuXG4vKipcbiAqIFJlZHV4IHJlZHVjZXJzIHRoYXQgd2lsbCBiZSBkaXNwYXRjaCBieSBhbiBldmVudCBmaXJlZCB0aHJvdWdoIGFuIGFjdGlvbi5cbiAqIFRoaXMgcmVkdWNlciB3aWxsIHVwZGF0ZSB0aGUgJ3Rva2VuJyBmaWVsZCBpbiB0aGUgZ2xvYmFsIHN0b3JlIGJ5IGFwcGVuZGluZyByZXBsYWNpbmcgdGhlXG4gKiB0b2tlbiBpdCByZWNlaXZlZCBmcm9tIHRoZSBhY3Rpb24uXG4gKiBAcGFyYW0gc3RhdGU6IGN1cnJlbnQgc3RhdGUgb2YgdGhlIGdsb2JhbCBzdG9yZVxuICogQHBhcmFtIGFjdGlvbjogdGhlIGRpc3BhdGNoZWQgYWN0aW9uXG4gKiBAcmV0dXJuIHthbnl9IG5ldyBnbG9iYWwgc3RhdGVcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHVzZXJUb2tlblJlZHVjZXIoc3RhdGU6IGFueSA9ICcnLCBhY3Rpb246IGFueSkge1xuICAgIHN3aXRjaCAoYWN0aW9uLnR5cGUpIHtcbiAgICAgICAgY2FzZSBVUERBVEVfVE9LRU46XG4gICAgICAgICAgICByZXR1cm4gYWN0aW9uLnBheWxvYWQudG9rZW47XG4gICAgICAgIGRlZmF1bHQgOlxuICAgICAgICAgICAgcmV0dXJuIHN0YXRlO1xuICAgIH1cbn1cblxuLyoqXG4gKiBSZWR1eCByZWR1Y2VycyB0aGF0IHdpbGwgYmUgZGlzcGF0Y2ggYnkgYW4gZXZlbnQgZmlyZWQgdGhyb3VnaCBhbiBhY3Rpb24uXG4gKiBUaGlzIHJlZHVjZXIgd2lsbCB1cGRhdGUgdGhlICdhdXRoJyBmaWVsZCBpbiB0aGUgZ2xvYmFsIHN0b3JlIGJ5IGNoYW5naW5nIGl0cyBzdGF0ZSB0byB0cnVlXG4gKiBAcGFyYW0gc3RhdGU6IGN1cnJlbnQgc3RhdGUgb2YgdGhlIGdsb2JhbCBzdG9yZVxuICogQHBhcmFtIGFjdGlvbjogdGhlIGRpc3BhdGNoZWQgYWN0aW9uXG4gKiBAcmV0dXJuIHthbnl9IG5ldyBnbG9iYWwgc3RhdGVcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGF1dGhSZWR1Y2VyKHN0YXRlOiBhbnkgPSBmYWxzZSwgYWN0aW9uOiBhbnkpIHtcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XG4gICAgICAgIGNhc2UgVVBEQVRFX0FVVEg6XG4gICAgICAgICAgICByZXR1cm4gYWN0aW9uLnBheWxvYWQuYXV0aDtcbiAgICAgICAgZGVmYXVsdCA6XG4gICAgICAgICAgICByZXR1cm4gc3RhdGU7XG4gICAgfVxufSJdfQ==
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon May 28 2018 17:31:24 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
